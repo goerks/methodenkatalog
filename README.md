@@ -51,5 +51,7 @@ Arten der Verknüpfung: `vorher`, `danach`, `ergaenzt`, `alternative`.
 4. Geänderte Dateien und `data/catalog.js` committen.
 
 ## Veröffentlichen mit GitHub Pages
-Repo-Einstellungen, Bereich Pages: Source «Deploy from a branch», Branch `main`, Ordner `/ (root)`.
-Alle Pfade sind relativ, `.nojekyll` schaltet die Jekyll-Verarbeitung ab.
+Der Workflow `.github/workflows/pages.yml` prüft und baut den Katalog bei jedem Push auf `main` und veröffentlicht die Seite.
+Einmalig einstellen: Repo-Einstellungen, Bereich Pages, Source auf **GitHub Actions** setzen.
+Die Seite ist danach unter `https://<konto>.github.io/methodenkatalog/` erreichbar. Der Lauf ist unter Actions sichtbar. Schlägt der Prüfer an, wird nichts veröffentlicht.
+Alternativ ohne Workflow: Source «Deploy from a branch», Branch `main`, Ordner `/ (root)`.

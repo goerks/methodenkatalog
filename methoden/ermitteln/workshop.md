@@ -1,9 +1,11 @@
 ---
 name: Anforderungsworkshop
+kurz: Workshop
 kategorie: ermitteln
 vorgehen: beide
 phase: ermitteln
 typ: Gruppenarbeit
+form: meeting
 aufwand: 2 bis 4 Stunden, Vorbereitung 1 Tag
 werkzeuge: [Miro, Mural, Haftnotizen, Flipchart]
 reihenfolge: 2

@@ -1,9 +1,11 @@
 ---
 name: Definition of Ready / Done
+kurz: DoR / DoD
 kategorie: dokumentieren
 vorgehen: agil
 phase: spezifizieren
 typ: Qualitätsvereinbarung
+form: artefakt
 aufwand: 1 Stunde zur Einführung, danach laufend
 werkzeuge: [Teamboard, Jira-Workflow, Wiki]
 reihenfolge: 4

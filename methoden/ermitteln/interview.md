@@ -1,9 +1,11 @@
 ---
 name: Interview
+kurz: Interview
 kategorie: ermitteln
 vorgehen: beide
 phase: ermitteln
 typ: Einzelgespräch
+form: methode
 aufwand: 30 bis 60 Min. pro Gespräch
 werkzeuge: [Interviewleitfaden, Aufnahmegerät (mit Einverständnis), Miro]
 reihenfolge: 1

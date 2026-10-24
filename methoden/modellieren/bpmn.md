@@ -1,9 +1,11 @@
 ---
 name: BPMN-Prozessmodell
+kurz: BPMN
 kategorie: modellieren
 vorgehen: klassisch
 phase: spezifizieren
 typ: Modell
+form: modell
 aufwand: 1 bis 3 Stunden
 werkzeuge: [Camunda Modeler, Signavio, draw.io, Bizagi]
 reihenfolge: 3

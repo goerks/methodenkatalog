@@ -1,9 +1,11 @@
 ---
 name: WSJF (Weighted Shortest Job First)
+kurz: WSJF
 kategorie: priorisieren
 vorgehen: agil
 phase: bewerten
 typ: Priorisierung
+form: methode
 aufwand: 1 Stunde
 werkzeuge: [Excel, Jira (WSJF-Feld)]
 reihenfolge: 3

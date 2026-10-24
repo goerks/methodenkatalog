@@ -1,9 +1,11 @@
 ---
 name: Beobachtung (Contextual Inquiry)
+kurz: Beobachtung
 kategorie: ermitteln
 vorgehen: beide
 phase: ermitteln
 typ: Feldstudie
+form: methode
 aufwand: Halber bis ganzer Tag pro Person
 werkzeuge: [Notizen, Foto (mit Einverständnis), Beobachtungsbogen]
 reihenfolge: 3

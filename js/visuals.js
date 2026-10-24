@@ -133,3 +133,58 @@ VIS.storymap = () => `<div class="vbox" style="overflow-x:auto"><div class="vsm"
   ${['Tour anlegen', 'Konflikt prüfen', 'Fahrer benachrichtigen'].map(a => `<div class="vc">${a}</div>`).join('')}
   <div class="vrel vrel1">Release 1</div>${['Fahrzeug zuweisen', 'Warnung anzeigen', 'Push-Meldung'].map(a => `<div class="vc">${a}</div>`).join('')}
   <div class="vrel">Release 2</div>${['Karte', 'Ersatzfahrer', 'Statusverlauf'].map(a => `<div class="vc vlater">${a}</div>`).join('')}</div></div>`;
+
+// Weitere Grafiken
+VIS.swot = draw('SWOT-Analyse', b => {
+  [[34, 10, 'Stärken', 'b', 'Eigene Kundendaten'], [220, 10, 'Schwächen', 'c', 'Veraltete\nSchnittstellen'], [34, 118, 'Chancen', 'a', 'Selbstbedienung\nsenkt Supportkosten'], [220, 118, 'Risiken', 'n', 'Wettbewerber\nstartet früher']]
+   .forEach(x => { b.shape('rect', x[0], x[1], 180, 100, x[3]); b.txt(x[0] + 14, x[1] + 18, x[2], x[3], {a: 'start', k: 1.15}); b.txt(x[0] + 14, x[1] + 62, x[4], x[3], {a: 'start', w: 500, k: .9}); });
+  b.txt(14, 60, 'intern', null, {k: .75, w: 500, rot: -90}); b.txt(14, 168, 'extern', null, {k: .75, w: 500, rot: -90});
+});
+VIS.bmc = draw('Business Model Canvas', b => {
+  const blk = (x, y, w, h, t, r) => { b.shape('rect', x, y, w, h, r || 'n'); b.txt(x + w / 2, y + 14, t, r || 'n', {k: .7}); };
+  blk(8, 8, 76, 150, 'Schlüssel-\npartner'); blk(88, 8, 76, 73, 'Aktivitäten'); blk(88, 85, 76, 73, 'Ressourcen');
+  blk(168, 8, 84, 150, 'Nutzen-\nversprechen', 'c'); blk(256, 8, 76, 73, 'Kunden-\nbeziehung'); blk(256, 85, 76, 73, 'Kanäle'); blk(336, 8, 76, 150, 'Kunden-\nsegmente', 'a');
+  blk(8, 162, 200, 60, 'Kostenstruktur', 'b'); blk(212, 162, 200, 60, 'Einnahmequellen', 'b');
+});
+VIS.impact = draw('Impact Map', b => {
+  const cx = [10, 116, 222, 328], nm = ['Warum', 'Wer', 'Wie', 'Was'];
+  b.ln('M202 82H222'); b.ln('M202 168H222'); b.ln('M308 82H328'); b.ln('M308 168H328');
+  b.ln('M96 124L116 82'); b.ln('M96 124L116 168');
+  b.shape('pill', 10, 100, 86, 48, 'c'); b.txt(53, 124, 'Leerfahrten\nhalbieren', 'c', {k: .8});
+  [[82, 'Disponentin', 'plant mit\nRückfracht', 'Rückfracht-\nvorschlag'], [168, 'Fahrer', 'meldet\nStatus', 'Fahrer-App']].forEach(r => {
+    b.shape('pill', 116, r[0] - 22, 86, 44, 'a'); b.txt(159, r[0], r[1], 'a', {k: .85});
+    b.shape('pill', 222, r[0] - 22, 86, 44, 'n'); b.txt(265, r[0], r[2], 'n', {k: .8});
+    b.shape('pill', 328, r[0] - 22, 82, 44, 'b'); b.txt(369, r[0], r[3], 'b', {k: .8});
+  });
+  cx.forEach((x, i) => b.txt(x + 43, 14, nm[i], null, {k: .72, w: 500}));
+});
+VIS.fivewhys = draw('5 Whys', b => {
+  b.shape('pill', 10, 10, 400, 34, 'c'); b.txt(210, 27, 'Problem: Fahrzeug doppelt vergeben', 'c', {k: .95});
+  const a = ['Excel-Liste war nicht aktuell', 'Änderungen kamen per Telefon', 'Es gibt keinen gemeinsamen Stand', 'Kein System für Tourenänderungen', 'Ursache: fehlendes zentrales System'];
+  a.forEach((t, i) => { const y = 56 + i * 34, last = i === 4; b.shape('pill', 10, y, 66, 28, 'a'); b.txt(43, y + 14, 'Warum ' + (i + 1), 'a', {k: .8}); b.shape('pill', 80, y, 330, 28, last ? 'b' : 'n'); b.txt(94, y + 14, t, last ? 'b' : 'n', {a: 'start', k: .9, w: last ? 700 : 500}); });
+});
+VIS.risiko = draw('Risikomatrix', b => {
+  const col = (p, i) => { const s = p * i; return s >= 6 ? 'c' : s >= 3 ? 'n' : 'b'; };
+  for (let p = 3; p >= 1; p--) for (let i = 1; i <= 3; i++) b.shape('rect', 70 + (i - 1) * 88, 10 + (3 - p) * 58, 84, 54, col(p, i));
+  [[3, 3, 'R1'], [2, 3, 'R2'], [1, 2, 'R3']].forEach(r => { const cx = 70 + (r[1] - 1) * 88 + 42, cy = 10 + (3 - r[0]) * 58 + 27; b.shape('ellipse', cx - 14, cy - 14, 28, 28, 'k'); b.txt(cx, cy, r[2], 'k', {k: .8}); });
+  b.txt(34, 92, 'Wahrscheinlichkeit', null, {k: .78, w: 500, rot: -90}); b.txt(196, 200, 'Auswirkung', null, {k: .78, w: 500});
+  b.txt(112, 188, 'gering', null, {k: .7, w: 500}); b.txt(288, 188, 'hoch', null, {k: .7, w: 500});
+});
+VIS.roadmap = draw('Roadmap', b => {
+  const cols = [[10, 'Jetzt', 'a', ['Touren anlegen', 'Konflikte prüfen']], [148, 'Als Nächstes', 'b', ['Fahrer-App', 'Benachrichtigung']], [286, 'Später', 'n', ['Auswertungen', 'Rückfracht-\nvorschlag']]];
+  cols.forEach(c => { b.shape('pill', c[0], 12, 124, 34, c[2]); b.txt(c[0] + 62, 29, c[1], c[2]); c[3].forEach((t, j) => { b.shape('rect', c[0], 62 + j * 76, 124, 64, 'n'); b.txt(c[0] + 62, 94 + j * 76, t, 'n', {k: .9}); }); });
+  b.ln('M138 29H146'); b.ln('M276 29H284');
+});
+VIS.event = draw('Event Storming', b => {
+  b.ln('M10 22H410'); b.txt(404, 12, 'Zeit', null, {k: .72, w: 500, a: 'end'});
+  ['Tour\nangelegt', 'Fahrzeug\nzugewiesen', 'Konflikt\nerkannt', 'Tour\nfreigegeben', 'Fahrer\nbenachrichtigt'].forEach((t, i) => { b.shape('rect', 10 + i * 82, 38, 74, 50, 'c'); b.txt(47 + i * 82, 63, t, 'c', {k: .72}); });
+  [[0, 'Tour\nanlegen'], [1, 'Fahrzeug\nwählen'], [3, 'Tour\nfreigeben']].forEach(c => { b.shape('rect', 10 + c[0] * 82, 108, 74, 46, 'a'); b.txt(47 + c[0] * 82, 131, c[1], 'a', {k: .72}); b.shape('pill', 10 + c[0] * 82 + 2, 170, 70, 26, 'n'); b.txt(47 + c[0] * 82, 183, 'Disponentin', 'n', {k: .62}); });
+  b.shape('rect', 174, 108, 74, 60, 'b'); b.txt(211, 138, 'Regel:\nein Fahrzeug\npro Tag', 'b', {k: .66});
+});
+VIS.domaene = draw('Domänenmodell', b => {
+  const cls = (x, y, w, h, t, a, r) => { b.shape('rect', x, y, w, h, r || 'n'); b.txt(x + w / 2, y + 16, t, r || 'n', {k: .95}); b.plain(`M${x + 8} ${y + 28}H${x + w - 8}`); b.txt(x + 12, y + 44, a, r || 'n', {a: 'start', k: .74, w: 500}); };
+  b.plain('M124 52L160 98'); b.plain('M124 170L160 130'); b.plain('M260 98L300 52'); b.plain('M353 76V150');
+  cls(14, 14, 110, 60, 'Fahrzeug', 'Kennzeichen'); cls(14, 150, 110, 60, 'Fahrer', 'Name'); cls(160, 80, 100, 64, 'Tour', 'Datum', 'a');
+  cls(300, 14, 106, 60, 'Stopp', 'Reihenfolge'); cls(300, 150, 106, 60, 'Auftrag', 'Nummer');
+  [[132, 62, '1'], [150, 96, 'n'], [132, 158, '1'], [152, 138, 'n'], [264, 90, '1'], [292, 66, 'n'], [361, 92, '1'], [361, 138, 'n']].forEach(l => b.txt(l[0], l[1], l[2], null, {k: .8, w: 700}));
+});

@@ -1,9 +1,11 @@
 ---
 name: User Story Mapping
+kurz: Story Mapping
 kategorie: planen
 vorgehen: agil
 phase: planen
 typ: Planungsmethode
+form: modell
 aufwand: 2 bis 4 Stunden
 werkzeuge: [Miro, Mural, StoriesOnBoard]
 grafik: storymap

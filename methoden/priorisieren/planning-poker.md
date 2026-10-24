@@ -1,9 +1,11 @@
 ---
 name: Planning Poker
+kurz: Planning Poker
 kategorie: priorisieren
 vorgehen: agil
 phase: bewerten
 typ: Schätzung
+form: methode
 aufwand: 2 bis 5 Min. pro Story
 werkzeuge: [Karten, Planning-Poker-App, Jira-Plugin]
 grafik: poker

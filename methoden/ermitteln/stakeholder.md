@@ -1,9 +1,11 @@
 ---
 name: Stakeholder-Analyse
+kurz: Stakeholder
 kategorie: ermitteln
 vorgehen: beide
 phase: verstehen
 typ: Analyse
+form: methode
 aufwand: 1 bis 2 Stunden, laufend aktualisieren
 werkzeuge: [Matrix (Einfluss/Interesse), Miro, Excel]
 reihenfolge: 4

@@ -5,19 +5,21 @@ import { join, basename, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const KAT = { ermitteln: 'erm', dokumentieren: 'dok', modellieren: 'mod', priorisieren: 'prio', planen: 'plan', absichern: 'qs' };
+const KAT = { ermitteln: 'erm', dokumentieren: 'dok', modellieren: 'mod', priorisieren: 'prio', planen: 'plan', absichern: 'qs', werkzeuge: 'tool' };
 const KAT_ORDER = Object.keys(KAT);
 const VORGEHEN = ['klassisch', 'agil', 'beide'];
 const PHASEN = ['verstehen', 'ermitteln', 'spezifizieren', 'bewerten', 'planen', 'absichern'];
+const FORMEN = ['methode', 'artefakt', 'modell', 'meeting', 'werkzeug'];
 const ARTEN = { vorher: 'vorher', danach: 'danach', ergaenzt: 'ergaenzt', 'ergänzt': 'ergaenzt', alternative: 'alternative' };
 const STATUS = ['entwurf', 'geprueft', 'veroeffentlicht'];
-const LINKS_MIN = 3, LINKS_MAX = 7;
+const LINKS_MIN = 3, LINKS_MAX = 7, TOOL_MIN = 2;
 
-const errors = [], warnings = [];
+const errors = [];
 const err = (id, msg) => errors.push(`${id}: ${msg}`);
 
 function parseFile(file, folder) {
   const id = basename(file, '.md');
+  const isTool = folder === 'werkzeuge';
   const raw = readFileSync(file, 'utf8').replace(/\r\n/g, '\n');
   const fm = raw.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
   if (!fm) { err(id, 'Front Matter fehlt (--- ... ---)'); return null; }
@@ -36,12 +38,14 @@ function parseFile(file, folder) {
   }
   const beispielKey = Object.keys(sec).find(k => k.startsWith('Beispiel'));
   const lines = key => (sec[key] || '').split('\n');
+  const numbered = key => lines(key).map(l => l.match(/^\d+\.\s+(.*)/)).filter(Boolean).map(x => x[1]);
+  const bullets = key => lines(key).map(l => l.match(/^-\s+(.*)/)).filter(Boolean).map(x => x[1]);
 
   const m = {
-    id, n: meta.name, c: KAT[meta.kategorie], m: meta.vorgehen, ph: meta.phase, t: meta.typ,
-    k: intro, aufwand: meta.aufwand,
-    ab: lines('Ablauf').map(l => l.match(/^\d+\.\s+(.*)/)).filter(Boolean).map(x => x[1]),
-    re: lines('Regeln').map(l => l.match(/^-\s+(.*)/)).filter(Boolean).map(x => x[1]),
+    id, n: meta.name, c: KAT[meta.kategorie], f: meta.form, m: meta.vorgehen, ph: isTool ? 'alle' : meta.phase, t: meta.typ,
+    kz: meta.kurz || '', k: intro, aufwand: meta.aufwand || '',
+    ab: isTool ? bullets('Einsatz') : numbered('Ablauf'),
+    re: isTool ? bullets('Grenzen') : bullets('Regeln'),
     bsp: beispielKey ? { t: beispielKey.replace(/^Beispiel:?\s*/, '') || 'Beispiel', x: sec[beispielKey] } : null,
     li: [],
     tools: (meta.werkzeuge || '').replace(/^\[|\]$/g, '').split(',').map(s => s.trim()).filter(Boolean),
@@ -60,14 +64,23 @@ function parseFile(file, folder) {
   if (!meta.name) err(id, 'name fehlt');
   if (!KAT[meta.kategorie]) err(id, `kategorie «${meta.kategorie}» unbekannt`);
   else if (meta.kategorie !== folder) err(id, `liegt im Ordner «${folder}», kategorie ist «${meta.kategorie}»`);
+  if (!FORMEN.includes(m.f)) err(id, `form «${m.f}» unbekannt (${FORMEN.join(', ')})`);
+  else if (isTool !== (m.f === 'werkzeug')) err(id, isTool ? 'Werkzeuge haben form: werkzeug' : 'form: werkzeug ist nur im Ordner werkzeuge erlaubt');
   if (!VORGEHEN.includes(m.m)) err(id, `vorgehen «${m.m}» unbekannt`);
-  if (!PHASEN.includes(m.ph)) err(id, `phase «${m.ph}» unbekannt`);
+  if (!isTool && !PHASEN.includes(m.ph)) err(id, `phase «${m.ph}» unbekannt`);
   if (!STATUS.includes(m.s)) err(id, `status «${m.s}» unbekannt`);
-  for (const f of ['typ', 'aufwand']) if (!meta[f]) err(id, `${f} fehlt`);
+  if (!meta.typ) err(id, 'typ fehlt');
   if (!intro) err(id, 'Einleitungstext fehlt');
-  if (!m.ab.length) err(id, 'Abschnitt «Ablauf» fehlt oder leer');
-  if (!m.re.length) err(id, 'Abschnitt «Regeln» fehlt oder leer');
-  if (!m.bsp || !m.bsp.x) err(id, 'Abschnitt «Beispiel» fehlt oder leer');
+  if (isTool) {
+    if (!m.ab.length) err(id, 'Abschnitt «Einsatz» fehlt oder leer');
+    if (!m.re.length) err(id, 'Abschnitt «Grenzen» fehlt oder leer');
+    if (m.li.length) err(id, 'Werkzeuge haben keine eigenen Verknüpfungen, sie ergeben sich aus dem Feld werkzeuge der Methoden');
+  } else {
+    if (!meta.aufwand) err(id, 'aufwand fehlt');
+    if (!m.ab.length) err(id, 'Abschnitt «Ablauf» fehlt oder leer');
+    if (!m.re.length) err(id, 'Abschnitt «Regeln» fehlt oder leer');
+    if (!m.bsp || !m.bsp.x) err(id, 'Abschnitt «Beispiel» fehlt oder leer');
+  }
   return m;
 }
 
@@ -84,24 +97,30 @@ for (const folder of readdirSync(join(ROOT, 'methoden'))) {
 
 const ids = new Map();
 for (const m of all) { if (ids.has(m.id)) err(m.id, 'ID kommt doppelt vor'); ids.set(m.id, m); }
-const incoming = new Map();
-for (const m of all) {
+const methods = all.filter(m => m.f !== 'werkzeug'), tools = all.filter(m => m.f === 'werkzeug');
+for (const m of methods) {
   if (m.li.length < LINKS_MIN || m.li.length > LINKS_MAX) err(m.id, `${m.li.length} Verknüpfungen, erlaubt sind ${LINKS_MIN} bis ${LINKS_MAX}`);
   for (const [to] of m.li) {
     if (!ids.has(to)) err(m.id, `Verknüpfung zu unbekannter Methode «${to}»`);
     else if (to === m.id) err(m.id, 'Verknüpfung auf sich selbst');
-    else incoming.set(to, (incoming.get(to) || 0) + 1);
+    else if (ids.get(to).f === 'werkzeug') err(m.id, `«${to}» ist ein Werkzeug, Werkzeuge werden über das Feld werkzeuge verbunden`);
   }
 }
-for (const m of all) if (!incoming.has(m.id)) err(m.id, 'Keine andere Methode verweist auf diese');
+// Werkzeuge: Zuordnung über den Namen im Feld werkzeuge der Methoden
+const norm = s => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+for (const t of tools) {
+  t.sp = methods.filter(m => m.tools.some(x => norm(x) === norm(t.n))).map(m => m.id);
+  if (t.sp.length < TOOL_MIN) err(t.id, `unterstützt nur ${t.sp.length} Methoden, mindestens ${TOOL_MIN} nötig (Name im Feld werkzeuge der Methoden eintragen)`);
+}
 
 if (errors.length) {
   console.error(`\n${errors.length} Fehler:\n- ` + errors.join('\n- '));
   process.exit(1);
 }
 
-all.sort((a, b) => KAT_ORDER.indexOf(Object.keys(KAT).find(k => KAT[k] === a.c)) - KAT_ORDER.indexOf(Object.keys(KAT).find(k => KAT[k] === b.c)) || a.o - b.o || a.n.localeCompare(b.n, 'de'));
+const ki = m => KAT_ORDER.indexOf(Object.keys(KAT).find(k => KAT[k] === m.c));
+all.sort((a, b) => ki(a) - ki(b) || a.o - b.o || a.n.localeCompare(b.n, 'de'));
 for (const m of all) delete m.o;
 writeFileSync(join(ROOT, 'data', 'catalog.js'),
   '// Erzeugt von tools/build.mjs aus methoden/*/*.md. Nicht von Hand bearbeiten.\nconst M = ' + JSON.stringify(all, null, 1) + ';\n');
-console.log(`${all.length} Methoden geschrieben (${all.filter(m => m.s === 'entwurf').length} Entwurf).`);
+console.log(`${methods.length} Methoden und ${tools.length} Werkzeuge geschrieben (${all.filter(m => m.s === 'entwurf').length} Entwurf).`);

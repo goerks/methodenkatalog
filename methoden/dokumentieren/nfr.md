@@ -1,9 +1,11 @@
 ---
 name: Qualitätsanforderungen (NFR)
+kurz: Qualität (NFR)
 kategorie: dokumentieren
 vorgehen: beide
 phase: spezifizieren
 typ: Anforderungsart
+form: artefakt
 aufwand: 1 bis 3 Stunden je Themenfeld
 werkzeuge: [ISO 25010, Planguage, Quality Attribute Workshop]
 reihenfolge: 5

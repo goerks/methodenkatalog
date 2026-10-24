@@ -1,9 +1,11 @@
 ---
 name: Zustandsdiagramm
+kurz: Zustandsdiagramm
 kategorie: modellieren
 vorgehen: klassisch
 phase: spezifizieren
 typ: Modell
+form: modell
 aufwand: 30 Min.
 werkzeuge: [draw.io, PlantUML, Enterprise Architect]
 reihenfolge: 5

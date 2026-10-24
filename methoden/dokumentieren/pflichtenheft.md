@@ -1,9 +1,11 @@
 ---
 name: Lastenheft / Pflichtenheft
+kurz: Pflichtenheft
 kategorie: dokumentieren
 vorgehen: klassisch
 phase: spezifizieren
 typ: Spezifikationsdokument
+form: artefakt
 aufwand: Tage bis Wochen
 werkzeuge: [Word, Confluence, Doors, Polarion]
 reihenfolge: 6

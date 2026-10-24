@@ -1,9 +1,11 @@
 ---
 name: Use Cases
+kurz: Use Cases
 kategorie: dokumentieren
 vorgehen: klassisch
 phase: spezifizieren
 typ: Anforderungsformat
+form: artefakt
 aufwand: 30 bis 90 Min. pro Use Case
 werkzeuge: [Word-Vorlage, Enterprise Architect, Confluence]
 grafik: usecase-text

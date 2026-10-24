@@ -1,9 +1,11 @@
 ---
 name: Änderungsmanagement
+kurz: Änderungen
 kategorie: absichern
 vorgehen: klassisch
 phase: absichern
 typ: Prozess
+form: methode
 aufwand: Je Antrag 30 Min. bis 2 Stunden
 werkzeuge: [Jira, ServiceNow, Excel]
 reihenfolge: 4

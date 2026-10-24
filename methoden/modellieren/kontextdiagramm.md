@@ -1,9 +1,11 @@
 ---
 name: Kontextdiagramm
+kurz: Kontextdiagramm
 kategorie: modellieren
 vorgehen: beide
 phase: verstehen
 typ: Modell
+form: modell
 aufwand: 30 bis 60 Min.
 werkzeuge: [draw.io, Miro, PlantUML]
 grafik: context

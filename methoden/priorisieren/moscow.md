@@ -1,9 +1,11 @@
 ---
 name: MoSCoW-Priorisierung
+kurz: MoSCoW
 kategorie: priorisieren
 vorgehen: beide
 phase: bewerten
 typ: Priorisierung
+form: methode
 aufwand: 1 bis 2 Stunden
 werkzeuge: [Miro, Excel, Jira-Label]
 grafik: moscow

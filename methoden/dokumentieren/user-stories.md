@@ -1,9 +1,11 @@
 ---
 name: User Stories
+kurz: User Stories
 kategorie: dokumentieren
 vorgehen: agil
 phase: spezifizieren
 typ: Anforderungsformat
+form: artefakt
 aufwand: 5 bis 15 Min. pro Story
 werkzeuge: [Jira, Azure DevOps, Trello, Haftnotizen]
 grafik: story

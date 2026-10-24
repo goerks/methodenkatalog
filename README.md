@@ -57,3 +57,12 @@ Der Workflow `.github/workflows/pages.yml` prüft und baut den Katalog bei jedem
 Einmalig einstellen: Repo-Einstellungen, Bereich Pages, Source auf **GitHub Actions** setzen.
 Die Seite ist danach unter `https://<konto>.github.io/methodenkatalog/` erreichbar. Der Lauf ist unter Actions sichtbar. Schlägt der Prüfer an, wird nichts veröffentlicht.
 Alternativ ohne Workflow: Source «Deploy from a branch», Branch `main`, Ordner `/ (root)`.
+
+
+## Stand 0.2: Wissenslandkarte
+
+- Startseite ist die **Wissenslandkarte**: Methoden als Punkte, organisch angeordnet (Kräftemodell in `js/graph.js`). Stark vernetzte Methoden liegen zentral. Farbe = Phase, Form = Typ.
+- Neues Feld `form` (methode, artefakt, modell, meeting, werkzeug) und optional `kurz` (Kurzbezeichnung für die Karte).
+- Werkzeuge liegen in `methoden/werkzeuge/`, haben keine eigenen Verknüpfungen und ergeben sich aus dem Feld `werkzeuge` der Methoden (mindestens zwei Methoden je Werkzeug).
+- Rückverweise entstehen automatisch aus den Verknüpfungen (`js/core.js`).
+- Dateien: `js/core.js` (Modell, Filter), `js/graph.js` (Karte), `js/app.js` (Ansichten), `js/visuals.js` (Grafiken).

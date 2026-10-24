@@ -1,9 +1,11 @@
 ---
 name: Backlog Refinement
+kurz: Refinement
 kategorie: planen
 vorgehen: agil
 phase: planen
 typ: Meeting
+form: meeting
 aufwand: 1 bis 2 Stunden pro Woche
 werkzeuge: [Jira, Miro, Planning-Poker-App]
 reihenfolge: 2

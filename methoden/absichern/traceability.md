@@ -1,9 +1,11 @@
 ---
 name: Traceability-Matrix
+kurz: Traceability
 kategorie: absichern
 vorgehen: klassisch
 phase: absichern
 typ: Verwaltung
+form: artefakt
 aufwand: Laufend
 werkzeuge: [Doors, Polarion, Jira, Excel]
 reihenfolge: 3

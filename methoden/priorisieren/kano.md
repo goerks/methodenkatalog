@@ -1,9 +1,11 @@
 ---
 name: Kano-Modell
+kurz: Kano
 kategorie: priorisieren
 vorgehen: beide
 phase: bewerten
 typ: Priorisierung
+form: methode
 aufwand: 2 bis 4 Stunden mit Umfrage
 werkzeuge: [Umfrage-Tool, Excel]
 reihenfolge: 2

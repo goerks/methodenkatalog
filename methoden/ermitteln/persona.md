@@ -1,9 +1,11 @@
 ---
 name: Persona
+kurz: Persona
 kategorie: ermitteln
 vorgehen: agil
 phase: verstehen
 typ: Nutzerprofil
+form: artefakt
 aufwand: 2 bis 3 Stunden pro Persona
 werkzeuge: [Persona-Vorlage, Miro, Figma]
 reihenfolge: 5

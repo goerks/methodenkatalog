@@ -1,9 +1,11 @@
 ---
 name: Review / Inspektion
+kurz: Review
 kategorie: absichern
 vorgehen: beide
 phase: absichern
 typ: Prüfung
+form: meeting
 aufwand: 1 bis 2 Stunden
 werkzeuge: [Checkliste, Confluence, Jira]
 reihenfolge: 1

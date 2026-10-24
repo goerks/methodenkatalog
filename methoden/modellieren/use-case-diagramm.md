@@ -1,9 +1,11 @@
 ---
 name: Use-Case-Diagramm
+kurz: Use-Case-Diagr.
 kategorie: modellieren
 vorgehen: klassisch
 phase: spezifizieren
 typ: Modell
+form: modell
 aufwand: 30 Min.
 werkzeuge: [draw.io, PlantUML, Enterprise Architect]
 grafik: usecase

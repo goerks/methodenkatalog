@@ -1,9 +1,11 @@
 ---
 name: Story Points
+kurz: Story Points
 kategorie: priorisieren
 vorgehen: agil
 phase: bewerten
 typ: Schätzeinheit
+form: methode
 aufwand: Laufend
 werkzeuge: [Jira, Azure DevOps, Burndown-Chart]
 reihenfolge: 5

@@ -1,9 +1,11 @@
 ---
 name: Prototyping
+kurz: Prototyping
 kategorie: absichern
 vorgehen: beide
 phase: absichern
 typ: Validierung
+form: methode
 aufwand: Stunden bis Tage
 werkzeuge: [Figma, Balsamiq, Papier]
 reihenfolge: 2

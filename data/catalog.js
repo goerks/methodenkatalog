@@ -4,9 +4,11 @@ const M = [
   "id": "interview",
   "n": "Interview",
   "c": "erm",
+  "f": "methode",
   "m": "beide",
   "ph": "ermitteln",
   "t": "Einzelgespräch",
+  "kz": "Interview",
   "k": "Strukturiertes Einzelgespräch, um Wünsche, Probleme und Rahmenbedingungen einer Person aus erster Hand zu erfahren.",
   "aufwand": "30 bis 60 Min. pro Gespräch",
   "ab": [
@@ -58,9 +60,11 @@ const M = [
   "id": "workshop",
   "n": "Anforderungsworkshop",
   "c": "erm",
+  "f": "meeting",
   "m": "beide",
   "ph": "ermitteln",
   "t": "Gruppenarbeit",
+  "kz": "Workshop",
   "k": "Moderierte Sitzung mit mehreren Beteiligten, in der Anforderungen gemeinsam gesammelt, geklärt und abgestimmt werden.",
   "aufwand": "2 bis 4 Stunden, Vorbereitung 1 Tag",
   "ab": [
@@ -113,9 +117,11 @@ const M = [
   "id": "beobachtung",
   "n": "Beobachtung (Contextual Inquiry)",
   "c": "erm",
+  "f": "methode",
   "m": "beide",
   "ph": "ermitteln",
   "t": "Feldstudie",
+  "kz": "Beobachtung",
   "k": "Anwender bei der echten Arbeit beobachten und dabei Fragen stellen. Zeigt, was Menschen tun, nicht nur, was sie sagen.",
   "aufwand": "Halber bis ganzer Tag pro Person",
   "ab": [
@@ -162,9 +168,11 @@ const M = [
   "id": "stakeholder",
   "n": "Stakeholder-Analyse",
   "c": "erm",
+  "f": "methode",
   "m": "beide",
   "ph": "verstehen",
   "t": "Analyse",
+  "kz": "Stakeholder",
   "k": "Identifiziert alle Personen und Gruppen mit Einfluss oder Interesse am Vorhaben und legt fest, wie man mit ihnen umgeht.",
   "aufwand": "1 bis 2 Stunden, laufend aktualisieren",
   "ab": [
@@ -216,9 +224,11 @@ const M = [
   "id": "persona",
   "n": "Persona",
   "c": "erm",
+  "f": "artefakt",
   "m": "agil",
   "ph": "verstehen",
   "t": "Nutzerprofil",
+  "kz": "Persona",
   "k": "Fiktive, aber datenbasierte Beschreibung einer typischen Nutzerin mit Zielen, Frust und Kontext. Hilft dem Team, für echte Menschen zu entscheiden.",
   "aufwand": "2 bis 3 Stunden pro Persona",
   "ab": [
@@ -262,12 +272,321 @@ const M = [
   "s": "entwurf"
  },
  {
+  "id": "fragebogen",
+  "n": "Fragebogen und Umfrage",
+  "c": "erm",
+  "f": "methode",
+  "m": "beide",
+  "ph": "ermitteln",
+  "t": "Befragung",
+  "kz": "Fragebogen",
+  "k": "Standardisierte Fragen an viele Personen, um Bedürfnisse, Häufigkeiten und Meinungen zahlenmässig zu erfassen.",
+  "aufwand": "1 bis 3 Tage",
+  "ab": [
+   "Ziel und Zielgruppe festlegen",
+   "Fragen formulieren (kurz, eindeutig, eine Aussage je Frage)",
+   "Mit wenigen Personen testen",
+   "Versenden und Rücklauf verfolgen",
+   "Auswerten und Ergebnisse mit Interviews absichern"
+  ],
+  "re": [
+   "Höchstens 10 Minuten Bearbeitungszeit",
+   "Keine Suggestivfragen",
+   "Offene Fragen sparsam einsetzen"
+  ],
+  "bsp": {
+   "t": "Befragung Disponenten",
+   "x": "«Wie oft müssen Sie eine Tour nach dem Versand ändern?» täglich, wöchentlich, selten. 62 % antworten täglich. Folge: Änderungsfunktion bekommt hohe Priorität."
+  },
+  "li": [
+   [
+    "stakeholder",
+    "vorher",
+    "Zielgruppe bestimmen."
+   ],
+   [
+    "interview",
+    "alternative",
+    "Interview bei wenigen, Fragebogen bei vielen Personen."
+   ],
+   [
+    "kano",
+    "ergaenzt",
+    "Die Kano-Befragung ist ein spezieller Fragebogen."
+   ],
+   [
+    "persona",
+    "danach",
+    "Daten zu Personas verdichten."
+   ],
+   [
+    "dokumentenanalyse",
+    "ergaenzt",
+    "Dokumente und Befragung ergänzen sich."
+   ]
+  ],
+  "tools": [
+   "Umfrage-Tool",
+   "Excel"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "swot",
+  "n": "SWOT-Analyse",
+  "c": "erm",
+  "f": "methode",
+  "m": "beide",
+  "ph": "verstehen",
+  "t": "Analyse",
+  "kz": "SWOT",
+  "k": "Stellt Stärken, Schwächen, Chancen und Risiken eines Vorhabens, Produkts oder Bereichs in vier Feldern gegenüber und zeigt, wo Handlungsbedarf besteht.",
+  "aufwand": "1 bis 2 Stunden",
+  "ab": [
+   "Untersuchungsgegenstand und Zeithorizont festlegen",
+   "Stärken und Schwächen (intern) sammeln",
+   "Chancen und Risiken (extern) sammeln",
+   "Punkte gewichten und die wichtigsten je Feld auswählen",
+   "Daraus Massnahmen und offene Fragen ableiten"
+  ],
+  "re": [
+   "Intern und extern sauber trennen",
+   "Pro Feld höchstens fünf Punkte",
+   "Aussagen mit Beobachtung oder Zahl belegen"
+  ],
+  "bsp": {
+   "t": "SWOT für ein Kundenportal",
+   "x": "Stärke: eigene Kundendaten. Schwäche: veraltete Schnittstellen. Chance: Selbstbedienung senkt Supportkosten. Risiko: Wettbewerber startet früher."
+  },
+  "li": [
+   [
+    "stakeholder",
+    "ergaenzt",
+    "Einfluss der Stakeholder fliesst in Chancen und Risiken ein."
+   ],
+   [
+    "workshop",
+    "ergaenzt",
+    "Im Workshop gemeinsam erarbeiten."
+   ],
+   [
+    "business-model-canvas",
+    "ergaenzt",
+    "Das Geschäftsmodell zeigt, wo Stärken wirken."
+   ],
+   [
+    "produktvision",
+    "danach",
+    "Aus der Lage ergibt sich die Vision."
+   ],
+   [
+    "risikoanalyse",
+    "danach",
+    "Bedrohungen werden als Risiken weiterverfolgt."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Excel"
+  ],
+  "s": "entwurf",
+  "vis": "swot"
+ },
+ {
+  "id": "five-whys",
+  "n": "5 Whys",
+  "c": "erm",
+  "f": "methode",
+  "m": "beide",
+  "ph": "verstehen",
+  "t": "Ursachenanalyse",
+  "kz": "5 Whys",
+  "k": "Fragt fünfmal nacheinander nach dem Warum, um von einem Symptom zur eigentlichen Ursache eines Problems zu kommen.",
+  "aufwand": "15 bis 30 Min.",
+  "ab": [
+   "Problem in einem Satz beschreiben",
+   "Fragen: Warum ist das passiert?",
+   "Zur Antwort erneut Warum fragen",
+   "Wiederholen, bis eine beeinflussbare Ursache erreicht ist",
+   "Massnahme gegen die Ursache festlegen und prüfen"
+  ],
+  "re": [
+   "Von Fakten ausgehen, nicht von Vermutungen",
+   "Nach Prozessen fragen, nicht nach Schuldigen",
+   "Bei mehreren Ursachen mehrere Ketten bilden"
+  ],
+  "bsp": {
+   "t": "Falsch zugewiesene Touren",
+   "x": "1 Fahrzeug doppelt vergeben. 2 Excel-Liste war nicht aktuell. 3 Änderungen kamen per Telefon. 4 Es gibt keinen gemeinsamen Stand. 5 Kein System für Tourenänderungen. Ursache: fehlendes zentrales System."
+  },
+  "li": [
+   [
+    "beobachtung",
+    "vorher",
+    "Beobachtete Probleme hinterfragen."
+   ],
+   [
+    "interview",
+    "ergaenzt",
+    "Im Interview nachfragen."
+   ],
+   [
+    "workshop",
+    "ergaenzt",
+    "Im Workshop gemeinsam durchführen."
+   ],
+   [
+    "risikoanalyse",
+    "danach",
+    "Ursachen fliessen in die Risiken ein."
+   ],
+   [
+    "user-stories",
+    "danach",
+    "Ursachen führen zu besseren Stories."
+   ]
+  ],
+  "tools": [
+   "Miro"
+  ],
+  "s": "entwurf",
+  "vis": "fivewhys"
+ },
+ {
+  "id": "dokumentenanalyse",
+  "n": "Dokumentenanalyse",
+  "c": "erm",
+  "f": "methode",
+  "m": "klassisch",
+  "ph": "ermitteln",
+  "t": "Analyse",
+  "kz": "Dokumenten-analyse",
+  "k": "Wertet vorhandene Unterlagen wie Handbücher, Verträge, Berichte und Altsysteme aus, um Anforderungen, Regeln und Begriffe zu finden.",
+  "aufwand": "Stunden bis Tage",
+  "ab": [
+   "Relevante Dokumente sammeln und nach Aktualität ordnen",
+   "Dokumente sichten und Auszüge markieren",
+   "Anforderungen, Regeln und Begriffe herausschreiben",
+   "Widersprüche und Lücken als Fragen notieren",
+   "Offene Fragen in Interviews klären"
+  ],
+  "re": [
+   "Quelle jeder Aussage festhalten",
+   "Alte Dokumente nicht ungeprüft übernehmen",
+   "Lücken sichtbar machen"
+  ],
+  "bsp": {
+   "t": "Altes Bedienhandbuch",
+   "x": "Das Handbuch nennt eine Regel: Eine Tour darf höchstens 9 Stunden dauern. Das Interview zeigt, dass heute 10 Stunden gelten. Regel wird angepasst und mit Datum vermerkt."
+  },
+  "li": [
+   [
+    "stakeholder",
+    "vorher",
+    "Dokumentenbesitzer finden."
+   ],
+   [
+    "interview",
+    "danach",
+    "Offene Fragen im Interview klären."
+   ],
+   [
+    "glossar",
+    "danach",
+    "Begriffe sammeln."
+   ],
+   [
+    "geschaeftsregeln",
+    "danach",
+    "Regeln aus Dokumenten ableiten."
+   ],
+   [
+    "fragebogen",
+    "ergaenzt",
+    "Dokumente und Befragung ergänzen sich."
+   ]
+  ],
+  "tools": [
+   "Confluence",
+   "Excel"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "event-storming",
+  "n": "Event Storming",
+  "c": "erm",
+  "f": "meeting",
+  "m": "agil",
+  "ph": "ermitteln",
+  "t": "Workshop",
+  "kz": "Event Storming",
+  "k": "Ein Workshop, in dem Fachleute und Entwicklung alle Ereignisse eines Geschäftsbereichs auf einer langen Zeitachse sammeln und daraus Zusammenhänge ableiten.",
+  "aufwand": "2 bis 4 Stunden",
+  "ab": [
+   "Grosse Fläche und orange Haftnotizen bereitstellen",
+   "Ereignisse in der Vergangenheitsform sammeln («Tour freigegeben»)",
+   "Ereignisse auf der Zeitachse ordnen",
+   "Befehle, Akteure und Regeln ergänzen",
+   "Offene Fragen und Bereichsgrenzen markieren"
+  ],
+  "re": [
+   "Ereignisse in der Vergangenheit formulieren",
+   "Fachleute und Entwicklung arbeiten gemeinsam",
+   "Unklarheiten sofort als Frage festhalten"
+  ],
+  "bsp": {
+   "t": "Ereignisse der Tourenplanung",
+   "x": "Tour angelegt → Fahrzeug zugewiesen → Konflikt erkannt → Tour freigegeben → Fahrer benachrichtigt."
+  },
+  "li": [
+   [
+    "workshop",
+    "ergaenzt",
+    "Ein besonderer Workshop-Typ."
+   ],
+   [
+    "domaenenmodell",
+    "danach",
+    "Begriffe und Zusammenhänge als Modell darstellen."
+   ],
+   [
+    "aktivitaetsdiagramm",
+    "danach",
+    "Ablauf als Diagramm darstellen."
+   ],
+   [
+    "user-stories",
+    "danach",
+    "Ereignisse werden zu Stories."
+   ],
+   [
+    "bpmn",
+    "alternative",
+    "BPMN ist formaler, Event Storming schneller."
+   ],
+   [
+    "glossar",
+    "danach",
+    "Gemeinsame Begriffe festhalten."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Haftnotizen"
+  ],
+  "s": "entwurf",
+  "vis": "event"
+ },
+ {
   "id": "user-stories",
   "n": "User Stories",
   "c": "dok",
+  "f": "artefakt",
   "m": "agil",
   "ph": "spezifizieren",
   "t": "Anforderungsformat",
+  "kz": "User Stories",
   "k": "Kurze Anforderung aus Sicht des Nutzers im Format «Als ... möchte ich ..., damit ...». Dient als Gesprächsanlass, nicht als vollständige Spezifikation.",
   "aufwand": "5 bis 15 Min. pro Story",
   "ab": [
@@ -337,9 +656,11 @@ const M = [
   "id": "use-cases",
   "n": "Use Cases",
   "c": "dok",
+  "f": "artefakt",
   "m": "klassisch",
   "ph": "spezifizieren",
   "t": "Anforderungsformat",
+  "kz": "Use Cases",
   "k": "Beschreibt die Interaktion zwischen Akteur und System zu einem Ziel, mit Hauptablauf, Alternativen und Fehlerfällen.",
   "aufwand": "30 bis 90 Min. pro Use Case",
   "ab": [
@@ -397,9 +718,11 @@ const M = [
   "id": "akzeptanzkriterien",
   "n": "Akzeptanzkriterien (Gherkin)",
   "c": "dok",
+  "f": "artefakt",
   "m": "agil",
   "ph": "spezifizieren",
   "t": "Testbare Bedingungen",
+  "kz": "Akzeptanzkriterien",
   "k": "Überprüfbare Bedingungen, unter denen eine Anforderung als erfüllt gilt. Häufig im Format Gegeben / Wenn / Dann (Gherkin).",
   "aufwand": "10 bis 20 Min. pro Story",
   "ab": [
@@ -453,9 +776,11 @@ const M = [
   "id": "dor-dod",
   "n": "Definition of Ready / Done",
   "c": "dok",
+  "f": "artefakt",
   "m": "agil",
   "ph": "spezifizieren",
   "t": "Qualitätsvereinbarung",
+  "kz": "DoR / DoD",
   "k": "Zwei Checklisten des Teams: Wann ist eine Story bereit für den Sprint (Ready) und wann gilt sie als fertig (Done).",
   "aufwand": "1 Stunde zur Einführung, danach laufend",
   "ab": [
@@ -507,9 +832,11 @@ const M = [
   "id": "nfr",
   "n": "Qualitätsanforderungen (NFR)",
   "c": "dok",
+  "f": "artefakt",
   "m": "beide",
   "ph": "spezifizieren",
   "t": "Anforderungsart",
+  "kz": "Qualität (NFR)",
   "k": "Nichtfunktionale Anforderungen wie Performance, Sicherheit, Bedienbarkeit oder Verfügbarkeit, messbar formuliert.",
   "aufwand": "1 bis 3 Stunden je Themenfeld",
   "ab": [
@@ -561,9 +888,11 @@ const M = [
   "id": "pflichtenheft",
   "n": "Lastenheft / Pflichtenheft",
   "c": "dok",
+  "f": "artefakt",
   "m": "klassisch",
   "ph": "spezifizieren",
   "t": "Spezifikationsdokument",
+  "kz": "Pflichtenheft",
   "k": "Klassische Dokumentation: Das Lastenheft beschreibt, was der Auftraggeber will, das Pflichtenheft, wie der Auftragnehmer es umsetzt.",
   "aufwand": "Tage bis Wochen",
   "ab": [
@@ -623,12 +952,269 @@ const M = [
   "s": "entwurf"
  },
  {
+  "id": "produktvision",
+  "n": "Produktvision",
+  "c": "dok",
+  "f": "artefakt",
+  "m": "agil",
+  "ph": "verstehen",
+  "t": "Artefakt",
+  "kz": "Vision",
+  "k": "Kurze, überprüfbare Beschreibung, für wen das Produkt welchen Nutzen schafft und was es von Alternativen abhebt. Gibt dem Team Richtung.",
+  "aufwand": "1 bis 2 Stunden",
+  "ab": [
+   "Zielgruppe und ihr Problem benennen",
+   "Kernnutzen und Alleinstellung formulieren",
+   "Erfolgsmasse festlegen",
+   "Vision in ein bis zwei Sätzen aufschreiben (z. B. mit dem Product Vision Board)",
+   "Im Team teilen und bei neuen Erkenntnissen schärfen"
+  ],
+  "re": [
+   "Höchstens zwei Sätze",
+   "Sie nennt eine Zielgruppe und einen Nutzen",
+   "Sie ist so konkret, dass man Ideen dagegen prüfen kann"
+  ],
+  "bsp": {
+   "t": "Vision Tourenplanung",
+   "x": "Für Disponentinnen kleiner Transportfirmen, die täglich mehr als 20 Touren planen, ist die Tourenplanung ein Werkzeug, das Konflikte vor dem Versand findet. Anders als Excel prüft es Fahrzeuge und Fahrer automatisch."
+  },
+  "li": [
+   [
+    "swot",
+    "vorher",
+    "Die Lage liefert die Grundlage."
+   ],
+   [
+    "business-model-canvas",
+    "vorher",
+    "Das Geschäftsmodell definiert Zielgruppe und Nutzen."
+   ],
+   [
+    "impact-mapping",
+    "danach",
+    "Die Vision wird zu einem messbaren Ziel."
+   ],
+   [
+    "roadmap",
+    "danach",
+    "Die Roadmap setzt die Vision in Etappen um."
+   ],
+   [
+    "product-backlog",
+    "danach",
+    "Backlog-Einträge dienen der Vision."
+   ],
+   [
+    "stakeholder",
+    "ergaenzt",
+    "Stakeholder prüfen die Vision."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Confluence"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "glossar",
+  "n": "Glossar",
+  "c": "dok",
+  "f": "artefakt",
+  "m": "beide",
+  "ph": "spezifizieren",
+  "t": "Artefakt",
+  "kz": "Glossar",
+  "k": "Sammlung der Fachbegriffe des Vorhabens mit einheitlicher Definition. Verhindert Missverständnisse zwischen Fachbereich und Entwicklung.",
+  "aufwand": "Laufend",
+  "ab": [
+   "Begriffe aus Interviews, Dokumenten und Workshops sammeln",
+   "Je Begriff eine kurze Definition schreiben",
+   "Synonyme und verbotene Wörter vermerken",
+   "Mit dem Fachbereich abstimmen",
+   "Laufend ergänzen und verlinken"
+  ],
+  "re": [
+   "Ein Begriff hat genau eine Bedeutung",
+   "Definitionen sind kurz und verständlich",
+   "Das Glossar liegt dort, wo alle es sehen"
+  ],
+  "bsp": {
+   "t": "Glossareintrag",
+   "x": "Tour: Fahrt eines Fahrzeugs mit einem Fahrer an einem Tag, bestehend aus mehreren Stopps. Nicht: Auftrag."
+  },
+  "li": [
+   [
+    "dokumentenanalyse",
+    "vorher",
+    "Begriffe stammen aus Dokumenten."
+   ],
+   [
+    "event-storming",
+    "vorher",
+    "Begriffe entstehen im Workshop."
+   ],
+   [
+    "domaenenmodell",
+    "ergaenzt",
+    "Modell und Glossar nutzen dieselben Begriffe."
+   ],
+   [
+    "user-stories",
+    "ergaenzt",
+    "Stories verwenden die Begriffe."
+   ],
+   [
+    "pflichtenheft",
+    "danach",
+    "Als Anhang im Pflichtenheft."
+   ],
+   [
+    "geschaeftsregeln",
+    "ergaenzt",
+    "Regeln stützen sich auf Begriffe."
+   ]
+  ],
+  "tools": [
+   "Confluence",
+   "Wiki"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "geschaeftsregeln",
+  "n": "Geschäftsregeln",
+  "c": "dok",
+  "f": "artefakt",
+  "m": "klassisch",
+  "ph": "spezifizieren",
+  "t": "Artefakt",
+  "kz": "Regeln",
+  "k": "Verbindliche Regeln der Fachseite, etwa Berechnungen, Fristen und Bedingungen. Werden getrennt von Funktionen beschrieben und eindeutig nummeriert.",
+  "aufwand": "Stunden bis Tage",
+  "ab": [
+   "Regeln aus Dokumenten, Gesprächen und Altsystemen sammeln",
+   "Je Regel eine Zeile mit eindeutiger Nummer anlegen",
+   "Als «Wenn ... dann ...» formulieren",
+   "Mit dem Fachbereich bestätigen lassen",
+   "Regeln mit Anforderungen und Tests verknüpfen"
+  ],
+  "re": [
+   "Eine Regel pro Zeile",
+   "Jede Regel hat eine verantwortliche Stelle",
+   "Regeln sind prüfbar, mit konkreten Werten"
+  ],
+  "bsp": {
+   "t": "Regel BR-07",
+   "x": "Wenn eine Tour länger als 10 Stunden dauert, dann muss ein zweiter Fahrer eingeplant werden."
+  },
+  "li": [
+   [
+    "dokumentenanalyse",
+    "vorher",
+    "Regeln stehen oft in Dokumenten."
+   ],
+   [
+    "domaenenmodell",
+    "ergaenzt",
+    "Regeln verbinden die Begriffe des Modells."
+   ],
+   [
+    "glossar",
+    "ergaenzt",
+    "Regeln stützen sich auf Begriffe."
+   ],
+   [
+    "akzeptanzkriterien",
+    "danach",
+    "Regeln werden zu testbaren Kriterien."
+   ],
+   [
+    "pflichtenheft",
+    "danach",
+    "Regeln stehen im Pflichtenheft."
+   ],
+   [
+    "bpmn",
+    "ergaenzt",
+    "Gateways im Prozess folgen den Regeln."
+   ]
+  ],
+  "tools": [
+   "Confluence",
+   "Excel"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "story-splitting",
+  "n": "Story Splitting",
+  "c": "dok",
+  "f": "methode",
+  "m": "agil",
+  "ph": "spezifizieren",
+  "t": "Technik",
+  "kz": "Story Splitting",
+  "k": "Teilt zu grosse User Stories in kleinere auf, die jeweils für sich Nutzen bringen und in einen Sprint passen.",
+  "aufwand": "10 bis 20 Min. pro Story",
+  "ab": [
+   "Zu grosse Story erkennen (z. B. mehr als die Hälfte eines Sprints)",
+   "Möglichen Schnitt wählen (Ablauf, Regel, Daten, Rolle)",
+   "Jede Teilstory so formulieren, dass sie einzeln Nutzen bringt",
+   "Teilstories prüfen (unabhängig, testbar, schätzbar)",
+   "Neu schätzen und priorisieren"
+  ],
+  "re": [
+   "Vertikal schneiden (durch alle Schichten), nicht nach Technik",
+   "Jede Teilstory ist für sich nutzbar",
+   "Den einfachsten durchgängigen Weg zuerst"
+  ],
+  "bsp": {
+   "t": "Tour verwalten (21 Punkte)",
+   "x": "Geteilt in: Tour anlegen, Tour ändern, Tour freigeben, Tour stornieren. Jede Teilstory ist einzeln ausführbar."
+  },
+  "li": [
+   [
+    "user-stories",
+    "vorher",
+    "Zu grosse Stories werden geteilt."
+   ],
+   [
+    "refinement",
+    "ergaenzt",
+    "Das Teilen geschieht im Refinement."
+   ],
+   [
+    "story-mapping",
+    "ergaenzt",
+    "Schnitte entlang der Nutzerreise."
+   ],
+   [
+    "dor-dod",
+    "ergaenzt",
+    "Ready verlangt kleine Stories."
+   ],
+   [
+    "planning-poker",
+    "danach",
+    "Danach neu schätzen."
+   ]
+  ],
+  "tools": [
+   "Jira",
+   "Miro"
+  ],
+  "s": "entwurf"
+ },
+ {
   "id": "aktivitaetsdiagramm",
   "n": "Aktivitätsdiagramm (UML)",
   "c": "mod",
+  "f": "modell",
   "m": "beide",
   "ph": "spezifizieren",
   "t": "Modell",
+  "kz": "Aktivitätsdiagramm",
   "k": "Zeigt einen Ablauf als Folge von Aktionen mit Entscheidungen, Verzweigungen und parallelen Strängen. Ideal für Prozesse und Use-Case-Abläufe.",
   "aufwand": "30 bis 60 Min.",
   "ab": [
@@ -683,9 +1269,11 @@ const M = [
   "id": "use-case-diagramm",
   "n": "Use-Case-Diagramm",
   "c": "mod",
+  "f": "modell",
   "m": "klassisch",
   "ph": "spezifizieren",
   "t": "Modell",
+  "kz": "Use-Case-Diagr.",
   "k": "Übersicht über Akteure und die Funktionen (Use Cases), die das System für sie bereitstellt. Zeigt den Umfang auf einer Seite.",
   "aufwand": "30 Min.",
   "ab": [
@@ -738,9 +1326,11 @@ const M = [
   "id": "bpmn",
   "n": "BPMN-Prozessmodell",
   "c": "mod",
+  "f": "modell",
   "m": "klassisch",
   "ph": "spezifizieren",
   "t": "Modell",
+  "kz": "BPMN",
   "k": "Standardnotation für Geschäftsprozesse mit Pools, Lanes, Ereignissen, Aufgaben und Gateways. Verständlich für Fachbereich und IT.",
   "aufwand": "1 bis 3 Stunden",
   "ab": [
@@ -791,12 +1381,75 @@ const M = [
   "vis": "bpmn"
  },
  {
+  "id": "impact-mapping",
+  "n": "Impact Mapping",
+  "c": "mod",
+  "f": "modell",
+  "m": "agil",
+  "ph": "verstehen",
+  "t": "Modell",
+  "kz": "Impact Mapping",
+  "k": "Verbindet ein Ziel über Akteure und deren gewünschtes Verhalten mit den Lieferobjekten, die dazu beitragen. Zeigt, warum etwas gebaut wird.",
+  "aufwand": "2 bis 3 Stunden",
+  "ab": [
+   "Ziel messbar formulieren (Warum?)",
+   "Akteure sammeln, die das Ziel beeinflussen (Wer?)",
+   "Gewünschte Verhaltensänderung je Akteur beschreiben (Wie?)",
+   "Mögliche Lieferobjekte sammeln (Was?)",
+   "Lieferobjekte nach Wirkung wählen und als Hypothese testen"
+  ],
+  "re": [
+   "Das Ziel steht in der Mitte und ist messbar",
+   "Jedes Lieferobjekt führt über einen Akteur zum Ziel",
+   "Lieferobjekte ohne Wirkungskette entfallen"
+  ],
+  "bsp": {
+   "t": "Ziel: Leerfahrten halbieren",
+   "x": "Akteur Disponentin, Verhalten: plant Touren mit Rückfracht. Lieferobjekt: Vorschlag für Rückfracht."
+  },
+  "li": [
+   [
+    "produktvision",
+    "vorher",
+    "Die Vision liefert das Ziel."
+   ],
+   [
+    "workshop",
+    "vorher",
+    "Im Workshop entwickeln."
+   ],
+   [
+    "stakeholder",
+    "ergaenzt",
+    "Akteure der Map sind Stakeholder."
+   ],
+   [
+    "user-stories",
+    "danach",
+    "Lieferobjekte werden zu User Stories."
+   ],
+   [
+    "story-mapping",
+    "alternative",
+    "Story Map ordnet Stories, Impact Map begründet sie."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "draw.io"
+  ],
+  "s": "entwurf",
+  "vis": "impact"
+ },
+ {
   "id": "kontextdiagramm",
   "n": "Kontextdiagramm",
   "c": "mod",
+  "f": "modell",
   "m": "beide",
   "ph": "verstehen",
   "t": "Modell",
+  "kz": "Kontextdiagramm",
   "k": "Zeigt das System als Black Box mit seinen Nachbarn (Nutzer, Fremdsysteme) und den Datenflüssen. Klärt den Umfang früh.",
   "aufwand": "30 bis 60 Min.",
   "ab": [
@@ -846,12 +1499,75 @@ const M = [
   "vis": "context"
  },
  {
+  "id": "business-model-canvas",
+  "n": "Business Model Canvas",
+  "c": "mod",
+  "f": "modell",
+  "m": "beide",
+  "ph": "verstehen",
+  "t": "Modell",
+  "kz": "Business Canvas",
+  "k": "Beschreibt ein Geschäftsmodell auf einer Seite mit neun Bausteinen, von Kundensegmenten über Nutzenversprechen bis zu Kosten und Erlösen.",
+  "aufwand": "2 bis 3 Stunden",
+  "ab": [
+   "Kundensegmente und Nutzenversprechen klären",
+   "Kanäle und Kundenbeziehungen festhalten",
+   "Schlüsselressourcen, -aktivitäten und -partner ergänzen",
+   "Kostenstruktur und Einnahmequellen ergänzen",
+   "Auf Widersprüche prüfen und Hypothesen markieren"
+  ],
+  "re": [
+   "Bei Kundensegment und Nutzenversprechen beginnen",
+   "Jeder Baustein ist kurz und konkret",
+   "Unsichere Annahmen sichtbar machen und prüfen"
+  ],
+  "bsp": {
+   "t": "Tourenplanung als Dienst",
+   "x": "Kundensegment: Transportfirmen mit 20 bis 200 Fahrzeugen. Nutzen: weniger Leerfahrten. Erlös: monatliche Lizenz pro Fahrzeug."
+  },
+  "li": [
+   [
+    "swot",
+    "ergaenzt",
+    "Zeigt Stärken und Risiken des Modells."
+   ],
+   [
+    "stakeholder",
+    "ergaenzt",
+    "Kunden und Partner sind Stakeholder."
+   ],
+   [
+    "workshop",
+    "vorher",
+    "Im Workshop gemeinsam füllen."
+   ],
+   [
+    "produktvision",
+    "danach",
+    "Das Modell schärft die Vision."
+   ],
+   [
+    "impact-mapping",
+    "danach",
+    "Ziele des Modells in eine Impact Map überführen."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Confluence"
+  ],
+  "s": "entwurf",
+  "vis": "bmc"
+ },
+ {
   "id": "zustandsdiagramm",
   "n": "Zustandsdiagramm",
   "c": "mod",
+  "f": "modell",
   "m": "klassisch",
   "ph": "spezifizieren",
   "t": "Modell",
+  "kz": "Zustandsdiagramm",
   "k": "Zeigt Zustände eines Objekts und die Ereignisse, die zwischen ihnen wechseln. Gut für Lebenszyklen wie Bestellungen oder Tickets.",
   "aufwand": "30 Min.",
   "ab": [
@@ -896,12 +1612,76 @@ const M = [
   "vis": "zustand"
  },
  {
+  "id": "domaenenmodell",
+  "n": "Domänenmodell",
+  "c": "mod",
+  "f": "modell",
+  "m": "beide",
+  "ph": "spezifizieren",
+  "t": "Modell",
+  "kz": "Domänenmodell",
+  "k": "Zeigt die wichtigen Fachbegriffe eines Bereichs als Klassen mit ihren Beziehungen, ohne technische Details. Schafft ein gemeinsames Bild der Fachwelt.",
+  "aufwand": "1 bis 3 Stunden",
+  "ab": [
+   "Zentrale Begriffe aus Glossar und Workshops sammeln",
+   "Begriffe als Kästchen zeichnen",
+   "Beziehungen mit Kardinalität verbinden (1, n)",
+   "Wichtige Attribute ergänzen",
+   "Mit dem Fachbereich auf Stimmigkeit prüfen"
+  ],
+  "re": [
+   "Fachbegriffe verwenden, keine Tabellen- oder Klassennamen der Technik",
+   "Nur das Wichtige zeigen",
+   "Jede Beziehung hat einen Namen und eine Kardinalität"
+  ],
+  "bsp": {
+   "t": "Tourenplanung",
+   "x": "Tour (1) enthält Stopps (n). Eine Tour hat genau ein Fahrzeug und einen Fahrer. Ein Stopp gehört zu einem Auftrag."
+  },
+  "li": [
+   [
+    "glossar",
+    "ergaenzt",
+    "Modell und Glossar nutzen dieselben Begriffe."
+   ],
+   [
+    "event-storming",
+    "vorher",
+    "Ereignisse zeigen die Begriffe."
+   ],
+   [
+    "geschaeftsregeln",
+    "ergaenzt",
+    "Regeln verbinden Begriffe."
+   ],
+   [
+    "zustandsdiagramm",
+    "ergaenzt",
+    "Zustände der Objekte darstellen."
+   ],
+   [
+    "pflichtenheft",
+    "danach",
+    "Als Kapitel Datenmodell einbinden."
+   ]
+  ],
+  "tools": [
+   "draw.io",
+   "PlantUML",
+   "Enterprise Architect"
+  ],
+  "s": "entwurf",
+  "vis": "domaene"
+ },
+ {
   "id": "moscow",
   "n": "MoSCoW-Priorisierung",
   "c": "prio",
+  "f": "methode",
   "m": "beide",
   "ph": "bewerten",
   "t": "Priorisierung",
+  "kz": "MoSCoW",
   "k": "Einteilung von Anforderungen in Must, Should, Could und Won't (diesmal nicht). Einfach und im Workshop schnell anwendbar.",
   "aufwand": "1 bis 2 Stunden",
   "ab": [
@@ -954,9 +1734,11 @@ const M = [
   "id": "kano",
   "n": "Kano-Modell",
   "c": "prio",
+  "f": "methode",
   "m": "beide",
   "ph": "bewerten",
   "t": "Priorisierung",
+  "kz": "Kano",
   "k": "Ordnet Merkmale nach Wirkung auf die Zufriedenheit ein: Basis-, Leistungs- und Begeisterungsfaktoren.",
   "aufwand": "2 bis 4 Stunden mit Umfrage",
   "ab": [
@@ -1008,9 +1790,11 @@ const M = [
   "id": "wsjf",
   "n": "WSJF (Weighted Shortest Job First)",
   "c": "prio",
+  "f": "methode",
   "m": "agil",
   "ph": "bewerten",
   "t": "Priorisierung",
+  "kz": "WSJF",
   "k": "Rechnet die Kosten der Verzögerung gegen die Dauer. Höchster Wert pro Aufwand kommt zuerst.",
   "aufwand": "1 Stunde",
   "ab": [
@@ -1061,9 +1845,11 @@ const M = [
   "id": "planning-poker",
   "n": "Planning Poker",
   "c": "prio",
+  "f": "methode",
   "m": "agil",
   "ph": "bewerten",
   "t": "Schätzung",
+  "kz": "Planning Poker",
   "k": "Teambasierte Schätzmethode: Alle zeigen gleichzeitig eine Karte mit ihrer Schätzung. Abweichungen werden besprochen.",
   "aufwand": "2 bis 5 Min. pro Story",
   "ab": [
@@ -1117,9 +1903,11 @@ const M = [
   "id": "story-points",
   "n": "Story Points",
   "c": "prio",
+  "f": "methode",
   "m": "agil",
   "ph": "bewerten",
   "t": "Schätzeinheit",
+  "kz": "Story Points",
   "k": "Relative Einheit für Grösse und Komplexität einer Story, unabhängig von Stunden. Mit der Velocity wird planbar.",
   "aufwand": "Laufend",
   "ab": [
@@ -1169,12 +1957,80 @@ const M = [
   "s": "entwurf"
  },
  {
+  "id": "risikoanalyse",
+  "n": "Risikoanalyse",
+  "c": "prio",
+  "f": "methode",
+  "m": "beide",
+  "ph": "bewerten",
+  "t": "Analyse",
+  "kz": "Risiken",
+  "k": "Erfasst mögliche Risiken, bewertet Eintrittswahrscheinlichkeit und Auswirkung und legt Gegenmassnahmen fest.",
+  "aufwand": "1 bis 2 Stunden",
+  "ab": [
+   "Risiken sammeln (Workshop, Checkliste)",
+   "Wahrscheinlichkeit und Auswirkung bewerten (z. B. 1 bis 3)",
+   "In der Risikomatrix einordnen",
+   "Gegenmassnahmen und Verantwortliche festlegen",
+   "Regelmässig überprüfen"
+  ],
+  "re": [
+   "Jedes Risiko hat eine verantwortliche Person",
+   "Gegenmassnahme oder bewusste Akzeptanz festhalten",
+   "Hohe Risiken früh angehen"
+  ],
+  "bsp": {
+   "t": "Risiko Schnittstelle ERP",
+   "x": "Wahrscheinlichkeit 3, Auswirkung 3 → hohes Risiko. Massnahme: früh einen Prototyp der Schnittstelle bauen."
+  },
+  "li": [
+   [
+    "swot",
+    "vorher",
+    "Bedrohungen aus der SWOT-Analyse aufnehmen."
+   ],
+   [
+    "five-whys",
+    "vorher",
+    "Ursachen als Risiken erfassen."
+   ],
+   [
+    "wsjf",
+    "ergaenzt",
+    "Risikoreduktion ist Teil von WSJF."
+   ],
+   [
+    "product-backlog",
+    "danach",
+    "Risikoreiche Einträge früh einplanen."
+   ],
+   [
+    "nfr",
+    "ergaenzt",
+    "Viele Risiken betreffen Qualität."
+   ],
+   [
+    "change-management",
+    "ergaenzt",
+    "Änderungen verändern Risiken."
+   ]
+  ],
+  "tools": [
+   "Excel",
+   "Miro"
+  ],
+  "s": "entwurf",
+  "vis": "risiko"
+ },
+ {
   "id": "product-backlog",
   "n": "Product Backlog",
   "c": "plan",
+  "f": "artefakt",
   "m": "agil",
   "ph": "planen",
   "t": "Artefakt",
+  "kz": "Backlog",
   "k": "Priorisierte, lebende Liste aller Anforderungen. Der Product Owner verantwortet sie, das Team schätzt.",
   "aufwand": "Laufend",
   "ab": [
@@ -1231,9 +2087,11 @@ const M = [
   "id": "refinement",
   "n": "Backlog Refinement",
   "c": "plan",
+  "f": "meeting",
   "m": "agil",
   "ph": "planen",
   "t": "Meeting",
+  "kz": "Refinement",
   "k": "Regelmässige Sitzung, in der das Team Backlog-Einträge klärt, aufteilt, schätzt und bereit für den Sprint macht.",
   "aufwand": "1 bis 2 Stunden pro Woche",
   "ab": [
@@ -1285,9 +2143,11 @@ const M = [
   "id": "story-mapping",
   "n": "User Story Mapping",
   "c": "plan",
+  "f": "modell",
   "m": "agil",
   "ph": "planen",
   "t": "Planungsmethode",
+  "kz": "Story Mapping",
   "k": "Zeigt die Nutzerreise horizontal und Stories vertikal nach Priorität. Macht Umfang und Releases sichtbar.",
   "aufwand": "2 bis 4 Stunden",
   "ab": [
@@ -1342,12 +2202,139 @@ const M = [
   "vis": "storymap"
  },
  {
+  "id": "roadmap",
+  "n": "Produkt-Roadmap",
+  "c": "plan",
+  "f": "artefakt",
+  "m": "agil",
+  "ph": "planen",
+  "t": "Artefakt",
+  "kz": "Roadmap",
+  "k": "Zeigt in groben Etappen, welche Ziele und Themen das Produkt in welcher Reihenfolge erreichen soll, ohne feste Termine für Details.",
+  "aufwand": "2 bis 3 Stunden",
+  "ab": [
+   "Vision und Ziele zusammentragen",
+   "Themen oder Ziele je Etappe festlegen (Jetzt, Als Nächstes, Später)",
+   "Abhängigkeiten und Risiken prüfen",
+   "Mit Stakeholdern abstimmen",
+   "Regelmässig überarbeiten"
+  ],
+  "re": [
+   "Ziele statt Funktionslisten",
+   "Je weiter weg, desto grober",
+   "Roadmap ist keine Terminzusage"
+  ],
+  "bsp": {
+   "t": "Roadmap in drei Etappen",
+   "x": "Jetzt: Touren anlegen und prüfen. Als Nächstes: Fahrer-App und Benachrichtigung. Später: Auswertungen und Rückfrachtvorschläge."
+  },
+  "li": [
+   [
+    "produktvision",
+    "vorher",
+    "Die Vision liefert die Richtung."
+   ],
+   [
+    "product-backlog",
+    "vorher",
+    "Das Backlog liefert die Inhalte."
+   ],
+   [
+    "wsjf",
+    "vorher",
+    "Reihenfolge nach Wert pro Aufwand."
+   ],
+   [
+    "story-mapping",
+    "ergaenzt",
+    "Releases der Story Map."
+   ],
+   [
+    "sprint-planning",
+    "danach",
+    "Etappen werden in Sprints umgesetzt."
+   ],
+   [
+    "risikoanalyse",
+    "ergaenzt",
+    "Risiken beeinflussen die Reihenfolge."
+   ]
+  ],
+  "tools": [
+   "Jira",
+   "Confluence"
+  ],
+  "s": "entwurf",
+  "vis": "roadmap"
+ },
+ {
+  "id": "sprint-planning",
+  "n": "Sprint Planning",
+  "c": "plan",
+  "f": "meeting",
+  "m": "agil",
+  "ph": "planen",
+  "t": "Meeting",
+  "kz": "Sprint Planning",
+  "k": "Meeting zu Beginn eines Sprints: Das Team wählt Einträge aus dem Backlog, legt das Sprintziel fest und plant, wie es sie umsetzt.",
+  "aufwand": "1 bis 2 Stunden",
+  "ab": [
+   "Product Owner stellt das Sprintziel und die obersten Einträge vor",
+   "Team schätzt Kapazität anhand der Velocity",
+   "Team wählt Einträge, die es schaffen kann",
+   "Aufgaben zu den Einträgen ableiten",
+   "Sprintziel gemeinsam bestätigen"
+  ],
+  "re": [
+   "Nur Einträge, die Ready sind",
+   "Das Team entscheidet über den Umfang",
+   "Es gibt ein Sprintziel in einem Satz"
+  ],
+  "bsp": {
+   "t": "Sprintziel",
+   "x": "Disponentinnen können Touren anlegen und Fahrzeugkonflikte sehen. Gewählt: 5 Stories mit 21 Punkten, Velocity 21."
+  },
+  "li": [
+   [
+    "product-backlog",
+    "vorher",
+    "Das Backlog liefert die Auswahl."
+   ],
+   [
+    "refinement",
+    "vorher",
+    "Das Refinement macht die Einträge bereit."
+   ],
+   [
+    "story-points",
+    "vorher",
+    "Die Velocity bestimmt den Umfang."
+   ],
+   [
+    "roadmap",
+    "vorher",
+    "Die Etappe gibt das Ziel."
+   ],
+   [
+    "dor-dod",
+    "ergaenzt",
+    "Ready und Done leiten die Auswahl."
+   ]
+  ],
+  "tools": [
+   "Jira"
+  ],
+  "s": "entwurf"
+ },
+ {
   "id": "review",
   "n": "Review / Inspektion",
   "c": "qs",
+  "f": "meeting",
   "m": "beide",
   "ph": "absichern",
   "t": "Prüfung",
+  "kz": "Review",
   "k": "Gemeinsame Prüfung von Anforderungen oder Ergebnissen auf Vollständigkeit, Verständlichkeit und Widerspruchsfreiheit.",
   "aufwand": "1 bis 2 Stunden",
   "ab": [
@@ -1399,9 +2386,11 @@ const M = [
   "id": "prototyping",
   "n": "Prototyping",
   "c": "qs",
+  "f": "methode",
   "m": "beide",
   "ph": "absichern",
   "t": "Validierung",
+  "kz": "Prototyping",
   "k": "Früh sichtbare oder klickbare Entwürfe, mit denen Anforderungen mit Nutzern getestet werden.",
   "aufwand": "Stunden bis Tage",
   "ab": [
@@ -1453,9 +2442,11 @@ const M = [
   "id": "traceability",
   "n": "Traceability-Matrix",
   "c": "qs",
+  "f": "artefakt",
   "m": "klassisch",
   "ph": "absichern",
   "t": "Verwaltung",
+  "kz": "Traceability",
   "k": "Verbindet Anforderungen mit Quellen, Design, Code und Tests. Zeigt Abdeckung und Auswirkungen von Änderungen.",
   "aufwand": "Laufend",
   "ab": [
@@ -1509,9 +2500,11 @@ const M = [
   "id": "change-management",
   "n": "Änderungsmanagement",
   "c": "qs",
+  "f": "methode",
   "m": "klassisch",
   "ph": "absichern",
   "t": "Prozess",
+  "kz": "Änderungen",
   "k": "Geregelter Umgang mit Änderungswünschen: erfassen, bewerten, entscheiden, umsetzen.",
   "aufwand": "Je Antrag 30 Min. bis 2 Stunden",
   "ab": [
@@ -1553,5 +2546,356 @@ const M = [
    "Excel"
   ],
   "s": "entwurf"
+ },
+ {
+  "id": "abnahmetest",
+  "n": "Abnahmetest (UAT)",
+  "c": "qs",
+  "f": "methode",
+  "m": "beide",
+  "ph": "absichern",
+  "t": "Test",
+  "kz": "Abnahmetest",
+  "k": "Der Fachbereich prüft das fertige System anhand echter Abläufe und entscheidet, ob es die Anforderungen erfüllt und produktiv gehen darf.",
+  "aufwand": "Stunden bis Tage",
+  "ab": [
+   "Testfälle aus Akzeptanzkriterien und Use Cases ableiten",
+   "Testdaten und Umgebung vorbereiten",
+   "Fachbereich führt die Testfälle aus",
+   "Abweichungen erfassen und bewerten",
+   "Abnahme entscheiden und festhalten"
+  ],
+  "re": [
+   "Fachseite testet, nicht die Entwicklung",
+   "Abnahmekriterien vorher vereinbart",
+   "Jede Abweichung wird mit Entscheid dokumentiert"
+  ],
+  "bsp": {
+   "t": "Testfall zur Tourenfreigabe",
+   "x": "Disponentin gibt Tour mit Fahrzeugkonflikt frei. Erwartet: Warnung mit Name der Konflikttour. Ergebnis: bestanden."
+  },
+  "li": [
+   [
+    "akzeptanzkriterien",
+    "vorher",
+    "Kriterien liefern die Testfälle."
+   ],
+   [
+    "use-cases",
+    "vorher",
+    "Abläufe liefern die Testfälle."
+   ],
+   [
+    "review",
+    "ergaenzt",
+    "Review prüft Dokumente, UAT das System."
+   ],
+   [
+    "dor-dod",
+    "ergaenzt",
+    "Die Abnahme ist Teil von Done."
+   ],
+   [
+    "traceability",
+    "ergaenzt",
+    "Tests mit Anforderungen verknüpfen."
+   ]
+  ],
+  "tools": [
+   "Jira",
+   "Cucumber"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "jira",
+  "n": "Jira",
+  "c": "tool",
+  "f": "werkzeug",
+  "m": "beide",
+  "ph": "alle",
+  "t": "Ticketsystem",
+  "kz": "",
+  "k": "Ticket- und Projektwerkzeug von Atlassian. Im agilen Umfeld verwaltet es Backlog, Sprints und Aufgaben.",
+  "aufwand": "",
+  "ab": [
+   "Backlog und Stories erfassen und priorisieren",
+   "Sprints planen und Boards führen",
+   "Akzeptanzkriterien und Schätzungen an Tickets festhalten",
+   "Berichte wie Burndown und Velocity auswerten"
+  ],
+  "re": [
+   "Viele Einstellungen, braucht eine klare Konvention im Team",
+   "Für Modelle und Zeichnungen nur Anhänge",
+   "Lizenzkosten pro Nutzer"
+  ],
+  "bsp": null,
+  "li": [],
+  "tools": [],
+  "s": "entwurf",
+  "sp": [
+   "abnahmetest",
+   "change-management",
+   "review",
+   "traceability",
+   "akzeptanzkriterien",
+   "story-splitting",
+   "user-stories",
+   "product-backlog",
+   "refinement",
+   "roadmap",
+   "sprint-planning",
+   "story-points"
+  ]
+ },
+ {
+  "id": "miro",
+  "n": "Miro",
+  "c": "tool",
+  "f": "werkzeug",
+  "m": "beide",
+  "ph": "alle",
+  "t": "Digitales Whiteboard",
+  "kz": "",
+  "k": "Unendliche Online-Fläche für Workshops mit Haftnotizen, Diagrammen und Vorlagen. Mehrere Personen arbeiten gleichzeitig.",
+  "aufwand": "",
+  "ab": [
+   "Workshops mit Haftnotizen und Clustern durchführen",
+   "Story Maps, Impact Maps und Canvas-Vorlagen füllen",
+   "Abstimmungen und Zeitboxen im Workshop nutzen",
+   "Ergebnisse als Bild oder Link teilen"
+  ],
+  "re": [
+   "Ergebnisse sind schwer versionierbar",
+   "Bei sehr grossen Boards wird es unübersichtlich",
+   "Keine Verbindung zur Anforderungsverwaltung ohne Zusatz"
+  ],
+  "bsp": null,
+  "li": [],
+  "tools": [],
+  "s": "entwurf",
+  "sp": [
+   "produktvision",
+   "story-splitting",
+   "event-storming",
+   "five-whys",
+   "interview",
+   "persona",
+   "stakeholder",
+   "swot",
+   "workshop",
+   "aktivitaetsdiagramm",
+   "business-model-canvas",
+   "impact-mapping",
+   "kontextdiagramm",
+   "refinement",
+   "story-mapping",
+   "moscow",
+   "risikoanalyse"
+  ]
+ },
+ {
+  "id": "drawio",
+  "n": "draw.io",
+  "c": "tool",
+  "f": "werkzeug",
+  "m": "beide",
+  "ph": "alle",
+  "t": "Diagrammwerkzeug",
+  "kz": "",
+  "k": "Kostenloses Zeichenwerkzeug für UML, BPMN und Flussdiagramme. Läuft im Browser oder lokal, Dateien lassen sich im Repo ablegen.",
+  "aufwand": "",
+  "ab": [
+   "Aktivitäts-, Use-Case- und Zustandsdiagramme zeichnen",
+   "BPMN-Prozesse mit Standardformen zeichnen",
+   "Diagramme als Bild oder PDF exportieren",
+   "Dateien im Repository versionieren"
+  ],
+  "re": [
+   "Keine Modellprüfung, nur Zeichnen",
+   "Kein gemeinsames Modell hinter den Diagrammen",
+   "Layout muss von Hand gepflegt werden"
+  ],
+  "bsp": null,
+  "li": [],
+  "tools": [],
+  "s": "entwurf",
+  "sp": [
+   "aktivitaetsdiagramm",
+   "bpmn",
+   "domaenenmodell",
+   "impact-mapping",
+   "kontextdiagramm",
+   "use-case-diagramm",
+   "zustandsdiagramm"
+  ]
+ },
+ {
+  "id": "plantuml",
+  "n": "PlantUML",
+  "c": "tool",
+  "f": "werkzeug",
+  "m": "beide",
+  "ph": "alle",
+  "t": "Diagramme aus Text",
+  "kz": "",
+  "k": "Erzeugt UML-Diagramme aus einer Textbeschreibung. Die Quelle ist versionierbar und lässt sich leicht anpassen.",
+  "aufwand": "",
+  "ab": [
+   "Aktivitäts-, Sequenz- und Zustandsdiagramme als Text beschreiben",
+   "Diagramme direkt in Dokumentation einbetten",
+   "Änderungen im Repository nachvollziehen",
+   "Domänenmodelle als Klassendiagramm darstellen"
+  ],
+  "re": [
+   "Layout nur begrenzt steuerbar",
+   "Einarbeitung in die Syntax nötig",
+   "Für Fachbereich weniger zugänglich"
+  ],
+  "bsp": null,
+  "li": [],
+  "tools": [],
+  "s": "entwurf",
+  "sp": [
+   "aktivitaetsdiagramm",
+   "domaenenmodell",
+   "kontextdiagramm",
+   "use-case-diagramm",
+   "zustandsdiagramm"
+  ]
+ },
+ {
+  "id": "confluence",
+  "n": "Confluence",
+  "c": "tool",
+  "f": "werkzeug",
+  "m": "beide",
+  "ph": "alle",
+  "t": "Wiki",
+  "kz": "",
+  "k": "Wiki von Atlassian für Dokumentation, Protokolle und Spezifikationen. Eng mit Jira verbunden.",
+  "aufwand": "",
+  "ab": [
+   "Spezifikationen, Glossar und Regeln pflegen",
+   "Workshop-Ergebnisse und Protokolle ablegen",
+   "Seiten kommentieren und gemeinsam bearbeiten",
+   "Jira-Tickets in Seiten einbetten"
+  ],
+  "re": [
+   "Struktur verwildert ohne Pflege",
+   "Keine strenge Versionierung wie ein Repository",
+   "Suche liefert bei grossen Beständen viel Rauschen"
+  ],
+  "bsp": null,
+  "li": [],
+  "tools": [],
+  "s": "entwurf",
+  "sp": [
+   "review",
+   "geschaeftsregeln",
+   "glossar",
+   "pflichtenheft",
+   "produktvision",
+   "use-cases",
+   "dokumentenanalyse",
+   "business-model-canvas",
+   "roadmap"
+  ]
+ },
+ {
+  "id": "figma",
+  "n": "Figma",
+  "c": "tool",
+  "f": "werkzeug",
+  "m": "beide",
+  "ph": "alle",
+  "t": "Designwerkzeug",
+  "kz": "",
+  "k": "Online-Werkzeug für Oberflächenentwürfe und klickbare Prototypen. Mehrere Personen arbeiten gleichzeitig.",
+  "aufwand": "",
+  "ab": [
+   "Wireframes und klickbare Prototypen bauen",
+   "Nutzertests mit dem Prototyp durchführen",
+   "Personas und Journey Maps gestalten",
+   "Entwürfe mit Kommentaren abstimmen"
+  ],
+  "re": [
+   "Gestaltungsarbeit braucht Übung",
+   "Nicht für Anforderungsverwaltung gedacht",
+   "Lizenzkosten für Teams"
+  ],
+  "bsp": null,
+  "li": [],
+  "tools": [],
+  "s": "entwurf",
+  "sp": [
+   "prototyping",
+   "persona"
+  ]
+ },
+ {
+  "id": "cucumber",
+  "n": "Cucumber",
+  "c": "tool",
+  "f": "werkzeug",
+  "m": "beide",
+  "ph": "alle",
+  "t": "Testautomatisierung",
+  "kz": "",
+  "k": "Führt Akzeptanzkriterien im Format Gegeben, Wenn, Dann (Gherkin) als automatische Tests aus. Verbindet Anforderung und Test.",
+  "aufwand": "",
+  "ab": [
+   "Szenarien in Gherkin schreiben",
+   "Schritte mit Testcode verbinden",
+   "Szenarien bei jedem Build ausführen",
+   "Ergebnisse als lebende Dokumentation nutzen"
+  ],
+  "re": [
+   "Braucht Disziplin bei der Formulierung",
+   "Entwicklungsaufwand für den Testcode",
+   "Zu viele Szenarien verlangsamen den Build"
+  ],
+  "bsp": null,
+  "li": [],
+  "tools": [],
+  "s": "entwurf",
+  "sp": [
+   "abnahmetest",
+   "akzeptanzkriterien"
+  ]
+ },
+ {
+  "id": "enterprise-architect",
+  "n": "Enterprise Architect",
+  "c": "tool",
+  "f": "werkzeug",
+  "m": "beide",
+  "ph": "alle",
+  "t": "Modellierungswerkzeug",
+  "kz": "",
+  "k": "Umfassendes Modellierungswerkzeug für UML, BPMN und Anforderungen mit gemeinsamem Modell und Rückverfolgbarkeit.",
+  "aufwand": "",
+  "ab": [
+   "Use Cases, Aktivitäts- und Zustandsdiagramme modellieren",
+   "Anforderungen mit Modellelementen verknüpfen",
+   "Berichte und Dokumente aus dem Modell erzeugen",
+   "Modelle im Team gemeinsam pflegen"
+  ],
+  "re": [
+   "Hoher Einarbeitungsaufwand",
+   "Lizenzkosten",
+   "Für kleine Vorhaben oft zu schwergewichtig"
+  ],
+  "bsp": null,
+  "li": [],
+  "tools": [],
+  "s": "entwurf",
+  "sp": [
+   "use-cases",
+   "aktivitaetsdiagramm",
+   "domaenenmodell",
+   "use-case-diagramm",
+   "zustandsdiagramm"
+  ]
  }
 ];

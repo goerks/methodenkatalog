@@ -1,9 +1,11 @@
 ---
 name: Product Backlog
+kurz: Backlog
 kategorie: planen
 vorgehen: agil
 phase: planen
 typ: Artefakt
+form: artefakt
 aufwand: Laufend
 werkzeuge: [Jira, Azure DevOps, Trello]
 reihenfolge: 1

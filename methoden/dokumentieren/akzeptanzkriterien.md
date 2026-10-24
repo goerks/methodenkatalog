@@ -1,9 +1,11 @@
 ---
 name: Akzeptanzkriterien (Gherkin)
+kurz: Akzeptanzkriterien
 kategorie: dokumentieren
 vorgehen: agil
 phase: spezifizieren
 typ: Testbare Bedingungen
+form: artefakt
 aufwand: 10 bis 20 Min. pro Story
 werkzeuge: [Cucumber, SpecFlow, Behave, Jira]
 grafik: gherkin

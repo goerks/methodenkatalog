@@ -1,9 +1,11 @@
 ---
 name: Aktivitätsdiagramm (UML)
+kurz: Aktivitätsdiagramm
 kategorie: modellieren
 vorgehen: beide
 phase: spezifizieren
 typ: Modell
+form: modell
 aufwand: 30 bis 60 Min.
 werkzeuge: [draw.io, PlantUML, Enterprise Architect, Miro]
 grafik: activity

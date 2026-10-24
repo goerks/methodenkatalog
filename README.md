@@ -15,3 +15,7 @@ Eintrag in eine Datei unter `data/` ergänzen. Pflichtfelder:
 `ab` Ablauf (Liste), `re` Regeln (Liste), `bsp` {t, x}, `li` Verknüpfungen [id, art, Begründung] mit art = vorher, danach, ergaenzt, alternative, `tools`.
 
 Regeln für Verknüpfungen: 3 bis 7 pro Methode, nur direkte Nachbarn, jede Methode wird von mindestens einer anderen verlinkt.
+
+## Veröffentlichen mit GitHub Pages
+Repo-Einstellungen, Bereich Pages: Source «Deploy from a branch», Branch `main`, Ordner `/ (root)`.
+Die Seite ist danach unter `https://<konto>.github.io/methodenkatalog/` erreichbar. Alle Pfade sind relativ, `.nojekyll` schaltet die Jekyll-Verarbeitung ab.

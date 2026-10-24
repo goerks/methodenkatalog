@@ -1,5 +1,7 @@
 # Methodenkatalog RE und BA
 
+**Online ansehen: https://goerks.github.io/methodenkatalog/**
+
 Statische Webseite für Requirements Engineering und Business Analyse (klassisch und agil). Kein Build für die Seite selbst nötig: `index.html` im Browser öffnen oder per GitHub Pages veröffentlichen.
 
 ## Aufbau

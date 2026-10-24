@@ -1,21 +1,55 @@
 # Methodenkatalog RE und BA
 
-Statische Webseite (kein Build nötig). `index.html` im Browser öffnen oder auf einem beliebigen Webspace ablegen.
+Statische Webseite für Requirements Engineering und Business Analyse (klassisch und agil). Kein Build für die Seite selbst nötig: `index.html` im Browser öffnen oder per GitHub Pages veröffentlichen.
 
-## Struktur
-- `data/` Methoden als JavaScript-Daten, gruppiert nach Kategorie
+## Aufbau
+- `methoden/<kategorie>/<id>.md` eine Datei pro Methode (hier wird gearbeitet)
+- `tools/build.mjs` liest die Methoden, prüft sie und erzeugt `data/catalog.js`
+- `data/catalog.js` erzeugt, nicht von Hand bearbeiten
 - `js/app.js` Ansichten (Kategorien, Phasen-Landkarte, Alle Methoden) und Methodenseite
-- `js/visuals.js` kleine Grafiken zu einzelnen Methoden (Feld `vis`)
+- `js/visuals.js` kleine Grafiken zu einzelnen Methoden (Feld `grafik`)
 - `css/style.css` Design mit hellem und dunklem Thema
 
-## Neue Methode hinzufügen
-Eintrag in eine Datei unter `data/` ergänzen. Pflichtfelder:
-`id` (eindeutig, klein, mit Bindestrich), `n` Name, `c` Kategorie (erm, dok, mod, prio, plan, qs), `m` Vorgehen (klassisch, agil, beide),
-`ph` Phase (verstehen, ermitteln, spezifizieren, bewerten, planen, absichern), `t` Typ, `k` Kurzbeschreibung, `aufwand`,
-`ab` Ablauf (Liste), `re` Regeln (Liste), `bsp` {t, x}, `li` Verknüpfungen [id, art, Begründung] mit art = vorher, danach, ergaenzt, alternative, `tools`.
+## Neue Methode anlegen
+1. Datei `methoden/<kategorie>/<id>.md` erstellen. Die ID ist der Dateiname: klein, mit Bindestrichen, ohne Umlaute.
+2. Vorlage:
 
-Regeln für Verknüpfungen: 3 bis 7 pro Methode, nur direkte Nachbarn, jede Methode wird von mindestens einer anderen verlinkt.
+```markdown
+---
+name: Planning Poker
+kategorie: priorisieren   # ermitteln, dokumentieren, modellieren, priorisieren, planen, absichern
+vorgehen: agil            # klassisch, agil, beide
+phase: bewerten           # verstehen, ermitteln, spezifizieren, bewerten, planen, absichern
+typ: Schätzung
+aufwand: 2 bis 5 Min. pro Story
+werkzeuge: [Karten, Jira-Plugin]
+grafik: poker             # optional, Name aus js/visuals.js
+reihenfolge: 4            # optional, Position in der Kategorie
+status: entwurf           # entwurf, geprueft, veroeffentlicht
+---
+
+Kurzbeschreibung in zwei Sätzen.
+
+## Ablauf
+1. Erster Schritt
+2. Zweiter Schritt
+
+## Regeln
+- Eine Regel
+
+## Beispiel: Titel des Beispiels
+Text des Beispiels.
+
+## Verknüpfungen
+- vorher: [[user-stories]] Begründung in einem Satz.
+- danach: [[product-backlog]] Begründung in einem Satz.
+```
+
+Arten der Verknüpfung: `vorher`, `danach`, `ergaenzt`, `alternative`.
+
+3. `node tools/build.mjs` ausführen (Node 18 oder neuer). Der Prüfer meldet fehlende Pflichtfelder, unbekannte Verknüpfungen, doppelte IDs und Methoden, auf die niemand verweist. Pro Methode sind 3 bis 7 Verknüpfungen erlaubt.
+4. Geänderte Dateien und `data/catalog.js` committen.
 
 ## Veröffentlichen mit GitHub Pages
 Repo-Einstellungen, Bereich Pages: Source «Deploy from a branch», Branch `main`, Ordner `/ (root)`.
-Die Seite ist danach unter `https://<konto>.github.io/methodenkatalog/` erreichbar. Alle Pfade sind relativ, `.nojekyll` schaltet die Jekyll-Verarbeitung ab.
+Alle Pfade sind relativ, `.nojekyll` schaltet die Jekyll-Verarbeitung ab.

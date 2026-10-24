@@ -16,7 +16,6 @@ const PHASES = [
 ];
 const REL = {vorher:'Davor', danach:'Danach', ergaenzt:'Ergänzt', alternative:'Alternative'};
 const MODE = {klassisch:'Klassisch', agil:'Agil', beide:'Klassisch und agil'};
-const M = [...M1, ...M2, ...M3, ...M4, ...M5];
 const BY = Object.fromEntries(M.map(m => [m.id, m]));
 const CAT = Object.fromEntries(CATS.map(c => [c.k, c]));
 const VIEWS = {kategorien:'Kategorien', landkarte:'Phasen-Landkarte', suche:'Alle Methoden'};
@@ -77,7 +76,7 @@ function vDetail(id) {
   const vis = m.vis ? `<div class="vis" ${cc(m)}>${VIS[m.vis]()}</div>` : '';
   return `<div ${cc(m)}><button class="back" data-back>← ${VIEWS[lastView]}</button>
   <header class="dh"><span class="lbl" style="color:var(--cc)">${c.n}</span><h1>${esc(m.n)}</h1>
-    <div class="meta"><span>Vorgehen: <b>${MODE[m.m]}</b></span><span>Phase: <b>${ph.n}</b></span><span>Aufwand: <b>${esc(m.aufwand)}</b></span><span>Typ: <b>${esc(m.t)}</b></span></div>
+    <div class="meta"><span>Vorgehen: <b>${MODE[m.m]}</b></span><span>Phase: <b>${ph.n}</b></span><span>Aufwand: <b>${esc(m.aufwand)}</b></span><span>Typ: <b>${esc(m.t)}</b></span>${m.s === 'entwurf' ? '<span>Status: <b>Entwurf, fachlich noch nicht geprüft</b></span>' : ''}</div>
     <p class="lead">${esc(m.k)}</p></header>
   <div class="dg"><div>
     <section class="sec"><h2>Ablauf</h2><ol class="steps">${m.ab.map(s => `<li><span>${esc(s)}</span></li>`).join('')}</ol></section>

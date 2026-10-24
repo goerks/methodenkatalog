@@ -7,6 +7,7 @@ typ: Modell
 aufwand: 1 bis 3 Stunden
 werkzeuge: [Camunda Modeler, Signavio, draw.io, Bizagi]
 reihenfolge: 3
+grafik: bpmn
 status: entwurf
 ---
 

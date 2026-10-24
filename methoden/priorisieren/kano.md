@@ -7,6 +7,7 @@ typ: Priorisierung
 aufwand: 2 bis 4 Stunden mit Umfrage
 werkzeuge: [Umfrage-Tool, Excel]
 reihenfolge: 2
+grafik: kano
 status: entwurf
 ---
 

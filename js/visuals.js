@@ -1,78 +1,135 @@
+// Grafikbaukasten im Stil «Weiche Flächen». Farben kommen aus CSS-Tokens (--v-*), Hell und Dunkel gelten automatisch.
+// Rollen: n neutral, a Hauptfarbe, b zweite Farbe, c Warnung/Betonung, k dunkel.
+let VU = 0;
+function vb() {
+  const id = 'v' + (++VU), B = [], L = [], T = [];
+  const geo = (kind, x, y, w, h, cls) => {
+    if (kind === 'ellipse') return `<ellipse class="${cls}" cx="${x + w / 2}" cy="${y + h / 2}" rx="${w / 2}" ry="${h / 2}"/>`;
+    if (kind === 'diamond') return `<path class="${cls}" d="M${x + w / 2} ${y}L${x + w} ${y + h / 2}L${x + w / 2} ${y + h}L${x} ${y + h / 2}Z" stroke-linejoin="round"/>`;
+    return `<rect class="${cls}" x="${x}" y="${y}" width="${w}" height="${h}" rx="${kind === 'pill' ? h / 2 : 12}"/>`;
+  };
+  const b = {
+    shape(kind, x, y, w, h, role) { B.push(geo(kind, x, y, w, h, 'f' + role)); },
+    ring(cx, cy, r, thick) { B.push(`<circle class="fn vr${thick ? ' vr2' : ''}" cx="${cx}" cy="${cy}" r="${r}"/>`); },
+    ln(d, dash) { L.push(`<path class="vl${dash ? ' vd' : ''}" d="${d}"${dash ? '' : ` marker-end="url(#m${id})"`}/>`); },
+    plain(d) { L.push(`<path class="vl" d="${d}"/>`); },
+    curve(d, role) { L.push(`<path class="c${role}" d="${d}"/>`); },
+    box(x, y, w, h) { L.push(`<rect class="vbx" x="${x}" y="${y}" width="${w}" height="${h}" rx="10"/>`); },
+    txt(x, y, s, role, o) {
+      o = o || {}; const size = 13 * (o.k || 1), lines = String(s).split('\n'), y0 = y - ((lines.length - 1) * size * 1.15) / 2;
+      T.push(`<text class="${role ? 't' + role : 'ti'}" x="${x}" y="${y0}" text-anchor="${o.a || 'middle'}" dominant-baseline="central" font-size="${size}"${o.w ? ` style="font-weight:${o.w}"` : ''}${o.rot ? ` transform="rotate(${o.rot} ${x} ${y})"` : ''}>${lines.map((l, i) => `<tspan x="${x}" dy="${i ? size * 1.15 : 0}">${l}</tspan>`).join('')}</text>`);
+    },
+    actor(cx, top, label) {
+      b.plain(`M${cx + 9} ${top + 11}A9 9 0 1 1 ${cx - 9} ${top + 11}A9 9 0 1 1 ${cx + 9} ${top + 11}`);
+      b.plain(`M${cx} ${top + 20}V${top + 52}M${cx - 18} ${top + 31}H${cx + 18}M${cx} ${top + 52}L${cx - 14} ${top + 76}M${cx} ${top + 52}L${cx + 14} ${top + 76}`);
+      b.txt(cx, top + 92, label);
+    },
+    out(label) {
+      return `<svg viewBox="0 0 420 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${label}"><defs><marker id="m${id}" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path class="vm" d="M0 0L10 5L0 10z"/></marker><filter id="s${id}" x="-12%" y="-12%" width="124%" height="150%"><feDropShadow dx="0" dy="3" stdDeviation="3.5" style="flood-color:var(--v-shadow);flood-opacity:var(--v-shadow-o)"/></filter></defs><rect class="vbg" width="420" height="230" rx="14"/><g>${L.join('')}</g><g filter="url(#s${id})">${B.join('')}</g>${T.join('')}</svg>`;
+    }
+  };
+  return b;
+}
+const draw = (label, fn) => () => { const b = vb(); fn(b); return b.out(label); };
+const small = {k: .8, w: 500};
+
 const VIS = {
-story: () => `<div style="border:2px solid var(--cc);border-radius:6px;padding:14px 16px;max-width:460px;margin:auto;background:var(--bg)">
-  <div class="lbl" style="color:var(--cc)">Story-Karte</div>
-  <p style="margin:6px 0"><b>Als</b> Disponentin<br><b>möchte ich</b> bei doppelter Fahrzeugbelegung gewarnt werden,<br><b>damit</b> ich keine unmöglichen Touren verschicke.</p>
-  <div class="lbl" style="margin-top:10px">Akzeptanz</div>
-  <ul style="margin:4px 0 0;padding-left:18px;font-size:.9rem"><li>Warnung erscheint vor dem Speichern</li><li>Betroffenes Fahrzeug wird genannt</li></ul>
-  <div style="display:flex;justify-content:space-between;margin-top:10px" class="mono"><span>TOUR-12</span><span>5 SP</span></div></div>`,
-
-'usecase-text': () => `<div style="font-size:.92rem;display:grid;gap:4px">
-  <div><span class="lbl">Name</span> UC-04 Tour freigeben</div>
-  <div><span class="lbl">Akteur</span> Disponentin</div>
-  <div><span class="lbl">Vorbedingung</span> Tour ist vollständig</div>
-  <div><span class="lbl">Hauptablauf</span></div>
-  <ol style="margin:0;padding-left:20px"><li>Disponentin wählt «Freigeben»</li><li>System prüft Fahrzeug und Fahrer</li><li>System sperrt die Tour für Änderungen</li></ol>
-  <div><span class="lbl">Alternative 2a</span> Konflikt: System zeigt Details, zurück zu Schritt 1</div>
-  <div><span class="lbl">Nachbedingung</span> Tour hat Status «Freigegeben»</div></div>`,
-
-gherkin: () => `<pre style="margin:0;font-family:var(--f-mono);font-size:.82rem;line-height:1.7;white-space:pre-wrap;overflow-x:auto"><b style="color:var(--cc)">Szenario:</b> Warnung bei Doppelbelegung
-  <b style="color:var(--cc)">Gegeben</b> Fahrzeug 12 ist am Montag für Tour A eingeplant
-  <b style="color:var(--cc)">Wenn</b>    die Disponentin Fahrzeug 12 für Tour B wählt
-  <b style="color:var(--cc)">Dann</b>    zeigt das System eine Warnung mit «Tour A»</pre>`,
-
-activity: () => `<svg class="sv" viewBox="0 0 560 250" width="560" role="img" aria-label="Aktivitätsdiagramm Tour freigeben">
-  <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="fl"/></marker></defs>
-  <circle cx="30" cy="100" r="9" class="fl"/>
-  <path class="ln" d="M39 100H70" marker-end="url(#ar)"/>
-  <rect x="72" y="80" width="110" height="40" rx="14" class="st"/><text x="127" y="105" text-anchor="middle">Tour prüfen</text>
-  <path class="ln" d="M182 100H222" marker-end="url(#ar)"/>
-  <path d="M245 76L268 100L245 124L222 100Z" class="st"/><text x="245" y="104" text-anchor="middle" font-size="11">Konflikt?</text>
-  <path class="ln" d="M268 100H318" marker-end="url(#ar)"/><text x="283" y="92" class="mu" font-size="11">nein</text>
-  <rect x="320" y="80" width="110" height="40" rx="14" class="st"/><text x="375" y="105" text-anchor="middle">Tour sperren</text>
-  <path class="ln" d="M375 120V160" marker-end="url(#ar)"/>
-  <rect x="320" y="162" width="110" height="40" rx="14" class="st"/><text x="375" y="187" text-anchor="middle" font-size="12">Fahrer benachr.</text>
-  <path class="ln" d="M430 182H478" marker-end="url(#ar)"/>
-  <circle cx="490" cy="182" r="11" class="st"/><circle cx="490" cy="182" r="6" class="fl"/>
-  <path class="ln" d="M245 124V180" marker-end="url(#ar)"/><text x="253" y="150" class="mu" font-size="11">ja</text>
-  <rect x="190" y="182" width="110" height="40" rx="14" class="st"/><text x="245" y="207" text-anchor="middle" font-size="12">Warnung zeigen</text>
-  <path class="ln" d="M190 202H127V122" marker-end="url(#ar)"/></svg>`,
-
-usecase: () => `<svg class="sv" viewBox="0 0 520 250" width="520" role="img" aria-label="Use-Case-Diagramm Tourenplanung">
-  <rect x="150" y="14" width="230" height="222" rx="6" class="bd"/><text x="265" y="34" text-anchor="middle" class="mu" font-size="12">Tourenplanung</text>
-  <ellipse cx="265" cy="76" rx="80" ry="24" class="st"/><text x="265" y="80" text-anchor="middle">Tour planen</text>
-  <ellipse cx="265" cy="136" rx="80" ry="24" class="st"/><text x="265" y="140" text-anchor="middle">Tour freigeben</text>
-  <ellipse cx="265" cy="196" rx="80" ry="24" class="st"/><text x="265" y="200" text-anchor="middle">Tour einsehen</text>
-  <g class="ln"><circle cx="60" cy="86" r="10"/><path d="M60 96V134M36 108H84M60 134L42 164M60 134L78 164"/></g>
-  <text x="60" y="186" text-anchor="middle">Disponentin</text>
-  <g class="ln"><circle cx="460" cy="146" r="10"/><path d="M460 156V194M436 168H484M460 194L442 224M460 194L478 224"/></g>
-  <text x="460" y="244" text-anchor="middle">Fahrer</text>
-  <path class="ln" d="M80 108L190 80M80 118L190 132"/><path class="ln" d="M440 170L335 196"/></svg>`,
-
-context: () => `<svg class="sv" viewBox="0 0 540 260" width="540" role="img" aria-label="Kontextdiagramm Tourenplanung">
-  <defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="fl"/></marker></defs>
-  <rect x="200" y="95" width="140" height="70" rx="6" class="st"/><text x="270" y="135" text-anchor="middle" font-weight="600">Tourenplanung</text>
-  <rect x="10" y="20" width="120" height="44" rx="4" class="st"/><text x="70" y="47" text-anchor="middle">Disponentin</text>
-  <rect x="410" y="20" width="120" height="44" rx="4" class="st"/><text x="470" y="47" text-anchor="middle">Fahrer-App</text>
-  <rect x="10" y="196" width="120" height="44" rx="4" class="st"/><text x="70" y="223" text-anchor="middle">ERP (Aufträge)</text>
-  <rect x="410" y="196" width="120" height="44" rx="4" class="st"/><text x="470" y="217" text-anchor="middle" font-size="12">Fahrzeug-</text><text x="470" y="231" text-anchor="middle" font-size="12">verwaltung</text>
-  <path class="ln" d="M130 55L200 105" marker-end="url(#ar2)"/><text x="120" y="96" class="mu" font-size="11">Touren</text>
-  <path class="ln" d="M340 105L410 55" marker-end="url(#ar2)"/><text x="385" y="98" class="mu" font-size="11">Fahrplan</text>
-  <path class="ln" d="M130 205L200 155" marker-end="url(#ar2)"/><text x="120" y="188" class="mu" font-size="11">Aufträge</text>
-  <path class="ln" d="M410 205L340 155" marker-end="url(#ar2)"/><text x="385" y="186" class="mu" font-size="11">Verfügbarkeit</text></svg>`,
-
-moscow: () => `<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:.9rem">
-  ${[['Must','Tour anlegen · Fahrzeugkonflikt prüfen','var(--c-qs)'],['Should','Ersatzfahrer-Vorschlag','var(--c-prio)'],['Could','Kartenansicht','var(--c-plan)'],["Won't",'Mobiler Offline-Modus','var(--muted)']].map(x=>`<div style="border:1px solid var(--line);border-top:4px solid ${x[2]};border-radius:5px;padding:8px 10px;background:var(--bg)"><div class="lbl" style="color:${x[2]}">${x[0]}</div>${x[1]}</div>`).join('')}</div>`,
-
-poker: () => `<div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:flex-end">
-  ${[3,5,5,13].map((v,i)=>`<div style="width:62px;height:88px;border:2px solid var(--cc);border-radius:8px;display:grid;place-items:center;font-family:var(--f-display);font-size:1.8rem;font-weight:700;background:var(--bg);${v===13?'color:var(--c-qs);border-color:var(--c-qs)':''}">${v}</div>`).join('')}</div>
-  <p class="mono" style="text-align:center;margin:12px 0 0;color:var(--muted)">Skala: 1 · 2 · 3 · 5 · 8 · 13 · 21 · ?</p>`,
-
-storymap: () => `<div style="overflow-x:auto"><div style="display:grid;grid-template-columns:repeat(3,minmax(130px,1fr));gap:6px;font-size:.82rem;min-width:420px">
-  ${['Planen','Freigeben','Ausliefern'].map(a=>`<div style="background:var(--cc);color:var(--bg);padding:6px 8px;border-radius:4px;font-weight:600">${a}</div>`).join('')}
-  ${['Tour anlegen','Konflikt prüfen','Fahrer benachrichtigen'].map(a=>`<div style="border:1px solid var(--line);padding:6px 8px;border-radius:4px;background:var(--bg)">${a}</div>`).join('')}
-  <div class="lbl" style="grid-column:1/-1;border-top:2px dashed var(--cc);padding-top:4px;color:var(--cc)">Release 1</div>
-  ${['Fahrzeug zuweisen','Warnung anzeigen','Push-Meldung'].map(a=>`<div style="border:1px solid var(--line);padding:6px 8px;border-radius:4px">${a}</div>`).join('')}
-  <div class="lbl" style="grid-column:1/-1;border-top:2px dashed var(--muted);padding-top:4px">Release 2</div>
-  ${['Karte','Ersatzfahrer','Statusverlauf'].map(a=>`<div style="border:1px solid var(--line);padding:6px 8px;border-radius:4px;color:var(--muted)">${a}</div>`).join('')}
-</div></div>`
+activity: draw('Aktivitätsdiagramm: Tour freigeben', b => {
+  b.ln('M42 62H70'); b.ln('M170 62H190'); b.ln('M270 62H300'); b.ln('M350 82V150'); b.ln('M230 92V150'); b.ln('M180 170H120V84');
+  b.shape('ellipse', 18, 50, 24, 24, 'k'); b.shape('pill', 70, 42, 100, 40, 'n'); b.shape('diamond', 190, 30, 80, 64, 'a');
+  b.shape('pill', 300, 42, 100, 40, 'b'); b.shape('pill', 180, 150, 100, 40, 'c'); b.shape('ellipse', 338, 150, 24, 24, 'k');
+  b.txt(120, 62, 'Tour prüfen', 'n'); b.txt(230, 62, 'Konflikt?', 'a', {k: .9}); b.txt(350, 62, 'Tour sperren', 'b');
+  b.txt(230, 170, 'Warnung\nzeigen', 'c'); b.txt(285, 50, 'nein', null, small); b.txt(244, 122, 'ja', null, {k: .8, w: 500, a: 'start'});
+}),
+usecase: draw('Use-Case-Diagramm: Tourenplanung', b => {
+  b.box(120, 14, 180, 202); b.txt(210, 30, 'Tourenplanung', null, {k: .85, w: 500});
+  b.ln('M68 78L140 66', true); b.ln('M68 88L146 104', true); b.ln('M352 150L296 160', true);
+  b.shape('ellipse', 136, 46, 148, 40, 'a'); b.shape('ellipse', 136, 100, 148, 40, 'a'); b.shape('ellipse', 136, 154, 148, 40, 'b');
+  b.txt(210, 66, 'Tour planen', 'a'); b.txt(210, 120, 'Tour freigeben', 'a'); b.txt(210, 174, 'Tour einsehen', 'b');
+  b.actor(54, 56, 'Disponentin'); b.actor(366, 108, 'Fahrer');
+}),
+context: draw('Kontextdiagramm: Tourenplanung', b => {
+  b.ln('M124 54L156 92'); b.ln('M264 92L296 54'); b.ln('M124 178L156 140'); b.ln('M296 178L264 140');
+  b.shape('rect', 150, 84, 120, 62, 'a'); b.txt(210, 115, 'Tourenplanung', 'a');
+  b.shape('rect', 14, 16, 110, 42, 'n'); b.txt(69, 37, 'Disponentin', 'n');
+  b.shape('rect', 296, 16, 110, 42, 'n'); b.txt(351, 37, 'Fahrer-App', 'n');
+  b.shape('rect', 14, 172, 110, 42, 'n'); b.txt(69, 193, 'ERP\n(Aufträge)', 'n', {k: .9});
+  b.shape('rect', 296, 172, 110, 42, 'n'); b.txt(351, 193, 'Fahrzeug-\nverwaltung', 'n', {k: .9});
+  b.txt(116, 84, 'Touren', null, {...small, a: 'end'}); b.txt(304, 84, 'Fahrplan', null, {...small, a: 'start'});
+  b.txt(116, 152, 'Aufträge', null, {...small, a: 'end'}); b.txt(304, 152, 'Verfügbarkeit', null, {...small, a: 'start'});
+}),
+story: draw('User-Story-Karte', b => {
+  b.shape('rect', 50, 12, 320, 206, 'n'); b.shape('rect', 50, 12, 320, 32, 'a');
+  b.txt(64, 28, 'TOUR-12', 'a', {a: 'start'}); b.txt(356, 28, '5 SP', 'a', {a: 'end'});
+  b.txt(64, 62, 'Als Disponentin', 'n', {a: 'start'});
+  ['möchte ich bei doppelter Fahrzeugbelegung', 'gewarnt werden,', 'damit keine unmöglichen Touren rausgehen.'].forEach((s, i) => b.txt(64, 82 + i * 19, s, 'n', {a: 'start', w: 500, k: .92}));
+  b.plain('M64 140H356');
+  b.shape('rect', 64, 152, 14, 14, 'b'); b.txt(88, 160, 'Warnung vor dem Speichern', 'n', {a: 'start', w: 500, k: .92});
+  b.shape('rect', 64, 178, 14, 14, 'b'); b.txt(88, 186, 'Betroffenes Fahrzeug wird genannt', 'n', {a: 'start', w: 500, k: .92});
+}),
+moscow: draw('MoSCoW-Raster', b => {
+  [[16, 14, 'Must', 'c', 'Tour anlegen\nKonflikt prüfen'], [216, 14, 'Should', 'a', 'Ersatzfahrer-\nVorschlag'], [16, 122, 'Could', 'b', 'Kartenansicht'], [216, 122, "Won't", 'n', 'Offline-Modus']]
+   .forEach(x => { b.shape('rect', x[0], x[1], 188, 94, x[3]); b.txt(x[0] + 14, x[1] + 18, x[2], x[3], {a: 'start', k: 1.15}); b.txt(x[0] + 14, x[1] + 56, x[4], x[3], {a: 'start', w: 500, k: .92}); });
+}),
+poker: draw('Planning-Poker-Karten', b => {
+  [[34, 3, 'n'], [118, 5, 'a'], [202, 5, 'a'], [286, 13, 'c']].forEach(c => { b.shape('rect', c[0], 30, 78, 106, c[2]); b.txt(c[0] + 39, 83, String(c[1]), c[2], {k: 2.6}); });
+  b.plain('M34 168H364'); [34, 100, 166, 232, 298, 364].forEach(x => b.plain(`M${x} 164V172`));
+  b.txt(210, 198, 'Skala 1 · 2 · 3 · 5 · 8 · 13 · 21', null, {k: .9, w: 500}); b.txt(325, 14, 'Ausreisser', 'c', small);
+}),
+stakeholder: draw('Einfluss-Interesse-Matrix', b => {
+  const q = [[52, 12, 'Zufriedenstellen', 'a'], [232, 12, 'Eng einbinden', 'c'], [52, 112, 'Beobachten', 'n'], [232, 112, 'Informieren', 'b']];
+  q.forEach(x => { b.shape('rect', x[0], x[1], 172, 92, x[3]); b.txt(x[0] + 12, x[1] + 16, x[2], x[3], {a: 'start', k: .95}); });
+  b.shape('pill', 76, 40, 124, 28, 'n'); b.txt(138, 54, 'Geschäftsleitung', 'n', {k: .85});
+  b.shape('pill', 260, 44, 116, 28, 'n'); b.txt(318, 58, 'Fachbereich', 'n', {k: .85});
+  b.shape('pill', 76, 146, 96, 28, 'n'); b.txt(124, 160, 'Revision', 'n', {k: .85});
+  b.shape('pill', 266, 146, 112, 28, 'n'); b.txt(322, 160, 'Support-Team', 'n', {k: .85});
+  b.txt(14, 108, 'Einfluss', null, {k: .85, rot: -90}); b.txt(314, 218, 'Interesse', null, {k: .85}); b.txt(138, 218, 'gering', null, {k: .75, w: 500}); b.txt(390, 218, 'hoch', null, {k: .75, w: 500, a: 'end'});
+}),
+zustand: draw('Zustandsdiagramm: Tour', b => {
+  b.ln('M20 60H26'); b.ln('M106 60H156'); b.ln('M256 60H306'); b.ln('M351 82V150'); b.ln('M206 82V150'); b.ln('M66 82V116H176V150');
+  b.shape('ellipse', 6, 54, 12, 12, 'k'); b.shape('pill', 26, 38, 80, 44, 'a'); b.shape('pill', 156, 38, 100, 44, 'a'); b.shape('pill', 306, 38, 90, 44, 'b');
+  b.shape('pill', 296, 150, 110, 40, 'k'); b.shape('pill', 156, 150, 100, 40, 'c');
+  b.txt(66, 60, 'Entwurf', 'a'); b.txt(206, 60, 'Freigegeben', 'a', {k: .95}); b.txt(351, 60, 'Unterwegs', 'b', {k: .95});
+  b.txt(206, 170, 'Storniert', 'c'); b.txt(351, 170, 'Abgeschlossen', 'k', {k: .9});
+  b.txt(131, 48, 'freigeben', null, {k: .72, w: 500}); b.txt(281, 48, 'starten', null, {k: .72, w: 500});
+  b.txt(358, 116, 'abschliessen', null, {k: .72, w: 500, a: 'start'}); b.txt(214, 116, 'stornieren', null, {k: .72, w: 500, a: 'start'});
+}),
+bpmn: draw('BPMN: Bestellung bearbeiten', b => {
+  b.box(6, 12, 408, 206); b.txt(18, 28, 'Auftragsabwicklung', null, {k: .8, w: 500, a: 'start'});
+  b.ln('M42 108H60'); b.ln('M136 108H156'); b.ln('M216 108H246'); b.ln('M336 108H358'); b.ln('M186 138V168'); b.ln('M236 188H370V122');
+  b.ring(30, 108, 12, false); b.shape('rect', 60, 88, 76, 40, 'n'); b.shape('diamond', 156, 78, 60, 60, 'a');
+  b.shape('rect', 246, 88, 90, 40, 'b'); b.ring(370, 108, 12, true); b.shape('rect', 136, 168, 100, 40, 'c');
+  b.txt(98, 108, 'Bestellung\nprüfen', 'n', {k: .85}); b.txt(186, 108, '×', 'a', {k: 1.3}); b.txt(291, 108, 'Rechnung\nund Versand', 'b', {k: .85});
+  b.txt(186, 188, 'Kunde\ninformieren', 'c', {k: .85}); b.txt(186, 66, 'lieferbar?', null, small); b.txt(231, 98, 'ja', null, small); b.txt(194, 152, 'nein', null, {...small, a: 'start'});
+}),
+kano: draw('Kano-Modell', b => {
+  b.ln('M60 204V22'); b.ln('M60 108H340');
+  b.curve('M70 100C170 98 250 68 328 26', 'a'); b.curve('M70 176L328 66', 'b'); b.curve('M70 190C170 186 250 160 328 126', 'c');
+  b.txt(68, 12, 'Zufriedenheit', null, {k: .8, w: 500, a: 'start'}); b.txt(200, 222, 'Erfüllungsgrad des Merkmals', null, {k: .8, w: 500});
+  b.txt(336, 26, 'Begeisterung', 'a', {k: .9, a: 'start'}); b.txt(336, 66, 'Leistung', 'b', {k: .9, a: 'start'}); b.txt(336, 126, 'Basis', 'c', {k: .9, a: 'start'});
+}),
+trace: draw('Traceability-Matrix', b => {
+  b.shape('rect', 10, 8, 400, 214, 'n');
+  const cols = ['UC-03', 'UC-04', 'TC-30', 'TC-31', 'TC-32'], rows = ['REQ-10', 'REQ-11', 'REQ-12', 'REQ-13'], X = i => 138 + i * 56, Y = j => 76 + j * 38;
+  cols.forEach((c, i) => b.txt(X(i), 36, c, null, {k: .8}));
+  rows.forEach((r, j) => b.txt(26, Y(j), r, null, {k: .85, a: 'start'}));
+  b.plain('M20 52H398');
+  [[0, 0], [0, 2], [1, 0], [1, 2], [2, 1], [2, 3], [2, 4], [3, 1]].forEach(p => b.shape('ellipse', X(p[1]) - 9, Y(p[0]) - 9, 18, 18, p[1] < 2 ? 'a' : 'b'));
+  b.shape('pill', X(2) - 24, Y(3) - 13, 136, 26, 'c'); b.txt(X(2) + 44, Y(3), 'Test fehlt', 'c', {k: .85});
+})
 };
+
+// Grafiken aus Text und Raster (HTML)
+VIS['usecase-text'] = () => `<div class="vbox"><div class="vrow"><span class="vk">Name</span>UC-04 Tour freigeben</div>
+  <div class="vrow"><span class="vk">Akteur</span>Disponentin</div><div class="vrow"><span class="vk">Vorbedingung</span>Tour ist vollständig</div>
+  <div class="vrow"><span class="vk">Hauptablauf</span></div><ol><li>Disponentin wählt «Freigeben»</li><li>System prüft Fahrzeug und Fahrer</li><li>System sperrt die Tour für Änderungen</li></ol>
+  <div class="vrow"><span class="vk">Alternative 2a</span>Konflikt: System zeigt Details, zurück zu Schritt 1</div><div class="vrow"><span class="vk">Nachbedingung</span>Tour hat Status «Freigegeben»</div></div>`;
+VIS.gherkin = () => `<div class="vbox"><pre class="vcode"><b>Szenario:</b> Warnung bei Doppelbelegung
+  <b>Gegeben</b> Fahrzeug 12 ist am Montag für Tour A eingeplant
+  <b>Wenn</b>    die Disponentin Fahrzeug 12 für Tour B wählt
+  <b>Dann</b>    zeigt das System eine Warnung mit «Tour A»</pre></div>`;
+VIS.storymap = () => `<div class="vbox" style="overflow-x:auto"><div class="vsm">
+  ${['Planen', 'Freigeben', 'Ausliefern'].map(a => `<div class="vh">${a}</div>`).join('')}
+  ${['Tour anlegen', 'Konflikt prüfen', 'Fahrer benachrichtigen'].map(a => `<div class="vc">${a}</div>`).join('')}
+  <div class="vrel vrel1">Release 1</div>${['Fahrzeug zuweisen', 'Warnung anzeigen', 'Push-Meldung'].map(a => `<div class="vc">${a}</div>`).join('')}
+  <div class="vrel">Release 2</div>${['Karte', 'Ersatzfahrer', 'Statusverlauf'].map(a => `<div class="vc vlater">${a}</div>`).join('')}</div></div>`;

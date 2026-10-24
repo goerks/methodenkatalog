@@ -7,6 +7,7 @@ typ: Modell
 aufwand: 30 Min.
 werkzeuge: [draw.io, PlantUML, Enterprise Architect]
 reihenfolge: 5
+grafik: zustand
 status: entwurf
 ---
 

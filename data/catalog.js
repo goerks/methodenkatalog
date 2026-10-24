@@ -209,7 +209,8 @@ const M = [
    "Miro",
    "Excel"
   ],
-  "s": "entwurf"
+  "s": "entwurf",
+  "vis": "stakeholder"
  },
  {
   "id": "persona",
@@ -786,7 +787,8 @@ const M = [
    "draw.io",
    "Bizagi"
   ],
-  "s": "entwurf"
+  "s": "entwurf",
+  "vis": "bpmn"
  },
  {
   "id": "kontextdiagramm",
@@ -890,7 +892,8 @@ const M = [
    "PlantUML",
    "Enterprise Architect"
   ],
-  "s": "entwurf"
+  "s": "entwurf",
+  "vis": "zustand"
  },
  {
   "id": "moscow",
@@ -998,7 +1001,8 @@ const M = [
    "Umfrage-Tool",
    "Excel"
   ],
-  "s": "entwurf"
+  "s": "entwurf",
+  "vis": "kano"
  },
  {
   "id": "wsjf",
@@ -1498,7 +1502,8 @@ const M = [
    "Jira",
    "Excel"
   ],
-  "s": "entwurf"
+  "s": "entwurf",
+  "vis": "trace"
  },
  {
   "id": "change-management",

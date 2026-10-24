@@ -7,6 +7,7 @@ typ: Analyse
 aufwand: 1 bis 2 Stunden, laufend aktualisieren
 werkzeuge: [Matrix (Einfluss/Interesse), Miro, Excel]
 reihenfolge: 4
+grafik: stakeholder
 status: entwurf
 ---
 

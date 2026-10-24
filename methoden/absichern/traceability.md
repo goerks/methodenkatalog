@@ -7,6 +7,7 @@ typ: Verwaltung
 aufwand: Laufend
 werkzeuge: [Doors, Polarion, Jira, Excel]
 reihenfolge: 3
+grafik: trace
 status: entwurf
 ---
 

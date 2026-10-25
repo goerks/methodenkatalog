@@ -229,3 +229,46 @@ ul.rules{margin:0;padding-left:20px;display:grid;gap:5px}
 .sent h4{margin-top:10px}.sent h4:first-child{margin-top:0}
 .vb{color:var(--muted);font-style:italic}
 .who{margin:12px 0 0;font-size:.9rem;color:var(--muted)}
+
+.fdet{margin-top:14px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 14px}
+.fdet summary{cursor:pointer;font-weight:600}
+.fg.start{margin-top:12px}
+.mapbox{margin-top:12px}
+@media (max-width:600px){.mapbox{padding:8px;border-radius:14px}.maptools .sp{display:none}.panel{max-height:none}.legend{gap:10px}}
+.top.compact p,.top.compact .lbl{display:none}.top.compact h1{font-size:clamp(1.2rem,3vw,1.6rem)}.top.compact{padding-bottom:0}
+.pstrip .now b{display:block}.pstrip{background:var(--surface);border:1px solid var(--line)}
+
+/* Feinschliff Zusammenhänge */
+.chip{white-space:normal;text-align:left;line-height:1.25}
+.sipoc{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));overflow:visible}
+.sc.mid{grid-column:auto}
+.sc{overflow:hidden}
+.pstrip{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1.1fr) auto minmax(0,1fr);align-items:center}
+.pstrip .ps{flex-direction:column;align-items:flex-start}
+@media (max-width:640px){.pstrip{grid-template-columns:1fr}.pstrip .arr{transform:rotate(90deg);justify-self:center}}
+@media (max-width:760px){
+ .fr,.fr.in{display:grid;justify-items:start;gap:3px}
+ .fl{flex-basis:auto}.fl::before,.fr.in .fl::before{content:none}
+ .fr.in .fl::after,.fr.out .fl::after{content:"▼";flex:none;border:0;font-size:.7rem;opacity:.7}
+ .fr.out{display:flex;flex-direction:column-reverse;align-items:flex-start}
+}
+.chip{overflow-wrap:anywhere;min-width:0}
+.pstrip>div,.pstrip .ps{min-width:0;max-width:100%}
+.pstrip .chip{max-width:100%}
+.sipoc{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.sc .chip{max-width:100%}
+.sc.mid{min-height:90px}
+
+.chip{overflow-wrap:break-word}
+.refbox{container-type:inline-size}
+.sipoc{grid-template-columns:repeat(2,minmax(0,1fr))}
+.sipoc .sc.mid{grid-column:1/-1;order:0;min-height:0;padding:12px}
+.sipoc .sc:nth-child(1){order:-2}.sipoc .sc:nth-child(2){order:-1}
+.sipoc .sc:nth-child(4){order:1}.sipoc .sc:nth-child(5){order:2}
+@container (min-width:860px){
+ .sipoc{grid-template-columns:repeat(5,minmax(0,1fr))}
+ .sipoc .sc.mid{grid-column:auto;order:0!important;min-height:90px}
+ .sipoc .sc:nth-child(n){order:0}
+}
+.pstrip{grid-template-columns:minmax(0,1.3fr) auto minmax(0,1fr) auto minmax(0,1.1fr)}
+@container (max-width:520px){.sipoc{grid-template-columns:1fr}}

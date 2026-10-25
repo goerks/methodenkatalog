@@ -66,3 +66,9 @@ Alternativ ohne Workflow: Source «Deploy from a branch», Branch `main`, Ordner
 - Werkzeuge liegen in `methoden/werkzeuge/`, haben keine eigenen Verknüpfungen und ergeben sich aus dem Feld `werkzeuge` der Methoden (mindestens zwei Methoden je Werkzeug).
 - Rückverweise entstehen automatisch aus den Verknüpfungen (`js/core.js`).
 - Dateien: `js/core.js` (Modell, Filter), `js/graph.js` (Karte), `js/app.js` (Ansichten), `js/visuals.js` (Grafiken).
+
+## Stand 0.3
+
+- Methodenseiten mit Wofür, Wann sinnvoll und besser nicht, Vorbereitung, Praxis, Empfehlung, Quellen.
+- Abschnitte `Lieferanten`, `Eingaben`, `Ergebnisse`, `Konsumenten` (SIPOC). Eingaben und Ergebnisse verweisen mit `Text >> [[id]] Verb` auf andere Methoden. Die Seite zeigt sie in vier umschaltbaren Darstellungen (Weg, Tabelle, Artefaktfluss, Sätze).
+- Karte für Touch: Antippen wählt, «Methode öffnen» öffnet, zwei Finger zoomen.

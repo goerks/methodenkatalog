@@ -30,13 +30,13 @@ const cardHtml = m => `<button class="card" ${cc(m)} data-m="${m.id}"><span clas
 
 function vKarte() {
   const n = NM.filter(pass).length;
-  return `<div class="filters" style="padding-bottom:0"><div class="fg"><span class="lbl">Ich will</span>${START.map(s => `<button class="pill" data-m="${s[1]}">${s[0]}</button>`).join('')}</div></div>
-  ${filters(false)}
-  <div class="mapbox"><div class="maptools"><button class="pill" aria-pressed="${toolsOn}" data-tools>Werkzeuge ${toolsOn ? 'ausblenden' : 'einblenden'}</button><span class="sp"></span>
+  const nf = F.ph.size + F.form.size + (F.mode !== 'alle') + (F.q ? 1 : 0);
+  return `<div class="mapbox"><div class="maptools"><button class="pill" aria-pressed="${toolsOn}" data-tools>Werkzeuge ${toolsOn ? 'ausblenden' : 'einblenden'}</button><span class="sp"></span>
     <button class="pill" data-z="in" aria-label="Vergrössern">+</button><button class="pill" data-z="out" aria-label="Verkleinern">−</button><button class="pill" data-z="fit">Einpassen</button><button class="pill" data-z="reset">Neu anordnen</button></div>
     <div class="mapgrid"><div id="graph" class="graph"></div><aside id="panel" class="panel"></aside></div>
-    <p class="hint">${filtered() ? `${n} von ${NM.length} Methoden passen, die übrigen sind abgeblendet. ` : ''}Klick wählt eine Methode, Doppelklick öffnet sie, Ziehen verschiebt. Zoom mit Strg und Mausrad oder den Knöpfen.</p></div>
-  ${legend()}
+    <p class="hint">${filtered() ? `${n} von ${NM.length} Methoden passen, die übrigen sind abgeblendet. ` : ''}Antippen wählt eine Methode, «Methode öffnen» im Feld daneben öffnet sie (Doppelklick geht auch), Ziehen verschiebt. Zoom mit Strg und Mausrad, den Knöpfen oder zwei Fingern.</p></div>
+  <div class="fg start"><span class="lbl">Ich will</span>${START.map(s => `<button class="pill" data-m="${s[1]}">${s[0]}</button>`).join('')}</div>
+  <details class="fdet"${filtered() ? ' open' : ''}><summary>Filter${nf ? ` (${nf} aktiv)` : ''} und Legende</summary>${filters(false)}${legend()}</details>
   <h2 class="h2">Lernpfade</h2><div class="paths">${PFADE.map((p, i) => `<div class="pcard"><h3>${esc(p.n)}</h3><p>${esc(p.d)}</p><ol>${p.s.map(id => `<li><button class="lk" data-m="${id}">${esc(plain(BY[id].n))}</button></li>`).join('')}</ol><button class="pill" data-path="${i}">Auf der Karte zeigen</button></div>`).join('')}</div>`;
 }
 function panelHtml(id) {
@@ -77,11 +77,12 @@ function pathStrip(m) {
   const nb = NB[m.id], side = (arr, lbl) => arr.length ? `<div class="ps">${arr.slice(0, 3).map(x => chip(x[0])).join('')}${arr.length > 3 ? `<small>+${arr.length - 3}</small>` : ''}</div>` : `<div class="ps none"><small>${lbl}</small></div>`;
   return `<div class="pstrip"><div><span class="lbl">Davor</span>${side(nb.vorher, 'Anfang')}</div><span class="arr">→</span><div class="now" ${cc(m)}><span class="lbl">Diese</span><b>${esc(plain(m.n))}</b></div><span class="arr">→</span><div><span class="lbl">Danach</span>${side(nb.danach, 'Ende')}</div></div>`;
 }
-let refVar = 'a';
-const REFV = {a: 'Tabelle (SIPOC)', b: 'Artefaktfluss', c: 'Sätze'};
+let refVar = 'w';
+const REFV = {w: 'Weg', a: 'Tabelle (SIPOC)', b: 'Artefaktfluss', c: 'Sätze'};
 const ioChip = x => x.to ? chip(x.to) : '';
 function refs(m) {
   const io = m.io, ul = a => `<ul>${a.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`;
+  if (refVar === 'w') return pathStrip(m);
   if (refVar === 'a') {
     const col = (t, body, cls) => `<div class="sc ${cls || ''}"><h4>${t}</h4>${body}</div>`;
     const items = a => `<ul>${a.map(x => `<li>${esc(x.t)}${x.to ? `<div>${chip(x.to)}</div>` : ''}</li>`).join('')}</ul>`;
@@ -117,8 +118,7 @@ function vDetail(id) {
     ${sec(t ? 'Grenzen' : 'Regeln', li(m.re))}
     ${m.bsp ? sec('Beispiel', `${vis}<div class="ex"><h3>${esc(m.bsp.t)}</h3><p>${esc(m.bsp.x)}</p></div>`) : ''}
     ${t ? '' : sec('Empfehlung', `<p class="prose">${esc(m.em)}</p>`)}
-    ${t ? '' : `<section class="sec"><h2>Eingaben und Ergebnisse</h2><div class="rv" role="group" aria-label="Darstellung der Referenzen"><span class="lbl">Darstellung</span>${Object.entries(REFV).map(([k, n]) => `<button class="pill" aria-pressed="${refVar === k}" data-rv="${k}">${n}</button>`).join('')}</div><div id="refs">${refs(m)}</div></section>`}
-    ${t ? '' : sec('Der Weg', pathStrip(m))}
+    ${t ? '' : `<section class="sec"><h2>Zusammenhänge</h2><div class="rv" role="group" aria-label="Darstellung der Referenzen"><span class="lbl">Darstellung</span>${Object.entries(REFV).map(([k, n]) => `<button class="pill" aria-pressed="${refVar === k}" data-rv="${k}">${n}</button>`).join('')}</div><div id="refs" class="refbox">${refs(m)}</div></section>`}
     ${sec('Quellen', `<ul class="src">${m.qu.map(q => `<li>${esc(q)}</li>`).join('')}</ul><p class="hint">Quellen wurden bei der Erstellung aus dem Fachwissen zusammengetragen und noch nicht einzeln geprüft.</p>`)}
   </div><aside>
     <section class="sec"><h2>${t ? 'Unterstützte Methoden' : 'Verknüpft'}</h2><div class="rel">${groups.map(r =>
@@ -133,6 +133,7 @@ function render() {
   const isD = !!h.m;
   document.getElementById('bar').hidden = isD;
   document.getElementById('intro').hidden = isD;
+  document.getElementById('intro').classList.toggle('compact', view === 'karte');
   renderTabs();
   Graph.unmount();
   if (isD) { main.innerHTML = vDetail(h.m); window.scrollTo(0, 0); return; }

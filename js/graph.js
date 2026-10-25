@@ -7,14 +7,16 @@ const Graph = (() => {
   const rng = (s => () => (s = (s * 16807) % 2147483647) / 2147483647)(7);
   const label = m => m.kz || plain(m.n).replace(/\s*\(.*?\)/g, '');
   const radius = m => Math.min(22, 7 + 2.6 * Math.sqrt(DEG[m.id]));
-  const REP = 26000, LEN = 100, GR = .0017, GD = .0005;
+  const REP = 30000, LEN = 105, GR = .0015, GD = .00045;
+  const lw = m => Math.max(24, label(m).length * 6.3 + 8);
+  let GX = 1;
   const CATS_ORDER = ['erm', 'dok', 'mod', 'prio', 'plan', 'qs', 'tool'];
 
   function setup() {
     const old = byId;
     nodes = M.filter(m => tools || !isTool(m)).map(m => {
       const p = POS.get(m.id), a = (CATS_ORDER.indexOf(m.c) / 7) * 2 * Math.PI + (rng() - .5) * .9, r0 = 120 + rng() * 140;
-      return {id: m.id, m, r: radius(m), x: p ? p.x : Math.cos(a) * r0, y: p ? p.y : Math.sin(a) * r0, vx: 0, vy: 0, fixed: false, fresh: !p};
+      return {id: m.id, m, r: radius(m), lw: lw(m), x: p ? p.x : Math.cos(a) * r0, y: p ? p.y : Math.sin(a) * r0, vx: 0, vy: 0, fixed: false, fresh: !p};
     });
     byId = Object.fromEntries(nodes.map(n => [n.id, n]));
     // Neue Werkzeuge starten in der Nähe der Methoden, die sie unterstützen
@@ -38,6 +40,13 @@ const Graph = (() => {
       let fx = dx / d * f, fy = dy / d * f;
       if (d < min) { const push = (min - d) * .22; fx += dx / d * push; fy += dy / d * push; }
       p.vx -= fx; p.vy -= fy; q.vx += fx; q.vy += fy;
+      // Beschriftungen als Rechtecke: überlappende Kästen werden entlang der kleineren Überlappung getrennt
+      const hx = Math.max(p.r, p.lw / 2) + Math.max(q.r, q.lw / 2) + 4, hy = p.r + q.r + 18;
+      const ox = hx - Math.abs(dx), oy = hy - Math.abs(dy);
+      if (ox > 0 && oy > 0) {
+        if (ox * .6 < oy) { const s = Math.sign(dx) || 1, m = ox * .12; p.vx -= s * m; q.vx += s * m; }
+        else { const s = Math.sign(dy) || 1, m = oy * .12; p.vy -= s * m; q.vy += s * m; }
+      }
     }
     for (const l of links) {
       const dx = l.t.x - l.s.x, dy = l.t.y - l.s.y, d = Math.sqrt(dx * dx + dy * dy) || .01, f = (d - l.len - l.s.r - l.t.r) * l.k * (.3 + a * .7);
@@ -51,7 +60,7 @@ const Graph = (() => {
       const c = cen[p.m.c];
       p.vx += (c.x / c.n - p.x) * .006 * (a + .2); p.vy += (c.y / c.n - p.y) * .006 * (a + .2);
       const g = GR + Math.min(DEG[p.id], 16) * GD;
-      p.vx -= p.x * g; p.vy -= p.y * g;
+      p.vx -= p.x * g * GX; p.vy -= p.y * g;
     }
     for (const p of nodes) {
       if (p.fixed) { p.vx = p.vy = 0; continue; }
@@ -93,7 +102,7 @@ const Graph = (() => {
       sh.setAttribute('stroke-width', n.id === sel ? 4 : (P && P.has(n.id)) ? 3 : 2);
       sh.setAttribute('stroke', n.id === sel ? 'var(--ink)' : `var(--p-${phk(n.m)})`);
       const lab = g.querySelector('text');
-      lab.style.opacity = (!ok || (f && !near.has(n.id))) ? 0 : (DEG[n.id] < 3 && tr.k < .8 && !near.has(n.id) && !(P && P.has(n.id))) ? 0 : 1;
+      lab.style.opacity = (!ok || (f && !near.has(n.id))) ? 0 : (DEG[n.id] < (W < 600 ? 5 : 3) && tr.k < (W < 600 ? 1.1 : .8) && !near.has(n.id) && !(P && P.has(n.id))) ? 0 : 1;
     });
     links.forEach((l, i) => {
       const ln = el.lines[i], ok = pass(l.s.m) && pass(l.t.m), hot = f && (l.e.a === f || l.e.b === f);
@@ -108,7 +117,7 @@ const Graph = (() => {
   function fit() {
     if (!nodes.length) return;
     let x0 = 1e9, x1 = -1e9, y0 = 1e9, y1 = -1e9;
-    nodes.forEach(n => { x0 = Math.min(x0, n.x - n.r - 30); x1 = Math.max(x1, n.x + n.r + 30); y0 = Math.min(y0, n.y - n.r - 12); y1 = Math.max(y1, n.y + n.r + 26); });
+    nodes.forEach(n => { const hw = Math.max(n.r, n.lw / 2) + 8; x0 = Math.min(x0, n.x - hw); x1 = Math.max(x1, n.x + hw); y0 = Math.min(y0, n.y - n.r - 12); y1 = Math.max(y1, n.y + n.r + 26); });
     tr.k = Math.max(.35, Math.min(1.5, W / (x1 - x0), H / (y1 - y0)));
     tr.x = W / 2 - (x0 + x1) / 2 * tr.k; tr.y = H / 2 - (y0 + y1) / 2 * tr.k; transform(); styles();
   }
@@ -126,12 +135,21 @@ const Graph = (() => {
   }
   function world(e) { const r = svg.getBoundingClientRect(); return {x: (e.clientX - r.left - tr.x) / tr.k, y: (e.clientY - r.top - tr.y) / tr.k, sx: e.clientX - r.left, sy: e.clientY - r.top}; }
   function bind() {
+    const ptr = new Map(); let pinch = 0;
+    const dist = () => { const [a, b] = [...ptr.values()]; return Math.hypot(a.x - b.x, a.y - b.y) || 1; };
     svg.addEventListener('pointerdown', e => {
+      ptr.set(e.pointerId, {x: e.clientX, y: e.clientY});
+      if (ptr.size === 2) { if (drag) drag.n.fixed = false; drag = pan = null; moved = true; pinch = dist(); return; }
       const g = e.target.closest('.gn'); moved = false; touched = true; svg.setPointerCapture(e.pointerId);
       if (g) { const n = byId[g.dataset.id], w = world(e); drag = {n, dx: n.x - w.x, dy: n.y - w.y, sx: e.clientX, sy: e.clientY}; n.fixed = true; }
       else pan = {x: e.clientX, y: e.clientY};
     });
     svg.addEventListener('pointermove', e => {
+      if (ptr.has(e.pointerId)) ptr.set(e.pointerId, {x: e.clientX, y: e.clientY});
+      if (ptr.size === 2 && pinch) {
+        const d = dist(), [a, b] = [...ptr.values()], r = svg.getBoundingClientRect();
+        zoom(d / pinch, (a.x + b.x) / 2 - r.left, (a.y + b.y) / 2 - r.top); pinch = d; return;
+      }
       if (drag) {
         if (Math.hypot(e.clientX - drag.sx, e.clientY - drag.sy) > 4) moved = true;
         if (moved) { const w = world(e); drag.n.x = w.x + drag.dx; drag.n.y = w.y + drag.dy; heat(.3); place(); }
@@ -143,12 +161,13 @@ const Graph = (() => {
         if (id !== hover) { hover = id; styles(); }
       }
     });
-    const up = () => {
+    const up = e => {
+      ptr.delete(e.pointerId); if (!ptr.size) pinch = 0;
       if (drag) { drag.n.fixed = false; if (!moved) choose(drag.n.id === sel ? null : drag.n.id); }
       else if (pan && !moved) choose(null);
       drag = pan = null;
     };
-    svg.addEventListener('pointerup', up); svg.addEventListener('pointercancel', () => { if (drag) drag.n.fixed = false; drag = pan = null; });
+    svg.addEventListener('pointerup', up); svg.addEventListener('pointercancel', e => { ptr.delete(e.pointerId); pinch = 0; if (drag) drag.n.fixed = false; drag = pan = null; });
     svg.addEventListener('pointerleave', () => { if (hover) { hover = null; styles(); } });
     svg.addEventListener('wheel', e => { if (!e.ctrlKey && !e.metaKey) return; e.preventDefault(); const w = world(e); zoom(e.deltaY < 0 ? 1.12 : .89, w.sx, w.sy); }, {passive: false});
     svg.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { const g = e.target.closest('.gn'); if (g) { e.preventDefault(); choose(g.dataset.id === sel ? null : g.dataset.id); } } });
@@ -161,7 +180,8 @@ const Graph = (() => {
     tr.x = sx - (sx - tr.x) * r; tr.y = sy - (sy - tr.y) * r; tr.k = k; transform(); styles();
   }
   function size() {
-    const w = Math.max(300, wrap.clientWidth || 900), h = Math.max(420, Math.min(660, Math.round(w * .68)));
+    const w = Math.max(300, wrap.clientWidth || 900), h = w < 600 ? Math.round(Math.max(460, Math.min(640, w * 1.5))) : Math.max(420, Math.min(660, Math.round(w * .68)));
+    GX = Math.max(.35, Math.min(1.6, h / w)) ** 1.3;
     W = w; H = h; svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.style.height = H + 'px';
   }
   return {

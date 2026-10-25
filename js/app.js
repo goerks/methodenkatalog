@@ -26,7 +26,7 @@ function filters(withCat) {
     ${withCat ? `<div class="fg"><span class="lbl">Kategorie</span>${CATS.map(c => pill('data-fc', c.k, F.cat.has(c.k), c.n)).join('')}</div>` : ''}
     ${filtered() ? `<div class="fg"><button class="pill" data-reset>Filter zurücksetzen</button></div>` : ''}</div>`;
 }
-const cardHtml = m => `<button class="card" ${cc(m)} data-m="${m.id}"><span class="tag">${icon(m.f, phk(m), 16)}${esc(CAT[m.c].n)}</span><h3>${esc(plain(m.n))}</h3><p>${esc(m.k)}</p><span class="tag">${isTool(m) ? esc(m.t) : MODE[m.m] + ' · ' + esc(m.aufwand)}</span></button>`;
+const cardHtml = m => { const sn = F.q ? snippet(SR.get(m.id)) : null; return `<button class="card" ${cc(m)} data-m="${m.id}"><span class="tag">${icon(m.f, phk(m), 16)}${esc(CAT[m.c].n)}</span><h3>${F.q ? hl(plain(m.n)) : esc(plain(m.n))}</h3><p>${sn ? `<span class="found">${sn.n}:</span> ${sn.h}` : esc(m.k)}</p><span class="tag">${isTool(m) ? esc(m.t) : MODE[m.m] + ' · ' + esc(m.aufwand)}</span></button>`; };
 
 function vKarte() {
   const n = NM.filter(pass).length;
@@ -69,7 +69,8 @@ function vLandkarte() {
 }
 function vSuche() {
   const res = M.filter(pass);
-  return filters(true) + `<p class="lbl">${res.length} von ${M.length} Einträgen</p>` +
+  if (F.q) res.sort((x, y) => SR.get(y.id).score - SR.get(x.id).score);
+  return filters(true) + `<p class="lbl">${F.q ? `${res.length} Treffer für «${esc(F.q)}», beste zuerst` : `${res.length} von ${M.length} Einträgen`}</p>` +
     (res.length ? `<div class="list">${res.map(cardHtml).join('')}</div>` : `<p class="empty">Nichts passt zu dieser Auswahl. Filter lockern oder Suchbegriff ändern.</p>`);
 }
 function toolLink(name) { const t = TOOLBYNAME[norm(name)]; return t ? `<button class="tl" data-m="${t.id}">${esc(name)}</button>` : `<span>${esc(name)}</span>`; }
@@ -158,7 +159,7 @@ document.addEventListener('click', e => {
   else if (d.fp) { flip(F.ph, d.fp); refilter(); }
   else if (d.ff) { flip(F.form, d.ff); refilter(); }
   else if (d.fm) { F.mode = d.fm; refilter(); }
-  else if (t.hasAttribute('data-reset')) { F.q = ''; qi.value = ''; F.cat.clear(); F.ph.clear(); F.form.clear(); F.mode = 'alle'; refilter(); }
+  else if (t.hasAttribute('data-reset')) { setQuery(''); qi.value = ''; F.cat.clear(); F.ph.clear(); F.form.clear(); F.mode = 'alle'; refilter(); }
   else if (t.hasAttribute('data-tools')) { toolsOn = !toolsOn; const keep = panelId; main.innerHTML = vKarte(); mountKarte(); }
   else if (d.z) { ({in: Graph.zoomIn, out: Graph.zoomOut, fit: Graph.fit, reset: Graph.reset})[d.z](); }
   else if (d.path !== undefined) { Graph.setPath(PFADE[+d.path].s); const g = document.getElementById('graph'); if (g && g.scrollIntoView) g.scrollIntoView({block: 'center'}); }
@@ -166,6 +167,40 @@ document.addEventListener('click', e => {
   else if (d.show) { view = 'karte'; panelId = d.show; if (isTool(BY[panelId])) toolsOn = true; go('karte'); }
   else if (t.hasAttribute('data-back')) go(lastView);
 });
-qi.addEventListener('input', () => { F.q = qi.value.trim(); if (view === 'karte' && !readHash().m) refilter(); else { view = 'suche'; go('suche'); } });
+const sug = document.getElementById('sug');
+let sugI = -1, sugIds = [];
+function closeSug() { sug.hidden = true; sugI = -1; qi.setAttribute('aria-expanded', 'false'); }
+function openSug(res) {
+  sugIds = res.slice(0, 8).map(x => x.id);
+  if (!F.q) return closeSug();
+  sug.innerHTML = sugIds.length ? sugIds.map((id, i) => { const m = BY[id], sn = snippet(SR.get(id)); return `<button class="sg" role="option" data-sg="${id}" aria-selected="${i === sugI}" ${cc(m)}>${icon(m.f, phk(m), 16)}<span><b>${hl(plain(m.n))}</b>${sn ? `<small>${esc(sn.n)}: ${sn.h}</small>` : `<small>${esc(CAT[m.c].n)}</small>`}</span></button>`; }).join('') + `<button class="sg all" data-sall>Alle ${res.length} Treffer anzeigen</button>` : `<p class="sg none">Nichts gefunden. Anderes Wort oder weniger Wörter versuchen.</p>`;
+  sug.hidden = false; qi.setAttribute('aria-expanded', 'true');
+}
+function runSearch(open) {
+  const res = setQuery(qi.value.trim()).map(x => x.m);
+  const onMap = view === 'karte' && !readHash().m;
+  if (onMap) refilter(); else if (view === 'suche' && !readHash().m) render();
+  if (open) openSug(res);
+}
+qi.addEventListener('input', () => { sugI = -1; runSearch(true); });
+qi.addEventListener('focus', () => { if (F.q) runSearch(true); });
+qi.addEventListener('keydown', e => {
+  const n = sugIds.length;
+  if (e.key === 'ArrowDown' && n) { e.preventDefault(); sugI = (sugI + 1) % n; }
+  else if (e.key === 'ArrowUp' && n) { e.preventDefault(); sugI = (sugI - 1 + n) % n; }
+  else if (e.key === 'Enter') { e.preventDefault(); if (sugI >= 0 && sugIds[sugI]) { const id = sugIds[sugI]; closeSug(); go(id); } else if (F.q) { closeSug(); view = 'suche'; go('suche'); } return; }
+  else if (e.key === 'Escape') { if (!sug.hidden) closeSug(); else { qi.value = ''; qi.blur(); runSearch(false); } return; }
+  else return;
+  sug.querySelectorAll('.sg[data-sg]').forEach((b, i) => b.setAttribute('aria-selected', i === sugI));
+});
+sug.addEventListener('mousedown', e => e.preventDefault());
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-sg],[data-sall]');
+  if (t) { closeSug(); if (t.dataset.sg) go(t.dataset.sg); else { view = 'suche'; go('suche'); } }
+  else if (!e.target.closest('.search')) closeSug();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === '/' && !/INPUT|TEXTAREA|SELECT/.test((e.target.tagName || '')) && !e.ctrlKey && !e.metaKey) { e.preventDefault(); qi.focus(); qi.select(); }
+});
 window.addEventListener('hashchange', render);
 render();

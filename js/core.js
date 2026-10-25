@@ -72,7 +72,7 @@ const chip = (id, big) => { const m = BY[id]; return `<button class="chip${big ?
 // Filter, gemeinsam für Karte und Liste
 const F = {q: '', cat: new Set(), ph: new Set(), form: new Set(), mode: 'alle'};
 function pass(m) {
-  if (F.q) { const t = (m.n + ' ' + m.k + ' ' + m.tools.join(' ') + ' ' + m.t).toLowerCase(); if (!t.includes(F.q.toLowerCase())) return false; }
+  if (F.q && !SR.has(m.id)) return false;
   if (F.cat.size && !F.cat.has(m.c)) return false;
   if (F.ph.size && !F.ph.has(phk(m))) return false;
   if (F.form.size && !F.form.has(m.f)) return false;
@@ -89,3 +89,60 @@ const PFADE = [
   {n:'Prozesse verstehen', d:'Von der Beobachtung zu Regeln und Tests.', s:['beobachtung','event-storming','aktivitaetsdiagramm','bpmn','geschaeftsregeln','akzeptanzkriterien']}
 ];
 const START = [['Anforderungen sammeln','workshop'],['Anforderungen aufschreiben','user-stories'],['Ablauf zeichnen','aktivitaetsdiagramm'],['Prioritäten setzen','moscow'],['Aufwand schätzen','planning-poker'],['Backlog aufbauen','story-mapping']];
+
+// Volltextsuche: alle Wörter müssen vorkommen (UND), Umlaute und Gross-/Kleinschreibung egal, gewichtet nach Feld
+const fold = s => String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ß/g, 's');
+const FIELDS = [
+  ['Name', 10, m => plain(m.n) + ' ' + (m.kz || '')], ['Typ und Werkzeuge', 4, m => m.t + ' ' + m.tools.join(' ')],
+  ['Überblick', 3, m => m.k], ['Wofür', 3, m => m.zw], ['Ablauf', 2, m => m.ab.join(' ')], ['Regeln', 2, m => m.re.join(' ')],
+  ['Wann sinnvoll', 2, m => m.wa.join(' ')], ['Wann besser nicht', 2, m => m.wn.join(' ')], ['Vorbereitung', 2, m => m.vb.join(' ')],
+  ['In der Praxis', 1.5, m => m.pr], ['Empfehlung', 1.5, m => m.em], ['Beispiel', 1.5, m => m.bsp ? m.bsp.t + ' ' + m.bsp.x : ''],
+  ['Eingaben und Ergebnisse', 1.5, m => m.io ? [...m.io.in, ...m.io.out].map(x => x.t).concat(m.io.lf, m.io.ko).join(' ') : ''],
+  ['Quellen', 1, m => m.qu.join(' ')]
+];
+const SIDX = M.map(m => ({m, f: FIELDS.map(([n, w, g]) => { const t = g(m); return {n, w, t, l: fold(t)}; })}));
+const variants = w => [...new Set([w, w.replace(/ae/g, 'a').replace(/oe/g, 'o').replace(/ue/g, 'u')])];
+const SR = new Map();
+let QT = [];
+function search(q) {
+  const terms = fold(q).split(/[^a-z0-9]+/).filter(Boolean);
+  const out = [];
+  if (!terms.length) return {terms, res: out};
+  for (const e of SIDX) {
+    let score = 0, ok = true, best = null;
+    for (const t of terms) {
+      const vs = variants(t); let hit = false;
+      for (const f of e.f) {
+        const pos = Math.min(...vs.map(v => { const i = f.l.indexOf(v); return i < 0 ? 1e9 : i; }));
+        if (pos < 1e9) {
+          hit = true; score += f.w + (f.n === 'Name' && (pos === 0 || f.l[pos - 1] === ' ') ? 6 : 0);
+          if (f.n !== 'Name' && (!best || f.w > best.w)) best = {n: f.n, w: f.w, t: f.t, pos};
+        }
+      }
+      if (!hit) { ok = false; break; }
+    }
+    if (ok) out.push({m: e.m, score, best});
+  }
+  out.sort((a, b) => b.score - a.score || a.m.n.localeCompare(b.m.n, 'de'));
+  return {terms, res: out};
+}
+function setQuery(q) {
+  F.q = q; SR.clear();
+  const r = search(q); QT = r.terms;
+  r.res.forEach(x => SR.set(x.m.id, x));
+  return r.res;
+}
+function flagHtml(s) {
+  const l = fold(s), flags = new Array(s.length).fill(false);
+  QT.forEach(t => variants(t).forEach(v => { let i = l.indexOf(v); while (i >= 0) { for (let k = i; k < i + v.length; k++) flags[k] = true; i = l.indexOf(v, i + v.length); } }));
+  let h = '', on = false;
+  for (let i = 0; i < s.length; i++) { if (flags[i] !== on) { h += on ? '</mark>' : '<mark>'; on = flags[i]; } h += esc(s[i]); }
+  return on ? h + '</mark>' : h;
+}
+// Ausschnitt um die Fundstelle, Suchwörter hervorgehoben
+function mark(text, from) {
+  const a = Math.max(0, from - 45), b = Math.min(text.length, from + 110);
+  return (a > 0 ? '… ' : '') + flagHtml(text.slice(a, b)) + (b < text.length ? ' …' : '');
+}
+const hl = text => flagHtml(text);
+const snippet = x => x && x.best ? {n: x.best.n, h: mark(x.best.t, x.best.pos)} : null;

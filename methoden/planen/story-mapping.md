@@ -15,6 +15,25 @@ status: entwurf
 
 Zeigt die Nutzerreise horizontal und Stories vertikal nach Priorität. Macht Umfang und Releases sichtbar.
 
+## Wofür
+Das Story Mapping ordnet Stories entlang der Nutzerreise: oben die Aktivitäten von links nach rechts, darunter die Stories nach Wichtigkeit. Es zeigt das Ganze statt einer flachen Liste und erlaubt, Releases als horizontale Schnitte zu planen.
+
+## Wann sinnvoll
+- Wenn das Backlog unübersichtlich und flach geworden ist
+- Beim Planen eines ersten Releases mit minimalem Umfang
+- Wenn das Team den Gesamtzusammenhang verlieren könnte
+
+## Wann besser nicht
+- Bei kleinen Vorhaben mit wenigen Stories
+- Wenn die Nutzerreise nicht bekannt ist: zuerst Personas und Interviews
+
+## Vorbereitung
+- Personas und Ziele bereitlegen
+- Grosse Wand oder digitales Whiteboard
+- Haftnotizen in zwei Farben für Aktivitäten und Stories
+- Fachleute und Team einladen
+- Halben Tag einplanen
+
 ## Ablauf
 1. Nutzeraktivitäten als Rückgrat der Karte anordnen
 2. Schritte darunter ergänzen
@@ -27,8 +46,33 @@ Zeigt die Nutzerreise horizontal und Stories vertikal nach Priorität. Macht Umf
 - Oben nach unten: Priorität
 - Erstes Release ist ein durchgängiger, kleiner Weg (Walking Skeleton)
 
+## In der Praxis
+Erzählen Sie die Geschichte aus Sicht der Persona von links nach rechts. Die oberste Ebene bilden Aktivitäten, darunter Schritte, ganz unten Stories. Ziehen Sie eine Linie quer: alles darüber ist das erste Release («Walking Skeleton»). So entsteht eine Liefersequenz, die den Nutzen früh zeigt.
+
 ## Beispiel: Tourenplanung
 Aktivität «Planen»: Tour anlegen, Fahrzeug zuweisen. Aktivität «Freigeben»: prüfen, sperren. Release 1: die oberste Zeile durch alle Aktivitäten.
+
+## Empfehlung
+Vorher liefern Stories, Personas und Workshop die Zutaten. Danach übernehmen Sie die geschnittene Liste ins Backlog und planen Releases.
+
+## Lieferanten
+- Fachbereich und Nutzervertretung
+- Product Owner
+
+## Eingaben
+- Stories >> [[user-stories]] geliefert von
+- Nutzerprofile >> [[persona]] geliefert von
+- Workshop >> [[workshop]] durchgeführt in
+
+## Ergebnisse
+- Story Map mit Release-Schnitten
+- Geordneter Inhalt >> [[product-backlog]] übernommen in
+- Teilbare Stories >> [[story-splitting]] weiterverarbeitet in
+
+## Konsumenten
+- Das ganze Team
+- Product Owner
+- Management
 
 ## Verknüpfungen
 - vorher: [[user-stories]] Stories füllen die Karte.
@@ -36,3 +80,8 @@ Aktivität «Planen»: Tour anlegen, Fahrzeug zuweisen. Aktivität «Freigeben»
 - danach: [[product-backlog]] Die Karte wird zum Backlog.
 - vorher: [[workshop]] Gemeinsam im Workshop erstellen.
 - alternative: [[use-case-diagramm]] Klassischer Überblick über Funktionen.
+
+## Quellen
+- Patton, J.: User Story Mapping (O'Reilly, 2014)
+- Patton, J.: The New User Story Backlog is a Map (2008), agileproductdesign.com
+- Cohn, M.: User Stories Applied (2004)

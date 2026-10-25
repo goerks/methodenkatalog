@@ -10,6 +10,17 @@ status: entwurf
 
 Ticket- und Projektwerkzeug von Atlassian. Im agilen Umfeld verwaltet es Backlog, Sprints und Aufgaben.
 
+## Wofür
+Jira ist ein Ticketsystem von Atlassian, das im agilen Umfeld Backlog, Sprints und Aufgaben verwaltet. Es ist der Ort, an dem Stories, Schätzungen und Status zusammenlaufen.
+
+## Wann sinnvoll
+- Wenn das Team in Sprints arbeitet und Backlog, Board und Berichte braucht
+- Wenn Aufgaben nachvollziehbar mit Stories und Fehlern verknüpft werden sollen
+
+## Wann besser nicht
+- Für Zeichnungen und Modelle, dort ist Miro oder draw.io besser
+- Wenn niemand Konventionen pflegt: Jira wird sonst unübersichtlich
+
 ## Einsatz
 - Backlog und Stories erfassen und priorisieren
 - Sprints planen und Boards führen
@@ -20,3 +31,7 @@ Ticket- und Projektwerkzeug von Atlassian. Im agilen Umfeld verwaltet es Backlog
 - Viele Einstellungen, braucht eine klare Konvention im Team
 - Für Modelle und Zeichnungen nur Anhänge
 - Lizenzkosten pro Nutzer
+
+## Quellen
+- Atlassian: Jira Software Dokumentation (atlassian.com)
+- Atlassian: Agile Coach (atlassian.com)

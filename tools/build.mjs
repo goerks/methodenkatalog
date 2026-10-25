@@ -41,12 +41,17 @@ function parseFile(file, folder) {
   const numbered = key => lines(key).map(l => l.match(/^\d+\.\s+(.*)/)).filter(Boolean).map(x => x[1]);
   const bullets = key => lines(key).map(l => l.match(/^-\s+(.*)/)).filter(Boolean).map(x => x[1]);
 
+  const prose = key => (sec[key] || '').trim();
+  const ioItems = key => bullets(key).map(s => { const x = s.match(/^(.*?)\s*>>\s*\[\[([^\]]+)\]\]\s*(.*)$/); return x ? { t: x[1].trim(), to: x[2], v: x[3].trim() } : { t: s }; });
   const m = {
     id, n: meta.name, c: KAT[meta.kategorie], f: meta.form, m: meta.vorgehen, ph: isTool ? 'alle' : meta.phase, t: meta.typ,
     kz: meta.kurz || '', k: intro, aufwand: meta.aufwand || '',
     ab: isTool ? bullets('Einsatz') : numbered('Ablauf'),
     re: isTool ? bullets('Grenzen') : bullets('Regeln'),
     bsp: beispielKey ? { t: beispielKey.replace(/^Beispiel:?\s*/, '') || 'Beispiel', x: sec[beispielKey] } : null,
+    zw: prose('Wofür'), wa: bullets('Wann sinnvoll'), wn: bullets('Wann besser nicht'), vb: bullets('Vorbereitung'),
+    pr: prose('In der Praxis'), em: prose('Empfehlung'), qu: bullets('Quellen'),
+    io: isTool ? null : { lf: bullets('Lieferanten'), in: ioItems('Eingaben'), out: ioItems('Ergebnisse'), ko: bullets('Konsumenten') },
     li: [],
     tools: (meta.werkzeuge || '').replace(/^\[|\]$/g, '').split(',').map(s => s.trim()).filter(Boolean),
     s: meta.status || 'entwurf',
@@ -71,6 +76,10 @@ function parseFile(file, folder) {
   if (!STATUS.includes(m.s)) err(id, `status «${m.s}» unbekannt`);
   if (!meta.typ) err(id, 'typ fehlt');
   if (!intro) err(id, 'Einleitungstext fehlt');
+  if (!m.zw) err(id, 'Abschnitt «Wofür» fehlt');
+  if (m.wa.length < 2) err(id, 'Abschnitt «Wann sinnvoll» braucht mindestens 2 Punkte');
+  if (!m.wn.length) err(id, 'Abschnitt «Wann besser nicht» fehlt');
+  if (!m.qu.length) err(id, 'Abschnitt «Quellen» fehlt');
   if (isTool) {
     if (!m.ab.length) err(id, 'Abschnitt «Einsatz» fehlt oder leer');
     if (!m.re.length) err(id, 'Abschnitt «Grenzen» fehlt oder leer');
@@ -80,6 +89,10 @@ function parseFile(file, folder) {
     if (!m.ab.length) err(id, 'Abschnitt «Ablauf» fehlt oder leer');
     if (!m.re.length) err(id, 'Abschnitt «Regeln» fehlt oder leer');
     if (!m.bsp || !m.bsp.x) err(id, 'Abschnitt «Beispiel» fehlt oder leer');
+    if (!m.vb.length) err(id, 'Abschnitt «Vorbereitung» fehlt');
+    if (!m.pr) err(id, 'Abschnitt «In der Praxis» fehlt');
+    if (!m.em) err(id, 'Abschnitt «Empfehlung» fehlt');
+    if (!m.io.in.length || !m.io.out.length || !m.io.lf.length || !m.io.ko.length) err(id, 'Lieferanten, Eingaben, Ergebnisse und Konsumenten brauchen je mindestens einen Punkt');
   }
   return m;
 }
@@ -100,6 +113,7 @@ for (const m of all) { if (ids.has(m.id)) err(m.id, 'ID kommt doppelt vor'); ids
 const methods = all.filter(m => m.f !== 'werkzeug'), tools = all.filter(m => m.f === 'werkzeug');
 for (const m of methods) {
   if (m.li.length < LINKS_MIN || m.li.length > LINKS_MAX) err(m.id, `${m.li.length} Verknüpfungen, erlaubt sind ${LINKS_MIN} bis ${LINKS_MAX}`);
+  for (const x of [...m.io.in, ...m.io.out]) if (x.to) { if (!ids.has(x.to)) err(m.id, `Eingabe/Ergebnis verweist auf unbekannte Methode «${x.to}»`); else if (x.to === m.id || ids.get(x.to).f === 'werkzeug') err(m.id, `Eingabe/Ergebnis «${x.t}» verweist auf sich selbst oder ein Werkzeug`); }
   for (const [to] of m.li) {
     if (!ids.has(to)) err(m.id, `Verknüpfung zu unbekannter Methode «${to}»`);
     else if (to === m.id) err(m.id, 'Verknüpfung auf sich selbst');

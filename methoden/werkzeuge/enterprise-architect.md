@@ -10,6 +10,17 @@ status: entwurf
 
 Umfassendes Modellierungswerkzeug für UML, BPMN und Anforderungen mit gemeinsamem Modell und Rückverfolgbarkeit.
 
+## Wofür
+Enterprise Architect ist ein umfassendes Modellierungswerkzeug für UML, BPMN und Anforderungen mit einem gemeinsamen Modell und Rückverfolgbarkeit.
+
+## Wann sinnvoll
+- Bei grossen Vorhaben mit gemeinsamem Modell
+- Wenn Berichte und Dokumente aus dem Modell erzeugt werden sollen
+
+## Wann besser nicht
+- Bei kleinen Vorhaben: oft zu schwergewichtig
+- Wenn der Einarbeitungsaufwand nicht gerechtfertigt ist
+
 ## Einsatz
 - Use Cases, Aktivitäts- und Zustandsdiagramme modellieren
 - Anforderungen mit Modellelementen verknüpfen
@@ -20,3 +31,7 @@ Umfassendes Modellierungswerkzeug für UML, BPMN und Anforderungen mit gemeinsam
 - Hoher Einarbeitungsaufwand
 - Lizenzkosten
 - Für kleine Vorhaben oft zu schwergewichtig
+
+## Quellen
+- Sparx Systems: Enterprise Architect Benutzerhandbuch (sparxsystems.com)
+- Sparx Systems: Enterprise Architect Dokumentation (sparxsystems.com)

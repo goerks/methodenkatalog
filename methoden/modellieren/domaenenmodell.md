@@ -15,6 +15,25 @@ status: entwurf
 
 Zeigt die wichtigen Fachbegriffe eines Bereichs als Klassen mit ihren Beziehungen, ohne technische Details. Schafft ein gemeinsames Bild der Fachwelt.
 
+## Wofür
+Das Domänenmodell stellt die zentralen Begriffe eines Fachgebiets und ihre Beziehungen dar, zum Beispiel Kunde, Auftrag und Rechnung. Es ist ein fachliches Modell, kein Datenbankentwurf, und dient als gemeinsames Verständnis.
+
+## Wann sinnvoll
+- Bei komplexer Fachlichkeit
+- Wenn Technik und Fachbereich sich über Begriffe uneinig sind
+- Vor dem Entwurf der Systemstruktur
+
+## Wann besser nicht
+- Wenn die Domäne einfach ist
+- Wenn es nur um Abläufe geht
+- Wenn daraus vorschnell eine Datenbank gebaut wird
+
+## Vorbereitung
+- Glossar und Begriffssammlung bereitlegen
+- Fachleute und Architektur einladen
+- Notation einfach halten (Klassen mit Beziehungen)
+- Whiteboard oder Zeichenwerkzeug
+
 ## Ablauf
 1. Zentrale Begriffe aus Glossar und Workshops sammeln
 2. Begriffe als Kästchen zeichnen
@@ -27,8 +46,33 @@ Zeigt die wichtigen Fachbegriffe eines Bereichs als Klassen mit ihren Beziehunge
 - Nur das Wichtige zeigen
 - Jede Beziehung hat einen Namen und eine Kardinalität
 
+## In der Praxis
+Zeichnen Sie nur fachlich relevante Begriffe und benennen Sie Beziehungen mit Verben («Kunde erteilt Auftrag»), mit Kardinalitäten. Verzichten Sie auf technische Felder. Lassen Sie Fachleute das Modell laut vorlesen: Wenn der Satz falsch klingt, stimmt das Modell nicht.
+
 ## Beispiel: Tourenplanung
 Tour (1) enthält Stopps (n). Eine Tour hat genau ein Fahrzeug und einen Fahrer. Ein Stopp gehört zu einem Auftrag.
+
+## Empfehlung
+Vorher liefern Glossar und Event Storming die Begriffe. Danach ergänzen Geschäftsregeln und Zustandsdiagramm das Modell. Es gehört ins Pflichtenheft.
+
+## Lieferanten
+- Fachexperten
+- Architektur
+
+## Eingaben
+- Begriffe >> [[glossar]] geliefert von
+- Ereignisse und Aggregate >> [[event-storming]] geliefert von
+- Regeln >> [[geschaeftsregeln]] ergänzt durch
+
+## Ergebnisse
+- Klassendiagramm der Fachbegriffe
+- Lebenszyklen >> [[zustandsdiagramm]] verfeinert in
+- Beschreibung der Fachstruktur >> [[pflichtenheft]] übernommen in
+
+## Konsumenten
+- Architektur
+- Entwicklung
+- Fachbereich
 
 ## Verknüpfungen
 - ergaenzt: [[glossar]] Modell und Glossar nutzen dieselben Begriffe.
@@ -36,3 +80,8 @@ Tour (1) enthält Stopps (n). Eine Tour hat genau ein Fahrzeug und einen Fahrer.
 - ergaenzt: [[geschaeftsregeln]] Regeln verbinden Begriffe.
 - ergaenzt: [[zustandsdiagramm]] Zustände der Objekte darstellen.
 - danach: [[pflichtenheft]] Als Kapitel Datenmodell einbinden.
+
+## Quellen
+- Evans, E.: Domain-Driven Design (Addison-Wesley, 2003)
+- Larman, C.: Applying UML and Patterns, 3. Auflage (Prentice Hall, 2004)
+- Fowler, M.: Analysis Patterns (Addison-Wesley, 1996)

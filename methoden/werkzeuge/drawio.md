@@ -10,6 +10,17 @@ status: entwurf
 
 Kostenloses Zeichenwerkzeug für UML, BPMN und Flussdiagramme. Läuft im Browser oder lokal, Dateien lassen sich im Repo ablegen.
 
+## Wofür
+draw.io (diagrams.net) ist ein kostenloses Zeichenwerkzeug für UML, BPMN und Flussdiagramme. Es läuft im Browser oder lokal, und die Dateien lassen sich im Repository ablegen.
+
+## Wann sinnvoll
+- Für Diagramme, die versioniert und geteilt werden sollen
+- Wenn keine Lizenzkosten anfallen sollen
+
+## Wann besser nicht
+- Wenn Modelle geprüft und verknüpft werden sollen: dafür ein Modellierungswerkzeug
+- Bei Diagrammen, die vollautomatisch aus Text entstehen sollen: dann PlantUML
+
 ## Einsatz
 - Aktivitäts-, Use-Case- und Zustandsdiagramme zeichnen
 - BPMN-Prozesse mit Standardformen zeichnen
@@ -20,3 +31,7 @@ Kostenloses Zeichenwerkzeug für UML, BPMN und Flussdiagramme. Läuft im Browser
 - Keine Modellprüfung, nur Zeichnen
 - Kein gemeinsames Modell hinter den Diagrammen
 - Layout muss von Hand gepflegt werden
+
+## Quellen
+- diagrams.net: Dokumentation (diagrams.net)
+- JGraph Ltd.: draw.io Handbuch (drawio.com)

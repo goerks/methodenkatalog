@@ -14,6 +14,25 @@ status: entwurf
 
 Relative Einheit für Grösse und Komplexität einer Story, unabhängig von Stunden. Mit der Velocity wird planbar.
 
+## Wofür
+Story Points messen den relativen Aufwand einer Story, einschliesslich Umfang, Komplexität und Unsicherheit, nicht Stunden. Mit der Zeit zeigt die Velocity, wie viele Punkte das Team pro Sprint schafft, und erlaubt Prognosen.
+
+## Wann sinnvoll
+- Wenn das Team in Sprints arbeitet und Prognosen braucht
+- Wenn Stundenschätzungen trügerisch genau wirken
+- Wenn die Planung auf Erfahrung des Teams beruhen soll
+
+## Wann besser nicht
+- Wenn Kunden Festpreis nach Stunden verlangen
+- Bei sehr wenigen Daten zu Beginn, die Prognose bleibt dann grob
+- Wenn Punkte zwischen Teams verglichen werden: sie sind teamspezifisch
+
+## Vorbereitung
+- Referenzstories festlegen, zum Beispiel eine kleine mit 2 und eine mittlere mit 5 Punkten
+- Skala vereinbaren (Fibonacci)
+- Werkzeug für Velocity und Burndown wählen
+- Team in die Bedeutung der Punkte einführen
+
 ## Ablauf
 1. Referenzstory festlegen (z. B. 3 Punkte)
 2. Neue Stories relativ dazu schätzen
@@ -27,11 +46,42 @@ Relative Einheit für Grösse und Komplexität einer Story, unabhängig von Stun
 - Nur fertige Stories zählen
 - Nicht als Leistungsmessung nutzen
 
+## In der Praxis
+Punkte sind relativ: Eine 8 ist ungefähr viermal so viel wie eine 2. Sie gehören dem Team, andere nutzen sie nicht als Leistungsmass. Die Velocity ist der Durchschnitt der letzten drei bis fünf Sprints. Rechnen Sie nicht auf Stunden um, das zerstört den Nutzen.
+
 ## Beispiel: Velocity
 Letzte drei Sprints: 21, 24, 18 Punkte → Velocity 21. Backlog mit 84 Punkten braucht etwa 4 Sprints.
+
+## Empfehlung
+Vorher schätzt das Team mit Planning Poker. Danach nutzen Sie die Punkte im Backlog und in der Sprintplanung und als Aufwand für WSJF.
+
+## Lieferanten
+- Entwicklungsteam
+- Product Owner
+
+## Eingaben
+- Schätzrunde >> [[planning-poker]] geliefert von
+- Stories >> [[user-stories]] geliefert von
+- Referenzstories
+
+## Ergebnisse
+- Punkte je Story
+- Velocity des Teams
+- Aufwand im Backlog >> [[product-backlog]] hinterlegt in
+- Aufwandsnenner >> [[wsjf]] genutzt in
+
+## Konsumenten
+- Product Owner
+- Sprint Planning
+- Management
 
 ## Verknüpfungen
 - vorher: [[planning-poker]] Punkte werden im Planning Poker bestimmt.
 - vorher: [[user-stories]] Punkte hängen an Stories.
 - danach: [[product-backlog]] Backlog mit Punkten bewerten.
 - danach: [[wsjf]] Aufwandsteil von WSJF.
+
+## Quellen
+- Cohn, M.: Agile Estimating and Planning (Prentice Hall, 2005)
+- Beck, K., Fowler, M.: Planning Extreme Programming (Addison-Wesley, 2000)
+- Schwaber, K., Sutherland, J.: The Scrum Guide (2020)

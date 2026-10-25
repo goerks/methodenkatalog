@@ -77,20 +77,49 @@ function pathStrip(m) {
   const nb = NB[m.id], side = (arr, lbl) => arr.length ? `<div class="ps">${arr.slice(0, 3).map(x => chip(x[0])).join('')}${arr.length > 3 ? `<small>+${arr.length - 3}</small>` : ''}</div>` : `<div class="ps none"><small>${lbl}</small></div>`;
   return `<div class="pstrip"><div><span class="lbl">Davor</span>${side(nb.vorher, 'Anfang')}</div><span class="arr">→</span><div class="now" ${cc(m)}><span class="lbl">Diese</span><b>${esc(plain(m.n))}</b></div><span class="arr">→</span><div><span class="lbl">Danach</span>${side(nb.danach, 'Ende')}</div></div>`;
 }
+let refVar = 'a';
+const REFV = {a: 'Tabelle (SIPOC)', b: 'Artefaktfluss', c: 'Sätze'};
+const ioChip = x => x.to ? chip(x.to) : '';
+function refs(m) {
+  const io = m.io, ul = a => `<ul>${a.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`;
+  if (refVar === 'a') {
+    const col = (t, body, cls) => `<div class="sc ${cls || ''}"><h4>${t}</h4>${body}</div>`;
+    const items = a => `<ul>${a.map(x => `<li>${esc(x.t)}${x.to ? `<div>${chip(x.to)}</div>` : ''}</li>`).join('')}</ul>`;
+    return `<div class="sipoc">${col('Lieferanten', ul(io.lf))}${col('Eingaben', items(io.in))}${col('Methode', `<b>${esc(plain(m.n))}</b><small>${m.ab.length} Schritte</small>`, 'mid')}${col('Ergebnisse', items(io.out))}${col('Konsumenten', ul(io.ko))}</div>`;
+  }
+  if (refVar === 'b') {
+    const row = (x, dir) => `<div class="fr ${dir}">${dir === 'in' ? (x.to ? chip(x.to) : '<span class="ext">extern</span>') : ''}<span class="fl"><i>${esc(x.t)}</i></span>${dir === 'out' ? (x.to ? chip(x.to) : '<span class="ext">extern</span>') : ''}</div>`;
+    return `<div class="flow"><div class="fcol">${io.in.map(x => row(x, 'in')).join('')}</div><div class="fmid" ${cc(m)}><b>${esc(plain(m.n))}</b></div><div class="fcol">${io.out.map(x => row(x, 'out')).join('')}</div></div><p class="hint">Beschriftung = was weitergegeben wird. Ohne Methode daneben liefert oder nutzt es eine Rolle ausserhalb des Katalogs.</p>`;
+  }
+  const v = x => x.v || 'in Verbindung mit';
+  return `<div class="sent"><h4>Diese Methode braucht</h4><ul>${io.in.map(x => `<li>${esc(x.t)}${x.to ? ` <span class="vb">${esc(v(x))}</span> ${chip(x.to)}` : ''}</li>`).join('')}</ul>
+   <h4>Sie liefert</h4><ul>${io.out.map(x => `<li>${esc(x.t)}${x.to ? ` <span class="vb">${esc(v(x))}</span> ${chip(x.to)}` : ''}</li>`).join('')}</ul>
+   <p class="who"><b>Geliefert von:</b> ${io.lf.map(esc).join(', ')}. <b>Genutzt von:</b> ${io.ko.map(esc).join(', ')}.</p></div>`;
+}
 function vDetail(id) {
   const m = BY[id], t = isTool(m), nb = NB[id];
   const vis = !t && m.vis && VIS[m.vis] ? `<div class="vis" ${cc(m)}>${VIS[m.vis]()}</div>` : '';
   const groups = Object.keys(REL).filter(r => nb[r].length);
+  const li = a => `<ul class="rules">${a.map(s => `<li>${esc(s)}</li>`).join('')}</ul>`;
   const meta = t ? `<span>Art: <b>${esc(m.t)}</b></span><span>Unterstützt: <b>${m.sp.length} Methoden</b></span>`
     : `<span>Vorgehen: <b>${MODE[m.m]}</b></span><span>Phase: <b>${PHN[m.ph]}</b></span><span>Typ: <b>${esc(m.t)}</b></span><span>Aufwand: <b>${esc(m.aufwand)}</b></span>`;
+  const sec = (h, b, cls) => `<section class="sec ${cls || ''}"><h2>${h}</h2>${b}</section>`;
   return `<div ${cc(m)}><button class="back" data-back>← ${VIEWS[lastView]}</button>
   <header class="dh"><span class="lbl" style="color:var(--cc)">${icon(m.f, phk(m), 18)} ${t ? 'Werkzeug' : CAT[m.c].n + ' · ' + FORMS[m.f]}</span><h1>${esc(plain(m.n))}</h1>
     <div class="meta">${meta}${m.s === 'entwurf' ? '<span>Status: <b>Entwurf, fachlich noch nicht geprüft</b></span>' : ''}</div>
-    <p class="lead">${esc(m.k)}</p>${t ? '' : pathStrip(m)}<button class="pill" data-show="${m.id}">Auf der Karte zeigen</button></header>
+    <p class="lead">${esc(m.k)}</p><button class="pill" data-show="${m.id}">Auf der Karte zeigen</button></header>
   <div class="dg"><div>
-    <section class="sec"><h2>${t ? 'Einsatz' : 'Ablauf'}</h2>${t ? `<ul class="rules">${m.ab.map(s => `<li>${esc(s)}</li>`).join('')}</ul>` : `<ol class="steps">${m.ab.map(s => `<li><span>${esc(s)}</span></li>`).join('')}</ol>`}</section>
-    <section class="sec"><h2>${t ? 'Grenzen' : 'Regeln'}</h2><ul class="rules">${m.re.map(s => `<li>${esc(s)}</li>`).join('')}</ul></section>
-    ${m.bsp ? `<section class="sec"><h2>Beispiel</h2>${vis}<div class="ex"><h3>${esc(m.bsp.t)}</h3><p>${esc(m.bsp.x)}</p></div></section>` : ''}
+    ${sec('Wofür', `<p class="prose">${esc(m.zw)}</p>`)}
+    <div class="two">${sec('Wann sinnvoll', li(m.wa), 'yes')}${sec('Wann besser nicht', li(m.wn), 'no')}</div>
+    ${t ? '' : sec('Vorbereitung und Material', li(m.vb))}
+    ${sec(t ? 'Einsatz' : 'Ablauf', t ? li(m.ab) : `<ol class="steps">${m.ab.map(s => `<li><span>${esc(s)}</span></li>`).join('')}</ol>`)}
+    ${t ? '' : sec('In der Praxis', `<p class="prose">${esc(m.pr)}</p>`)}
+    ${sec(t ? 'Grenzen' : 'Regeln', li(m.re))}
+    ${m.bsp ? sec('Beispiel', `${vis}<div class="ex"><h3>${esc(m.bsp.t)}</h3><p>${esc(m.bsp.x)}</p></div>`) : ''}
+    ${t ? '' : sec('Empfehlung', `<p class="prose">${esc(m.em)}</p>`)}
+    ${t ? '' : `<section class="sec"><h2>Eingaben und Ergebnisse</h2><div class="rv" role="group" aria-label="Darstellung der Referenzen"><span class="lbl">Darstellung</span>${Object.entries(REFV).map(([k, n]) => `<button class="pill" aria-pressed="${refVar === k}" data-rv="${k}">${n}</button>`).join('')}</div><div id="refs">${refs(m)}</div></section>`}
+    ${t ? '' : sec('Der Weg', pathStrip(m))}
+    ${sec('Quellen', `<ul class="src">${m.qu.map(q => `<li>${esc(q)}</li>`).join('')}</ul><p class="hint">Quellen wurden bei der Erstellung aus dem Fachwissen zusammengetragen und noch nicht einzeln geprüft.</p>`)}
   </div><aside>
     <section class="sec"><h2>${t ? 'Unterstützte Methoden' : 'Verknüpft'}</h2><div class="rel">${groups.map(r =>
       `<div class="rg"><h3>${REL[r]}</h3>${nb[r].map(([to, why]) => { const x = BY[to]; return `<button class="rl" ${cc(x)} data-m="${x.id}"><b>${icon(x.f, phk(x), 14)}${esc(plain(x.n))}</b>${why ? `<span>${esc(why)}</span>` : ''}</button>`; }).join('')}</div>`).join('') || '<p class="empty">Keine Verknüpfungen.</p>'}</div></section>
@@ -119,7 +148,7 @@ function refilter() {
 }
 const flip = (set, v) => set.has(v) ? set.delete(v) : set.add(v);
 document.addEventListener('click', e => {
-  const t = e.target.closest('[data-m],[data-v],[data-fc],[data-fp],[data-ff],[data-fm],[data-back],[data-reset],[data-tools],[data-z],[data-path],[data-show]');
+  const t = e.target.closest('[data-m],[data-v],[data-fc],[data-fp],[data-ff],[data-fm],[data-back],[data-reset],[data-tools],[data-z],[data-path],[data-show],[data-rv]');
   if (!t) return;
   const d = t.dataset;
   if (d.m) { if (e.target.closest('#panel') && !t.classList.contains('act')) { Graph.select(d.m); panelId = d.m; document.getElementById('panel').innerHTML = panelHtml(d.m); } else go(d.m); }
@@ -132,6 +161,7 @@ document.addEventListener('click', e => {
   else if (t.hasAttribute('data-tools')) { toolsOn = !toolsOn; const keep = panelId; main.innerHTML = vKarte(); mountKarte(); }
   else if (d.z) { ({in: Graph.zoomIn, out: Graph.zoomOut, fit: Graph.fit, reset: Graph.reset})[d.z](); }
   else if (d.path !== undefined) { Graph.setPath(PFADE[+d.path].s); const g = document.getElementById('graph'); if (g && g.scrollIntoView) g.scrollIntoView({block: 'center'}); }
+  else if (d.rv) { refVar = d.rv; const m = BY[readHash().m]; document.getElementById('refs').innerHTML = refs(m); document.querySelectorAll('[data-rv]').forEach(b => b.setAttribute('aria-pressed', b.dataset.rv === refVar)); }
   else if (d.show) { view = 'karte'; panelId = d.show; if (isTool(BY[panelId])) toolsOn = true; go('karte'); }
   else if (t.hasAttribute('data-back')) go(lastView);
 });

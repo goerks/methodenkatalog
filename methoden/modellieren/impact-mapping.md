@@ -15,6 +15,25 @@ status: entwurf
 
 Verbindet ein Ziel über Akteure und deren gewünschtes Verhalten mit den Lieferobjekten, die dazu beitragen. Zeigt, warum etwas gebaut wird.
 
+## Wofür
+Impact Mapping ist eine Mind-Map-Technik, die vier Fragen beantwortet: Warum (Ziel), Wer (Akteure), Wie (Wirkung auf das Verhalten) und Was (Lieferungen). Sie verbindet Ziele mit Lieferungen und verhindert, dass Funktionen ohne erkennbaren Nutzen gebaut werden.
+
+## Wann sinnvoll
+- Wenn eine Liste von Wünschen ohne Ziel vorliegt
+- Zum Start einer agilen Produktentwicklung
+- Wenn Stakeholder verschiedene Ziele verfolgen
+
+## Wann besser nicht
+- Wenn das Ziel nicht messbar sein kann oder gar nicht diskutiert werden darf
+- Bei kleinen, klar umrissenen Aufträgen
+
+## Vorbereitung
+- Messbares Ziel als Ausgangsfrage vorbereiten
+- Grosse Wand oder digitales Whiteboard
+- Haftnotizen in vier Farben: Ziel, Akteure, Wirkungen, Lieferungen
+- Fachliche Entscheider und das Team einladen
+- Zwei bis drei Stunden einplanen
+
 ## Ablauf
 1. Ziel messbar formulieren (Warum?)
 2. Akteure sammeln, die das Ziel beeinflussen (Wer?)
@@ -27,8 +46,33 @@ Verbindet ein Ziel über Akteure und deren gewünschtes Verhalten mit den Liefer
 - Jedes Lieferobjekt führt über einen Akteur zum Ziel
 - Lieferobjekte ohne Wirkungskette entfallen
 
+## In der Praxis
+Gehen Sie von der Mitte nach aussen: Ziel, dann Akteure, dann Wirkungen auf deren Verhalten, zuletzt Lieferungen. Resultate sollten messbar sein («Anteil Neukunden steigt von 5 auf 8 Prozent»). Prüfen Sie jede Lieferung: Welche Wirkung erzeugt sie? Zweige ohne Antwort streichen Sie. Wählen Sie die erfolgversprechendsten Pfade als nächste Schritte.
+
 ## Beispiel: Ziel: Leerfahrten halbieren
 Akteur Disponentin, Verhalten: plant Touren mit Rückfracht. Lieferobjekt: Vorschlag für Rückfracht.
+
+## Empfehlung
+Vorher sollten Vision oder Geschäftsmodell vorliegen. Danach entwickeln Sie aus den Lieferungen User Stories oder legen sie auf die Story Map.
+
+## Lieferanten
+- Auftraggeber und Fachbereiche
+- Product Owner
+
+## Eingaben
+- Produktvision und Ziel >> [[produktvision]] geliefert von
+- Geschäftsziele >> [[business-model-canvas]] geliefert von
+- Workshop mit Beteiligten >> [[workshop]] durchgeführt in
+
+## Ergebnisse
+- Impact Map von Ziel bis Lieferung
+- Ausgewählte Lieferungen >> [[user-stories]] formuliert als
+- Messgrössen für den Erfolg
+
+## Konsumenten
+- Product Owner
+- Entwicklungsteam
+- Auftraggeber
 
 ## Verknüpfungen
 - vorher: [[produktvision]] Die Vision liefert das Ziel.
@@ -36,3 +80,7 @@ Akteur Disponentin, Verhalten: plant Touren mit Rückfracht. Lieferobjekt: Vorsc
 - ergaenzt: [[stakeholder]] Akteure der Map sind Stakeholder.
 - danach: [[user-stories]] Lieferobjekte werden zu User Stories.
 - alternative: [[story-mapping]] Story Map ordnet Stories, Impact Map begründet sie.
+
+## Quellen
+- Adzic, G.: Impact Mapping (Provoking Thoughts, 2012)
+- impactmapping.org: Website zur Methode mit Vorlagen und Beispielen

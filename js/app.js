@@ -100,7 +100,7 @@ function refs(m) {
 }
 function vDetail(id) {
   const m = BY[id], t = isTool(m), nb = NB[id];
-  const vis = !t && m.vis && VIS[m.vis] ? `<div class="vis" ${cc(m)}>${VIS[m.vis]()}</div>` : '';
+  const vis = !t && m.vis && VIS[m.vis] ? `<div class="vis" ${cc(m)}>${VIS[m.vis]()}</div>` : (typeof KV !== 'undefined' && KV[m.id] ? `<div class="vis" ${cc(m)}>${KV[m.id]()}</div>` : '');
   const groups = Object.keys(REL).filter(r => nb[r].length);
   const li = a => `<ul class="rules">${a.map(s => `<li>${esc(s)}</li>`).join('')}</ul>`;
   const meta = t ? `<span>Art: <b>${esc(m.t)}</b></span><span>Unterstützt: <b>${m.sp.length} Methoden</b></span>`

@@ -1477,6 +1477,909 @@ const M = [
   "vis": "event"
  },
  {
+  "id": "fokusgruppe",
+  "n": "Fokusgruppe",
+  "c": "erm",
+  "f": "meeting",
+  "m": "beide",
+  "ph": "ermitteln",
+  "t": "Gruppengespräch",
+  "kz": "Fokusgruppe",
+  "k": "Moderierte Diskussion mit 6 bis 10 Personen einer Zielgruppe, um Meinungen, Erwartungen und Gründe zu verstehen.",
+  "aufwand": "1,5 bis 2 Stunden je Gruppe",
+  "ab": [
+   "Ziel und Ablauf erklären, Regeln vereinbaren",
+   "Mit einer einfachen Einstiegsfrage beginnen",
+   "Kernfragen im Wechsel von Gruppe und Einzelnen stellen",
+   "Unterschiede und Gemeinsamkeiten festhalten",
+   "Ergebnisse zusammenfassen und bestätigen lassen"
+  ],
+  "re": [
+   "Die Gruppe ist ähnlich genug, um offen zu sprechen",
+   "Eine Moderation lenkt, bewertet aber nicht",
+   "Alle kommen zu Wort, niemand dominiert",
+   "Mehrere Gruppen, wenn die Aussagen verallgemeinert werden"
+  ],
+  "bsp": {
+   "t": "Neue Tourenplanung",
+   "x": "Sechs Disponenten diskutieren 90 Minuten über den ersten Prototyp. Auffällig: Alle wollen die Fahrzeugwarnung, aber zwei lehnen eine automatische Sperre ab. Daraus folgt eine Anforderung: Warnung anzeigen, Entscheidung beim Menschen lassen."
+  },
+  "zw": "In einer Fokusgruppe diskutieren Vertreterinnen und Vertreter einer Zielgruppe unter Moderation ein Thema. Die Gruppendynamik bringt Meinungen, Erwartungen und Begründungen hervor, die in Einzelgesprächen oft fehlen. Sie eignet sich, um Bedürfnisse und Reaktionen auf Ideen früh zu verstehen.",
+  "wa": [
+   "Wenn Meinungen und Erwartungen einer Zielgruppe gefragt sind",
+   "Um Reaktionen auf Konzepte oder Entwürfe früh zu hören",
+   "Wenn die Diskussion neue Gesichtspunkte liefern soll"
+  ],
+  "wn": [
+   "Bei heiklen Themen, die man nicht vor anderen bespricht: dann Interview",
+   "Wenn belastbare Zahlen nötig sind: dann Fragebogen",
+   "Wenn einzelne Personen die Runde dominieren würden und die Moderation fehlt"
+  ],
+  "vb": [
+   "Forschungsfrage und Zielgruppe festlegen",
+   "Teilnehmende gezielt auswählen und einladen (6 bis 10)",
+   "Leitfaden mit 5 bis 8 offenen Fragen vorbereiten",
+   "Moderation und Protokollführung trennen",
+   "Raum, Aufnahme und Einwilligung klären"
+  ],
+  "nr": "E-07",
+  "kt": "Moderierte Diskussion mit 6 bis 10 Personen der Zielgruppe: Meinungen und Gründe erfahren.",
+  "ks": [
+   "Ziel und Regeln erklären",
+   "Einfache Einstiegsfrage stellen",
+   "Kernfragen im Wechsel stellen",
+   "Unterschiede festhalten",
+   "Ergebnisse bestätigen lassen"
+  ],
+  "gw": [
+   "Meinungen einer Zielgruppe sind gefragt",
+   "Reaktionen auf Entwürfe früh hören",
+   "Die Diskussion soll Neues liefern"
+  ],
+  "rg": [
+   "Die Gruppe ist ähnlich genug",
+   "Die Moderation lenkt, bewertet nicht",
+   "Alle kommen zu Wort"
+  ],
+  "vk": [
+   "Zielgruppe und Fragen festlegen",
+   "Moderation und Protokoll trennen"
+  ],
+  "bn": "Heikle Themen: besser Einzelinterview",
+  "pr": "Planen Sie lieber zwei kleinere Gruppen als eine grosse. Starten Sie mit einer leichten Frage, damit sich alle äussern. Dominante Personen bremsen Sie durch eine Runde, in der jeder zuerst aufschreibt. Wichtig: Gruppenaussagen sind Meinungen, kein Beweis für Verhalten. Prüfen Sie Erkenntnisse später mit Beobachtung oder Zahlen.",
+  "em": "Vorher sammeln Stakeholder-Analyse und Interviews Fragen. Danach prüft ein Fragebogen die Aussagen an vielen Personen, oder ein Prototyp macht sie testbar.",
+  "qu": [
+   "Krueger, R. A., Casey, M. A.: Focus Groups: A Practical Guide for Applied Research (SAGE, 5. Auflage 2015)",
+   "Morgan, D. L.: Focus Groups as Qualitative Research (SAGE, 2. Auflage 1997)",
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Focus Groups»"
+  ],
+  "io": {
+   "lf": [
+    "Zielgruppe der Nutzer",
+    "Fachbereich"
+   ],
+   "in": [
+    {
+     "t": "Liste möglicher Teilnehmender",
+     "to": "stakeholder",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Leitfaden",
+     "to": "interview",
+     "v": "ergänzt durch"
+    },
+    {
+     "t": "Prototyp oder Konzept zum Zeigen"
+    }
+   ],
+   "out": [
+    {
+     "t": "Protokoll mit Meinungen und Begründungen"
+    },
+    {
+     "t": "Erkenntnisse",
+     "to": "persona",
+     "v": "verdichtet in"
+    },
+    {
+     "t": "Offene Fragen",
+     "to": "fragebogen",
+     "v": "geprüft mit"
+    }
+   ],
+   "ko": [
+    "Produktteam",
+    "Auftraggeber",
+    "Design"
+   ]
+  },
+  "li": [
+   [
+    "stakeholder",
+    "vorher",
+    "Die Analyse zeigt, wen man einlädt."
+   ],
+   [
+    "interview",
+    "alternative",
+    "Interviews gehen tiefer, Fokusgruppen sind breiter."
+   ],
+   [
+    "fragebogen",
+    "danach",
+    "Ein Fragebogen prüft Aussagen an vielen Personen."
+   ],
+   [
+    "prototyping",
+    "ergaenzt",
+    "Prototypen geben der Gruppe etwas zum Diskutieren."
+   ],
+   [
+    "workshop",
+    "alternative",
+    "Ein Workshop erarbeitet Ergebnisse, die Fokusgruppe sammelt Meinungen."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Excel"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "jobs-to-be-done",
+  "n": "Jobs to be Done",
+  "c": "erm",
+  "f": "methode",
+  "m": "beide",
+  "ph": "verstehen",
+  "t": "Methode",
+  "kz": "Jobs to be Done",
+  "k": "Fragt, welchen Fortschritt Menschen in einer Situation erreichen wollen, statt wer sie sind oder was sie wünschen.",
+  "aufwand": "1 bis 3 Stunden",
+  "ab": [
+   "Interviews zur letzten Entscheidung führen",
+   "Situation, Motivation und Hindernisse notieren",
+   "Jobs in einem Satz formulieren",
+   "Jobs nach Wichtigkeit und Unzufriedenheit ordnen",
+   "Anforderungen aus den wichtigsten Jobs ableiten"
+  ],
+  "re": [
+   "Ein Job beschreibt ein Ziel, keine Lösung",
+   "Die Situation gehört zum Job",
+   "Jobs entstehen aus echten Entscheidungen, nicht aus Meinungen",
+   "Ein Job gilt für Menschen mit gleichem Ziel, nicht für ein Segment"
+  ],
+  "bsp": {
+   "t": "Tourenplanung",
+   "x": "Job: Wenn ich am Abend die Touren für morgen plane, will ich sicher sein, dass kein Fahrzeug doppelt eingesetzt ist, damit ich am Morgen keine Notlösungen suchen muss. Hindernis: Die Belegung steht in zwei Tabellen. Anforderung: Konflikte vor dem Speichern anzeigen."
+  },
+  "zw": "Jobs to be Done beschreibt Anforderungen als Fortschritt, den eine Person in einer bestimmten Situation erreichen will. Statt Eigenschaften der Nutzer oder gewünschte Funktionen zu sammeln, fragt die Methode, welche Aufgabe jemand «anheuert» und was ihn davon abhält. So werden Ziele sichtbar, die Lösungen unabhängig sind.",
+  "wa": [
+   "Wenn Funktionswünsche vorliegen, das eigentliche Ziel aber unklar ist",
+   "Bei neuen Produkten oder wenn Nutzer wegbleiben",
+   "Wenn Segmente nach Alter oder Branche nichts erklären"
+  ],
+  "wn": [
+   "Wenn die Lösung bereits feststeht und nur umgesetzt wird",
+   "Wenn keine Gespräche mit Nutzern möglich sind",
+   "Bei rein technischen Aufgaben ohne Nutzerbezug"
+  ],
+  "vb": [
+   "Gesprächspartner suchen, die kürzlich gewechselt oder gekauft haben",
+   "Interviewleitfaden zur Entscheidungsgeschichte vorbereiten",
+   "Vorlage für den Job festlegen (Wenn …, will ich …, damit …)",
+   "Aufnahme oder Protokollführung klären",
+   "Zeit für 5 bis 8 Gespräche einplanen"
+  ],
+  "nr": "V-10",
+  "kt": "Welchen Fortschritt will jemand in einer Situation erreichen? Ziel zuerst, Lösung später.",
+  "ks": [
+   "Interviews zur letzten Entscheidung",
+   "Situation und Hindernisse notieren",
+   "Jobs in einem Satz formulieren",
+   "Jobs nach Wichtigkeit ordnen",
+   "Anforderungen ableiten"
+  ],
+  "gw": [
+   "Funktionswünsche, aber unklares Ziel",
+   "Neue Produkte oder abwandernde Nutzer",
+   "Segmente erklären das Verhalten nicht"
+  ],
+  "rg": [
+   "Ein Job nennt ein Ziel, keine Lösung",
+   "Die Situation gehört zum Job",
+   "Jobs entstehen aus echten Entscheidungen"
+  ],
+  "vk": [
+   "Leute finden, die kürzlich entschieden",
+   "Leitfaden zur Entscheidung"
+  ],
+  "bn": "Die Lösung steht schon fest",
+  "pr": "Fragen Sie nach dem letzten Mal, nicht nach dem Normalfall: «Wann haben Sie zuletzt …? Was war vorher? Was hat Sie bewegt?» Die Erinnerung an eine konkrete Entscheidung liefert ehrlichere Antworten als Prognosen. Formulieren Sie den Job so, dass keine Lösung darin steckt. Probieren Sie die Frage: Würde der Job auch gelten, wenn es das Produkt nicht gäbe?",
+  "em": "Vorher klärt die Persona, wen Sie befragen. Danach schreiben Sie Stories aus den Jobs oder ordnen sie in einer Story Map an. Die Job-Formulierung eignet sich auch als Kopfzeile von User Stories.",
+  "qu": [
+   "Christensen, C. M., Hall, T., Dillon, K., Duncan, D. S.: Competing Against Luck (Harper Business, 2016)",
+   "Christensen, C. M. et al.: Know Your Customers' «Jobs to Be Done» (Harvard Business Review, September 2016)",
+   "Klement, A.: When Coffee and Kale Compete (2016)"
+  ],
+  "io": {
+   "lf": [
+    "Nutzerinnen und Nutzer",
+    "Kundendienst und Vertrieb"
+   ],
+   "in": [
+    {
+     "t": "Persona",
+     "to": "persona",
+     "v": "ergänzt durch"
+    },
+    {
+     "t": "Interviewleitfaden",
+     "to": "interview",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Beobachtungen aus dem Alltag",
+     "to": "beobachtung",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Liste der Jobs mit Situation und Hindernissen"
+    },
+    {
+     "t": "Priorisierte Jobs",
+     "to": "kano",
+     "v": "genutzt in"
+    },
+    {
+     "t": "Jobs als Ausgangspunkt",
+     "to": "user-stories",
+     "v": "ausformuliert in"
+    }
+   ],
+   "ko": [
+    "Product Owner",
+    "Produktteam",
+    "Design"
+   ]
+  },
+  "li": [
+   [
+    "interview",
+    "vorher",
+    "Interviews zur letzten Entscheidung liefern die Jobs."
+   ],
+   [
+    "persona",
+    "vorher",
+    "Die Persona hilft bei der Auswahl der Gesprächspartner."
+   ],
+   [
+    "user-stories",
+    "danach",
+    "Jobs werden zu Stories mit Nutzen."
+   ],
+   [
+    "five-whys",
+    "alternative",
+    "Fünf Whys fragen nach der Ursache, Jobs nach dem Ziel."
+   ],
+   [
+    "kano",
+    "ergaenzt",
+    "Kano zeigt, wie wichtig ein Job den Nutzern ist."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Excel"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "brainstorming",
+  "n": "Brainstorming",
+  "c": "erm",
+  "f": "meeting",
+  "m": "beide",
+  "ph": "ermitteln",
+  "t": "Kreativtechnik",
+  "kz": "Brainstorming",
+  "k": "Gemeinsames Sammeln vieler Ideen in kurzer Zeit, erst ohne Bewertung, danach geordnet und ausgewählt.",
+  "aufwand": "30 bis 60 Min.",
+  "ab": [
+   "Frage vorstellen und Regeln klären",
+   "Alle schreiben still Ideen auf Notizen",
+   "Ideen vorlesen und aufhängen",
+   "Ideen ordnen und Doppelte zusammenfassen",
+   "Die wichtigsten Ideen auswählen"
+  ],
+  "re": [
+   "Menge vor Qualität in der Sammelphase",
+   "Keine Kritik, keine Diskussion während des Sammelns",
+   "Alle schreiben zuerst für sich, dann wird geteilt",
+   "Das Ordnen und Bewerten ist ein eigener Schritt"
+  ],
+  "bsp": {
+   "t": "Risiken der Einführung",
+   "x": "Zehn Minuten stilles Schreiben ergeben 38 Notizen. Gruppiert ergeben sich vier Themen: Daten, Schulung, Technik, Akzeptanz. Mit Punkten wählt das Team die zwei wichtigsten Themen aus und nimmt sie in die Risikoliste auf."
+  },
+  "zw": "Beim Brainstorming sammelt eine Gruppe in kurzer Zeit möglichst viele Ideen zu einer Frage. Bewertet wird erst danach. Die Technik hilft, Anforderungen, Lösungen oder Risiken breit zu finden, bevor man sich festlegt. Wirksamer ist eine Variante, bei der alle zuerst allein schreiben.",
+  "wa": [
+   "Wenn viele Ideen zu einer offenen Frage gesucht werden",
+   "Am Anfang, um Anforderungen oder Risiken breit zu sammeln",
+   "Wenn das Team neue Lösungswege finden soll"
+  ],
+  "wn": [
+   "Wenn die Ideen bereits vorliegen und priorisiert werden sollen: dann MoSCoW oder Dot Voting",
+   "Wenn Hierarchie die Äusserung bremst und keine anonyme Variante möglich ist",
+   "Bei Fragen, die Fachwissen und Analyse verlangen"
+  ],
+  "vb": [
+   "Klare Frage formulieren",
+   "Gruppe mit unterschiedlichen Sichten einladen",
+   "Haftnotizen, Stifte oder digitales Board bereitlegen",
+   "Zeitbox und Moderation festlegen",
+   "Regeln sichtbar aufhängen"
+  ],
+  "nr": "E-08",
+  "kt": "Viele Ideen in kurzer Zeit sammeln, erst ohne Bewertung, dann ordnen und auswählen.",
+  "ks": [
+   "Frage vorstellen, Regeln klären",
+   "Still Ideen aufschreiben",
+   "Ideen vorlesen und aufhängen",
+   "Ordnen, Doppelte zusammenfassen",
+   "Wichtigste Ideen auswählen"
+  ],
+  "gw": [
+   "Viele Ideen zu einer offenen Frage",
+   "Anforderungen oder Risiken breit sammeln",
+   "Neue Lösungswege finden"
+  ],
+  "rg": [
+   "Menge vor Qualität beim Sammeln",
+   "Keine Kritik während des Sammelns",
+   "Alle schreiben zuerst für sich"
+  ],
+  "vk": [
+   "Konkrete Frage formulieren",
+   "Notizen und Zeitbox bereit"
+  ],
+  "bn": "Ideen liegen vor: besser priorisieren",
+  "pr": "Das stille Aufschreiben (Brainwriting) vor dem Teilen verhindert, dass laute Stimmen die Runde prägen, und liefert mehr Ideen als das reine Zurufen. Formulieren Sie die Frage konkret: «Was könnte eine Disponentin am Morgen stören?» statt «Probleme?». Planen Sie Zeit für das Ordnen ein, denn dort entsteht der Nutzen.",
+  "em": "Vorher legt der Workshop die Frage fest. Danach ordnen Sie die Ideen und bewerten sie mit Dot Voting oder MoSCoW. Als Einstieg in einen Workshop ist es kaum zu schlagen.",
+  "qu": [
+   "Osborn, A. F.: Applied Imagination (Scribner, 1953)",
+   "Diehl, M., Stroebe, W.: Productivity Loss in Brainstorming Groups (Journal of Personality and Social Psychology 53(3), 1987)",
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Brainstorming»"
+  ],
+  "io": {
+   "lf": [
+    "Teilnehmende des Teams",
+    "Fachbereich"
+   ],
+   "in": [
+    {
+     "t": "Frage oder Fokusthema",
+     "to": "workshop",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Hintergrundwissen aus der Analyse",
+     "to": "stakeholder",
+     "v": "ergänzt durch"
+    },
+    {
+     "t": "Regeln des Brainstormings"
+    }
+   ],
+   "out": [
+    {
+     "t": "Sammlung geordneter Ideen"
+    },
+    {
+     "t": "Ausgewählte Ideen",
+     "to": "dot-voting",
+     "v": "bewertet mit"
+    },
+    {
+     "t": "Ideen für Anforderungen",
+     "to": "user-stories",
+     "v": "ausformuliert in"
+    }
+   ],
+   "ko": [
+    "Projektteam",
+    "Product Owner"
+   ]
+  },
+  "li": [
+   [
+    "workshop",
+    "vorher",
+    "Brainstorming ist ein typischer Baustein im Workshop."
+   ],
+   [
+    "dot-voting",
+    "danach",
+    "Dot Voting wählt die wichtigsten Ideen aus."
+   ],
+   [
+    "moscow",
+    "danach",
+    "MoSCoW ordnet die Ideen nach Wichtigkeit."
+   ],
+   [
+    "five-whys",
+    "alternative",
+    "Fünf Whys gehen einer Ursache nach, Brainstorming sammelt breit."
+   ],
+   [
+    "swot",
+    "ergaenzt",
+    "SWOT strukturiert gesammelte Ideen."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Confluence"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "contextual-inquiry",
+  "n": "Contextual Inquiry",
+  "c": "erm",
+  "f": "methode",
+  "m": "beide",
+  "ph": "ermitteln",
+  "t": "Befragung vor Ort",
+  "kz": "Contextual Inquiry",
+  "k": "Beobachten und befragen am Arbeitsplatz: Die Nutzerin zeigt die Arbeit, der Analyst fragt nach.",
+  "aufwand": "2 bis 3 Stunden je Besuch",
+  "ab": [
+   "Rolle erklären: Sie zeigen, ich lerne",
+   "Echte Arbeit beobachten und Fragen stellen",
+   "Beobachtung und Deutung trennen",
+   "Deutungen mit der Person abgleichen",
+   "Notizen auswerten und Muster suchen"
+  ],
+  "re": [
+   "Beobachten vor Ort, nicht im Besprechungsraum",
+   "Fragen während der Arbeit, nicht nur danach",
+   "Deutungen prüft man mit der Person, nicht allein",
+   "Wenige Besuche reichen, wenn man die Muster auswertet"
+  ],
+  "bsp": {
+   "t": "Besuch in der Disposition",
+   "x": "Zwei Besucher begleiten eine Disponentin am Vorabend. Beobachtung: Sie kopiert Daten zwischen zwei Tabellen und prüft jeden Fahrzeugeintrag von Hand. Deutung nach Rückfrage: Sie vertraut den Tabellen nicht. Anforderung: Konflikte automatisch anzeigen."
+  },
+  "zw": "Bei der Contextual Inquiry besucht man Nutzer an ihrem Arbeitsplatz, sieht ihnen bei der echten Arbeit zu und fragt dabei nach. Die Beziehung gleicht einem Meister und Lehrling: Die Nutzerin zeigt, der Analyst lernt. So entstehen Anforderungen aus dem tatsächlichen Alltag statt aus dem, was Menschen darüber berichten.",
+  "wa": [
+   "Wenn Abläufe komplex oder stark von Gewohnheiten geprägt sind",
+   "Wenn Menschen Details der eigenen Arbeit nicht mehr benennen können",
+   "Vor dem Entwurf von Werkzeugen für einen bestimmten Arbeitsplatz"
+  ],
+  "wn": [
+   "Wenn der Arbeitsplatz nicht zugänglich ist: dann Interview mit Beispielen",
+   "Wenn nur Meinungen vieler Menschen gefragt sind: dann Fragebogen",
+   "Wenn wenig Zeit und kein Zugang zu mehreren Personen besteht"
+  ],
+  "vb": [
+   "Ziel und Fokus des Besuchs festlegen",
+   "Erlaubnis von Führung und Betroffenen einholen",
+   "Zwei Personen für Beobachtung und Notizen einplanen",
+   "Notizbogen oder Aufnahme klären",
+   "Besuchsdauer von 2 bis 3 Stunden vereinbaren"
+  ],
+  "nr": "E-09",
+  "kt": "Am Arbeitsplatz zusehen und nachfragen: Anforderungen aus dem echten Alltag, nicht aus Berichten.",
+  "ks": [
+   "Rolle erklären: Sie zeigen",
+   "Arbeit beobachten, nachfragen",
+   "Beobachtung und Deutung trennen",
+   "Deutung mit der Person prüfen",
+   "Muster auswerten"
+  ],
+  "gw": [
+   "Komplexe, gewohnheitsgeprägte Abläufe",
+   "Menschen können ihre Arbeit nicht benennen",
+   "Vor dem Entwurf eines Werkzeugs"
+  ],
+  "rg": [
+   "Vor Ort beobachten, nicht im Raum",
+   "Fragen während der Arbeit",
+   "Deutungen mit der Person prüfen"
+  ],
+  "vk": [
+   "Erlaubnis der Betroffenen holen",
+   "Zwei Personen einplanen"
+  ],
+  "bn": "Kein Zugang zum Arbeitsplatz",
+  "pr": "Bleiben Sie in der Lernerrolle: Fragen Sie «Warum machen Sie das so?» statt Verbesserungen vorzuschlagen. Halten Sie Beobachtung und Deutung getrennt, etwa in zwei Spalten. Prüfen Sie Ihre Deutung gleich mit der Person: «Habe ich richtig verstanden, dass …?» Mit vier bis sechs Besuchen erkennen Sie meist die wichtigsten Muster.",
+  "em": "Vorher legt die Stakeholder-Analyse fest, wen Sie besuchen. Danach fassen Persona und Empathy Map die Erkenntnisse zusammen. Beobachtung ist die einfachere Verwandte, wenn keine Zeit für Rückfragen bleibt.",
+  "qu": [
+   "Beyer, H., Holtzblatt, K.: Contextual Design: Defining Customer-Centered Systems (Morgan Kaufmann, 1998)",
+   "Holtzblatt, K., Beyer, H.: Contextual Design: Design for Life (Morgan Kaufmann, 2. Auflage 2017)",
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Observation»"
+  ],
+  "io": {
+   "lf": [
+    "Nutzerinnen und Nutzer am Arbeitsplatz",
+    "Vorgesetzte, die den Zutritt erlauben"
+   ],
+   "in": [
+    {
+     "t": "Liste der Rollen",
+     "to": "stakeholder",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Vorabinformationen",
+     "to": "dokumentenanalyse",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Beobachtungsbogen"
+    }
+   ],
+   "out": [
+    {
+     "t": "Protokolle mit Beobachtung und Deutung"
+    },
+    {
+     "t": "Muster aus den Besuchen",
+     "to": "persona",
+     "v": "verdichtet in"
+    },
+    {
+     "t": "Schmerzpunkte",
+     "to": "customer-journey-map",
+     "v": "genutzt in"
+    }
+   ],
+   "ko": [
+    "Produktteam",
+    "Design und Entwicklung"
+   ]
+  },
+  "li": [
+   [
+    "stakeholder",
+    "vorher",
+    "Die Analyse zeigt, wen man besucht."
+   ],
+   [
+    "beobachtung",
+    "alternative",
+    "Beobachtung kommt ohne dauerndes Nachfragen aus."
+   ],
+   [
+    "interview",
+    "alternative",
+    "Interviews fragen nach, ohne die Arbeit zu sehen."
+   ],
+   [
+    "persona",
+    "danach",
+    "Aus den Besuchen entstehen Personas."
+   ],
+   [
+    "empathy-map",
+    "ergaenzt",
+    "Die Empathy Map bündelt, was man gesehen und gehört hat."
+   ]
+  ],
+  "tools": [
+   "Excel",
+   "Miro"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "empathy-map",
+  "n": "Empathy Map",
+  "c": "erm",
+  "f": "artefakt",
+  "m": "agil",
+  "ph": "verstehen",
+  "t": "Artefakt",
+  "kz": "Empathy Map",
+  "k": "Vierfeld-Bild einer Person: was sie sieht, hört, sagt und tut, und was sie denkt und fühlt.",
+  "aufwand": "30 bis 60 Min.",
+  "ab": [
+   "Person und Situation festlegen",
+   "Sehen, Hören, Sagen und Tun sammeln",
+   "Denken und Fühlen ableiten",
+   "Schmerzpunkte und Gewinne ergänzen",
+   "Erkenntnisse im Team besprechen"
+  ],
+  "re": [
+   "Sie beschreibt eine Person in einer Situation, nicht ein Segment",
+   "Aussagen stützen sich auf Daten, Vermutungen sind markiert",
+   "Zitate stehen wörtlich",
+   "Sie wird nach neuen Gesprächen aktualisiert"
+  ],
+  "bsp": {
+   "t": "Disponentin Anna",
+   "x": "Sieht: zwei Tabellen und das ERP. Hört: Anrufe von Fahrern am Morgen. Sagt: «Ich prüfe alles doppelt.» Tut: kopiert Daten zwischen Tabellen. Denkt und fühlt: Angst vor Fehlern, Zeitdruck. Schmerzpunkt: doppelte Belegung. Gewinn: ein ruhiger Morgen."
+  },
+  "zw": "Die Empathy Map fasst auf einer Seite zusammen, was eine Person in einer Situation sieht, hört, sagt und tut, und was sie dabei denkt und fühlt. Sie bringt Wissen aus Gesprächen und Beobachtungen zusammen und baut Verständnis für Nutzer auf, ohne gleich eine ausgearbeitete Persona zu verlangen.",
+  "wa": [
+   "Nach Interviews oder Beobachtungen, um Erkenntnisse zu bündeln",
+   "Wenn das Team die Nutzer besser verstehen will",
+   "Als schneller Einstieg in Design-Thinking-Workshops"
+  ],
+  "wn": [
+   "Wenn keine echten Informationen über Nutzer vorliegen",
+   "Wenn es nur um Fakten und Zahlen geht",
+   "Wenn die Karte nur Vermutungen des Teams enthält"
+  ],
+  "vb": [
+   "Person oder Rolle und Situation festlegen",
+   "Material aus Interviews und Beobachtungen bereithalten",
+   "Vorlage mit sechs Feldern vorbereiten",
+   "Haftnotizen und Stifte bereitlegen",
+   "Teilnehmende aus Fachbereich und Team einladen"
+  ],
+  "nr": "V-13",
+  "kt": "Eine Person in einer Situation: sieht, hört, sagt, tut, denkt, fühlt. Auf einer Seite.",
+  "ks": [
+   "Person und Situation festlegen",
+   "Sehen, hören, sagen, tun",
+   "Denken und Fühlen ableiten",
+   "Schmerzpunkte und Gewinne",
+   "Erkenntnisse besprechen"
+  ],
+  "gw": [
+   "Nach Interviews, um Erkenntnisse zu bündeln",
+   "Das Team soll Nutzer besser verstehen",
+   "Einstieg in einen Design-Workshop"
+  ],
+  "rg": [
+   "Eine Person in einer Situation",
+   "Aussagen stützen sich auf Daten",
+   "Zitate stehen wörtlich"
+  ],
+  "vk": [
+   "Person und Situation festlegen",
+   "Material aus Gesprächen bereithalten"
+  ],
+  "bn": "Es gibt keine echten Informationen",
+  "pr": "Die Felder «Sagen und Tun» sind beobachtbar, «Denken und Fühlen» wird abgeleitet. Prüfen Sie gerade dort Widersprüche: Wo sagt jemand etwas anderes, als er tut? Dort liegen oft die besten Anforderungen. Stellen Sie die Karte nicht für alle Nutzer, sondern für eine Person her, und hängen Sie sie sichtbar auf.",
+  "em": "Vorher liefern Interviews und Beobachtung die Aussagen. Danach entsteht daraus eine Persona oder eine Journey Map. Für ein einzelnes Gespräch genügt die Karte, bei mehreren Gruppen die Persona.",
+  "qu": [
+   "Gray, D., Brown, S., Macanufo, J.: Gamestorming (O'Reilly, 2010)",
+   "Gibbons, S.: Empathy Mapping: The First Step in Design Thinking (Nielsen Norman Group, 2018)",
+   "Osterwalder, A., Pigneur, Y.: Business Model Generation (Wiley, 2010)"
+  ],
+  "io": {
+   "lf": [
+    "Nutzerinnen und Nutzer",
+    "Teammitglieder mit Kundenkontakt"
+   ],
+   "in": [
+    {
+     "t": "Interviewnotizen",
+     "to": "interview",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Beobachtungsprotokoll",
+     "to": "beobachtung",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Situation und Rolle"
+    }
+   ],
+   "out": [
+    {
+     "t": "Ausgefüllte Empathy Map"
+    },
+    {
+     "t": "Zusammenfassung der Person",
+     "to": "persona",
+     "v": "verdichtet in"
+    },
+    {
+     "t": "Schmerzpunkte",
+     "to": "customer-journey-map",
+     "v": "genutzt in"
+    }
+   ],
+   "ko": [
+    "Produktteam",
+    "Design",
+    "Fachbereich"
+   ]
+  },
+  "li": [
+   [
+    "interview",
+    "vorher",
+    "Interviews liefern Zitate und Aussagen."
+   ],
+   [
+    "beobachtung",
+    "vorher",
+    "Beobachtung zeigt, was Menschen wirklich tun."
+   ],
+   [
+    "persona",
+    "danach",
+    "Aus mehreren Karten wird eine Persona."
+   ],
+   [
+    "customer-journey-map",
+    "danach",
+    "Schmerzpunkte fliessen in die Journey Map ein."
+   ],
+   [
+    "jobs-to-be-done",
+    "alternative",
+    "Jobs to be Done fragt nach dem Ziel statt nach dem Erleben."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Figma"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "spike",
+  "n": "Spike",
+  "c": "erm",
+  "f": "methode",
+  "m": "agil",
+  "ph": "ermitteln",
+  "t": "Erkundung",
+  "kz": "Spike",
+  "k": "Zeitlich begrenzte Erkundung, die offene fachliche oder technische Fragen beantwortet, bevor Stories geschätzt werden.",
+  "aufwand": "0,5 bis 2 Tage",
+  "ab": [
+   "Frage und Zeitbox festlegen",
+   "Variante recherchieren oder ausprobieren",
+   "Ergebnisse und Annahmen festhalten",
+   "Empfehlung formulieren",
+   "Im Team vorstellen und Stories anpassen"
+  ],
+  "re": [
+   "Ein Spike beantwortet eine Frage, er liefert keine Funktion",
+   "Er hat eine feste Zeitbox",
+   "Das Ergebnis wird dokumentiert und geteilt",
+   "Er steht im Backlog und wird im Sprint eingeplant"
+  ],
+  "bsp": {
+   "t": "Schnittstelle zum ERP",
+   "x": "Frage: Liefert das ERP Fahrzeugdaten in Echtzeit? Zeitbox: ein Tag. Ergebnis: Die Schnittstelle liefert alle 15 Minuten Daten. Empfehlung: Warnung beim Speichern genügt. Die Story «Konfliktwarnung» wird mit 5 Punkten geschätzt."
+  },
+  "zw": "Ein Spike ist eine kurze, zeitlich begrenzte Erkundung, die eine konkrete Frage beantwortet: Geht das technisch? Wie verhält sich eine Schnittstelle? Welche Variante ist tragfähig? Das Ergebnis ist Wissen, keine fertige Funktion. So werden Stories schätzbar, und Risiken zeigen sich früh.",
+  "wa": [
+   "Wenn eine Story wegen Unsicherheit nicht geschätzt werden kann",
+   "Bei neuen Technologien, Schnittstellen oder Regeln",
+   "Wenn mehrere Lösungswege zur Wahl stehen"
+  ],
+  "wn": [
+   "Wenn die Frage mit einem kurzen Gespräch zu klären ist",
+   "Als Vorwand für Arbeit ohne Ziel und Ablaufdatum",
+   "Wenn das Ergebnis eine fertige Funktion sein soll: dann Story"
+  ],
+  "vb": [
+   "Konkrete Frage in einem Satz formulieren",
+   "Zeitbox festlegen (halber bis zwei Tage)",
+   "Ergebnisform vereinbaren: Notiz, Demo, Empfehlung",
+   "Verantwortliche Person bestimmen",
+   "Als Eintrag im Backlog führen"
+  ],
+  "nr": "E-10",
+  "kt": "Kurze, begrenzte Erkundung, die eine offene Frage beantwortet. Ergebnis ist Wissen, keine Funktion.",
+  "ks": [
+   "Frage und Zeitbox festlegen",
+   "Ausprobieren oder recherchieren",
+   "Ergebnisse festhalten",
+   "Empfehlung formulieren",
+   "Im Team vorstellen"
+  ],
+  "gw": [
+   "Story lässt sich nicht schätzen",
+   "Neue Technik, Schnittstelle oder Regel",
+   "Mehrere Lösungswege zur Wahl"
+  ],
+  "rg": [
+   "Ein Spike liefert Wissen, keine Funktion",
+   "Er hat eine feste Zeitbox",
+   "Das Ergebnis wird dokumentiert"
+  ],
+  "vk": [
+   "Frage in einem Satz formulieren",
+   "Zeitbox festlegen"
+  ],
+  "bn": "Ein Gespräch genügt für die Antwort",
+  "pr": "Formulieren Sie vorab, woran Sie erkennen, dass die Frage beantwortet ist. Halten Sie die Zeitbox strikt ein: Ist sie abgelaufen, wird entschieden, nicht verlängert. Das Ergebnis ist eine Empfehlung mit Begründung, kein Code für die Produktion. Zu viele Spikes sind ein Zeichen, dass Anforderungen zu spät geklärt werden.",
+  "em": "Vorher zeigt das Refinement, welche Story nicht schätzbar ist. Danach schätzt das Team neu und plant im Sprint. Bei fachlichen Fragen ist oft ein Gespräch oder ein Prototyp schneller.",
+  "qu": [
+   "Beck, K., Andres, C.: Extreme Programming Explained (Addison-Wesley, 2. Auflage 2004)",
+   "Cohn, M.: User Stories Applied (Addison-Wesley, 2004)",
+   "Scaled Agile Framework: Spikes (scaledagileframework.com)"
+  ],
+  "io": {
+   "lf": [
+    "Entwicklungsteam",
+    "Fachbereich mit offenen Fragen"
+   ],
+   "in": [
+    {
+     "t": "Unklare Story",
+     "to": "refinement",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Frage in einem Satz"
+    },
+    {
+     "t": "Zeitbox"
+    }
+   ],
+   "out": [
+    {
+     "t": "Dokumentiertes Ergebnis mit Empfehlung"
+    },
+    {
+     "t": "Geklärte Story",
+     "to": "story-points",
+     "v": "geschätzt mit"
+    },
+    {
+     "t": "Neue oder angepasste Stories",
+     "to": "product-backlog",
+     "v": "übernommen in"
+    }
+   ],
+   "ko": [
+    "Product Owner",
+    "Entwicklungsteam"
+   ]
+  },
+  "li": [
+   [
+    "refinement",
+    "vorher",
+    "Im Refinement fällt auf, was nicht schätzbar ist."
+   ],
+   [
+    "story-points",
+    "danach",
+    "Nach dem Spike lässt sich die Story schätzen."
+   ],
+   [
+    "product-backlog",
+    "danach",
+    "Das Ergebnis passt das Backlog an."
+   ],
+   [
+    "prototyping",
+    "alternative",
+    "Ein Prototyp erkundet die Oberfläche statt der Technik."
+   ],
+   [
+    "story-splitting",
+    "ergaenzt",
+    "Statt eines Spikes hilft manchmal ein Teilen der Story."
+   ]
+  ],
+  "tools": [
+   "Jira",
+   "Confluence"
+  ],
+  "s": "entwurf"
+ },
+ {
   "id": "user-stories",
   "n": "User Stories",
   "c": "dok",
@@ -3034,6 +3937,157 @@ const M = [
   "s": "entwurf"
  },
  {
+  "id": "example-mapping",
+  "n": "Example Mapping",
+  "c": "dok",
+  "f": "meeting",
+  "m": "agil",
+  "ph": "spezifizieren",
+  "t": "Workshop-Technik",
+  "kz": "Example Mapping",
+  "k": "Kurzes Gespräch zu einer Story mit Karten für Story, Regeln, Beispiele und offene Fragen.",
+  "aufwand": "25 bis 30 Min. je Story",
+  "ab": [
+   "Story auf eine gelbe Karte schreiben",
+   "Regeln auf blaue Karten sammeln",
+   "Je Regel Beispiele auf grüne Karten schreiben",
+   "Offene Fragen auf rote Karten festhalten",
+   "Entscheiden: bereit, mehr Klärung oder teilen"
+  ],
+  "re": [
+   "Höchstens 25 Minuten je Story",
+   "Beispiele sind konkret, mit Namen und Werten",
+   "Viele rote Karten heissen: Story ist nicht bereit",
+   "Zu viele Regeln heissen: Story teilen"
+  ],
+  "bsp": {
+   "t": "Konfliktwarnung",
+   "x": "Story: Warnung bei doppelter Belegung. Regel 1: gleiches Fahrzeug, überlappende Zeit. Beispiel: Fahrzeug A, Tour 1 8 bis 12 Uhr, Tour 2 11 bis 15 Uhr → Warnung. Gegenbeispiel: 8 bis 12 und 12 bis 15 Uhr → keine Warnung. Frage (rot): Gilt das auch für Anhänger?"
+  },
+  "zw": "Beim Example Mapping besprechen Product Owner, Entwicklung und Test eine Story in 25 Minuten anhand von vier Kartenfarben: Story, Regeln, Beispiele und Fragen. Konkrete Beispiele machen Regeln prüfbar und decken Lücken auf. Das Ergebnis sind klare Akzeptanzkriterien, oder die Erkenntnis, dass die Story noch nicht bereit ist.",
+  "wa": [
+   "Im Refinement, bevor eine Story in den Sprint kommt",
+   "Wenn Regeln einer Story unklar oder widersprüchlich wirken",
+   "Wenn Akzeptanzkriterien als Beispiele formuliert werden sollen"
+  ],
+  "wn": [
+   "Bei rein technischen Aufgaben ohne fachliche Regeln",
+   "Wenn die Fachperson für Rückfragen fehlt",
+   "Wenn die Story zu gross ist: dann zuerst Story Splitting"
+  ],
+  "vb": [
+   "Story mit Nutzen und Rolle bereithalten",
+   "Product Owner, Entwicklung und Test einladen",
+   "Karten in vier Farben bereitlegen: Story, Regeln, Beispiele, Fragen",
+   "Zeitbox von 25 Minuten festlegen",
+   "Moderation bestimmen"
+  ],
+  "nr": "S-15",
+  "kt": "25 Minuten, vier Kartenfarben: Story, Regeln, Beispiele, Fragen. Zeigt, ob eine Story bereit ist.",
+  "ks": [
+   "Story auf Karte schreiben",
+   "Regeln sammeln",
+   "Beispiele je Regel notieren",
+   "Offene Fragen festhalten",
+   "Bereit, klären oder teilen"
+  ],
+  "gw": [
+   "Im Refinement vor dem Sprint",
+   "Regeln einer Story sind unklar",
+   "Beispiele statt Prosa-Kriterien"
+  ],
+  "rg": [
+   "Höchstens 25 Minuten je Story",
+   "Beispiele sind konkret",
+   "Viele Fragen: Story nicht bereit"
+  ],
+  "vk": [
+   "Story mit Nutzen bereithalten",
+   "Drei Rollen einladen"
+  ],
+  "bn": "Rein technische Aufgabe ohne Regeln",
+  "pr": "Die Farben sind das Steuerungsinstrument: Viele rote Karten zeigen fehlendes Wissen, viele blaue eine zu grosse Story. Fordern Sie für jede Regel mindestens ein konkretes Beispiel und, wenn möglich, ein Gegenbeispiel. Halten Sie sich an die Zeitbox, sonst wird aus dem Mapping ein langes Meeting. Aus den Beispielen lassen sich Akzeptanzkriterien oder automatisierte Tests schreiben.",
+  "em": "Vorher sammelt das Refinement die Stories. Danach schreiben Sie die Beispiele als Akzeptanzkriterien auf. Bei grossen Stories zuerst teilen.",
+  "qu": [
+   "Wynne, M.: Introducing Example Mapping (Cucumber Blog, 2015)",
+   "Smart, J. F.: BDD in Action (Manning, 2. Auflage 2023)",
+   "Adzic, G.: Specification by Example (Manning, 2011)"
+  ],
+  "io": {
+   "lf": [
+    "Product Owner",
+    "Entwicklung und Test"
+   ],
+   "in": [
+    {
+     "t": "Story",
+     "to": "user-stories",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Backlog-Reihenfolge",
+     "to": "refinement",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Regeln aus dem Fachbereich",
+     "to": "geschaeftsregeln",
+     "v": "ergänzt durch"
+    }
+   ],
+   "out": [
+    {
+     "t": "Regeln und konkrete Beispiele"
+    },
+    {
+     "t": "Akzeptanzkriterien",
+     "to": "akzeptanzkriterien",
+     "v": "ausformuliert in"
+    },
+    {
+     "t": "Offene Fragen und Entscheid zur Bereitschaft"
+    }
+   ],
+   "ko": [
+    "Entwicklungsteam",
+    "Product Owner",
+    "Test"
+   ]
+  },
+  "li": [
+   [
+    "user-stories",
+    "vorher",
+    "Die Story ist der Ausgangspunkt."
+   ],
+   [
+    "refinement",
+    "vorher",
+    "Im Refinement wird Example Mapping eingesetzt."
+   ],
+   [
+    "akzeptanzkriterien",
+    "danach",
+    "Die Beispiele werden zu Akzeptanzkriterien."
+   ],
+   [
+    "story-splitting",
+    "alternative",
+    "Zu grosse Stories werden zuerst geteilt."
+   ],
+   [
+    "geschaeftsregeln",
+    "ergaenzt",
+    "Die Regeln lassen sich in einem Regelkatalog sammeln."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Cucumber"
+  ],
+  "s": "entwurf"
+ },
+ {
   "id": "aktivitaetsdiagramm",
   "n": "Aktivitätsdiagramm (UML)",
   "c": "mod",
@@ -4202,6 +5256,909 @@ const M = [
   "vis": "domaene"
  },
  {
+  "id": "customer-journey-map",
+  "n": "Customer Journey Map",
+  "c": "mod",
+  "f": "modell",
+  "m": "beide",
+  "ph": "verstehen",
+  "t": "Modell",
+  "kz": "Journey Map",
+  "k": "Visuelle Darstellung, welche Schritte, Gedanken und Gefühle eine Nutzerin auf dem Weg zu einem Ziel durchläuft.",
+  "aufwand": "2 bis 4 Stunden",
+  "ab": [
+   "Persona und Ziel der Reise festlegen",
+   "Phasen der Reise benennen",
+   "Handlungen und Kontaktpunkte je Phase sammeln",
+   "Gedanken und Gefühle aus Daten ergänzen",
+   "Schmerzpunkte und Chancen markieren"
+  ],
+  "re": [
+   "Eine Karte gehört zu einer Persona und einem Ziel",
+   "Aussagen stützen sich auf echte Daten, nicht auf Vermutungen",
+   "Aus jedem Schmerzpunkt folgt eine Frage oder Anforderung",
+   "Sie wird laufend überarbeitet und nicht archiviert"
+  ],
+  "bsp": {
+   "t": "Tour freigeben",
+   "x": "Persona Disponentin Anna, Ziel: Tour für morgen freigeben. Phasen: Planen, Prüfen, Freigeben, Nachverfolgen. Schmerzpunkt in Phase Prüfen: doppelte Fahrzeugbelegung wird erst nach dem Speichern bemerkt (Frust). Chance: Warnung schon bei der Eingabe zeigen."
+  },
+  "zw": "Eine Customer Journey Map zeigt entlang einer Zeitachse, was eine Person tut, denkt und fühlt, wenn sie ein Ziel erreichen will: von der Phase vor dem ersten Kontakt bis nach der Nutzung. Sie macht Reibungspunkte und Chancen sichtbar, bevor Anforderungen formuliert werden, und schafft im Team ein gemeinsames Bild der Erfahrung.",
+  "wa": [
+   "Wenn das Team die Erfahrung der Nutzer nur aus eigener Sicht kennt",
+   "Bei Prozessen, die mehrere Kanäle oder Abteilungen berühren",
+   "Vor dem Entwurf einer neuen oder überarbeiteten Lösung"
+  ],
+  "wn": [
+   "Wenn keine Daten oder Gespräche mit echten Nutzern vorliegen: dann zuerst Interviews",
+   "Wenn nur ein einzelner, sehr kurzer Arbeitsschritt betrachtet wird",
+   "Wenn niemand aus der Karte Konsequenzen ableitet"
+  ],
+  "vb": [
+   "Persona oder Nutzergruppe und ihr Ziel festlegen",
+   "Interviews, Beobachtungen oder Nutzungsdaten bereithalten",
+   "Rahmen wählen: Phasen, Handlungen, Gedanken, Gefühle, Kontaktpunkte",
+   "Grosse Fläche oder digitales Board vorbereiten",
+   "Teilnehmende aus Fachbereich, Betrieb und Entwicklung einladen"
+  ],
+  "nr": "V-09",
+  "kt": "Weg einer Nutzerin in Phasen: was sie tut, denkt, fühlt. Schmerzpunkte werden sichtbar.",
+  "ks": [
+   "Persona und Ziel festlegen",
+   "Phasen der Reise benennen",
+   "Handlungen und Kontaktpunkte sammeln",
+   "Gedanken und Gefühle ergänzen",
+   "Schmerzpunkte markieren"
+  ],
+  "gw": [
+   "Das Team kennt nur die eigene Sicht",
+   "Mehrere Kanäle oder Abteilungen beteiligt",
+   "Vor dem Entwurf einer neuen Lösung"
+  ],
+  "rg": [
+   "Eine Karte gehört zu einer Persona",
+   "Aussagen stützen sich auf echte Daten",
+   "Aus Schmerzpunkten folgen Anforderungen"
+  ],
+  "vk": [
+   "Persona und Ziel festlegen",
+   "Echte Daten und Zitate sammeln"
+  ],
+  "bn": "Keine Daten zu echten Nutzern: erst Interviews",
+  "pr": "Beginnen Sie mit dem heutigen Weg, nicht mit der Wunschlösung. Tragen Sie Zitate aus Interviews direkt in die Karte ein, das überzeugt Skeptiker besser als Zusammenfassungen. Eine Gefühlskurve genügt oft als einfachste Darstellung der Stimmung. Halten Sie die Karte auf einer Seite, sonst liest sie niemand, und hängen Sie sie sichtbar im Teamraum auf.",
+  "em": "Vorher liefern Persona und Interviews die Datenbasis. Danach leiten Sie aus den Schmerzpunkten User Stories ab oder legen sie in einer Story Map nach Phasen der Reise ab.",
+  "qu": [
+   "Kalbach, J.: Mapping Experiences (O'Reilly, 2. Auflage 2020)",
+   "Gibbons, S.: Journey Mapping 101 (Nielsen Norman Group, 2018)",
+   "Lemon, K. N., Verhoef, P. C.: Understanding Customer Experience Throughout the Customer Journey (Journal of Marketing 80(6), 2016)"
+  ],
+  "io": {
+   "lf": [
+    "Nutzerinnen und Nutzer",
+    "Fachbereich, Kundendienst"
+   ],
+   "in": [
+    {
+     "t": "Persona",
+     "to": "persona",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Interview- und Beobachtungsergebnisse",
+     "to": "interview",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Ziel der Nutzerin"
+    }
+   ],
+   "out": [
+    {
+     "t": "Journey Map mit Phasen, Gefühlskurve und Schmerzpunkten"
+    },
+    {
+     "t": "Chancen und Fragen",
+     "to": "user-stories",
+     "v": "ausformuliert in"
+    },
+    {
+     "t": "Phasen der Reise",
+     "to": "story-mapping",
+     "v": "genutzt in"
+    }
+   ],
+   "ko": [
+    "Produktteam",
+    "Design und Entwicklung",
+    "Management"
+   ]
+  },
+  "li": [
+   [
+    "persona",
+    "vorher",
+    "Die Persona legt fest, wessen Reise gezeigt wird."
+   ],
+   [
+    "interview",
+    "vorher",
+    "Interviews liefern Handlungen, Gedanken und Zitate."
+   ],
+   [
+    "story-mapping",
+    "danach",
+    "Die Phasen der Reise bilden die Achse der Story Map."
+   ],
+   [
+    "empathy-map",
+    "ergaenzt",
+    "Die Empathy Map vertieft Denken und Fühlen einer Person."
+   ],
+   [
+    "event-storming",
+    "alternative",
+    "Event Storming betrachtet den Ablauf aus Sicht der Fachlichkeit."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Figma"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "entscheidungstabelle",
+  "n": "Entscheidungstabelle",
+  "c": "mod",
+  "f": "modell",
+  "m": "beide",
+  "ph": "spezifizieren",
+  "t": "Tabellenmodell",
+  "kz": "Entscheidungstabelle",
+  "k": "Tabelle, die Bedingungen und Aktionen so gegenüberstellt, dass jede Regelkombination eindeutig abgedeckt ist.",
+  "aufwand": "1 bis 2 Stunden",
+  "ab": [
+   "Entscheidung und Aktionen festlegen",
+   "Bedingungen mit ihren Werten auflisten",
+   "Regelspalten für alle Kombinationen anlegen",
+   "Aktion je Regel eintragen",
+   "Lücken, Widersprüche und Zusammenfassbares prüfen"
+  ],
+  "re": [
+   "Jede Kombination ist genau einmal abgedeckt",
+   "Bedingungen sind eindeutig mit Ja, Nein oder Wert prüfbar",
+   "Gleiche Aktionen werden zusammengefasst",
+   "Die Tabelle trägt Name und Verantwortliche"
+  ],
+  "bsp": {
+   "t": "Fahrzeugfreigabe",
+   "x": "Bedingungen: Fahrzeug frei? Fahrer verfügbar? Zeit passt? Aktionen: freigeben, warnen, ablehnen. Regel 1: alle Ja → freigeben. Regel 2: Fahrzeug nein → ablehnen. Regel 3: Fahrer nein, Fahrzeug ja → warnen. Beim Prüfen fällt eine fehlende Kombination auf und wird ergänzt."
+  },
+  "zw": "Eine Entscheidungstabelle listet Bedingungen und die daraus folgenden Aktionen in einer Tabelle auf. Jede Spalte ist eine Regel: Wenn diese Bedingungen zutreffen, dann diese Aktion. Sie eignet sich für Logik mit mehreren Bedingungen, bei der Prosa unübersichtlich wird, und macht Lücken und Widersprüche sichtbar.",
+  "wa": [
+   "Wenn eine Entscheidung von mehreren Bedingungen abhängt",
+   "Wenn Prosaregeln lang und widersprüchlich werden",
+   "Als Grundlage für Testfälle und Regelautomatisierung"
+  ],
+  "wn": [
+   "Bei einfachen Wenn-dann-Regeln mit einer Bedingung",
+   "Bei Abläufen mit Reihenfolge: dann Aktivitätsdiagramm",
+   "Wenn die Bedingungen nicht eindeutig prüfbar sind"
+  ],
+  "vb": [
+   "Entscheidung und Ergebnis benennen",
+   "Bedingungen und Werte sammeln",
+   "Aktionen und mögliche Ergebnisse auflisten",
+   "Fachexperten für die Regeln einplanen",
+   "Vorlage wählen: Tabelle oder DMN-Werkzeug"
+  ],
+  "nr": "S-16",
+  "kt": "Bedingungen und Aktionen als Tabelle: jede Kombination genau einmal, Lücken sichtbar.",
+  "ks": [
+   "Entscheidung und Aktionen festlegen",
+   "Bedingungen auflisten",
+   "Regelspalten anlegen",
+   "Aktion je Regel eintragen",
+   "Lücken und Widersprüche prüfen"
+  ],
+  "gw": [
+   "Entscheidung hängt von mehreren Bedingungen ab",
+   "Prosaregeln sind lang und widersprüchlich",
+   "Grundlage für Testfälle"
+  ],
+  "rg": [
+   "Jede Kombination genau einmal",
+   "Bedingungen eindeutig prüfbar",
+   "Gleiche Aktionen zusammenfassen"
+  ],
+  "vk": [
+   "Bedingungen und Werte sammeln",
+   "Aktionen auflisten"
+  ],
+  "bn": "Einfache Regel mit einer Bedingung",
+  "pr": "Zählen Sie die Kombinationen: Bei drei Ja-Nein-Bedingungen sind es acht Spalten. Fehlt eine, ist eine Lücke gefunden. Fassen Sie Spalten mit gleicher Aktion zusammen und kennzeichnen Sie die egal-Fälle. Aus jeder Spalte ergibt sich ein Testfall. Wird die Tabelle über 10 Bedingungen gross, zerlegen Sie die Entscheidung.",
+  "em": "Vorher sammeln Geschäftsregeln oder Interviews die Bedingungen. Danach liefert jede Regelspalte einen Testfall für den Abnahmetest. Für komplexe Entscheidungen im Prozess hilft die Notation DMN.",
+  "qu": [
+   "OMG: Decision Model and Notation (DMN), Version 1.3 (2019)",
+   "Pohl, K., Rupp, C.: Basiswissen Requirements Engineering (dpunkt.verlag, 5. Auflage 2021)",
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Decision Modelling»"
+  ],
+  "io": {
+   "lf": [
+    "Fachbereich mit Entscheidungswissen",
+    "Regelverantwortliche"
+   ],
+   "in": [
+    {
+     "t": "Regeltexte",
+     "to": "geschaeftsregeln",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Beispiele aus dem Alltag",
+     "to": "interview",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Bedingungen aus der Fachlichkeit"
+    }
+   ],
+   "out": [
+    {
+     "t": "Vollständige Entscheidungstabelle"
+    },
+    {
+     "t": "Testfälle",
+     "to": "abnahmetest",
+     "v": "genutzt in"
+    },
+    {
+     "t": "Regeln",
+     "to": "pflichtenheft",
+     "v": "übernommen in"
+    }
+   ],
+   "ko": [
+    "Entwicklung und Test",
+    "Fachbereich",
+    "Auftraggeber"
+   ]
+  },
+  "li": [
+   [
+    "geschaeftsregeln",
+    "vorher",
+    "Die Regeln liefern die Bedingungen."
+   ],
+   [
+    "abnahmetest",
+    "danach",
+    "Jede Regelspalte wird zu einem Testfall."
+   ],
+   [
+    "aktivitaetsdiagramm",
+    "alternative",
+    "Das Aktivitätsdiagramm zeigt Reihenfolgen, die Tabelle Kombinationen."
+   ],
+   [
+    "akzeptanzkriterien",
+    "ergaenzt",
+    "Die Tabelle macht Kriterien vollständig."
+   ],
+   [
+    "bpmn",
+    "ergaenzt",
+    "In BPMN-Prozessen entscheiden Tabellen über Verzweigungen."
+   ]
+  ],
+  "tools": [
+   "Excel",
+   "Confluence"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "datenmodell",
+  "n": "Datenmodell (ER-Diagramm)",
+  "c": "mod",
+  "f": "modell",
+  "m": "klassisch",
+  "ph": "spezifizieren",
+  "t": "Modell",
+  "kz": "Datenmodell",
+  "k": "Zeigt, welche Dinge mit welchen Merkmalen und Beziehungen gespeichert werden.",
+  "aufwand": "2 bis 4 Stunden",
+  "ab": [
+   "Entitäten aus Begriffen und Beispielen sammeln",
+   "Attribute und Schlüssel festlegen",
+   "Beziehungen und Kardinalitäten zeichnen",
+   "Mit Beispieldaten durchspielen",
+   "Mit Fachleuten und Entwicklung prüfen"
+  ],
+  "re": [
+   "Jede Entität hat einen eindeutigen Schlüssel",
+   "Beziehungen tragen Kardinalitäten",
+   "Namen stammen aus der Fachsprache",
+   "Das Modell wird mit Beispieldaten geprüft"
+  ],
+  "bsp": {
+   "t": "Tourenplanung",
+   "x": "Entitäten: Tour, Fahrzeug, Fahrer, Auftrag. Beziehungen: Eine Tour hat ein Fahrzeug und einen Fahrer, ein Fahrzeug hat viele Touren, eine Tour enthält viele Aufträge. Beim Durchspielen fällt auf: Ein Auftrag kann auf zwei Touren aufgeteilt sein. Die Beziehung wird auf viele zu viele geändert."
+  },
+  "zw": "Ein Datenmodell zeigt Entitäten, ihre Attribute und die Beziehungen mit Kardinalitäten, etwa ein Kunde hat viele Aufträge. Das ER-Diagramm ist die gängigste Darstellung. Es schafft Klarheit, welche Informationen das System verwalten muss, und bildet die Grundlage für Datenbank, Schnittstellen und Berichte.",
+  "wa": [
+   "Wenn ein System Daten dauerhaft speichern und verknüpfen muss",
+   "Vor dem Entwurf einer Datenbank oder Schnittstelle",
+   "Wenn Fachbegriffe und ihre Beziehungen geklärt werden müssen"
+  ],
+  "wn": [
+   "Wenn nur Fachbegriffe ohne Speicherung geklärt werden sollen: dann Domänenmodell",
+   "Bei Abläufen und Reihenfolgen: dann Aktivitätsdiagramm",
+   "Bei sehr kleinen Datenmengen ohne Beziehungen"
+  ],
+  "vb": [
+   "Glossar und Begriffssammlung bereitlegen",
+   "Beispiele für echte Datensätze sammeln",
+   "Notation festlegen (zum Beispiel Krähenfuss)",
+   "Fachexperten und Entwicklung einladen",
+   "Werkzeug wählen"
+  ],
+  "nr": "S-17",
+  "kt": "Entitäten, Attribute und Beziehungen mit Kardinalitäten: was das System speichern muss.",
+  "ks": [
+   "Entitäten sammeln",
+   "Attribute und Schlüssel festlegen",
+   "Beziehungen zeichnen",
+   "Mit Beispieldaten durchspielen",
+   "Mit Fachleuten prüfen"
+  ],
+  "gw": [
+   "Das System speichert Daten dauerhaft",
+   "Vor Entwurf von Datenbank oder Schnittstelle",
+   "Beziehungen zwischen Begriffen klären"
+  ],
+  "rg": [
+   "Jede Entität hat einen Schlüssel",
+   "Beziehungen tragen Kardinalitäten",
+   "Namen stammen aus der Fachsprache"
+  ],
+  "vk": [
+   "Glossar und Beispiele bereitlegen",
+   "Notation festlegen"
+  ],
+  "bn": "Nur Begriffe klären: besser Domänenmodell",
+  "pr": "Gehen Sie von echten Beispielen aus: Zwei oder drei konkrete Datensätze zeigen schnell, ob eine Beziehung stimmt. Klären Sie Kardinalitäten im Gespräch («Kann ein Auftrag mehrere Fahrer haben?»), nicht durch Annahmen. Trennen Sie das fachliche vom technischen Modell: erst die Sicht des Fachbereichs, dann die Tabellen.",
+  "em": "Vorher klärt das Glossar die Begriffe, das Domänenmodell die Fachlichkeit. Danach folgen Schnittstellen und Datenbank. Wer das System nur fachlich beschreibt, bleibt beim Domänenmodell.",
+  "qu": [
+   "Chen, P. P.: The Entity-Relationship Model: Toward a Unified View of Data (ACM Transactions on Database Systems 1(1), 1976)",
+   "Elmasri, R., Navathe, S. B.: Fundamentals of Database Systems (Pearson, 7. Auflage 2015)",
+   "Simsion, G. C., Witt, G. C.: Data Modeling Essentials (Morgan Kaufmann, 3. Auflage 2005)"
+  ],
+  "io": {
+   "lf": [
+    "Fachbereich mit Datenwissen",
+    "Entwicklung und Datenbankteam"
+   ],
+   "in": [
+    {
+     "t": "Begriffe",
+     "to": "glossar",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Fachliches Modell",
+     "to": "domaenenmodell",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Beispiele für Datensätze"
+    }
+   ],
+   "out": [
+    {
+     "t": "ER-Diagramm mit Attributen und Beziehungen"
+    },
+    {
+     "t": "Datenanforderungen",
+     "to": "pflichtenheft",
+     "v": "übernommen in"
+    },
+    {
+     "t": "Grundlage für Datenbank und Schnittstellen"
+    }
+   ],
+   "ko": [
+    "Entwicklung",
+    "Datenbankteam",
+    "Test"
+   ]
+  },
+  "li": [
+   [
+    "glossar",
+    "vorher",
+    "Das Glossar liefert die Begriffe."
+   ],
+   [
+    "domaenenmodell",
+    "vorher",
+    "Das Domänenmodell legt die Fachlichkeit fest."
+   ],
+   [
+    "pflichtenheft",
+    "danach",
+    "Datenanforderungen kommen ins Pflichtenheft."
+   ],
+   [
+    "zustandsdiagramm",
+    "ergaenzt",
+    "Das Zustandsdiagramm ergänzt Lebenszyklen der Entitäten."
+   ]
+  ],
+  "tools": [
+   "draw.io",
+   "Enterprise Architect",
+   "PlantUML"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "value-proposition-canvas",
+  "n": "Value Proposition Canvas",
+  "c": "mod",
+  "f": "modell",
+  "m": "beide",
+  "ph": "verstehen",
+  "t": "Modell",
+  "kz": "Value Proposition",
+  "k": "Stellt Kundenprofil und Wertversprechen gegenüber, um zu prüfen, ob eine Lösung echte Probleme und Wünsche trifft.",
+  "aufwand": "2 bis 3 Stunden",
+  "ab": [
+   "Kundensegment festlegen",
+   "Aufgaben, Probleme und Gewinne sammeln",
+   "Probleme und Gewinne nach Wichtigkeit ordnen",
+   "Produkte, Problemlöser und Gewinnbringer zuordnen",
+   "Passung prüfen und Annahmen markieren"
+  ],
+  "re": [
+   "Zuerst das Kundenprofil, dann das Wertversprechen",
+   "Pro Canvas ein Kundensegment",
+   "Annahmen als Annahmen kennzeichnen und testen",
+   "Problemlöser erfinden keine Probleme, sie antworten auf vorhandene"
+  ],
+  "bsp": {
+   "t": "Tourenplanung",
+   "x": "Kundenprofil Disponentin: Aufgabe: Touren für den nächsten Tag planen. Problem: doppelt belegte Fahrzeuge. Gewinn: ein ruhiger Morgen. Wertversprechen: Produkt Tourenplaner, Problemlöser Konfliktwarnung, Gewinnbringer Vorschlag für Ersatzfahrzeuge. Annahme: Disponenten planen am Vorabend."
+  },
+  "zw": "Das Value Proposition Canvas hat zwei Seiten: Das Kundenprofil beschreibt Aufgaben, Probleme und erhoffte Gewinne einer Zielgruppe. Das Wertversprechen zeigt, mit welchen Produkten, Problemlösern und Gewinnbringern die Lösung darauf antwortet. Es schafft Passung zwischen Bedarf und Angebot und ergänzt das Business Model Canvas.",
+  "wa": [
+   "Wenn unklar ist, ob eine Idee ein echtes Problem löst",
+   "Bei neuen Produkten oder Zielgruppen",
+   "Wenn Fachbereich und Team verschiedene Annahmen über den Nutzen haben"
+  ],
+  "wn": [
+   "Bei internen Systemen ohne Wahlmöglichkeit der Nutzer",
+   "Wenn Zielgruppe und Problem noch gar nicht bekannt sind: dann zuerst Interviews",
+   "Wenn niemand Annahmen später überprüft"
+  ],
+  "vb": [
+   "Zielgruppe oder Segment festlegen",
+   "Poster oder digitales Canvas mit zwei Seiten bereitstellen",
+   "Haftnotizen in mehreren Farben bereitlegen",
+   "Daten aus Interviews und Beobachtungen mitbringen",
+   "Teilnehmende aus Fachbereich und Entwicklung einladen"
+  ],
+  "nr": "V-11",
+  "kt": "Kundenprofil und Wertversprechen gegenüberstellen: trifft die Lösung echte Probleme?",
+  "ks": [
+   "Segment festlegen",
+   "Aufgaben, Probleme, Gewinne sammeln",
+   "Nach Wichtigkeit ordnen",
+   "Lösung gegenüberstellen",
+   "Passung und Annahmen prüfen"
+  ],
+  "gw": [
+   "Unklar, ob die Idee ein Problem löst",
+   "Neue Produkte oder Zielgruppen",
+   "Verschiedene Annahmen über den Nutzen"
+  ],
+  "rg": [
+   "Zuerst das Kundenprofil, dann die Lösung",
+   "Pro Canvas ein Kundensegment",
+   "Annahmen als Annahmen kennzeichnen"
+  ],
+  "vk": [
+   "Segment festlegen",
+   "Daten aus Interviews mitbringen"
+  ],
+  "bn": "Interne Pflichtsysteme ohne Wahl der Nutzer",
+  "pr": "Füllen Sie die rechte Seite zuerst aus und gehen Sie erst danach nach links. Sonst passt man Probleme an die vorhandene Lösung an. Ordnen Sie die Haftnotizen nach Wichtigkeit und stellen Sie die Frage: Welche Annahme müssten wir sofort überprüfen? Ein Canvas ohne Gespräche mit Nutzern bleibt Ideensammlung.",
+  "em": "Vorher liefern Persona und Interviews das Kundenprofil. Danach übernimmt das Business Model Canvas das geprüfte Wertversprechen, und Jobs to be Done schärft die Aufgabenseite.",
+  "qu": [
+   "Osterwalder, A., Pigneur, Y., Bernarda, G., Smith, A.: Value Proposition Design (Wiley, 2014)",
+   "Osterwalder, A., Pigneur, Y.: Business Model Generation (Wiley, 2010)",
+   "Strategyzer: Value Proposition Canvas (strategyzer.com)"
+  ],
+  "io": {
+   "lf": [
+    "Nutzerinnen und Nutzer",
+    "Fachbereich und Vertrieb"
+   ],
+   "in": [
+    {
+     "t": "Persona",
+     "to": "persona",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Jobs",
+     "to": "jobs-to-be-done",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Interviewergebnisse",
+     "to": "interview",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Kundenprofil und Wertversprechen mit Annahmen"
+    },
+    {
+     "t": "Wertversprechen",
+     "to": "business-model-canvas",
+     "v": "genutzt in"
+    },
+    {
+     "t": "Annahmen",
+     "to": "prototyping",
+     "v": "getestet mit"
+    }
+   ],
+   "ko": [
+    "Produktteam",
+    "Management",
+    "Vertrieb"
+   ]
+  },
+  "li": [
+   [
+    "persona",
+    "vorher",
+    "Die Persona liefert Aufgaben, Probleme und Gewinne."
+   ],
+   [
+    "jobs-to-be-done",
+    "vorher",
+    "Die Jobs füllen die Aufgabenseite des Kundenprofils."
+   ],
+   [
+    "business-model-canvas",
+    "danach",
+    "Das Wertversprechen ist ein Baustein des Business Model Canvas."
+   ],
+   [
+    "prototyping",
+    "danach",
+    "Annahmen werden mit einem Prototyp getestet."
+   ],
+   [
+    "impact-mapping",
+    "ergaenzt",
+    "Impact Mapping verbindet Ziel und Wirkung."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Excel"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "rich-picture",
+  "n": "Rich Picture",
+  "c": "mod",
+  "f": "modell",
+  "m": "klassisch",
+  "ph": "verstehen",
+  "t": "Modell",
+  "kz": "Rich Picture",
+  "k": "Freie Zeichnung einer Problemsituation mit Beteiligten, Beziehungen, Interessen und Konflikten.",
+  "aufwand": "1 bis 2 Stunden",
+  "ab": [
+   "Leitfrage und Situation abgrenzen",
+   "Beteiligte und Organisationen zeichnen",
+   "Abläufe und Beziehungen verbinden",
+   "Konflikte und Sorgen markieren",
+   "Bild gemeinsam lesen und Fragen sammeln"
+  ],
+  "re": [
+   "Zeichnen statt schreiben: wenige Worte, einfache Symbole",
+   "Jede Sicht darf ins Bild, auch widersprüchliche",
+   "Konflikte werden sichtbar gemacht, nicht geglättet",
+   "Das Bild bleibt unformal, es braucht keine Notation"
+  ],
+  "bsp": {
+   "t": "Tourenplanung heute",
+   "x": "Disponentin, Fahrer, Werkstatt und Kundendienst sind gezeichnet, dazu zwei Tabellen und das ERP. Pfeile zeigen, wer wem Informationen schickt. Blitz: Fahrzeug doppelt eingeplant, die Werkstatt erfährt es zu spät. Denkblase der Fahrer: «Ich erfahre die Touren erst am Morgen.»"
+  },
+  "zw": "Ein Rich Picture ist eine bewusst unformale Zeichnung, die eine komplexe Situation als Ganzes zeigt: Personen, Organisationen, Abläufe, Systeme, Interessen und Konflikte. Es entstand in der Soft Systems Methodology und hilft, Sichtweisen zu klären, bevor Ziele und Anforderungen festgelegt werden.",
+  "wa": [
+   "Am Anfang bei unklarer, vielschichtiger Ausgangslage",
+   "Wenn Beteiligte die Situation verschieden sehen",
+   "Wenn Konflikte und Zuständigkeiten Teil des Problems sind"
+  ],
+  "wn": [
+   "Wenn der Ablauf bekannt ist und formal dokumentiert werden soll: dann BPMN",
+   "Wenn die Gruppe nicht zeichnen will und kein Vertrauen besteht",
+   "Als Ersatz für eine Spezifikation"
+  ],
+  "vb": [
+   "Grosses Papier oder digitale Fläche bereitstellen",
+   "Farbige Stifte oder Symbole bereitlegen",
+   "Beteiligte mit unterschiedlichen Sichten einladen",
+   "Leitfrage formulieren: Was ist die Situation?",
+   "Zeitbox von 60 bis 90 Minuten festlegen"
+  ],
+  "nr": "V-12",
+  "kt": "Freie Zeichnung der Situation: Beteiligte, Beziehungen, Konflikte. Gemeinsam sehen, was Sache ist.",
+  "ks": [
+   "Situation abgrenzen",
+   "Beteiligte zeichnen",
+   "Beziehungen und Abläufe verbinden",
+   "Konflikte markieren",
+   "Bild gemeinsam lesen"
+  ],
+  "gw": [
+   "Unklare, vielschichtige Ausgangslage",
+   "Beteiligte sehen die Lage verschieden",
+   "Konflikte und Zuständigkeiten sind Teil"
+  ],
+  "rg": [
+   "Zeichnen statt schreiben",
+   "Jede Sicht darf ins Bild",
+   "Konflikte sichtbar machen"
+  ],
+  "vk": [
+   "Papier und Stifte bereitlegen",
+   "Leitfrage formulieren"
+  ],
+  "bn": "Der Ablauf ist bekannt: formal mit BPMN",
+  "pr": "Beginnen Sie mit den Menschen, nicht mit den Systemen. Wer im Raum etwas zeichnet, erklärt es gleich, und Unterschiede in den Sichten fallen früh auf. Nutzen Sie Denkblasen für Sorgen und Blitze für Konflikte. Lesen Sie am Ende das Bild laut vor und fragen Sie: Was fehlt? Was überrascht? Die Fragen sind das Ergebnis, nicht die Zeichnung.",
+  "em": "Vorher hilft die Stakeholder-Analyse, die richtigen Leute einzuladen. Danach schärfen Kontextdiagramm und Prozessmodell das Bild. Es passt gut in einen Workshop zu Beginn.",
+  "qu": [
+   "Checkland, P.: Systems Thinking, Systems Practice (Wiley, 1981)",
+   "Checkland, P., Poulter, J.: Learning for Action (Wiley, 2006)",
+   "Monk, A., Howard, S.: The Rich Picture: A Tool for Reasoning About Work Context (Interactions 5(2), 1998)"
+  ],
+  "io": {
+   "lf": [
+    "Beteiligte der Situation",
+    "Auftraggeber"
+   ],
+   "in": [
+    {
+     "t": "Liste der Beteiligten",
+     "to": "stakeholder",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Beobachtungen",
+     "to": "beobachtung",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Leitfrage des Workshops"
+    }
+   ],
+   "out": [
+    {
+     "t": "Rich Picture mit Beteiligten, Beziehungen und Konflikten"
+    },
+    {
+     "t": "Offene Fragen",
+     "to": "workshop",
+     "v": "bearbeitet in"
+    },
+    {
+     "t": "Systemgrenze",
+     "to": "kontextdiagramm",
+     "v": "verfeinert in"
+    }
+   ],
+   "ko": [
+    "Projektteam",
+    "Auftraggeber",
+    "Fachbereiche"
+   ]
+  },
+  "li": [
+   [
+    "stakeholder",
+    "vorher",
+    "Die Analyse zeigt, wer ins Bild gehört."
+   ],
+   [
+    "kontextdiagramm",
+    "danach",
+    "Das Kontextdiagramm legt die Systemgrenze fest."
+   ],
+   [
+    "bpmn",
+    "danach",
+    "Relevante Abläufe werden als Prozessmodell festgehalten."
+   ],
+   [
+    "event-storming",
+    "alternative",
+    "Event Storming sammelt Ereignisse statt freier Zeichnung."
+   ],
+   [
+    "swot",
+    "ergaenzt",
+    "SWOT bewertet die Ausgangslage."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "draw.io"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "sequenzdiagramm",
+  "n": "Sequenzdiagramm",
+  "c": "mod",
+  "f": "modell",
+  "m": "beide",
+  "ph": "spezifizieren",
+  "t": "UML-Diagramm",
+  "kz": "Sequenzdiagramm",
+  "k": "Zeigt, in welcher Reihenfolge Beteiligte oder Systeme Nachrichten austauschen.",
+  "aufwand": "1 bis 2 Stunden",
+  "ab": [
+   "Szenario und Beteiligte festlegen",
+   "Lebenslinien nebeneinander zeichnen",
+   "Nachrichten in zeitlicher Reihenfolge ergänzen",
+   "Antworten, Alternativen und Schleifen markieren",
+   "Mit den Beteiligten prüfen"
+  ],
+  "re": [
+   "Ein Diagramm zeigt ein Szenario",
+   "Nachrichten tragen Verben und Daten",
+   "Lebenslinien entsprechen Rollen oder Systemen",
+   "Wenige Alternativen, sonst teilen"
+  ],
+  "bsp": {
+   "t": "Tour speichern",
+   "x": "Beteiligte: Disponentin, Tourenplaner, ERP. Nachrichten: Tour speichern → Fahrzeug prüfen (an ERP) → Verfügbarkeit melden → Warnung anzeigen oder Tour bestätigen. Beim Zeichnen fällt auf: Das ERP antwortet bis zu zwei Sekunden verzögert. Anforderung: Anzeige darf nicht blockieren."
+  },
+  "zw": "Ein Sequenzdiagramm zeigt für ein Szenario, welche Beteiligten oder Systeme in welcher Reihenfolge Nachrichten austauschen. Die Zeit läuft von oben nach unten. Es eignet sich, Schnittstellen und Zusammenspiel zu klären, etwa zwischen Nutzer, Anwendung und Drittsystem.",
+  "wa": [
+   "Wenn das Zusammenspiel mehrerer Systeme geklärt werden muss",
+   "Bei Schnittstellen und Integrationen",
+   "Um einen Use Case als Ablauf zwischen Beteiligten zu zeigen"
+  ],
+  "wn": [
+   "Bei Abläufen mit vielen Verzweigungen: dann Aktivitätsdiagramm oder BPMN",
+   "Wenn die Beteiligten die Notation nicht kennen und keine Zeit für Einführung ist",
+   "Bei einfachen Abläufen mit zwei Beteiligten"
+  ],
+  "vb": [
+   "Szenario und Ziel abgrenzen",
+   "Beteiligte und Systeme festlegen",
+   "Use Case oder Story mit Hauptablauf bereitlegen",
+   "Notation klären (UML 2)",
+   "Werkzeug wählen"
+  ],
+  "nr": "S-18",
+  "kt": "Nachrichten zwischen Beteiligten in zeitlicher Reihenfolge: Zusammenspiel und Schnittstellen klären.",
+  "ks": [
+   "Szenario festlegen",
+   "Lebenslinien zeichnen",
+   "Nachrichten in Reihenfolge ergänzen",
+   "Alternativen markieren",
+   "Mit Beteiligten prüfen"
+  ],
+  "gw": [
+   "Zusammenspiel mehrerer Systeme klären",
+   "Schnittstellen und Integrationen",
+   "Use Case als Ablauf zeigen"
+  ],
+  "rg": [
+   "Ein Diagramm zeigt ein Szenario",
+   "Nachrichten tragen Verben und Daten",
+   "Lebenslinien sind Rollen oder Systeme"
+  ],
+  "vk": [
+   "Szenario und Beteiligte festlegen",
+   "Hauptablauf bereitlegen"
+  ],
+  "bn": "Viele Verzweigungen: besser BPMN",
+  "pr": "Bleiben Sie bei einem Szenario und dem Hauptablauf, Ausnahmen kommen auf eigene Diagramme. Benennen Sie Nachrichten mit Verb und Daten («Tour speichern»), nicht mit Technikbegriffen. Zeichnen Sie das Diagramm gemeinsam mit Entwicklung und Fachseite, denn dort fallen fehlende Antworten und Annahmen über Schnittstellen auf.",
+  "em": "Vorher liefert der Use Case den Hauptablauf. Danach prüft das Team die Schnittstellen mit den Systemverantwortlichen. Für Prozesse mit mehreren Rollen eignet sich BPMN besser.",
+  "qu": [
+   "OMG: Unified Modeling Language (UML), Version 2.5.1 (2017)",
+   "Fowler, M.: UML Distilled (Addison-Wesley, 3. Auflage 2003)",
+   "Rupp, C., Queins, S.: UML 2 glasklar (Hanser, 4. Auflage 2012)"
+  ],
+  "io": {
+   "lf": [
+    "Entwicklung und Architektur",
+    "Systemverantwortliche"
+   ],
+   "in": [
+    {
+     "t": "Hauptablauf",
+     "to": "use-cases",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Systemgrenzen",
+     "to": "kontextdiagramm",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Schnittstellenbeschreibungen"
+    }
+   ],
+   "out": [
+    {
+     "t": "Sequenzdiagramm eines Szenarios"
+    },
+    {
+     "t": "Schnittstellenanforderungen",
+     "to": "pflichtenheft",
+     "v": "übernommen in"
+    },
+    {
+     "t": "Testszenarien",
+     "to": "abnahmetest",
+     "v": "genutzt in"
+    }
+   ],
+   "ko": [
+    "Entwicklung",
+    "Test",
+    "Systemverantwortliche"
+   ]
+  },
+  "li": [
+   [
+    "use-cases",
+    "vorher",
+    "Der Use Case liefert den Hauptablauf."
+   ],
+   [
+    "kontextdiagramm",
+    "vorher",
+    "Das Kontextdiagramm nennt die beteiligten Systeme."
+   ],
+   [
+    "abnahmetest",
+    "danach",
+    "Szenarien werden zu Testfällen."
+   ],
+   [
+    "aktivitaetsdiagramm",
+    "alternative",
+    "Das Aktivitätsdiagramm zeigt Entscheidungen, das Sequenzdiagramm Nachrichten."
+   ],
+   [
+    "bpmn",
+    "alternative",
+    "BPMN zeigt Prozesse über mehrere Rollen."
+   ]
+  ],
+  "tools": [
+   "PlantUML",
+   "draw.io",
+   "Enterprise Architect"
+  ],
+  "s": "entwurf"
+ },
+ {
   "id": "moscow",
   "n": "MoSCoW-Priorisierung",
   "c": "prio",
@@ -5092,6 +7049,611 @@ const M = [
   "vis": "risiko"
  },
  {
+  "id": "dot-voting",
+  "n": "Dot Voting",
+  "c": "prio",
+  "f": "methode",
+  "m": "agil",
+  "ph": "bewerten",
+  "t": "Abstimmung",
+  "kz": "Dot Voting",
+  "k": "Alle verteilen eine begrenzte Zahl Klebepunkte auf die Optionen, die ihnen am wichtigsten sind.",
+  "aufwand": "15 bis 30 Min.",
+  "ab": [
+   "Optionen vorstellen und Kriterium nennen",
+   "Punkte pro Person festlegen",
+   "Alle verteilen gleichzeitig ihre Punkte",
+   "Punkte zählen und Rangliste bilden",
+   "Ergebnis besprechen und Entscheid festhalten"
+  ],
+  "re": [
+   "Alle stimmen gleichzeitig ab, nicht nacheinander",
+   "Punkte sind knapp, damit gewählt werden muss",
+   "Das Kriterium wird vor der Abstimmung genannt",
+   "Das Ergebnis ist ein Impuls, kein Beschluss"
+  ],
+  "bsp": {
+   "t": "Ideen aus der Retrospektive",
+   "x": "Zwölf Verbesserungsideen, jede Person hat vier Punkte. Ergebnis: Automatische Fahrzeugwarnung 9 Punkte, Schulung 5, Neues Layout 2. Das Team nimmt die ersten zwei in den nächsten Sprint und lässt die übrigen im Backlog stehen."
+  },
+  "zw": "Beim Dot Voting verteilt jede Person eine begrenzte Zahl von Punkten auf die Optionen, die ihr am wichtigsten sind. Die Verteilung zeigt in Minuten, wo die Gruppe Schwerpunkte sieht. Die Technik ist schnell und einfach, liefert aber ein Stimmungsbild, keine fachliche Begründung.",
+  "wa": [
+   "Wenn aus vielen Ideen wenige ausgewählt werden sollen",
+   "Wenn die Gruppe schnell ein Stimmungsbild braucht",
+   "Nach einem Brainstorming oder einer Retrospektive"
+  ],
+  "wn": [
+   "Wenn Wert und Aufwand genau verglichen werden müssen: dann WSJF oder RICE",
+   "Wenn Entscheidungen fachlich oder rechtlich begründet sein müssen",
+   "Wenn Meinungsführer die Abstimmung beeinflussen würden"
+  ],
+  "vb": [
+   "Optionen als einzelne Karten oder Einträge vorbereiten",
+   "Punkte oder digitale Stimmen bereitlegen",
+   "Zahl der Punkte festlegen (etwa ein Drittel der Optionen)",
+   "Frage für die Abstimmung formulieren",
+   "Zeitbox von 5 bis 10 Minuten setzen"
+  ],
+  "nr": "B-07",
+  "kt": "Alle verteilen wenige Punkte auf ihre Favoriten: schnelles Stimmungsbild, Schwerpunkte sichtbar.",
+  "ks": [
+   "Optionen und Kriterium vorstellen",
+   "Punkte pro Person festlegen",
+   "Alle verteilen gleichzeitig",
+   "Punkte zählen, Rangliste bilden",
+   "Ergebnis besprechen"
+  ],
+  "gw": [
+   "Aus vielen Ideen wenige wählen",
+   "Schnelles Stimmungsbild der Gruppe",
+   "Nach Brainstorming oder Retrospektive"
+  ],
+  "rg": [
+   "Alle stimmen gleichzeitig ab",
+   "Punkte sind knapp",
+   "Das Kriterium wird vorher genannt"
+  ],
+  "vk": [
+   "Optionen als Karten vorbereiten",
+   "Punktezahl festlegen"
+  ],
+  "bn": "Wert und Aufwand müssen genau verglichen werden",
+  "pr": "Stimmen Sie gleichzeitig ab, sonst folgen alle den ersten Punkten. Nennen Sie das Kriterium vorher: «Was bringt dem Nutzer am meisten?» statt «Was gefällt?». Knappe Punkte erzwingen Entscheidungen, rund ein Drittel der Optionen ist ein guter Wert. Besprechen Sie auffällige Ausreisser, bevor Sie entscheiden, und halten Sie fest, wer entscheidet.",
+  "em": "Vorher sammelt Brainstorming oder Workshop die Optionen. Danach legen Sie das Ergebnis im Backlog ab. Bei teuren Entscheidungen bietet sich WSJF oder RICE an.",
+  "qu": [
+   "Gray, D., Brown, S., Macanufo, J.: Gamestorming (O'Reilly, 2010)",
+   "Diceman, J.: The Dotmocracy Handbook (2010)",
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Voting»"
+  ],
+  "io": {
+   "lf": [
+    "Teilnehmende der Gruppe",
+    "Moderation"
+   ],
+   "in": [
+    {
+     "t": "Optionen",
+     "to": "brainstorming",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Kriterium der Abstimmung"
+    },
+    {
+     "t": "Optionen aus dem Backlog",
+     "to": "product-backlog",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Rangliste mit Punkten"
+    },
+    {
+     "t": "Priorisierte Einträge",
+     "to": "product-backlog",
+     "v": "übernommen in"
+    },
+    {
+     "t": "Auswahl für den nächsten Schritt",
+     "to": "sprint-planning",
+     "v": "genutzt in"
+    }
+   ],
+   "ko": [
+    "Product Owner",
+    "Team",
+    "Auftraggeber"
+   ]
+  },
+  "li": [
+   [
+    "brainstorming",
+    "vorher",
+    "Brainstorming liefert die Optionen."
+   ],
+   [
+    "product-backlog",
+    "danach",
+    "Die Rangliste ordnet das Backlog."
+   ],
+   [
+    "moscow",
+    "alternative",
+    "MoSCoW ordnet in vier Klassen statt nach Punkten."
+   ],
+   [
+    "wsjf",
+    "alternative",
+    "WSJF rechnet Wert und Aufwand."
+   ],
+   [
+    "retrospektive",
+    "ergaenzt",
+    "In der Retrospektive wählt das Team Massnahmen aus."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Confluence"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "rice",
+  "n": "RICE-Scoring",
+  "c": "prio",
+  "f": "methode",
+  "m": "agil",
+  "ph": "bewerten",
+  "t": "Bewertungsformel",
+  "kz": "RICE",
+  "k": "Bewertet Ideen mit Reichweite, Wirkung, Zuversicht und Aufwand zu einer vergleichbaren Zahl.",
+  "aufwand": "1 bis 3 Stunden",
+  "ab": [
+   "Kandidaten und Zeitraum festlegen",
+   "Reichweite schätzen",
+   "Wirkung und Zuversicht bewerten",
+   "Aufwand schätzen",
+   "Wert berechnen und Rangliste prüfen"
+  ],
+  "re": [
+   "Gleiche Skalen für alle Kandidaten",
+   "Reichweite stützt sich auf Zahlen, nicht auf Gefühl",
+   "Geringe Zuversicht senkt den Wert sichtbar",
+   "Das Ergebnis ist Diskussionsgrundlage, kein Befehl"
+  ],
+  "bsp": {
+   "t": "Vier Ideen",
+   "x": "Reichweite pro Quartal, Wirkung 0,25 bis 3, Zuversicht in Prozent. Konfliktwarnung: 200 · 2 · 80 % : 2 = 160. Export-Funktion: 50 · 1 · 100 % : 1 = 50. Neues Layout: 400 · 0,5 · 50 % : 4 = 25. Das Team startet mit der Konfliktwarnung."
+  },
+  "zw": "RICE steht für Reach (Reichweite), Impact (Wirkung), Confidence (Zuversicht) und Effort (Aufwand). Der Wert ergibt sich als Reichweite mal Wirkung mal Zuversicht, geteilt durch den Aufwand. So lassen sich unterschiedliche Ideen mit einer gemeinsamen Formel vergleichen. Die Zuversicht macht Unsicherheit der Schätzung sichtbar.",
+  "wa": [
+   "Wenn viele Ideen um knappe Kapazität konkurrieren",
+   "Wenn Nutzerzahlen oder Daten zur Reichweite vorliegen",
+   "Wenn die Priorisierung gegenüber Stakeholdern nachvollziehbar sein soll"
+  ],
+  "wn": [
+   "Wenn Zahlen nur geraten sind und niemand sie prüft",
+   "Bei Pflichtthemen mit Frist oder Gesetz: dann MoSCoW",
+   "Bei sehr wenigen Optionen, die ein Gespräch klärt"
+  ],
+  "vb": [
+   "Liste der Kandidaten mit kurzer Beschreibung",
+   "Zeitraum und Einheit für die Reichweite festlegen",
+   "Skala für Wirkung vereinbaren (zum Beispiel 0,25 bis 3)",
+   "Skala für Zuversicht festlegen (50, 80, 100 Prozent)",
+   "Aufwand in Personenmonaten oder Punkten schätzen"
+  ],
+  "nr": "B-08",
+  "kt": "Reichweite mal Wirkung mal Zuversicht, geteilt durch Aufwand: vergleichbare Zahl für jede Idee.",
+  "ks": [
+   "Kandidaten festlegen",
+   "Reichweite schätzen",
+   "Wirkung und Zuversicht bewerten",
+   "Aufwand schätzen",
+   "Wert berechnen, Rangliste prüfen"
+  ],
+  "gw": [
+   "Viele Ideen, knappe Kapazität",
+   "Nutzerzahlen liegen vor",
+   "Die Reihenfolge soll begründbar sein"
+  ],
+  "rg": [
+   "Gleiche Skalen für alle Kandidaten",
+   "Reichweite stützt sich auf Zahlen",
+   "Geringe Zuversicht senkt den Wert"
+  ],
+  "vk": [
+   "Kandidaten und Zeitraum festlegen",
+   "Skalen vereinbaren"
+  ],
+  "bn": "Zahlen sind nur geraten",
+  "pr": "Der Nutzen liegt im Gespräch über die Annahmen, nicht in der Zahl. Lassen Sie die Zuversicht unbequem ehrlich sein: Wer wenig weiss, setzt 50 Prozent. Vergleichen Sie auffällige Ergebnisse mit dem Bauchgefühl, und fragen Sie bei Abweichung nach den Annahmen. Pflegen Sie die Tabelle regelmässig, sonst veraltet sie.",
+  "em": "Vorher sammeln Backlog und Daten die Kandidaten. Danach ordnen Sie das Backlog nach dem Wert. Für Pflichtthemen oder wenige Optionen ist MoSCoW oder Dot Voting einfacher.",
+  "qu": [
+   "McBride, S.: RICE: Simple prioritization for product managers (Intercom Blog, 2016)",
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Prioritization»",
+   "Cagan, M.: Inspired (Wiley, 2. Auflage 2018)"
+  ],
+  "io": {
+   "lf": [
+    "Produktmanagement",
+    "Nutzungsdaten und Analyse"
+   ],
+   "in": [
+    {
+     "t": "Kandidatenliste",
+     "to": "product-backlog",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Schätzung des Aufwands",
+     "to": "story-points",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Nutzungsdaten"
+    }
+   ],
+   "out": [
+    {
+     "t": "Tabelle mit Werten und Rangliste"
+    },
+    {
+     "t": "Priorisierte Reihenfolge",
+     "to": "product-backlog",
+     "v": "übernommen in"
+    },
+    {
+     "t": "Begründung für Stakeholder",
+     "to": "roadmap",
+     "v": "genutzt in"
+    }
+   ],
+   "ko": [
+    "Product Owner",
+    "Management",
+    "Entwicklungsteam"
+   ]
+  },
+  "li": [
+   [
+    "product-backlog",
+    "vorher",
+    "Das Backlog liefert die Kandidaten."
+   ],
+   [
+    "story-points",
+    "vorher",
+    "Story Points liefern den Aufwand."
+   ],
+   [
+    "roadmap",
+    "danach",
+    "Die Rangliste prägt die Reihenfolge der Roadmap."
+   ],
+   [
+    "wsjf",
+    "alternative",
+    "WSJF bewertet mit Kosten der Verzögerung."
+   ],
+   [
+    "moscow",
+    "alternative",
+    "MoSCoW kommt ohne Rechnen aus."
+   ]
+  ],
+  "tools": [
+   "Excel",
+   "Jira"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "kosten-nutzen",
+  "n": "Kosten-Nutzen-Analyse",
+  "c": "prio",
+  "f": "methode",
+  "m": "klassisch",
+  "ph": "bewerten",
+  "t": "Wirtschaftlichkeitsrechnung",
+  "kz": "Kosten-Nutzen",
+  "k": "Stellt erwartete Kosten und Nutzen einer Anforderung oder Lösung gegenüber, um deren Wirtschaftlichkeit zu beurteilen.",
+  "aufwand": "0,5 bis 2 Tage",
+  "ab": [
+   "Varianten und Betrachtungszeitraum festlegen",
+   "Einmalige und laufende Kosten sammeln",
+   "Nutzen bewerten und in Geld ausdrücken",
+   "Kosten und Nutzen gegenüberstellen",
+   "Annahmen und Risiken prüfen, Empfehlung formulieren"
+  ],
+  "re": [
+   "Annahmen werden offen genannt",
+   "Einmalige und laufende Kosten getrennt zeigen",
+   "Nutzen nur zählen, wenn jemand ihn beanspruchen kann",
+   "Ein Szenario genügt nicht, mindestens eine Spanne zeigen"
+  ],
+  "bsp": {
+   "t": "Automatische Konfliktwarnung",
+   "x": "Kosten: einmalig 40 000, laufend 5 000 im Jahr. Nutzen: 120 Fehlerfälle weniger, pro Fall 300 Franken Ersparnis, also 36 000 im Jahr. Über drei Jahre ergeben sich 108 000 Nutzen gegen 55 000 Kosten. Empfehlung: umsetzen, wenn die Fehlerzahl für die Annahme belegt wird."
+  },
+  "zw": "Die Kosten-Nutzen-Analyse stellt für eine Anforderung, ein Vorhaben oder eine Lösungsvariante die erwarteten Kosten und den erwarteten Nutzen gegenüber. So lässt sich begründen, ob und in welcher Reihenfolge investiert wird. Sie eignet sich besonders, wenn Entscheider Zahlen verlangen.",
+  "wa": [
+   "Wenn Entscheider eine begründete Investition verlangen",
+   "Beim Vergleich mehrerer Lösungsvarianten",
+   "Wenn Kosten und Nutzen sich in Geld ausdrücken lassen"
+  ],
+  "wn": [
+   "Wenn sich der Nutzen nicht sinnvoll beziffern lässt: dann Kano oder MoSCoW",
+   "Wenn die Zahlen nur geraten sind und nie überprüft werden",
+   "Bei gesetzlich vorgeschriebenen Massnahmen"
+  ],
+  "vb": [
+   "Fragestellung und Varianten festlegen",
+   "Zeitraum und Annahmen vereinbaren",
+   "Kostenarten und Nutzenarten sammeln",
+   "Fachbereich und Finanzen einbeziehen",
+   "Vorlage in einer Tabelle anlegen"
+  ],
+  "nr": "B-09",
+  "kt": "Kosten und Nutzen einer Lösung gegenüberstellen: Investitionen mit Zahlen begründen.",
+  "ks": [
+   "Varianten und Zeitraum festlegen",
+   "Kosten sammeln",
+   "Nutzen in Geld ausdrücken",
+   "Gegenüberstellen",
+   "Annahmen prüfen, empfehlen"
+  ],
+  "gw": [
+   "Entscheider verlangen Zahlen",
+   "Mehrere Lösungsvarianten vergleichen",
+   "Kosten und Nutzen in Geld darstellbar"
+  ],
+  "rg": [
+   "Annahmen offen nennen",
+   "Einmalige und laufende Kosten trennen",
+   "Nutzen braucht einen Verantwortlichen"
+  ],
+  "vk": [
+   "Varianten und Zeitraum festlegen",
+   "Annahmen vereinbaren"
+  ],
+  "bn": "Nutzen lässt sich nicht beziffern",
+  "pr": "Der häufigste Fehler ist ein zu optimistischer Nutzen. Verlangen Sie für jeden Nutzenposten eine Person, die ihn verantwortet. Rechnen Sie mindestens mit einer vorsichtigen, einer erwarteten und einer optimistischen Variante. Zeigen Sie, welche Annahme das Ergebnis am stärksten bestimmt, und prüfen Sie sie als erstes.",
+  "em": "Vorher liefern Schätzung und Stakeholder-Analyse die Zahlen. Danach fliesst das Ergebnis in Roadmap und Backlog. Für agile Teams genügt oft eine schlankere Methode wie RICE.",
+  "qu": [
+   "Boardman, A. E., Greenberg, D. H., Vining, A. R., Weimer, D. L.: Cost-Benefit Analysis (Cambridge University Press, 5. Auflage 2018)",
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Financial Analysis»",
+   "Project Management Institute: A Guide to the Project Management Body of Knowledge (PMBOK Guide), 7. Auflage 2021"
+  ],
+  "io": {
+   "lf": [
+    "Fachbereich mit Zahlen",
+    "Finanzen und Controlling"
+   ],
+   "in": [
+    {
+     "t": "Aufwandsschätzung",
+     "to": "story-points",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Risiken",
+     "to": "risikoanalyse",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Nutzenannahmen aus dem Fachbereich"
+    }
+   ],
+   "out": [
+    {
+     "t": "Gegenüberstellung von Kosten und Nutzen"
+    },
+    {
+     "t": "Entscheidungsgrundlage",
+     "to": "roadmap",
+     "v": "genutzt in"
+    },
+    {
+     "t": "Priorisierung",
+     "to": "product-backlog",
+     "v": "übernommen in"
+    }
+   ],
+   "ko": [
+    "Auftraggeber",
+    "Management",
+    "Projektleitung"
+   ]
+  },
+  "li": [
+   [
+    "risikoanalyse",
+    "vorher",
+    "Risiken fliessen in die Kosten ein."
+   ],
+   [
+    "story-points",
+    "vorher",
+    "Die Schätzung liefert den Aufwand."
+   ],
+   [
+    "roadmap",
+    "danach",
+    "Entscheid und Reihenfolge landen in der Roadmap."
+   ],
+   [
+    "rice",
+    "alternative",
+    "RICE ist leichter und kommt ohne Geldbeträge aus."
+   ],
+   [
+    "kano",
+    "alternative",
+    "Kano fragt nach Zufriedenheit statt nach Geld."
+   ]
+  ],
+  "tools": [
+   "Excel"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "affinity-estimation",
+  "n": "Affinity Estimation",
+  "c": "prio",
+  "f": "methode",
+  "m": "agil",
+  "ph": "bewerten",
+  "t": "Schätzverfahren",
+  "kz": "Affinity Estimation",
+  "k": "Das Team sortiert viele Stories schweigend nach Grösse in eine Reihe und ordnet ihnen danach Punktewerte zu.",
+  "aufwand": "30 bis 60 Min.",
+  "ab": [
+   "Stories gut sichtbar aufhängen",
+   "Team ordnet still von klein nach gross",
+   "Gruppen prüfen und Unstimmiges verschieben",
+   "Gruppen mit Punktewerten versehen",
+   "Ergebnis im Backlog erfassen"
+  ],
+  "re": [
+   "Zuerst still sortieren, dann sprechen",
+   "Alle dürfen jede Karte verschieben",
+   "Relative Grösse zählt, nicht absolute Stunden",
+   "Stories über 13 werden geteilt"
+  ],
+  "bsp": {
+   "t": "Erstschätzung eines Backlogs",
+   "x": "Das Team hat 32 Stories. In 20 Minuten sortiert es sie in eine Reihe, bildet vier Gruppen und vergibt 2, 3, 5 und 8 Punkte. Drei Stories wandern mehrmals und werden besprochen. Danach liegt eine Schätzung für das ganze Release vor."
+  },
+  "zw": "Bei der Affinity Estimation sortiert das Team viele Stories ohne Diskussion von klein nach gross auf eine Wand. Anschliessend werden Gruppen gebildet und mit Punktewerten versehen. So schätzt ein Team Dutzende Stories in einer Stunde relativ zueinander, statt jede einzeln zu besprechen.",
+  "wa": [
+   "Wenn ein ganzes Backlog erstmals geschätzt werden soll",
+   "Wenn viele Stories in kurzer Zeit eine grobe Grösse brauchen",
+   "Zu Beginn eines Vorhabens für die Planung"
+  ],
+  "wn": [
+   "Wenn Stories noch unklar sind: zuerst klären",
+   "Wenn einzelne Stories genau besprochen werden sollen: dann Planning Poker",
+   "Wenn das Team die Stories nicht kennt"
+  ],
+  "vb": [
+   "Stories auf Karten schreiben (20 bis 60 Stück)",
+   "Wand oder Board mit Skala von klein bis gross vorbereiten",
+   "Skala mit Punktewerten (1, 2, 3, 5, 8, 13) bereithalten",
+   "Ganzes Team einladen",
+   "Eine Referenzstory festlegen"
+  ],
+  "nr": "B-10",
+  "kt": "Team sortiert viele Stories still nach Grösse und gibt den Gruppen Punkte. Schätzung in einer Stunde.",
+  "ks": [
+   "Stories aufhängen",
+   "Still von klein nach gross sortieren",
+   "Gruppen prüfen",
+   "Punktewerte vergeben",
+   "Im Backlog erfassen"
+  ],
+  "gw": [
+   "Ein ganzes Backlog erstmals schätzen",
+   "Viele Stories, wenig Zeit",
+   "Grobe Grösse zu Projektbeginn"
+  ],
+  "rg": [
+   "Zuerst still sortieren",
+   "Alle dürfen jede Karte verschieben",
+   "Relative Grösse zählt"
+  ],
+  "vk": [
+   "Stories auf Karten schreiben",
+   "Skala und Wand vorbereiten"
+  ],
+  "bn": "Stories sind noch unklar",
+  "pr": "Das stille Sortieren hält Diskussionen klein und die Zeit kurz. Wer nicht einverstanden ist, verschiebt die Karte, statt zu argumentieren. Erst wenn eine Karte ständig hin und her wandert, wird gesprochen. Wählen Sie eine Referenzstory, die alle kennen. Für Stories mit hohem Risiko zeigt anschliessend Planning Poker genauer.",
+  "em": "Vorher ist das Backlog verfeinert und die Stories sind verständlich. Danach prüfen Sie kritische Stories mit Planning Poker und planen das Release.",
+  "qu": [
+   "Cohn, M.: Agile Estimating and Planning (Prentice Hall, 2005)",
+   "Lindstrom, L.: Affinity Estimating (Oobeya, Mountain Goat Software Presentation, 2011)",
+   "Rubin, K. S.: Essential Scrum (Addison-Wesley, 2012)"
+  ],
+  "io": {
+   "lf": [
+    "Entwicklungsteam",
+    "Product Owner"
+   ],
+   "in": [
+    {
+     "t": "Stories",
+     "to": "product-backlog",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Referenzstory",
+     "to": "story-points",
+     "v": "ergänzt durch"
+    },
+    {
+     "t": "Verständnis der Stories",
+     "to": "refinement",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Geschätzte Stories mit Punktewerten"
+    },
+    {
+     "t": "Schätzung",
+     "to": "release-planning",
+     "v": "genutzt in"
+    },
+    {
+     "t": "Offene Fälle",
+     "to": "planning-poker",
+     "v": "genauer geschätzt mit"
+    }
+   ],
+   "ko": [
+    "Product Owner",
+    "Team",
+    "Projektleitung"
+   ]
+  },
+  "li": [
+   [
+    "refinement",
+    "vorher",
+    "Verständliche Stories sind die Voraussetzung."
+   ],
+   [
+    "product-backlog",
+    "vorher",
+    "Das Backlog liefert die Stories."
+   ],
+   [
+    "release-planning",
+    "danach",
+    "Die Schätzung trägt die Release-Planung."
+   ],
+   [
+    "planning-poker",
+    "alternative",
+    "Planning Poker schätzt einzelne Stories genauer."
+   ],
+   [
+    "story-points",
+    "ergaenzt",
+    "Story Points sind die Einheit der Schätzung."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Jira"
+  ],
+  "s": "entwurf"
+ },
+ {
   "id": "product-backlog",
   "n": "Product Backlog",
   "c": "plan",
@@ -5859,6 +8421,159 @@ const M = [
   "s": "entwurf"
  },
  {
+  "id": "release-planning",
+  "n": "Release-Planung",
+  "c": "plan",
+  "f": "methode",
+  "m": "beide",
+  "ph": "planen",
+  "t": "Planung",
+  "kz": "Release-Planung",
+  "k": "Legt fest, welche Funktionen mit welcher Zuverlässigkeit in welchem Release erscheinen und wann.",
+  "aufwand": "2 bis 4 Stunden",
+  "ab": [
+   "Release-Ziel und Zeitrahmen festlegen",
+   "Kapazität des Teams bestimmen",
+   "Stories in Sprints und Releases einordnen",
+   "Abhängigkeiten und Risiken prüfen",
+   "Plan mit Pufferbereich abstimmen"
+  ],
+  "re": [
+   "Plan zeigt eine Spanne, nicht einen Tag",
+   "Der Plan wird nach jedem Sprint aktualisiert",
+   "Umfang oder Termin sind fest, nie beides",
+   "Puffer ist ausgewiesen"
+  ],
+  "bsp": {
+   "t": "Release 1 Tourenplanung",
+   "x": "Velocity 20 Punkte je Sprint, Release-Ziel Ende Juni mit sechs Sprints. Kapazität 120 Punkte. Must-Stories 85 Punkte, Should 40. Plan: Alle Must und die Hälfte der Should bis Juni, der Rest im Juli. Das Management sieht eine Spanne mit zwei Szenarien."
+  },
+  "zw": "In der Release-Planung wird festgelegt, welche Funktionen in welchem Release erscheinen sollen und mit welchem Zeithorizont. Sie verbindet Priorität, Schätzung und Kapazität zu einem Plan, den Stakeholder verstehen. Er wird laufend angepasst, wenn sich Wissen und Prioritäten ändern.",
+  "wa": [
+   "Wenn Termine und Umfang für Kunden und Management gebraucht werden",
+   "Wenn mehrere Teams oder Abhängigkeiten abgestimmt werden müssen",
+   "Wenn ein Ziel (Termin oder Funktionen) feststeht und der Weg gesucht wird"
+  ],
+  "wn": [
+   "Wenn nur der nächste Sprint zu planen ist: dann Sprint Planning",
+   "Wenn das Backlog nicht geschätzt oder priorisiert ist",
+   "Wenn der Plan als fixes Versprechen gelesen wird"
+  ],
+  "vb": [
+   "Priorisiertes und geschätztes Backlog bereithalten",
+   "Velocity oder Kapazität des Teams kennen",
+   "Ziel des Releases klären: Termin oder Umfang",
+   "Abhängigkeiten und Risiken sammeln",
+   "Entscheider und Teamvertreter einladen"
+  ],
+  "nr": "P-06",
+  "kt": "Welche Funktionen kommen in welches Release, mit Spanne statt Stichtag? Plan mit Puffer.",
+  "ks": [
+   "Ziel und Zeitrahmen festlegen",
+   "Kapazität bestimmen",
+   "Stories den Releases zuordnen",
+   "Abhängigkeiten prüfen",
+   "Plan mit Puffer abstimmen"
+  ],
+  "gw": [
+   "Termine und Umfang für Management nötig",
+   "Mehrere Teams oder Abhängigkeiten",
+   "Ziel steht fest, der Weg wird gesucht"
+  ],
+  "rg": [
+   "Plan zeigt eine Spanne",
+   "Plan wird nach jedem Sprint angepasst",
+   "Umfang oder Termin sind fest"
+  ],
+  "vk": [
+   "Backlog priorisieren und schätzen",
+   "Velocity kennen"
+  ],
+  "bn": "Nur der nächste Sprint ist zu planen",
+  "pr": "Zeigen Sie Spannen statt einzelner Daten: «Release 1 zwischen Mai und Juni». Legen Sie fest, was fest ist, den Termin oder den Umfang. Beides gleichzeitig fest ist ein Risiko. Aktualisieren Sie den Plan nach jedem Sprint mit der tatsächlichen Velocity, und zeigen Sie Veränderungen offen. So bleibt der Plan eine gemeinsame Orientierung.",
+  "em": "Vorher liefern Backlog, Schätzung und Roadmap die Eingaben. Danach plant jeder Sprint den nächsten Ausschnitt. Das Ergebnis gehört auf die Roadmap für Management und Kunden.",
+  "qu": [
+   "Cohn, M.: Agile Estimating and Planning (Prentice Hall, 2005)",
+   "Pichler, R.: Agile Product Management with Scrum (Addison-Wesley, 2010)",
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Roadmap»"
+  ],
+  "io": {
+   "lf": [
+    "Product Owner",
+    "Entwicklungsteam"
+   ],
+   "in": [
+    {
+     "t": "Priorisiertes Backlog",
+     "to": "product-backlog",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Schätzung",
+     "to": "affinity-estimation",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Roadmap und Ziele",
+     "to": "roadmap",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Release-Plan mit Spannen und Szenarien"
+    },
+    {
+     "t": "Sprint-Zuordnung",
+     "to": "sprint-planning",
+     "v": "genutzt in"
+    },
+    {
+     "t": "Termine und Umfang",
+     "to": "roadmap",
+     "v": "genutzt in"
+    }
+   ],
+   "ko": [
+    "Management",
+    "Kunden",
+    "Entwicklungsteam"
+   ]
+  },
+  "li": [
+   [
+    "product-backlog",
+    "vorher",
+    "Das Backlog liefert Stories und Reihenfolge."
+   ],
+   [
+    "roadmap",
+    "vorher",
+    "Die Roadmap gibt Ziele und Zeithorizont."
+   ],
+   [
+    "sprint-planning",
+    "danach",
+    "Jeder Sprint plant seinen Ausschnitt."
+   ],
+   [
+    "story-mapping",
+    "ergaenzt",
+    "Die Release-Linie der Story Map zeigt den Umfang."
+   ],
+   [
+    "moscow",
+    "ergaenzt",
+    "MoSCoW legt fest, was zum Release gehört."
+   ]
+  ],
+  "tools": [
+   "Jira",
+   "Miro"
+  ],
+  "s": "entwurf"
+ },
+ {
   "id": "review",
   "n": "Review / Inspektion",
   "c": "qs",
@@ -6582,6 +9297,308 @@ const M = [
   "s": "entwurf"
  },
  {
+  "id": "usability-test",
+  "n": "Usability-Test",
+  "c": "qs",
+  "f": "methode",
+  "m": "beide",
+  "ph": "absichern",
+  "t": "Test",
+  "kz": "Usability-Test",
+  "k": "Echte Nutzerinnen lösen Aufgaben an einem Prototyp oder Produkt, während das Team beobachtet.",
+  "aufwand": "0,5 bis 2 Tage",
+  "ab": [
+   "Ziel und Aufgaben festlegen",
+   "Teilnehmende begrüssen und Rolle erklären",
+   "Aufgaben bearbeiten lassen, laut denken",
+   "Beobachten, nicht helfen, Auffälligkeiten notieren",
+   "Probleme gewichten und Massnahmen ableiten"
+  ],
+  "re": [
+   "Getestet wird das Produkt, nicht der Mensch",
+   "Die Testleitung hilft nicht und führt nicht",
+   "Teilnehmende denken laut",
+   "Fünf Personen genügen für die gröbsten Probleme"
+  ],
+  "bsp": {
+   "t": "Prototyp der Tourenplanung",
+   "x": "Fünf Disponentinnen sollen eine Tour anlegen und freigeben. Vier übersehen die Warnung, weil sie grau dargestellt ist. Massnahme: Warnung farbig und mit Symbol. Der zweite Test mit anderen Teilnehmenden bestätigt die Verbesserung."
+  },
+  "zw": "Beim Usability-Test bearbeiten echte Nutzer typische Aufgaben an einem Prototyp oder einem fertigen Produkt, während das Team beobachtet und nicht eingreift. So zeigt sich, wo Menschen scheitern, zögern oder etwas anderes verstehen als gedacht. Schon fünf Teilnehmende decken die meisten grossen Probleme auf.",
+  "wa": [
+   "Wenn Oberfläche und Abläufe geprüft werden sollen",
+   "Vor der Entwicklung mit einem Prototyp, um billig zu lernen",
+   "Wenn Meinungen im Team auseinandergehen und Fakten fehlen"
+  ],
+  "wn": [
+   "Bei reinen Hintergrundverarbeitungen ohne Oberfläche",
+   "Wenn es nur um Meinungen vieler Menschen geht: dann Fragebogen",
+   "Wenn keine Nutzer erreichbar sind"
+  ],
+  "vb": [
+   "Ziel und Aufgaben für den Test festlegen",
+   "Prototyp oder Produkt bereitstellen und selbst durchspielen",
+   "Fünf Teilnehmende aus der Zielgruppe einladen",
+   "Testleitung und Beobachtung trennen",
+   "Einwilligung und Aufzeichnung klären"
+  ],
+  "nr": "A-06",
+  "kt": "Echte Nutzer lösen Aufgaben, das Team schaut zu: Probleme zeigen sich früh und billig.",
+  "ks": [
+   "Ziel und Aufgaben festlegen",
+   "Teilnehmende begrüssen",
+   "Aufgaben bearbeiten lassen",
+   "Beobachten, nicht helfen",
+   "Probleme gewichten"
+  ],
+  "gw": [
+   "Oberfläche und Abläufe prüfen",
+   "Vor der Entwicklung mit einem Prototyp",
+   "Meinungen gehen auseinander, Fakten fehlen"
+  ],
+  "rg": [
+   "Getestet wird das Produkt, nicht der Mensch",
+   "Die Testleitung hilft nicht",
+   "Teilnehmende denken laut"
+  ],
+  "vk": [
+   "Aufgaben festlegen, selbst durchspielen",
+   "Fünf Teilnehmende einladen"
+  ],
+  "bn": "Nur Hintergrundverarbeitung ohne Oberfläche",
+  "pr": "Üben Sie den Test einmal selbst, bevor Sie ihn mit Nutzern durchführen. Sagen Sie zu Beginn: «Wir testen das Produkt, nicht Sie.» Greifen Sie nicht ein, auch wenn es schwerfällt, und fragen Sie bei Stocken: «Was erwarten Sie jetzt?» Bewerten Sie die Probleme nach Häufigkeit und Schwere, und beheben Sie zuerst die, bei denen mehrere Personen scheitern.",
+  "em": "Vorher liefert ein Prototyp die Basis, und die Persona die Auswahl der Teilnehmenden. Danach fliessen Erkenntnisse ins Backlog. Wenn Zahlen nötig sind, ergänzt ein Fragebogen.",
+  "qu": [
+   "Krug, S.: Rocket Surgery Made Easy (New Riders, 2010)",
+   "Rubin, J., Chisnell, D.: Handbook of Usability Testing (Wiley, 2. Auflage 2008)",
+   "Nielsen, J.: Usability Engineering (Academic Press, 1993)"
+  ],
+  "io": {
+   "lf": [
+    "Nutzerinnen und Nutzer",
+    "Design und Entwicklung"
+   ],
+   "in": [
+    {
+     "t": "Prototyp",
+     "to": "prototyping",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Persona",
+     "to": "persona",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Testaufgaben aus Use Cases",
+     "to": "use-cases",
+     "v": "abgeleitet aus"
+    }
+   ],
+   "out": [
+    {
+     "t": "Liste gewichteter Probleme"
+    },
+    {
+     "t": "Verbesserungen",
+     "to": "product-backlog",
+     "v": "übernommen in"
+    },
+    {
+     "t": "Erkenntnisse",
+     "to": "prototyping",
+     "v": "eingearbeitet in"
+    }
+   ],
+   "ko": [
+    "Design",
+    "Product Owner",
+    "Entwicklungsteam"
+   ]
+  },
+  "li": [
+   [
+    "prototyping",
+    "vorher",
+    "Der Prototyp wird getestet."
+   ],
+   [
+    "persona",
+    "vorher",
+    "Die Persona hilft bei der Auswahl der Teilnehmenden."
+   ],
+   [
+    "product-backlog",
+    "danach",
+    "Erkenntnisse werden Backlog-Einträge."
+   ],
+   [
+    "fragebogen",
+    "alternative",
+    "Ein Fragebogen misst Meinungen vieler Menschen."
+   ],
+   [
+    "abnahmetest",
+    "ergaenzt",
+    "Der Abnahmetest prüft Kriterien, der Usability-Test das Erleben."
+   ]
+  ],
+  "tools": [
+   "Figma",
+   "Miro"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "retrospektive",
+  "n": "Retrospektive",
+  "c": "qs",
+  "f": "meeting",
+  "m": "agil",
+  "ph": "absichern",
+  "t": "Teammeeting",
+  "kz": "Retrospektive",
+  "k": "Das Team schaut auf den letzten Zeitraum zurück, lernt daraus und beschliesst konkrete Verbesserungen.",
+  "aufwand": "45 bis 90 Min.",
+  "ab": [
+   "Rahmen setzen und Ziel nennen",
+   "Daten und Eindrücke sammeln",
+   "Muster erkennen und Ursachen besprechen",
+   "Wenige Massnahmen auswählen",
+   "Verantwortliche und Termine festhalten"
+  ],
+  "re": [
+   "Geschützter Rahmen: was gesagt wird, bleibt im Team",
+   "Höchstens zwei bis drei Massnahmen",
+   "Jede Massnahme hat eine verantwortliche Person",
+   "Zu Beginn wird der Stand früherer Massnahmen geprüft"
+  ],
+  "bsp": {
+   "t": "Sprint 12",
+   "x": "Gut: Rückfragen wurden schnell beantwortet. Weniger gut: Stories kamen unklar in den Sprint. Ursache: Refinement fiel aus. Massnahme: fester Termin am Mittwoch, Product Owner lädt ein. Zwei Massnahmen, beide mit Verantwortlichen."
+  },
+  "zw": "In der Retrospektive reflektiert das Team regelmässig, was gut lief, was nicht und was es ändern will. Am Ende stehen wenige konkrete Massnahmen. Sie sichert die Qualität der Zusammenarbeit und verbessert so auch das Erheben, Schreiben und Prüfen von Anforderungen.",
+  "wa": [
+   "Am Ende jedes Sprints oder Release",
+   "Nach Störungen, Konflikten oder grossen Meilensteinen",
+   "Wenn die Arbeit zäh läuft und die Ursache unklar ist"
+  ],
+  "wn": [
+   "Wenn niemand Massnahmen umsetzt: zuerst Wirksamkeit klären",
+   "Wenn Vertrauen im Team fehlt und niemand offen spricht",
+   "Als Ersatz für das tägliche Gespräch"
+  ],
+  "vb": [
+   "Ziel und Zeitfenster der Rückschau festlegen",
+   "Moderation bestimmen, am besten nicht der Product Owner",
+   "Geschützten Rahmen und Regeln klären",
+   "Vorlage wählen (Start, Stop, Continue oder Sailboat)",
+   "Frühere Massnahmen und ihren Stand bereithalten"
+  ],
+  "nr": "A-07",
+  "kt": "Team blickt zurück, lernt und beschliesst wenige konkrete Verbesserungen mit Verantwortlichen.",
+  "ks": [
+   "Rahmen setzen",
+   "Eindrücke sammeln",
+   "Muster und Ursachen besprechen",
+   "Wenige Massnahmen wählen",
+   "Verantwortliche festhalten"
+  ],
+  "gw": [
+   "Am Ende jedes Sprints oder Releases",
+   "Nach Störungen oder Konflikten",
+   "Die Arbeit läuft zäh, Ursache unklar"
+  ],
+  "rg": [
+   "Geschützter Rahmen",
+   "Höchstens zwei bis drei Massnahmen",
+   "Jede Massnahme hat eine verantwortliche Person"
+  ],
+  "vk": [
+   "Moderation und Rahmen klären",
+   "Stand früherer Massnahmen bereit"
+  ],
+  "bn": "Niemand setzt Massnahmen um",
+  "pr": "Wechseln Sie das Format, wenn die Runde müde wird. Beschränken Sie sich auf wenige Massnahmen und tragen Sie sie in das Backlog ein, damit sie nicht untergehen. Prüfen Sie zu Beginn, was aus den letzten Massnahmen wurde. Wenn nichts davon umgesetzt wird, lohnt eine Retrospektive nicht.",
+  "em": "Vorher sammeln Punkte oder Notizen die Eindrücke. Danach wählt Dot Voting die Themen aus, und das Backlog nimmt die Massnahmen auf. Retrospektiven gehören zu jedem Sprint.",
+  "qu": [
+   "Derby, E., Larsen, D.: Agile Retrospectives (Pragmatic Bookshelf, 2006)",
+   "Schwaber, K., Sutherland, J.: The Scrum Guide (2020)",
+   "Kerth, N. L.: Project Retrospectives (Dorset House, 2001)"
+  ],
+  "io": {
+   "lf": [
+    "Entwicklungsteam",
+    "Product Owner und Scrum Master"
+   ],
+   "in": [
+    {
+     "t": "Eindrücke und Daten aus dem Sprint",
+     "to": "review",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Stand früherer Massnahmen"
+    },
+    {
+     "t": "Ziel der Rückschau"
+    }
+   ],
+   "out": [
+    {
+     "t": "Wenige konkrete Massnahmen mit Verantwortlichen"
+    },
+    {
+     "t": "Massnahmen im Backlog",
+     "to": "product-backlog",
+     "v": "übernommen in"
+    },
+    {
+     "t": "Auswahl der Themen",
+     "to": "dot-voting",
+     "v": "gewählt mit"
+    }
+   ],
+   "ko": [
+    "Team",
+    "Product Owner",
+    "Management"
+   ]
+  },
+  "li": [
+   [
+    "review",
+    "vorher",
+    "Das Review liefert Eindrücke zum Ergebnis."
+   ],
+   [
+    "product-backlog",
+    "danach",
+    "Massnahmen werden ins Backlog aufgenommen."
+   ],
+   [
+    "sprint-planning",
+    "danach",
+    "Massnahmen fliessen in den nächsten Sprint."
+   ],
+   [
+    "dot-voting",
+    "ergaenzt",
+    "Dot Voting wählt die wichtigsten Themen."
+   ],
+   [
+    "five-whys",
+    "ergaenzt",
+    "Fünf Whys finden Ursachen von Problemen."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Confluence"
+  ],
+  "s": "entwurf"
+ },
+ {
   "id": "jira",
   "n": "Jira",
   "c": "tool",
@@ -6652,10 +9669,14 @@ const M = [
    "akzeptanzkriterien",
    "story-splitting",
    "user-stories",
+   "spike",
    "product-backlog",
    "refinement",
+   "release-planning",
    "roadmap",
    "sprint-planning",
+   "affinity-estimation",
+   "rice",
    "story-points"
   ]
  },
@@ -6723,21 +9744,35 @@ const M = [
   "tools": [],
   "s": "entwurf",
   "sp": [
+   "retrospektive",
+   "usability-test",
+   "example-mapping",
    "produktvision",
    "story-splitting",
+   "brainstorming",
+   "contextual-inquiry",
+   "empathy-map",
    "event-storming",
    "five-whys",
+   "fokusgruppe",
    "interview",
+   "jobs-to-be-done",
    "persona",
    "stakeholder",
    "swot",
    "workshop",
    "aktivitaetsdiagramm",
    "business-model-canvas",
+   "customer-journey-map",
    "impact-mapping",
    "kontextdiagramm",
+   "rich-picture",
+   "value-proposition-canvas",
    "refinement",
+   "release-planning",
    "story-mapping",
+   "affinity-estimation",
+   "dot-voting",
    "moscow",
    "risikoanalyse"
   ]
@@ -6808,9 +9843,12 @@ const M = [
   "sp": [
    "aktivitaetsdiagramm",
    "bpmn",
+   "datenmodell",
    "domaenenmodell",
    "impact-mapping",
    "kontextdiagramm",
+   "rich-picture",
+   "sequenzdiagramm",
    "use-case-diagramm",
    "zustandsdiagramm"
   ]
@@ -6880,8 +9918,10 @@ const M = [
   "s": "entwurf",
   "sp": [
    "aktivitaetsdiagramm",
+   "datenmodell",
    "domaenenmodell",
    "kontextdiagramm",
+   "sequenzdiagramm",
    "use-case-diagramm",
    "zustandsdiagramm"
   ]
@@ -6950,15 +9990,20 @@ const M = [
   "tools": [],
   "s": "entwurf",
   "sp": [
+   "retrospektive",
    "review",
    "geschaeftsregeln",
    "glossar",
    "pflichtenheft",
    "produktvision",
    "use-cases",
+   "brainstorming",
    "dokumentenanalyse",
+   "spike",
    "business-model-canvas",
-   "roadmap"
+   "entscheidungstabelle",
+   "roadmap",
+   "dot-voting"
   ]
  },
  {
@@ -7026,7 +10071,10 @@ const M = [
   "s": "entwurf",
   "sp": [
    "prototyping",
-   "persona"
+   "usability-test",
+   "empathy-map",
+   "persona",
+   "customer-journey-map"
   ]
  },
  {
@@ -7094,7 +10142,8 @@ const M = [
   "s": "entwurf",
   "sp": [
    "abnahmetest",
-   "akzeptanzkriterien"
+   "akzeptanzkriterien",
+   "example-mapping"
   ]
  },
  {
@@ -7163,10 +10212,12 @@ const M = [
   "sp": [
    "use-cases",
    "aktivitaetsdiagramm",
+   "datenmodell",
    "domaenenmodell",
+   "sequenzdiagramm",
    "use-case-diagramm",
    "zustandsdiagramm"
   ]
  }
 ];
-const SETS = [{"id":"workshop-koffer","n":"Workshop-Koffer","m":"W","s":["workshop","event-storming","story-mapping","impact-mapping","moscow","persona","miro"]},{"id":"backlog-aufbauen","n":"Backlog aufbauen","m":"B","s":["persona","user-stories","akzeptanzkriterien","story-splitting","story-mapping","product-backlog","refinement","dor-dod"]},{"id":"schaetzen-planen","n":"Schätzen und Planen","m":"S","s":["planning-poker","story-points","wsjf","roadmap","sprint-planning","risikoanalyse"]},{"id":"spezifikation-klassisch","n":"Spezifikation klassisch","m":"K","s":["kontextdiagramm","use-case-diagramm","use-cases","aktivitaetsdiagramm","nfr","pflichtenheft","review","traceability"]},{"id":"prozesse-verstehen","n":"Prozesse verstehen","m":"P","s":["beobachtung","event-storming","aktivitaetsdiagramm","bpmn","geschaeftsregeln","glossar"]}];
+const SETS = [{"id":"workshop-koffer","n":"Workshop-Koffer","m":"W","s":["workshop","event-storming","story-mapping","impact-mapping","moscow","persona","miro","brainstorming","dot-voting","fokusgruppe","empathy-map","example-mapping"]},{"id":"backlog-aufbauen","n":"Backlog aufbauen","m":"B","s":["persona","user-stories","akzeptanzkriterien","story-splitting","story-mapping","product-backlog","refinement","dor-dod","example-mapping","jobs-to-be-done","spike"]},{"id":"schaetzen-planen","n":"Schätzen und Planen","m":"S","s":["planning-poker","story-points","wsjf","roadmap","sprint-planning","risikoanalyse","rice","affinity-estimation","release-planning","kosten-nutzen","retrospektive"]},{"id":"spezifikation-klassisch","n":"Spezifikation klassisch","m":"K","s":["kontextdiagramm","use-case-diagramm","use-cases","aktivitaetsdiagramm","nfr","pflichtenheft","review","traceability","entscheidungstabelle","datenmodell","sequenzdiagramm"]},{"id":"prozesse-verstehen","n":"Prozesse verstehen","m":"P","s":["beobachtung","event-storming","aktivitaetsdiagramm","bpmn","geschaeftsregeln","glossar","rich-picture","customer-journey-map","contextual-inquiry","value-proposition-canvas"]}];

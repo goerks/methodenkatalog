@@ -10,7 +10,12 @@
    "impact-mapping",
    "moscow",
    "persona",
-   "miro"
+   "miro",
+   "brainstorming",
+   "dot-voting",
+   "fokusgruppe",
+   "empathy-map",
+   "example-mapping"
   ]
  },
  {
@@ -25,7 +30,10 @@
    "story-mapping",
    "product-backlog",
    "refinement",
-   "dor-dod"
+   "dor-dod",
+   "example-mapping",
+   "jobs-to-be-done",
+   "spike"
   ]
  },
  {
@@ -38,7 +46,12 @@
    "wsjf",
    "roadmap",
    "sprint-planning",
-   "risikoanalyse"
+   "risikoanalyse",
+   "rice",
+   "affinity-estimation",
+   "release-planning",
+   "kosten-nutzen",
+   "retrospektive"
   ]
  },
  {
@@ -53,7 +66,10 @@
    "nfr",
    "pflichtenheft",
    "review",
-   "traceability"
+   "traceability",
+   "entscheidungstabelle",
+   "datenmodell",
+   "sequenzdiagramm"
   ]
  },
  {
@@ -66,7 +82,11 @@
    "aktivitaetsdiagramm",
    "bpmn",
    "geschaeftsregeln",
-   "glossar"
+   "glossar",
+   "rich-picture",
+   "customer-journey-map",
+   "contextual-inquiry",
+   "value-proposition-canvas"
   ]
  }
 ]

@@ -113,7 +113,7 @@ ul.ck li::before{content:"✓";color:var(--c);font-weight:700}
 .kcard .ghostpic{height:calc(var(--mm)*30);aspect-ratio:auto;background:none}
 .kcard .ghostpic .ico{opacity:.9}
 .kcard .pic{flex:none}
-.kcard .pic svg,.kcard .ghostpic{height:calc(var(--mm)*21)}
+.kcard .pic svg,.kcard .ghostpic{height:calc(var(--mm)*26)}
 .kcard .ghostpic .ico{width:calc(var(--mm)*17);height:calc(var(--mm)*17)}
 .kcard .cin>.sum{font-size:calc(var(--mm)*3.2)}
 .kcard .cin>ul.ck{font-size:calc(var(--mm)*3);gap:calc(var(--mm)*1.4)}

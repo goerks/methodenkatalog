@@ -7,7 +7,7 @@ const Graph = (() => {
   const rng = (s => () => (s = (s * 16807) % 2147483647) / 2147483647)(7);
   const label = m => m.kz || plain(m.n).replace(/\s*\(.*?\)/g, '');
   const radius = m => Math.min(22, 7 + 2.6 * Math.sqrt(DEG[m.id]));
-  const REP = 30000, LEN = 105, GR = .0015, GD = .00045;
+  const SC = Math.sqrt(Math.max(1, M.filter(m => m.f !== "werkzeug").length) / 44), REP = 30000 * SC * SC, LEN = 105 * SC, GR = .0015 / SC, GD = .00045 / SC;
   const lw = m => Math.max(24, label(m).length * 6.3 + 8);
   let GX = 1;
   const CATS_ORDER = ['erm', 'dok', 'mod', 'prio', 'plan', 'qs', 'tool'];

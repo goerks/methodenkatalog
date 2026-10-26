@@ -25,7 +25,7 @@ const Cards = (() => {
   const checks = a => `<ul class="ck">${a.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`;
   const eff = m => m.aufwand.split(/ (?:pro|je) |, /)[0];
   const two = m => { const a = String(m.zw).split(/(?<=[.!?])\s/), t = a.slice(0, 2).join(' '); return t.length <= 165 ? t : a[0].length <= 165 ? a[0] : m.kt; };
-  const pic = m => { const v = m.vis && typeof VIS !== 'undefined' && VIS[m.vis] ? VIS[m.vis]() : ''; return v.startsWith('<svg') ? `<div class="pic">${v}</div>` : `<div class="pic ghostpic">${ico(m.f, 20)}</div>`; };
+  const pic = m => { const v = typeof KV !== 'undefined' && KV[m.id] ? KV[m.id]() : (m.vis && typeof VIS !== 'undefined' && VIS[m.vis] ? VIS[m.vis]() : ''); return v.startsWith('<svg') ? `<div class="pic">${v}</div>` : `<div class="pic ghostpic">${ico(m.f, 20)}</div>`; };
   function front(m) {
     const t = isTool(m), ph = phk(m);
     return wrap(t ? 'tool' : '', ph, `<div class="band">${ico(m.f, 5.2)}<b>${PHN[ph] || 'Werkzeug'}</b><span class="sp"></span><span class="nr">${m.nr}</span></div>

@@ -80,3 +80,8 @@ Alternativ ohne Workflow: Source «Deploy from a branch», Branch `main`, Ordner
 - Format: A4 quer, 4 × 2 Karten à 65,75 × 94 mm, 6 mm Abstand für den Siegelrand, 8 mm Rand. Rückseiten sind gespiegelt angeordnet (Duplex, Wenden an der kurzen Kante). Testblatt zur Kontrolle der Wendekante.
 - QR-Codes: `js/vendor/qrcode.js` (qrcode-generator 1.4.4, MIT); Ziel-URL in `js/cards.js` (`SITE`).
 - Drucken: Browser-Druckdialog (A4 quer, 100 %, Hintergrund an), «Als PDF speichern» möglich.
+
+### Kartengrafiken und 20 neue Methoden
+
+- `js/kartengrafik.js`: eigene Grafiken (grosse Schrift) für Karten und Detailseiten, Schlüssel = Methoden-ID. Ausschnitte werden mit `tools/crop-kartengrafik.mjs` neu berechnet (Playwright), wenn Grafiken geändert werden.
+- Neu: Customer Journey Map, Jobs to be Done, Value Proposition Canvas, Rich Picture, Empathy Map, Fokusgruppe, Brainstorming, Contextual Inquiry, Spike, Example Mapping, Entscheidungstabelle, Datenmodell, Sequenzdiagramm, Dot Voting, RICE, Kosten-Nutzen-Analyse, Affinity Estimation, Release-Planung, Usability-Test, Retrospektive (alle Entwurf).

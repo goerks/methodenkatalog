@@ -2,14 +2,14 @@
 // Rollen: n neutral, a Hauptfarbe, b zweite Farbe, c Warnung/Betonung, k dunkel.
 let VU = 0;
 function vb() {
-  const id = 'v' + (++VU), B = [], L = [], T = [];
+  const id = 'v' + (++VU), B = [], L = [], T = [], H = [];
   const geo = (kind, x, y, w, h, cls) => {
     if (kind === 'ellipse') return `<ellipse class="${cls}" cx="${x + w / 2}" cy="${y + h / 2}" rx="${w / 2}" ry="${h / 2}"/>`;
     if (kind === 'diamond') return `<path class="${cls}" d="M${x + w / 2} ${y}L${x + w} ${y + h / 2}L${x + w / 2} ${y + h}L${x} ${y + h / 2}Z" stroke-linejoin="round"/>`;
     return `<rect class="${cls}" x="${x}" y="${y}" width="${w}" height="${h}" rx="${kind === 'pill' ? h / 2 : 12}"/>`;
   };
   const b = {
-    shape(kind, x, y, w, h, role) { B.push(geo(kind, x, y, w, h, 'f' + role)); },
+    shape(kind, x, y, w, h, role) { H.push(geo(kind, x + 4, y + 4, w, h, 'vsh')); B.push(geo(kind, x, y, w, h, 'f' + role)); },
     ring(cx, cy, r, thick) { B.push(`<circle class="fn vr${thick ? ' vr2' : ''}" cx="${cx}" cy="${cy}" r="${r}"/>`); },
     ln(d, dash) { L.push(`<path class="vl${dash ? ' vd' : ''}" d="${d}"${dash ? '' : ` marker-end="url(#m${id})"`}/>`); },
     plain(d) { L.push(`<path class="vl" d="${d}"/>`); },
@@ -25,7 +25,7 @@ function vb() {
       b.txt(cx, top + 92, label);
     },
     out(label) {
-      return `<svg viewBox="0 0 420 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${label}"><defs><marker id="m${id}" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path class="vm" d="M0 0L10 5L0 10z"/></marker><filter id="s${id}" x="-12%" y="-12%" width="124%" height="150%"><feDropShadow dx="0" dy="3" stdDeviation="3.5" style="flood-color:var(--v-shadow);flood-opacity:var(--v-shadow-o)"/></filter></defs><rect class="vbg" width="420" height="230" rx="14"/><g>${L.join('')}</g><g filter="url(#s${id})">${B.join('')}</g>${T.join('')}</svg>`;
+      return `<svg viewBox="0 0 420 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${label}"><defs><marker id="m${id}" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path class="vm" d="M0 0L10 5L0 10z"/></marker><filter id="s${id}" x="-12%" y="-12%" width="124%" height="150%"><feDropShadow dx="0" dy="3" stdDeviation="3.5" style="flood-color:var(--v-shadow);flood-opacity:var(--v-shadow-o)"/></filter></defs><rect class="vbg" width="420" height="230" rx="14"/><g>${H.join('')}</g><g>${L.join('')}</g><g>${B.join('')}</g>${T.join('')}</svg>`;
     }
   };
   return b;

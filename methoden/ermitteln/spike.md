@@ -96,5 +96,5 @@ Regeln: Ein Spike liefert Wissen, keine Funktion | Er hat eine feste Zeitbox | D
 
 ## Quellen
 - Beck, K., Andres, C.: Extreme Programming Explained (Addison-Wesley, 2. Auflage 2004)
-- Cohn, M.: User Stories Applied (Addison-Wesley, 2004)
+- Jeffries, R., Anderson, A., Hendrickson, C.: Extreme Programming Installed (Addison-Wesley, 2000), Kapitel «Spike Solution»
 - Scaled Agile Framework: Spikes (scaledagileframework.com)

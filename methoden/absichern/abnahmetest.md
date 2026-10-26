@@ -96,4 +96,4 @@ Besser nicht: Als Ersatz früherer Tests: zu spät
 ## Quellen
 - ISTQB: Certified Tester Foundation Level Syllabus (istqb.org), Abnahmetest
 - Crispin, L., Gregory, J.: Agile Testing (Addison-Wesley, 2009)
-- IIBA: BABOK Guide, Version 3 (2015), Technik «Akzeptanz- und Bewertungskriterien»
+- IIBA: BABOK Guide, Version 3 (2015), Technik «Acceptance and Evaluation Criteria»

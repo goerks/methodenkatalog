@@ -96,5 +96,5 @@ Besser nicht: Fragen noch unklar: erst Interviews
 
 ## Quellen
 - Dillman, D., Smyth, J., Christian, L.: Internet, Phone, Mail, and Mixed-Mode Surveys (Wiley, 2014)
-- IIBA: BABOK Guide, Version 3 (2015), Technik «Umfragen und Fragebögen»
+- IIBA: BABOK Guide, Version 3 (2015), Technik «Survey or Questionnaire»
 - Wiegers, K., Beatty, J.: Software Requirements, 3. Auflage (2013)

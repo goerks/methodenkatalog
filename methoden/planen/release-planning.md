@@ -98,4 +98,3 @@ Regeln: Plan zeigt eine Spanne | Plan wird nach jedem Sprint angepasst | Umfang 
 ## Quellen
 - Cohn, M.: Agile Estimating and Planning (Prentice Hall, 2005)
 - Pichler, R.: Agile Product Management with Scrum (Addison-Wesley, 2010)
-- IIBA: BABOK Guide, Version 3 (2015), Technik «Roadmap»

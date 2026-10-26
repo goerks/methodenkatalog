@@ -97,4 +97,4 @@ Besser nicht: Sie wird als Terminversprechen gelesen
 ## Quellen
 - Lombardo, C. T., McCarthy, B., Ryan, E., Connors, M.: Product Roadmaps Relaunched (O'Reilly, 2017)
 - Pichler, R.: Agile Product Management with Scrum (2010)
-- Cagan, M.: Inspired (Wiley, 2017)
+- Cagan, M.: Inspired (Wiley, 2. Auflage 2018)

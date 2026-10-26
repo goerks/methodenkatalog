@@ -93,6 +93,6 @@ Besser nicht: Dokumente sind veraltet und niemand merkt es
 - Begriffe ins Glossar
 
 ## Quellen
-- IIBA: BABOK Guide, Version 3 (2015), Technik «Dokumentenanalyse»
+- IIBA: BABOK Guide, Version 3 (2015), Technik «Document Analysis»
 - Pohl, K., Rupp, C.: Basiswissen Requirements Engineering (dpunkt.verlag)
 - Wiegers, K., Beatty, J.: Software Requirements, 3. Auflage (2013)

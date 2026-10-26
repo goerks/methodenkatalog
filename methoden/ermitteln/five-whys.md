@@ -96,4 +96,4 @@ Besser nicht: Mehrere Ursachen: eine Kette reicht nicht
 ## Quellen
 - Ohno, T.: Toyota Production System (Productivity Press, 1988)
 - Liker, J.: The Toyota Way (McGraw-Hill, 2004)
-- IIBA: BABOK Guide, Version 3 (2015), Technik «Ursachenanalyse»
+- IIBA: BABOK Guide, Version 3 (2015), Technik «Root Cause Analysis»

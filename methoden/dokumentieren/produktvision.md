@@ -97,4 +97,4 @@ Besser nicht: Nur ein Slogan ohne Zielgruppe
 ## Quellen
 - Moore, G.: Crossing the Chasm (HarperBusiness, 1991)
 - Pichler, R.: Agile Product Management with Scrum (Addison-Wesley, 2010)
-- Cagan, M.: Inspired (Wiley, 2017)
+- Cagan, M.: Inspired (Wiley, 2. Auflage 2018)

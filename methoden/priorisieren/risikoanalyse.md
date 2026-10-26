@@ -97,4 +97,4 @@ Besser nicht: Die Liste wird nie angeschaut
 ## Quellen
 - ISO 31000:2018 – Risk management guidelines
 - PMI: A Guide to the Project Management Body of Knowledge (PMBOK Guide), Risikomanagement
-- IIBA: BABOK Guide, Version 3 (2015), Technik «Risikoanalyse und -management»
+- IIBA: BABOK Guide, Version 3 (2015), Technik «Risk Analysis and Management»

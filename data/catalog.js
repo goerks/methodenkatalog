@@ -369,7 +369,7 @@ const M = [
   "em": "Vorher helfen ein erstes Interview und eine Stakeholder-Analyse, um die richtigen Personen zu wählen. Nachher werden die Beobachtungen zu Aktivitätsdiagrammen und Personas verdichtet. Gleichen Sie Ihre Eindrücke in einem Folgeinterview ab, um Fehldeutungen zu vermeiden.",
   "qu": [
    "Beyer, H., Holtzblatt, K.: Contextual Design (Morgan Kaufmann, 1998)",
-   "IIBA: BABOK Guide, Version 3 (2015), Technik «Beobachtung»",
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Observation»",
    "Pohl, K., Rupp, C.: Basiswissen Requirements Engineering (dpunkt.verlag)"
   ],
   "io": {
@@ -505,7 +505,7 @@ const M = [
   "em": "Vorher ist ein Kontextdiagramm nützlich, weil es externe Parteien sichtbar macht. Danach folgen Interviews mit den Schlüsselpersonen und der Anforderungsworkshop. Aus den Gruppen entstehen später Personas, wenn Nutzer im Zentrum stehen.",
   "qu": [
    "Mendelow, A.: Environmental Scanning – The Impact of the Stakeholder Concept (1981)",
-   "IIBA: BABOK Guide, Version 3 (2015), Techniken «Stakeholder-Liste, Map und Personas»",
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Stakeholder List, Map, or Personas»",
    "Pohl, K., Rupp, C.: Basiswissen Requirements Engineering (dpunkt.verlag)"
   ],
   "io": {
@@ -649,7 +649,7 @@ const M = [
   "qu": [
    "Cooper, A.: The Inmates Are Running the Asylum (Sams, 1999)",
    "Pruitt, J., Adlin, T.: The Persona Lifecycle (Morgan Kaufmann, 2006)",
-   "IIBA: BABOK Guide, Version 3 (2015), Technik «Personas»"
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Stakeholder List, Map, or Personas»"
   ],
   "io": {
    "lf": [
@@ -790,7 +790,7 @@ const M = [
   "em": "Vorher klären Interviews, welche Fragen überhaupt relevant sind, und die Stakeholder-Analyse, wen Sie befragen. Danach fliessen die Ergebnisse in Personas, oder in Kano und Priorisierung. Auffällige Antworten besprechen Sie anschliessend im Gespräch nach.",
   "qu": [
    "Dillman, D., Smyth, J., Christian, L.: Internet, Phone, Mail, and Mixed-Mode Surveys (Wiley, 2014)",
-   "IIBA: BABOK Guide, Version 3 (2015), Technik «Umfragen und Fragebögen»",
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Survey or Questionnaire»",
    "Wiegers, K., Beatty, J.: Software Requirements, 3. Auflage (2013)"
   ],
   "io": {
@@ -941,7 +941,7 @@ const M = [
   "em": "Vorher helfen Stakeholder-Analyse und Business Model Canvas für ein gemeinsames Bild der Lage. Danach schärfen Sie die Produktvision und vertiefen die wichtigsten Risiken in der Risikoanalyse.",
   "qu": [
    "Gürel, E.: SWOT Analysis: A Theoretical Review, Journal of International Social Research 10 (2017)",
-   "IIBA: BABOK Guide, Version 3 (2015), Technik «SWOT-Analyse»",
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «SWOT Analysis»",
    "Pichler, R.: Agile Product Management with Scrum (Addison-Wesley, 2010)"
   ],
   "io": {
@@ -1091,7 +1091,7 @@ const M = [
   "qu": [
    "Ohno, T.: Toyota Production System (Productivity Press, 1988)",
    "Liker, J.: The Toyota Way (McGraw-Hill, 2004)",
-   "IIBA: BABOK Guide, Version 3 (2015), Technik «Ursachenanalyse»"
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Root Cause Analysis»"
   ],
   "io": {
    "lf": [
@@ -1237,7 +1237,7 @@ const M = [
   "pr": "Lesen Sie gezielt, nicht vollständig: Markieren Sie Regeln, Begriffe, Zahlen und Widersprüche. Führen Sie eine Quellenliste mit Fundstelle, damit sich später jede Anforderung belegen lässt. Fragen Sie bei Widersprüchen nach, bevor Sie sich entscheiden. Begriffe sammeln Sie direkt für das Glossar.",
   "em": "Vorher klären Sie mit den Stakeholdern, welche Dokumente gelten. Danach gehen Sie mit konkreten Fragen in Interviews und übernehmen Begriffe ins Glossar und Regeln in die Geschäftsregeln.",
   "qu": [
-   "IIBA: BABOK Guide, Version 3 (2015), Technik «Dokumentenanalyse»",
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Document Analysis»",
    "Pohl, K., Rupp, C.: Basiswissen Requirements Engineering (dpunkt.verlag)",
    "Wiegers, K., Beatty, J.: Software Requirements, 3. Auflage (2013)"
   ],
@@ -2155,7 +2155,7 @@ const M = [
   "qu": [
    "Gray, D., Brown, S., Macanufo, J.: Gamestorming (O'Reilly, 2010)",
    "Gibbons, S.: Empathy Mapping: The First Step in Design Thinking (Nielsen Norman Group, 2018)",
-   "Osterwalder, A., Pigneur, Y.: Business Model Generation (Wiley, 2010)"
+   "XPLANE: The Empathy Map: A Human-Centered Tool for Understanding How Your Audience Thinks (xplane.com)"
   ],
   "io": {
    "lf": [
@@ -2305,7 +2305,7 @@ const M = [
   "em": "Vorher zeigt das Refinement, welche Story nicht schätzbar ist. Danach schätzt das Team neu und plant im Sprint. Bei fachlichen Fragen ist oft ein Gespräch oder ein Prototyp schneller.",
   "qu": [
    "Beck, K., Andres, C.: Extreme Programming Explained (Addison-Wesley, 2. Auflage 2004)",
-   "Cohn, M.: User Stories Applied (Addison-Wesley, 2004)",
+   "Jeffries, R., Anderson, A., Hendrickson, C.: Extreme Programming Installed (Addison-Wesley, 2000), Kapitel «Spike Solution»",
    "Scaled Agile Framework: Spikes (scaledagileframework.com)"
   ],
   "io": {
@@ -2623,7 +2623,7 @@ const M = [
   "qu": [
    "Cockburn, A.: Writing Effective Use Cases (Addison-Wesley, 2001)",
    "Jacobson, I.: Object-Oriented Software Engineering (Addison-Wesley, 1992)",
-   "IIBA: BABOK Guide, Version 3 (2015), Technik «Use Cases und Szenarien»"
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Use Cases and Scenarios»"
   ],
   "io": {
    "lf": [
@@ -3385,7 +3385,7 @@ const M = [
   "qu": [
    "Moore, G.: Crossing the Chasm (HarperBusiness, 1991)",
    "Pichler, R.: Agile Product Management with Scrum (Addison-Wesley, 2010)",
-   "Cagan, M.: Inspired (Wiley, 2017)"
+   "Cagan, M.: Inspired (Wiley, 2. Auflage 2018)"
   ],
   "io": {
    "lf": [
@@ -3544,7 +3544,7 @@ const M = [
   "pr": "Fachbegriffe in der Sprache des Fachbereichs definieren, nicht der IT. Ein Begriff, eine Bedeutung: Streiten Sie bei Mehrdeutigkeit, bis eine Definition gilt. Verlinken Sie das Glossar aus Stories und Spezifikationen. Ein kurzes Glossar, das gelesen wird, ist besser als ein vollständiges, das niemand kennt.",
   "em": "Vorher liefern Dokumentenanalyse und Event Storming die Begriffe. Danach hilft es dem Domänenmodell und den Geschäftsregeln, und es gehört ins Pflichtenheft.",
   "qu": [
-   "IIBA: BABOK Guide, Version 3 (2015), Technik «Glossar»",
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Glossary»",
    "Evans, E.: Domain-Driven Design (Addison-Wesley, 2003), Kapitel «Ubiquitous Language»",
    "Pohl, K., Rupp, C.: Basiswissen Requirements Engineering (dpunkt.verlag)"
   ],
@@ -3704,7 +3704,7 @@ const M = [
   "qu": [
    "Ross, R.: Business Rule Concepts (Business Rule Solutions, 2013)",
    "Business Rules Group: The Business Rules Manifesto (2003)",
-   "IIBA: BABOK Guide, Version 3 (2015), Technik «Geschäftsregelanalyse»"
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Business Rules Analysis»"
   ],
   "io": {
    "lf": [
@@ -6232,7 +6232,7 @@ const M = [
   "qu": [
    "Clegg, D., Barker, R.: Case Method Fast-Track: A RAD Approach (Addison-Wesley, 1994)",
    "DSDM Consortium: The DSDM Agile Project Framework (Agile Business Consortium)",
-   "IIBA: BABOK Guide, Version 3 (2015), Technik «MoSCoW-Analyse»"
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Prioritization»"
   ],
   "io": {
    "lf": [
@@ -6965,7 +6965,7 @@ const M = [
   "qu": [
    "ISO 31000:2018 – Risk management guidelines",
    "PMI: A Guide to the Project Management Body of Knowledge (PMBOK Guide), Risikomanagement",
-   "IIBA: BABOK Guide, Version 3 (2015), Technik «Risikoanalyse und -management»"
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Risk Analysis and Management»"
   ],
   "io": {
    "lf": [
@@ -7122,8 +7122,7 @@ const M = [
   "em": "Vorher sammelt Brainstorming oder Workshop die Optionen. Danach legen Sie das Ergebnis im Backlog ab. Bei teuren Entscheidungen bietet sich WSJF oder RICE an.",
   "qu": [
    "Gray, D., Brown, S., Macanufo, J.: Gamestorming (O'Reilly, 2010)",
-   "Diceman, J.: The Dotmocracy Handbook (2010)",
-   "IIBA: BABOK Guide, Version 3 (2015), Technik «Voting»"
+   "Diceman, J.: The Dotmocracy Handbook (2010)"
   ],
   "io": {
    "lf": [
@@ -7573,9 +7572,7 @@ const M = [
   "pr": "Das stille Sortieren hält Diskussionen klein und die Zeit kurz. Wer nicht einverstanden ist, verschiebt die Karte, statt zu argumentieren. Erst wenn eine Karte ständig hin und her wandert, wird gesprochen. Wählen Sie eine Referenzstory, die alle kennen. Für Stories mit hohem Risiko zeigt anschliessend Planning Poker genauer.",
   "em": "Vorher ist das Backlog verfeinert und die Stories sind verständlich. Danach prüfen Sie kritische Stories mit Planning Poker und planen das Release.",
   "qu": [
-   "Cohn, M.: Agile Estimating and Planning (Prentice Hall, 2005)",
-   "Lindstrom, L.: Affinity Estimating (Oobeya, Mountain Goat Software Presentation, 2011)",
-   "Rubin, K. S.: Essential Scrum (Addison-Wesley, 2012)"
+   "Cohn, M.: Agile Estimating and Planning (Prentice Hall, 2005)"
   ],
   "io": {
    "lf": [
@@ -8186,7 +8183,7 @@ const M = [
   "qu": [
    "Lombardo, C. T., McCarthy, B., Ryan, E., Connors, M.: Product Roadmaps Relaunched (O'Reilly, 2017)",
    "Pichler, R.: Agile Product Management with Scrum (2010)",
-   "Cagan, M.: Inspired (Wiley, 2017)"
+   "Cagan, M.: Inspired (Wiley, 2. Auflage 2018)"
   ],
   "io": {
    "lf": [
@@ -8494,8 +8491,7 @@ const M = [
   "em": "Vorher liefern Backlog, Schätzung und Roadmap die Eingaben. Danach plant jeder Sprint den nächsten Ausschnitt. Das Ergebnis gehört auf die Roadmap für Management und Kunden.",
   "qu": [
    "Cohn, M.: Agile Estimating and Planning (Prentice Hall, 2005)",
-   "Pichler, R.: Agile Product Management with Scrum (Addison-Wesley, 2010)",
-   "IIBA: BABOK Guide, Version 3 (2015), Technik «Roadmap»"
+   "Pichler, R.: Agile Product Management with Scrum (Addison-Wesley, 2010)"
   ],
   "io": {
    "lf": [
@@ -9221,7 +9217,7 @@ const M = [
   "qu": [
    "ISTQB: Certified Tester Foundation Level Syllabus (istqb.org), Abnahmetest",
    "Crispin, L., Gregory, J.: Agile Testing (Addison-Wesley, 2009)",
-   "IIBA: BABOK Guide, Version 3 (2015), Technik «Akzeptanz- und Bewertungskriterien»"
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Acceptance and Evaluation Criteria»"
   ],
   "io": {
    "lf": [

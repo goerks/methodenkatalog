@@ -96,4 +96,4 @@ Besser nicht: Anforderungen ändern sich schnell
 ## Quellen
 - Cockburn, A.: Writing Effective Use Cases (Addison-Wesley, 2001)
 - Jacobson, I.: Object-Oriented Software Engineering (Addison-Wesley, 1992)
-- IIBA: BABOK Guide, Version 3 (2015), Technik «Use Cases und Szenarien»
+- IIBA: BABOK Guide, Version 3 (2015), Technik «Use Cases and Scenarios»

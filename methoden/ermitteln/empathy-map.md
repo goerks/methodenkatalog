@@ -98,4 +98,4 @@ Regeln: Eine Person in einer Situation | Aussagen stützen sich auf Daten | Zita
 ## Quellen
 - Gray, D., Brown, S., Macanufo, J.: Gamestorming (O'Reilly, 2010)
 - Gibbons, S.: Empathy Mapping: The First Step in Design Thinking (Nielsen Norman Group, 2018)
-- Osterwalder, A., Pigneur, Y.: Business Model Generation (Wiley, 2010)
+- XPLANE: The Empathy Map: A Human-Centered Tool for Understanding How Your Audience Thinks (xplane.com)

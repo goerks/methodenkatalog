@@ -97,5 +97,3 @@ Regeln: Zuerst still sortieren | Alle dürfen jede Karte verschieben | Relative 
 
 ## Quellen
 - Cohn, M.: Agile Estimating and Planning (Prentice Hall, 2005)
-- Lindstrom, L.: Affinity Estimating (Oobeya, Mountain Goat Software Presentation, 2011)
-- Rubin, K. S.: Essential Scrum (Addison-Wesley, 2012)

@@ -98,4 +98,3 @@ Regeln: Alle stimmen gleichzeitig ab | Punkte sind knapp | Das Kriterium wird vo
 ## Quellen
 - Gray, D., Brown, S., Macanufo, J.: Gamestorming (O'Reilly, 2010)
 - Diceman, J.: The Dotmocracy Handbook (2010)
-- IIBA: BABOK Guide, Version 3 (2015), Technik «Voting»

@@ -96,4 +96,4 @@ Besser nicht: Fast alles ist Must: dann WSJF
 ## Quellen
 - Clegg, D., Barker, R.: Case Method Fast-Track: A RAD Approach (Addison-Wesley, 1994)
 - DSDM Consortium: The DSDM Agile Project Framework (Agile Business Consortium)
-- IIBA: BABOK Guide, Version 3 (2015), Technik «MoSCoW-Analyse»
+- IIBA: BABOK Guide, Version 3 (2015), Technik «Prioritization»

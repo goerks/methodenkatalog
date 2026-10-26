@@ -94,5 +94,5 @@ Regeln: Liste regelmässig aktualisieren | Einfluss und Interesse getrennt bewer
 
 ## Quellen
 - Mendelow, A.: Environmental Scanning – The Impact of the Stakeholder Concept (1981)
-- IIBA: BABOK Guide, Version 3 (2015), Techniken «Stakeholder-Liste, Map und Personas»
+- IIBA: BABOK Guide, Version 3 (2015), Technik «Stakeholder List, Map, or Personas»
 - Pohl, K., Rupp, C.: Basiswissen Requirements Engineering (dpunkt.verlag)

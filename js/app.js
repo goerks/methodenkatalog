@@ -120,7 +120,7 @@ function vDetail(id) {
     ${m.bsp ? sec('Beispiel', `${vis}<div class="ex"><h3>${esc(m.bsp.t)}</h3><p>${esc(m.bsp.x)}</p></div>`) : ''}
     ${t ? '' : sec('Empfehlung', `<p class="prose">${esc(m.em)}</p>`)}
     ${t ? '' : `<section class="sec"><h2>Zusammenhänge</h2><div class="rv" role="group" aria-label="Darstellung der Referenzen"><span class="lbl">Darstellung</span>${Object.entries(REFV).map(([k, n]) => `<button class="pill" aria-pressed="${refVar === k}" data-rv="${k}">${n}</button>`).join('')}</div><div id="refs" class="refbox">${refs(m)}</div></section>`}
-    ${sec('Quellen', `<ul class="src">${m.qu.map(q => `<li>${esc(q)}</li>`).join('')}</ul><p class="hint">Quellen wurden bei der Erstellung aus dem Fachwissen zusammengetragen und noch nicht einzeln geprüft.</p>`)}
+    ${sec('Quellen', `<ul class="src">${m.qu.map(q => `<li>${esc(q)}</li>`).join('')}</ul><p class="hint">Quellen sind anerkannte Fachliteratur und Standards. Titel und Jahr wurden stichprobenartig geprüft, Kapitel und Inhalte noch nicht. Vor einer Veröffentlichung bitte gegenlesen.</p>`)}
   </div><aside>
     <section class="sec"><h2>${t ? 'Unterstützte Methoden' : 'Verknüpft'}</h2><div class="rel">${groups.map(r =>
       `<div class="rg"><h3>${REL[r]}</h3>${nb[r].map(([to, why]) => { const x = BY[to]; return `<button class="rl" ${cc(x)} data-m="${x.id}"><b>${icon(x.f, phk(x), 14)}${esc(plain(x.n))}</b>${why ? `<span>${esc(why)}</span>` : ''}</button>`; }).join('')}</div>`).join('') || '<p class="empty">Keine Verknüpfungen.</p>'}</div></section>

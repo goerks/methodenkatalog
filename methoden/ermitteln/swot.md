@@ -97,5 +97,5 @@ Besser nicht: Für Details der Umsetzung zu grob
 
 ## Quellen
 - Gürel, E.: SWOT Analysis: A Theoretical Review, Journal of International Social Research 10 (2017)
-- IIBA: BABOK Guide, Version 3 (2015), Technik «SWOT-Analyse»
+- IIBA: BABOK Guide, Version 3 (2015), Technik «SWOT Analysis»
 - Pichler, R.: Agile Product Management with Scrum (Addison-Wesley, 2010)

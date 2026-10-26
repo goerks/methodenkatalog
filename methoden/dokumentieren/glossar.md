@@ -94,6 +94,6 @@ Besser nicht: Begriffe werden nie benutzt
 - Aus Stories darauf verweisen
 
 ## Quellen
-- IIBA: BABOK Guide, Version 3 (2015), Technik «Glossar»
+- IIBA: BABOK Guide, Version 3 (2015), Technik «Glossary»
 - Evans, E.: Domain-Driven Design (Addison-Wesley, 2003), Kapitel «Ubiquitous Language»
 - Pohl, K., Rupp, C.: Basiswissen Requirements Engineering (dpunkt.verlag)

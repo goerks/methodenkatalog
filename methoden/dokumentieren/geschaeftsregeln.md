@@ -95,4 +95,4 @@ Besser nicht: Wenige stabile Regeln: Kriterien genügen
 ## Quellen
 - Ross, R.: Business Rule Concepts (Business Rule Solutions, 2013)
 - Business Rules Group: The Business Rules Manifesto (2003)
-- IIBA: BABOK Guide, Version 3 (2015), Technik «Geschäftsregelanalyse»
+- IIBA: BABOK Guide, Version 3 (2015), Technik «Business Rules Analysis»

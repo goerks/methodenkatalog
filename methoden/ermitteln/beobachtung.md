@@ -93,5 +93,5 @@ Besser nicht: Arbeit ist vertraulich, kein Zutritt
 
 ## Quellen
 - Beyer, H., Holtzblatt, K.: Contextual Design (Morgan Kaufmann, 1998)
-- IIBA: BABOK Guide, Version 3 (2015), Technik «Beobachtung»
+- IIBA: BABOK Guide, Version 3 (2015), Technik «Observation»
 - Pohl, K., Rupp, C.: Basiswissen Requirements Engineering (dpunkt.verlag)

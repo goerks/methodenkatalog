@@ -94,4 +94,4 @@ Besser nicht: Ohne echte Daten: erst Interviews führen
 ## Quellen
 - Cooper, A.: The Inmates Are Running the Asylum (Sams, 1999)
 - Pruitt, J., Adlin, T.: The Persona Lifecycle (Morgan Kaufmann, 2006)
-- IIBA: BABOK Guide, Version 3 (2015), Technik «Personas»
+- IIBA: BABOK Guide, Version 3 (2015), Technik «Stakeholder List, Map, or Personas»

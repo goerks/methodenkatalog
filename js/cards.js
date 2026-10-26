@@ -25,10 +25,11 @@ const Cards = (() => {
   const checks = a => `<ul class="ck">${a.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`;
   const eff = m => m.aufwand.split(/ (?:pro|je) |, /)[0];
   const two = m => { const a = String(m.zw).split(/(?<=[.!?])\s/), t = a.slice(0, 2).join(' '); return t.length <= 165 ? t : a[0].length <= 165 ? a[0] : m.kt; };
+  const pic = m => { const v = m.vis && typeof VIS !== 'undefined' && VIS[m.vis] ? VIS[m.vis]() : ''; return v.startsWith('<svg') ? `<div class="pic">${v}</div>` : `<div class="pic ghostpic">${ico(m.f, 20)}</div>`; };
   function front(m) {
     const t = isTool(m), ph = phk(m);
     return wrap(t ? 'tool' : '', ph, `<div class="band">${ico(m.f, 5.2)}<b>${PHN[ph] || 'Werkzeug'}</b><span class="sp"></span><span class="nr">${m.nr}</span></div>
-      <h3>${esc(titleOf(m))}</h3><p class="sum">${esc(two(m))}</p><span class="sub">Einsetzen, wenn</span>${checks(m.gw)}
+      <h3>${esc(titleOf(m))}</h3>${pic(m)}<p class="sum">${esc(m.kt)}</p><span class="sub">Gut, wenn</span>${checks(m.gw.slice(0, 2))}
       <div class="foot"><span class="tag">${FORMS[m.f].split(' ')[0]}</span>${t ? '' : `<span class="tag">${vp(m.m)}${MODE[m.m].replace('Klassisch und agil', 'beide').toLowerCase()}</span><span class="tag">${esc(eff(m))}</span>`}</div>`);
   }
   function back(m) {

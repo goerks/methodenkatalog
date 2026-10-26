@@ -106,3 +106,16 @@ ul.ck li::before{content:"✓";color:var(--c);font-weight:700}
 .khelp ol{padding-left:1.2em;display:grid;gap:6px}
 .pill[disabled]{opacity:.45;pointer-events:none}
 @media(max-width:600px){.kgrid{grid-template-columns:repeat(2,1fr);gap:10px}.kbar{padding:6px 0}}
+
+/* Bild auf der Vorderseite: ohne Hintergrundfläche */
+.kcard .pic{background:none;border:0;padding:0;display:grid;place-items:center;overflow:hidden}
+.kcard .pic svg{display:block;width:100%;height:calc(var(--mm)*30);max-width:none}
+.kcard .ghostpic{height:calc(var(--mm)*30);aspect-ratio:auto;background:none}
+.kcard .ghostpic .ico{opacity:.9}
+.kcard .pic{flex:none}
+.kcard .pic svg,.kcard .ghostpic{height:calc(var(--mm)*21)}
+.kcard .ghostpic .ico{width:calc(var(--mm)*17);height:calc(var(--mm)*17)}
+.kcard .cin>.sum{font-size:calc(var(--mm)*3.2)}
+.kcard .cin>ul.ck{font-size:calc(var(--mm)*3);gap:calc(var(--mm)*1.4)}
+.kcard .vbg{fill:none}
+.kcard{--v-bg:#F2F4F9;--v-ink:#2B3445;--v-shadow:#1B2A4A;--v-shadow-o:.18;--v-n-f:#FFFFFF;--v-n-t:#2B3445;--v-a-f:#D9E4FF;--v-a-t:#1B3A9E;--v-b-f:#D5EFE3;--v-b-t:#17614A;--v-c-f:#FFE0D2;--v-c-t:#9A3A14;--v-k-f:#2B3445;--v-k-t:#FFFFFF}

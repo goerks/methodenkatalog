@@ -35,7 +35,7 @@ PlantUML erzeugt UML-Diagramme aus einer Textbeschreibung. Die Quelle ist versio
 
 ## Karte
 Teaser: Diagramme aus Text: versionierbar und leicht anzupassen.
-Gut wenn: Diagramme liegen im Code-Repository | Änderungen müssen nachvollziehbar sein
+Gut wenn: Diagramme liegen im Code-Repository | Änderungen müssen nachvollziehbar sein | Wenn Diagramme als Text gepflegt werden
 Besser nicht: Fachleute ohne Technik sollen zeichnen
 - Diagramme als Text beschreiben
 - In Dokumentation einbetten

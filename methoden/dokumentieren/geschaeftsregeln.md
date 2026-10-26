@@ -83,7 +83,7 @@ Vorher liefern Dokumentenanalyse und Glossar die Grundlage. Danach werden Regeln
 
 ## Karte
 Teaser: Was in der Organisation gilt, getrennt von Prozess und Funktion gepflegt.
-Gut wenn: Regelreiche Bereiche wie Bank, Versicherung | Eine Regel gilt an mehreren Stellen
+Gut wenn: Regelreiche Bereiche wie Bank, Versicherung | Eine Regel gilt an mehreren Stellen | Regeln ändern sich häufig
 Vorher: Regelquellen und Verantwortliche klären | Vorlage: Nummer, Text, Quelle, Gültigkeit
 Besser nicht: Wenige stabile Regeln: Kriterien genügen
 - Regelquellen finden

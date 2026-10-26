@@ -84,7 +84,7 @@ Vorher brauchen Sie klare Akzeptanzkriterien und eine Rückverfolgbarkeit von An
 
 ## Karte
 Teaser: Anwender prüfen, ob das Ergebnis ihre Erwartungen erfüllt. Letzter Schritt vor Freigabe.
-Gut wenn: Vor jeder Freigabe | Fachbereich nimmt formal ab
+Gut wenn: Vor jeder Freigabe | Fachbereich nimmt formal ab | Bei Verträgen mit Abnahmekriterien
 Vorher: Testfälle aus Kriterien ableiten | Realistische Daten und Testpersonen
 Besser nicht: Als Ersatz früherer Tests: zu spät
 - Kriterien und Testfälle ableiten

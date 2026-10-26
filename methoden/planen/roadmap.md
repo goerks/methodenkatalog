@@ -85,7 +85,7 @@ Vorher klären Vision und Priorisierung die Richtung. Danach plant das Team im S
 
 ## Karte
 Teaser: Grobe Etappen und Ziele über die Zeit: Orientierung, kein Terminversprechen.
-Gut wenn: Management braucht Orientierung | Mehrere Teams abstimmen
+Gut wenn: Management braucht Orientierung | Mehrere Teams abstimmen | Wenn die Vision in Etappen gehört
 Vorher: Vision und Ziele bereitlegen | Zeithorizont: Quartale statt Tage
 Besser nicht: Sie wird als Terminversprechen gelesen
 - Vision und Ziele klären

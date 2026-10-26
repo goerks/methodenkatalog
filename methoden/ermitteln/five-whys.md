@@ -84,7 +84,7 @@ Vorher steht meist eine Beobachtung oder ein Interview, das ein Problem sichtbar
 
 ## Karte
 Teaser: Mehrmals «Warum?» fragen, bis die beeinflussbare Ursache sichtbar wird.
-Gut wenn: Eine Lösung wird gefordert, Problem unklar | Fehler oder Störungen kehren wieder
+Gut wenn: Eine Lösung wird gefordert, Problem unklar | Fehler oder Störungen kehren wieder | Wenn die Frage lautet: Warum ist das wichtig?
 Vorher: Problem in einem Satz formulieren | Leute einladen, die es kennen
 Besser nicht: Mehrere Ursachen: eine Kette reicht nicht
 - Problem in einem Satz nennen

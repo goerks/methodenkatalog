@@ -82,7 +82,7 @@ Vorher müssen Interviews oder Beobachtungen vorliegen, sonst entsteht ein Wunsc
 
 ## Karte
 Teaser: Ein erfundenes, datenbasiertes Profil einer typischen Nutzergruppe mit Zielen und Frust.
-Gut wenn: Das Team sieht die Nutzer verschieden | Vor User Stories und Oberflächen
+Gut wenn: Das Team sieht die Nutzer verschieden | Vor User Stories und Oberflächen | Bei mehreren sehr verschiedenen Nutzergruppen
 Vorher: Interviews und Nutzungsdaten sammeln | Muster in Zielen und Frust suchen
 Besser nicht: Ohne echte Daten: erst Interviews führen
 - Interviews und Daten sammeln

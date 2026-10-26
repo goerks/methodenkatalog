@@ -81,7 +81,7 @@ Vorher braucht es ein freigegebenes Pflichtenheft und eine Traceability-Matrix. 
 
 ## Karte
 Teaser: Änderungswünsche erfassen, bewerten, entscheiden und umsetzen.
-Gut wenn: Anforderungen sind freigegeben | Festpreis und formale Abnahme
+Gut wenn: Anforderungen sind freigegeben | Festpreis und formale Abnahme | Wenn mehrere Parteien Änderungen verlangen
 Vorher: Verfahren und Gremium klären | Vorlage für Änderungsanträge
 Besser nicht: Rein agil: das Backlog genügt
 - Antrag mit Begründung erfassen

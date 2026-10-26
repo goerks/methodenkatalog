@@ -88,7 +88,7 @@ Vorher klären Workshop-Grundlagen und Stakeholder-Analyse, wer dabei sein muss.
 
 ## Karte
 Teaser: Fachleute kleben Ereignisse auf eine lange Wand. So wird Prozesswissen sichtbar.
-Gut wenn: Komplexer, unbekannter Geschäftsbereich | Fachleute und Technik reden aneinander vorbei
+Gut wenn: Komplexer, unbekannter Geschäftsbereich | Fachleute und Technik reden aneinander vorbei | Vor dem Entwurf von Systemgrenzen
 Vorher: Lange freie Wand oder digitales Board | Orange Zettel und dicke Stifte
 Besser nicht: Schlüsselpersonen können nicht kommen
 - Grosse Wand, orange Zettel

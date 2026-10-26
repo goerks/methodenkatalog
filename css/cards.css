@@ -58,12 +58,12 @@ ul.ck li::before{content:"✓";color:var(--c);font-weight:700}
 .kcard .box .sub{margin:0}
 .kcard .box.warn{background:#fff;border:calc(var(--mm)*.3) dashed var(--c)}
 .kcard .box.warn{padding:calc(var(--mm)*1.4) calc(var(--mm)*2.2)}.kcard ol.cl.tight{font-size:calc(var(--mm)*2.7)}
-.kcard .cin:has(.box.warn){gap:calc(var(--mm)*1.2)}
-.kcard .cin:has(.box.warn) ol.cl.tight{font-size:calc(var(--mm)*3);gap:calc(var(--mm)*1.2)}
-.kcard .cin:has(.box.warn) ul.ck{font-size:calc(var(--mm)*3);gap:calc(var(--mm)*1)}
-.kcard .cin:has(.box.warn) .fz{padding-block:calc(var(--mm)*1.6)}
-.kcard .sum{font-size:calc(var(--mm)*3.25)}
-.kcard .cin>ul.ck{font-size:calc(var(--mm)*3.05);gap:calc(var(--mm)*1.8)}
+.kcard .cin:has(.box){gap:calc(var(--mm)*1.2)}
+.kcard .cin:has(.box) ol.cl.tight{font-size:calc(var(--mm)*3);gap:calc(var(--mm)*1.2)}
+.kcard .cin:has(.box) ul.ck{font-size:calc(var(--mm)*3);gap:calc(var(--mm)*1)}
+.kcard .cin:has(.box) .fz{padding-block:calc(var(--mm)*1.6)}
+.kcard .sum{font-size:calc(var(--mm)*3.5)}
+.kcard .cin>ul.ck{font-size:calc(var(--mm)*3.3);gap:calc(var(--mm)*2)}
 
 .kcard .hero .pic svg{width:100%;height:calc(var(--mm)*26)}
 .kcard .hero .ghostpic{height:calc(var(--mm)*26);aspect-ratio:auto}

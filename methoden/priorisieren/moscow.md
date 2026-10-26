@@ -84,7 +84,7 @@ Vorher sammelt ein Workshop die Anforderungen. Danach übernehmen Sie die Reihen
 
 ## Karte
 Teaser: Anforderungen in Must, Should, Could, Won't einteilen: Wichtiges zuerst.
-Gut wenn: Feste Frist, mehr Wünsche als Platz | Schnelle Entscheide im Workshop
+Gut wenn: Feste Frist, mehr Wünsche als Platz | Schnelle Entscheide im Workshop | Zur Umfangsabgrenzung eines Releases
 Vorher: Anforderungsliste bereitlegen | Zeitrahmen und Ziel klären
 Besser nicht: Fast alles ist Must: dann WSJF
 - Zeitrahmen und Ziel klären

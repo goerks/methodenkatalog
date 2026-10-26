@@ -56,7 +56,13 @@ const M = [
   ],
   "gw": [
    "Der Bereich ist neu, Hintergrund fehlt",
-   "Heikle Themen, die nicht in die Gruppe gehören"
+   "Heikle Themen, die nicht in die Gruppe gehören",
+   "Mit Schlüsselpersonen, die in Gruppen schweigen"
+  ],
+  "rg": [
+   "Offene Fragen vor geschlossenen Fragen",
+   "Keine Lösungen vorschlagen, bevor das Problem klar ist",
+   "Eine Person führt, eine zweite protokolliert"
   ],
   "vk": [
    "Ziel in einem Satz festhalten",
@@ -198,7 +204,13 @@ const M = [
   ],
   "gw": [
    "Mehrere Bereiche müssen sich einigen",
-   "Gemeinsames Bild zählt mehr als Detail"
+   "Gemeinsames Bild zählt mehr als Detail",
+   "Zum Priorisieren und Modellieren im Team"
+  ],
+  "rg": [
+   "Moderator ist neutral und gehört nicht zum Entscheiderkreis",
+   "Zeitboxen für jeden Block",
+   "Entscheidungen sofort sichtbar festhalten"
   ],
   "vk": [
    "Ziel und Agenda schriftlich festlegen",
@@ -340,7 +352,13 @@ const M = [
   ],
   "gw": [
    "Abläufe lassen sich schwer beschreiben",
-   "Verdacht: Alltag weicht von Doku ab"
+   "Verdacht: Alltag weicht von Doku ab",
+   "Vor dem Lösungsentwurf, um echte Probleme zu sehen"
+  ],
+  "rg": [
+   "Beobachten, nicht bewerten",
+   "Echte Arbeitssituation statt Vorführung",
+   "Datenschutz und Einverständnis vorher klären"
   ],
   "vk": [
    "Fokus und Ziel festlegen",
@@ -470,7 +488,13 @@ const M = [
   ],
   "gw": [
    "Ganz am Anfang, vor der Erhebung",
-   "Viele Bereiche oder externe Parteien"
+   "Viele Bereiche oder externe Parteien",
+   "Bei Konflikten über Ziele oder Prioritäten"
+  ],
+  "rg": [
+   "Liste regelmässig aktualisieren",
+   "Einfluss und Interesse getrennt bewerten",
+   "Bewertung vertraulich behandeln"
   ],
   "vk": [
    "Erste Liste im Team sammeln",
@@ -607,7 +631,13 @@ const M = [
   ],
   "gw": [
    "Das Team sieht die Nutzer verschieden",
-   "Vor User Stories und Oberflächen"
+   "Vor User Stories und Oberflächen",
+   "Bei mehreren sehr verschiedenen Nutzergruppen"
+  ],
+  "rg": [
+   "Auf Daten stützen, nicht auf Annahmen",
+   "Wenige Personas (2 bis 4) statt viele",
+   "Keine Stereotype, sondern Verhalten beschreiben"
   ],
   "vk": [
    "Interviews und Nutzungsdaten sammeln",
@@ -743,7 +773,13 @@ const M = [
   ],
   "gw": [
    "Viele Personen an mehreren Standorten",
-   "Aussagen aus Interviews überprüfen"
+   "Aussagen aus Interviews überprüfen",
+   "Als Grundlage für Kano oder Prioritäten"
+  ],
+  "rg": [
+   "Höchstens 10 Minuten Bearbeitungszeit",
+   "Keine Suggestivfragen",
+   "Offene Fragen sparsam einsetzen"
   ],
   "vk": [
    "Zielgruppe und Frage festlegen",
@@ -888,7 +924,13 @@ const M = [
   ],
   "gw": [
    "Zu Beginn, um die Lage zu klären",
-   "Die Lagebilder gehen auseinander"
+   "Die Lagebilder gehen auseinander",
+   "Vor Vision oder Strategiediskussion"
+  ],
+  "rg": [
+   "Intern und extern sauber trennen",
+   "Pro Feld höchstens fünf Punkte",
+   "Aussagen mit Beobachtung oder Zahl belegen"
   ],
   "vk": [
    "Gegenstand klar abgrenzen",
@@ -1031,7 +1073,13 @@ const M = [
   ],
   "gw": [
    "Eine Lösung wird gefordert, Problem unklar",
-   "Fehler oder Störungen kehren wieder"
+   "Fehler oder Störungen kehren wieder",
+   "Wenn die Frage lautet: Warum ist das wichtig?"
+  ],
+  "rg": [
+   "Von Fakten ausgehen, nicht von Vermutungen",
+   "Nach Prozessen fragen, nicht nach Schuldigen",
+   "Bei mehreren Ursachen mehrere Ketten bilden"
   ],
   "vk": [
    "Problem in einem Satz formulieren",
@@ -1173,7 +1221,13 @@ const M = [
   ],
   "gw": [
    "Fachgebiet und Begriffe verstehen",
-   "Gesetzliche Vorgaben oder Altsystem"
+   "Gesetzliche Vorgaben oder Altsystem",
+   "Bei der Ablösung eines Altsystems"
+  ],
+  "rg": [
+   "Quelle jeder Aussage festhalten",
+   "Alte Dokumente nicht ungeprüft übernehmen",
+   "Lücken sichtbar machen"
   ],
   "vk": [
    "Relevante Dokumente finden",
@@ -1316,7 +1370,13 @@ const M = [
   ],
   "gw": [
    "Komplexer, unbekannter Geschäftsbereich",
-   "Fachleute und Technik reden aneinander vorbei"
+   "Fachleute und Technik reden aneinander vorbei",
+   "Vor dem Entwurf von Systemgrenzen"
+  ],
+  "rg": [
+   "Ereignisse in der Vergangenheit formulieren",
+   "Fachleute und Entwicklung arbeiten gemeinsam",
+   "Unklarheiten sofort als Frage festhalten"
   ],
   "vk": [
    "Lange freie Wand oder digitales Board",
@@ -1472,7 +1532,13 @@ const M = [
   ],
   "gw": [
    "Agil, mit laufender Verfeinerung",
-   "Fachbereich und Team arbeiten eng zusammen"
+   "Fachbereich und Team arbeiten eng zusammen",
+   "Wenn sich Anforderungen noch ändern"
+  ],
+  "rg": [
+   "Eine Story liefert Nutzen für eine Rolle",
+   "Sie passt in einen Sprint",
+   "Details entstehen im Gespräch, nicht im Text"
   ],
   "vk": [
    "Personas oder Rollen bereithalten",
@@ -1636,7 +1702,13 @@ const M = [
   ],
   "gw": [
    "Komplexe Abläufe mit vielen Ausnahmen",
-   "Formale Vorgaben, Basis für Abnahme"
+   "Formale Vorgaben, Basis für Abnahme",
+   "Wenn Details und Ausnahmen zählen"
+  ],
+  "rg": [
+   "Ein Use Case beschreibt ein Ziel eines Akteurs",
+   "Name im Format Verb + Objekt",
+   "Schritte sind Akteur-System-Dialog, ohne UI-Details"
   ],
   "vk": [
    "Akteure und Ziele sammeln",
@@ -1782,7 +1854,13 @@ const M = [
   ],
   "gw": [
    "Für jede Story vor dem Sprint",
-   "Alle verstehen «fertig» gleich"
+   "Alle verstehen «fertig» gleich",
+   "Wenn automatisierte Tests gewünscht sind"
+  ],
+  "rg": [
+   "Jedes Kriterium ist eindeutig mit Ja oder Nein beantwortbar",
+   "Kein technisches Vorgehen, sondern beobachtbares Verhalten",
+   "Drei Amigos: Fachseite, Entwicklung, Test sprechen gemeinsam"
   ],
   "vk": [
    "Story mit Rolle und Nutzen",
@@ -1930,7 +2008,13 @@ const M = [
   ],
   "gw": [
    "Stories bleiben halbfertig liegen",
-   "Neues Team oder mehrere Teams"
+   "Neues Team oder mehrere Teams",
+   "Wenn mehrere Teams ein Produkt bauen"
+  ],
+  "rg": [
+   "Vom ganzen Team gemeinsam beschlossen",
+   "Kurz halten (5 bis 8 Punkte)",
+   "Done gilt für jede Story, ohne Ausnahme"
   ],
   "vk": [
    "Probleme im Ablauf sammeln",
@@ -2072,7 +2156,13 @@ const M = [
   ],
   "gw": [
    "Früh, bevor die Architektur steht",
-   "«Schnell» und «sicher» bleiben vage"
+   "«Schnell» und «sicher» bleiben vage",
+   "Bei Lastspitzen, Sicherheit oder Regulierung"
+  ],
+  "rg": [
+   "Jede Anforderung ist messbar (Wert, Einheit, Bedingung)",
+   "Keine Adjektive wie «schnell» oder «sicher» ohne Zahl",
+   "Kritische NFR früh klären, da sie Architektur prägen"
   ],
   "vk": [
    "ISO 25010 als Checkliste",
@@ -2211,7 +2301,13 @@ const M = [
   ],
   "gw": [
    "Festpreis oder Ausschreibung",
-   "Hohe regulatorische Anforderungen"
+   "Hohe regulatorische Anforderungen",
+   "Auftraggeber und Auftragnehmer sind getrennt"
+  ],
+  "rg": [
+   "Jede Anforderung hat eine eindeutige ID",
+   "Verbindliche Sprache (muss, soll, kann)",
+   "Änderungen nur über Change Management"
   ],
   "vk": [
    "Struktur festlegen (ISO 29148)",
@@ -2368,7 +2464,13 @@ const M = [
   ],
   "gw": [
    "Zu Beginn eines Produkts",
-   "Streit über Ziele oder Prioritäten"
+   "Streit über Ziele oder Prioritäten",
+   "Als Leitplanke im Priorisierungsstreit"
+  ],
+  "rg": [
+   "Höchstens zwei Sätze",
+   "Sie nennt eine Zielgruppe und einen Nutzen",
+   "Sie ist so konkret, dass man Ideen dagegen prüfen kann"
   ],
   "vk": [
    "Zielgruppe und Problem klären",
@@ -2523,7 +2625,13 @@ const M = [
   ],
   "gw": [
    "Ab Projektstart, laufend",
-   "Begriffe führen zu Missverständnissen"
+   "Begriffe führen zu Missverständnissen",
+   "Neue Teammitglieder sollen schnell einsteigen"
+  ],
+  "rg": [
+   "Ein Begriff hat genau eine Bedeutung",
+   "Definitionen sind kurz und verständlich",
+   "Das Glossar liegt dort, wo alle es sehen"
   ],
   "vk": [
    "Verantwortliche Person bestimmen",
@@ -2675,7 +2783,13 @@ const M = [
   ],
   "gw": [
    "Regelreiche Bereiche wie Bank, Versicherung",
-   "Eine Regel gilt an mehreren Stellen"
+   "Eine Regel gilt an mehreren Stellen",
+   "Regeln ändern sich häufig"
+  ],
+  "rg": [
+   "Eine Regel pro Zeile",
+   "Jede Regel hat eine verantwortliche Stelle",
+   "Regeln sind prüfbar, mit konkreten Werten"
   ],
   "vk": [
    "Regelquellen und Verantwortliche klären",
@@ -2824,7 +2938,13 @@ const M = [
   ],
   "gw": [
    "Die Story passt nicht in einen Sprint",
-   "Das Team kann sie nicht schätzen"
+   "Das Team kann sie nicht schätzen",
+   "Schätzungen liegen weit auseinander"
+  ],
+  "rg": [
+   "Vertikal schneiden (durch alle Schichten), nicht nach Technik",
+   "Jede Teilstory ist für sich nutzbar",
+   "Den einfachsten durchgängigen Weg zuerst"
   ],
   "vk": [
    "Story und Kriterien im Blick",
@@ -2968,7 +3088,13 @@ const M = [
   ],
   "gw": [
    "Ablauf verstehen und klären",
-   "Entscheidungen und parallele Schritte"
+   "Entscheidungen und parallele Schritte",
+   "Um Use Cases mit Logik zu zeigen"
+  ],
+  "rg": [
+   "Ein Startknoten, mindestens ein Endknoten",
+   "Jede Raute hat Bedingungen an den ausgehenden Kanten",
+   "Aktionen mit Verb benennen"
   ],
   "vk": [
    "Ablauf und Ziel abgrenzen",
@@ -3110,7 +3236,13 @@ const M = [
   ],
   "gw": [
    "Funktionsumfang klären",
-   "Überblick für Fachleute"
+   "Überblick für Fachleute",
+   "Als Einstieg in Use-Case-Beschreibungen"
+  ],
+  "rg": [
+   "Akteure stehen ausserhalb der Systemgrenze",
+   "Use Cases benennen mit Verb + Objekt",
+   "Auf einer Seite lesbar bleiben"
   ],
   "vk": [
    "Akteure und Ziele sammeln",
@@ -3241,7 +3373,13 @@ const M = [
   ],
   "gw": [
    "Prozesse über mehrere Rollen",
-   "Verbessern oder automatisieren"
+   "Verbessern oder automatisieren",
+   "Wenn eine Prozessengine im Einsatz ist"
+  ],
+  "rg": [
+   "Ein Prozess hat ein Start- und mindestens ein Endereignis",
+   "Aufgaben mit Verb + Objekt benennen",
+   "Gateways immer paarweise schliessen"
   ],
   "vk": [
    "Prozessgrenzen und Ziel festlegen",
@@ -3384,7 +3522,13 @@ const M = [
   ],
   "gw": [
    "Wunschliste ohne erkennbares Ziel",
-   "Start einer agilen Entwicklung"
+   "Start einer agilen Entwicklung",
+   "Wenn Stakeholder verschiedene Ziele verfolgen"
+  ],
+  "rg": [
+   "Das Ziel steht in der Mitte und ist messbar",
+   "Jedes Lieferobjekt führt über einen Akteur zum Ziel",
+   "Lieferobjekte ohne Wirkungskette entfallen"
   ],
   "vk": [
    "Messbares Ziel als Startfrage",
@@ -3527,7 +3671,13 @@ const M = [
   ],
   "gw": [
    "Zu Beginn: Umfang und Schnittstellen",
-   "Viele Nachbarsysteme"
+   "Viele Nachbarsysteme",
+   "Wenn der Umfang diskutiert wird"
+  ],
+  "rg": [
+   "Keine inneren Details des Systems",
+   "Jeder Pfeil hat Richtung und Inhalt",
+   "Alle Schnittstellen sind sichtbar"
   ],
   "vk": [
    "Vorhaben grob beschreiben",
@@ -3669,7 +3819,13 @@ const M = [
   ],
   "gw": [
    "Geschäftlicher Zusammenhang ist unklar",
-   "Neue Produkte oder Geschäftsfelder"
+   "Neue Produkte oder Geschäftsfelder",
+   "Gemeinsames Bild für Fachbereich und Technik"
+  ],
+  "rg": [
+   "Bei Kundensegment und Nutzenversprechen beginnen",
+   "Jeder Baustein ist kurz und konkret",
+   "Unsichere Annahmen sichtbar machen und prüfen"
   ],
   "vk": [
    "Canvas und Zettel bereitstellen",
@@ -3814,7 +3970,13 @@ const M = [
   ],
   "gw": [
    "Objekt mit Lebenszyklus (Antrag, Vertrag)",
-   "Unklar, was in welchem Zustand gilt"
+   "Unklar, was in welchem Zustand gilt",
+   "Zur Vorbereitung von Übergangstests"
+  ],
+  "rg": [
+   "Zustände sind Adjektive oder Partizipien (offen, geprüft)",
+   "Jeder Übergang hat ein auslösendes Ereignis",
+   "Keine toten Zustände"
   ],
   "vk": [
    "Objekt und Lebensphasen benennen",
@@ -3941,7 +4103,13 @@ const M = [
   ],
   "gw": [
    "Komplexe Fachlichkeit",
-   "Technik und Fachbereich uneins über Begriffe"
+   "Technik und Fachbereich uneins über Begriffe",
+   "Vor dem Entwurf der Systemstruktur"
+  ],
+  "rg": [
+   "Begriffe der Fachsprache verwenden",
+   "Nur Fachliches, keine Technik",
+   "Wenige Klassen, klare Beziehungen"
   ],
   "vk": [
    "Glossar bereitlegen",
@@ -4089,7 +4257,13 @@ const M = [
   ],
   "gw": [
    "Feste Frist, mehr Wünsche als Platz",
-   "Schnelle Entscheide im Workshop"
+   "Schnelle Entscheide im Workshop",
+   "Zur Umfangsabgrenzung eines Releases"
+  ],
+  "rg": [
+   "Must heisst: ohne geht das Release nicht live",
+   "Must-Anteil bei höchstens 60 % des Aufwands halten",
+   "Won't gilt nur für diesen Zeitraum"
   ],
   "vk": [
    "Anforderungsliste bereitlegen",
@@ -4229,7 +4403,13 @@ const M = [
   ],
   "gw": [
    "Viele Nutzer mit freier Wahl",
-   "Features nach Wirkung sortieren"
+   "Features nach Wirkung sortieren",
+   "Wenn Teile zu viel Aufmerksamkeit bekommen"
+  ],
+  "rg": [
+   "Basisfaktoren sind Pflicht, sorgen aber nicht für Begeisterung",
+   "Begeisterungsfaktoren werden mit der Zeit zu Basisfaktoren",
+   "Befragung mit echten Nutzern"
   ],
   "vk": [
    "Fragenpaare je Merkmal formulieren",
@@ -4368,7 +4548,13 @@ const M = [
   ],
   "gw": [
    "Viele Anfragen, knappe Kapazität",
-   "Wert und Dringlichkeit begründen"
+   "Wert und Dringlichkeit begründen",
+   "In skalierten agilen Umgebungen"
+  ],
+  "rg": [
+   "Alle Faktoren relativ bewerten (z. B. Fibonacci)",
+   "Im Team bewerten, nicht allein",
+   "Das Ergebnis ist Diskussionsgrundlage"
   ],
   "vk": [
    "Kandidaten mit Aufwand schätzen",
@@ -4510,7 +4696,13 @@ const M = [
   ],
   "gw": [
    "Im Refinement, vor dem Sprint",
-   "Meinungen zum Aufwand gehen auseinander"
+   "Meinungen zum Aufwand gehen auseinander",
+   "Wenn das Team Kapazität einschätzen soll"
+  ],
+  "rg": [
+   "Skala: 1, 2, 3, 5, 8, 13, 21 (Fibonacci)",
+   "Niemand beeinflusst vor dem Aufdecken",
+   "Schätzen tut das Team, das umsetzt"
   ],
   "vk": [
    "Stories mit Kriterien vorbereiten",
@@ -4651,7 +4843,13 @@ const M = [
   ],
   "gw": [
    "Sprints und Prognosen sind nötig",
-   "Stundenschätzungen täuschen Genauigkeit vor"
+   "Stundenschätzungen täuschen Genauigkeit vor",
+   "Wenn Planung auf Teamerfahrung beruhen soll"
+  ],
+  "rg": [
+   "Punkte gelten nur innerhalb eines Teams",
+   "Nicht in Stunden umrechnen",
+   "Nur fertige Stories zählen"
   ],
   "vk": [
    "Referenzstories festlegen",
@@ -4792,7 +4990,13 @@ const M = [
   ],
   "gw": [
    "Zu Beginn und bei grossen Änderungen",
-   "Abhängig von Technik, Terminen, Dritten"
+   "Abhängig von Technik, Terminen, Dritten",
+   "In regulierten Bereichen"
+  ],
+  "rg": [
+   "Jedes Risiko hat eine verantwortliche Person",
+   "Gegenmassnahme oder bewusste Akzeptanz festhalten",
+   "Hohe Risiken früh angehen"
   ],
   "vk": [
    "Kategorien und Skalen vereinbaren",
@@ -4941,7 +5145,13 @@ const M = [
   ],
   "gw": [
    "In jedem agilen Vorhaben",
-   "Arbeit soll transparent und geordnet sein"
+   "Arbeit soll transparent und geordnet sein",
+   "Als einzige Quelle für kommende Arbeit"
+  ],
+  "rg": [
+   "Ein Backlog pro Produkt",
+   "Eine Person (Product Owner) bestimmt die Reihenfolge",
+   "Oben fein, unten grob (DEEP)"
   ],
   "vk": [
    "Product Owner bestimmen",
@@ -5093,7 +5303,13 @@ const M = [
   ],
   "gw": [
    "Laufend, einmal pro Sprint-Woche",
-   "Stories sind unklar oder zu gross"
+   "Stories sind unklar oder zu gross",
+   "Vor der Sprintplanung"
+  ],
+  "rg": [
+   "Höchstens 10 % der Sprintzeit",
+   "Product Owner ist anwesend",
+   "Ergebnis: Stories sind Ready"
   ],
   "vk": [
    "Zeitbox festlegen (z. B. 60 Min.)",
@@ -5238,7 +5454,13 @@ const M = [
   ],
   "gw": [
    "Das Backlog ist flach und unübersichtlich",
-   "Erstes Release mit minimalem Umfang"
+   "Erstes Release mit minimalem Umfang",
+   "Beim Planen eines ersten Releases"
+  ],
+  "rg": [
+   "Von links nach rechts erzählen",
+   "Wichtiges oben, Details unten",
+   "Release-Linie quer ziehen"
   ],
   "vk": [
    "Personas und Ziele bereithalten",
@@ -5384,7 +5606,13 @@ const M = [
   ],
   "gw": [
    "Management braucht Orientierung",
-   "Mehrere Teams abstimmen"
+   "Mehrere Teams abstimmen",
+   "Wenn die Vision in Etappen gehört"
+  ],
+  "rg": [
+   "Ziele statt Funktionslisten",
+   "Je weiter weg, desto grober",
+   "Roadmap ist keine Terminzusage"
   ],
   "vk": [
    "Vision und Ziele bereitlegen",
@@ -5534,7 +5762,13 @@ const M = [
   ],
   "gw": [
    "Zu Beginn jedes Sprints",
-   "Backlog und Kapazität sind bekannt"
+   "Backlog und Kapazität sind bekannt",
+   "Als feste Zeremonie im Scrum-Rhythmus"
+  ],
+  "rg": [
+   "Nur Einträge, die Ready sind",
+   "Das Team entscheidet über den Umfang",
+   "Es gibt ein Sprintziel in einem Satz"
   ],
   "vk": [
    "Backlog vorsortiert und verfeinert",
@@ -5679,7 +5913,13 @@ const M = [
   ],
   "gw": [
    "Vor der Umsetzung",
-   "Kritische Dokumente prüfen"
+   "Kritische Dokumente prüfen",
+   "Am Sprintende mit den Stakeholdern"
+  ],
+  "rg": [
+   "Prüfen, nicht Personen bewerten",
+   "Checkliste für Qualitätskriterien",
+   "Befunde schriftlich festhalten"
   ],
   "vk": [
    "Prüfgegenstand und Ziel festlegen",
@@ -5818,7 +6058,13 @@ const M = [
   ],
   "gw": [
    "Oberfläche und Ablauf sind unklar",
-   "Worte erzeugen Missverständnisse"
+   "Worte erzeugen Missverständnisse",
+   "Wenn Nutzer am Bild besser urteilen"
+  ],
+  "rg": [
+   "So einfach wie möglich",
+   "Prototypen werden weggeworfen",
+   "Mit Aufgaben testen, nicht nur zeigen"
   ],
   "vk": [
    "Ziel und Hypothesen festlegen",
@@ -5954,7 +6200,13 @@ const M = [
   ],
   "gw": [
    "Nachweispflicht, regulierte Bereiche",
-   "Viele Anforderungen und Änderungen"
+   "Viele Anforderungen und Änderungen",
+   "Wenn Auswirkungen von Änderungen zählen"
+  ],
+  "rg": [
+   "IDs bleiben stabil",
+   "Nur sinnvolle Beziehungen verfolgen",
+   "Tool-gestützt pflegen"
   ],
   "vk": [
    "Festlegen, was verknüpft wird",
@@ -6098,7 +6350,13 @@ const M = [
   ],
   "gw": [
    "Anforderungen sind freigegeben",
-   "Festpreis und formale Abnahme"
+   "Festpreis und formale Abnahme",
+   "Wenn mehrere Parteien Änderungen verlangen"
+  ],
+  "rg": [
+   "Jede Änderung hat einen Antrag und eine Entscheidung",
+   "Nachvollziehbare Historie",
+   "Agile Teams: Änderung = neuer Backlog-Eintrag"
   ],
   "vk": [
    "Verfahren und Gremium klären",
@@ -6230,7 +6488,13 @@ const M = [
   ],
   "gw": [
    "Vor jeder Freigabe",
-   "Fachbereich nimmt formal ab"
+   "Fachbereich nimmt formal ab",
+   "Bei Verträgen mit Abnahmekriterien"
+  ],
+  "rg": [
+   "Fachseite testet, nicht die Entwicklung",
+   "Abnahmekriterien vorher vereinbart",
+   "Jede Abweichung wird mit Entscheid dokumentiert"
   ],
   "vk": [
    "Testfälle aus Kriterien ableiten",
@@ -6360,7 +6624,13 @@ const M = [
   ],
   "gw": [
    "Sprints mit Backlog, Board, Berichten",
-   "Tickets mit Stories und Fehlern verknüpfen"
+   "Tickets mit Stories und Fehlern verknüpfen",
+   "Wenn Aufgaben nachvollziehbar sein müssen"
+  ],
+  "rg": [
+   "Viele Einstellungen, braucht eine klare Konvention im Team",
+   "Für Modelle und Zeichnungen nur Anhänge",
+   "Lizenzkosten pro Nutzer"
   ],
   "vk": [],
   "bn": "Für Zeichnungen: besser Miro oder draw.io",
@@ -6432,7 +6702,13 @@ const M = [
   ],
   "gw": [
    "Workshops mit verteilten Teams",
-   "Event Storming, Story Maps, Canvas"
+   "Event Storming, Story Maps, Canvas",
+   "Für Vorlagen wie Canvas und Impact Map"
+  ],
+  "rg": [
+   "Ergebnisse sind schwer versionierbar",
+   "Bei sehr grossen Boards wird es unübersichtlich",
+   "Keine Verbindung zur Anforderungsverwaltung ohne Zusatz"
   ],
   "vk": [],
   "bn": "Ergebnisse müssen versioniert sein",
@@ -6509,7 +6785,13 @@ const M = [
   ],
   "gw": [
    "Diagramme teilen und versionieren",
-   "Keine Lizenzkosten gewünscht"
+   "Keine Lizenzkosten gewünscht",
+   "Für einfache Diagramme ohne Lizenzkosten"
+  ],
+  "rg": [
+   "Keine Modellprüfung, nur Zeichnen",
+   "Kein gemeinsames Modell hinter den Diagrammen",
+   "Layout muss von Hand gepflegt werden"
   ],
   "vk": [],
   "bn": "Modelle sollen geprüft und verknüpft werden",
@@ -6576,7 +6858,13 @@ const M = [
   ],
   "gw": [
    "Diagramme liegen im Code-Repository",
-   "Änderungen müssen nachvollziehbar sein"
+   "Änderungen müssen nachvollziehbar sein",
+   "Wenn Diagramme als Text gepflegt werden"
+  ],
+  "rg": [
+   "Layout nur begrenzt steuerbar",
+   "Einarbeitung in die Syntax nötig",
+   "Für Fachbereich weniger zugänglich"
   ],
   "vk": [],
   "bn": "Fachleute ohne Technik sollen zeichnen",
@@ -6641,7 +6929,13 @@ const M = [
   ],
   "gw": [
    "Wissen gemeinsam pflegen und finden",
-   "Doku mit Tickets verbinden"
+   "Doku mit Tickets verbinden",
+   "Wenn Doku und Tickets zusammengehören"
+  ],
+  "rg": [
+   "Struktur verwildert ohne Pflege",
+   "Keine strenge Versionierung wie ein Repository",
+   "Suche liefert bei grossen Beständen viel Rauschen"
   ],
   "vk": [],
   "bn": "Strenge Versionierung wie im Repository",
@@ -6710,7 +7004,13 @@ const M = [
   ],
   "gw": [
    "Entwürfe früh mit Nutzern testen",
-   "Design und Anforderungen arbeiten zusammen"
+   "Design und Anforderungen arbeiten zusammen",
+   "Wenn Design und Anforderungen zusammenwirken"
+  ],
+  "rg": [
+   "Gestaltungsarbeit braucht Übung",
+   "Nicht für Anforderungsverwaltung gedacht",
+   "Lizenzkosten für Teams"
   ],
   "vk": [],
   "bn": "Als Ersatz für Anforderungsverwaltung",
@@ -6772,7 +7072,13 @@ const M = [
   ],
   "gw": [
    "Kriterien als lebende Dokumentation",
-   "Fachbereich, Test, Entwicklung teilen Szenarien"
+   "Fachbereich, Test, Entwicklung teilen Szenarien",
+   "Wenn Fachbereich und Test Szenarien teilen"
+  ],
+  "rg": [
+   "Braucht Disziplin bei der Formulierung",
+   "Entwicklungsaufwand für den Testcode",
+   "Zu viele Szenarien verlangsamen den Build"
   ],
   "vk": [],
   "bn": "Niemand pflegt die Szenarien",
@@ -6834,7 +7140,13 @@ const M = [
   ],
   "gw": [
    "Grosse Vorhaben mit gemeinsamem Modell",
-   "Berichte aus dem Modell erzeugen"
+   "Berichte aus dem Modell erzeugen",
+   "Wenn Doku aus dem Modell entstehen soll"
+  ],
+  "rg": [
+   "Hoher Einarbeitungsaufwand",
+   "Lizenzkosten",
+   "Für kleine Vorhaben oft zu schwergewichtig"
   ],
   "vk": [],
   "bn": "Kleine Vorhaben: oft zu schwergewichtig",

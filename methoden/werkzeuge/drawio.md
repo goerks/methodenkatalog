@@ -35,7 +35,7 @@ draw.io (diagrams.net) ist ein kostenloses Zeichenwerkzeug für UML, BPMN und Fl
 
 ## Karte
 Teaser: Kostenloses Zeichenwerkzeug für UML, BPMN und Flussdiagramme.
-Gut wenn: Diagramme teilen und versionieren | Keine Lizenzkosten gewünscht
+Gut wenn: Diagramme teilen und versionieren | Keine Lizenzkosten gewünscht | Für einfache Diagramme ohne Lizenzkosten
 Besser nicht: Modelle sollen geprüft und verknüpft werden
 - UML- und BPMN-Diagramme zeichnen
 - Als Bild oder PDF exportieren

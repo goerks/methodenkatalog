@@ -84,7 +84,7 @@ Vorher klären Sie Beteiligte und, wenn nötig, die Lage mit einer SWOT-Analyse.
 
 ## Karte
 Teaser: Neun Bausteine: wie eine Organisation Wert schafft, liefert und einnimmt.
-Gut wenn: Geschäftlicher Zusammenhang ist unklar | Neue Produkte oder Geschäftsfelder
+Gut wenn: Geschäftlicher Zusammenhang ist unklar | Neue Produkte oder Geschäftsfelder | Gemeinsames Bild für Fachbereich und Technik
 Vorher: Canvas und Zettel bereitstellen | Geschäfts- und Fachsicht einladen
 Besser nicht: Interne Systeme ohne Erlösmodell
 - Kunden und Wertangebot zuerst

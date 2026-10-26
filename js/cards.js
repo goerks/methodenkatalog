@@ -22,21 +22,20 @@ const Cards = (() => {
   const marks = id => SETS.filter(s => s.s.includes(id)).map(s => `<i class="sm" title="${esc(s.n)}">${s.m}</i>`).join('');
   const wrap = (cls, ph, inner, extra) => `<div class="kcard ${cls}"><div class="cin ph-${ph}" ${extra || ''}>${inner}</div></div>`;
 
-  const pic = m => { const v = m.vis && typeof VIS !== 'undefined' && VIS[m.vis] ? VIS[m.vis]() : ''; return v.startsWith('<svg') ? `<div class="pic">${v}</div>` : `<div class="pic ghostpic">${ico(m.f, 22)}</div>`; };
   const checks = a => `<ul class="ck">${a.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`;
   const eff = m => m.aufwand.split(/ (?:pro|je) |, /)[0];
+  const two = m => { const a = String(m.zw).split(/(?<=[.!?])\s/), t = a.slice(0, 2).join(' '); return t.length <= 165 ? t : a[0].length <= 165 ? a[0] : m.kt; };
   function front(m) {
     const t = isTool(m), ph = phk(m);
-    return wrap(t ? 'tool' : '', ph, `<div class="hero"><div class="band flat">${ico(m.f, 5.2)}<b>${PHN[ph] || 'Werkzeug'}</b><span class="sp"></span><span class="nr">${m.nr}</span></div>${pic(m)}</div>
-      <h3>${esc(titleOf(m))}</h3><p class="sum">${esc(m.kt)}</p><span class="sub">Gut, wenn</span>${checks(m.gw)}
+    return wrap(t ? 'tool' : '', ph, `<div class="band">${ico(m.f, 5.2)}<b>${PHN[ph] || 'Werkzeug'}</b><span class="sp"></span><span class="nr">${m.nr}</span></div>
+      <h3>${esc(titleOf(m))}</h3><p class="sum">${esc(two(m))}</p><span class="sub">Einsetzen, wenn</span>${checks(m.gw)}
       <div class="foot"><span class="tag">${FORMS[m.f].split(' ')[0]}</span>${t ? '' : `<span class="tag">${vp(m.m)}${MODE[m.m].replace('Klassisch und agil', 'beide').toLowerCase()}</span><span class="tag">${esc(eff(m))}</span>`}</div>`);
   }
   function back(m) {
     const t = isTool(m), ph = phk(m);
     return wrap(t ? 'tool' : '', ph, `<div class="top">${ico(m.f, 4.4)}<b>${esc(titleOf(m))}</b><span class="k">${PHN[ph] || 'Werkzeug'}</span></div>
-      ${t ? '' : `<span class="sub">Vorbereitung</span>${checks(m.vk)}`}
       <span class="sub">${t ? 'Einsatz' : 'Ablauf'}</span><ol class="cl tight">${m.ks.map(x => `<li>${esc(x)}</li>`).join('')}</ol>
-      <div class="box warn"><span class="sub">Besser nicht, wenn</span><p>${esc(m.bn)}</p></div>
+      <div class="box"><span class="sub">${t ? 'Grenzen' : 'Regeln'}</span>${checks(m.rg)}</div>
       <div class="fz"><div class="fn"><span class="nr">Karte ${m.nr}</span><span class="sms">${marks(m.id)}</span></div><span class="sp"></span><span class="mini">Details<br>scannen</span>${qr(SITE + '#' + m.id, 15)}</div>`);
   }
   function legendFront() {

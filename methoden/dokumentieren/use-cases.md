@@ -84,7 +84,7 @@ Vorher klären das Use-Case-Diagramm und das Kontextdiagramm, welche Akteure und
 
 ## Karte
 Teaser: Ein Akteur erreicht ein Ziel in Schritten mit Haupt- und Alternativablauf.
-Gut wenn: Komplexe Abläufe mit vielen Ausnahmen | Formale Vorgaben, Basis für Abnahme
+Gut wenn: Komplexe Abläufe mit vielen Ausnahmen | Formale Vorgaben, Basis für Abnahme | Wenn Details und Ausnahmen zählen
 Vorher: Akteure und Ziele sammeln | Vorlage wählen, Fachleute einplanen
 Besser nicht: Anforderungen ändern sich schnell
 - Akteur und Ziel bestimmen

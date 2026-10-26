@@ -76,7 +76,7 @@ Alternativ ohne Workflow: Source «Deploy from a branch», Branch `main`, Ordner
 ## Stand 0.4: Methodenkarten zum Drucken
 
 - Ansicht «Karten»: Karten antippen (Warenkorb), 5 Sets nach Situation (`methoden/sets.json`), Legendenkarte, Bogenvorschau, Testblatt.
-- Pro Methode: Front-Matter `karte: X-NN` (stabile Nummer, Präfix = Phase) und Abschnitt `## Karte` mit `Teaser:` (max. 105 Zeichen), `Gut wenn: A | B` (je 60), `Vorher: A | B` (je 44, nicht bei Werkzeugen), `Besser nicht: …` (78) und 3 bis 5 Schritten (je 38). `tools/build.mjs` prüft das.
+- Pro Methode: Front-Matter `karte: X-NN` (stabile Nummer, Präfix = Phase) und Abschnitt `## Karte` mit `Teaser:` (max. 105 Zeichen), `Gut wenn: A | B | C` (je 60), optional `Regeln: A | B | C` (je 62, sonst automatisch aus «Regeln»), `Vorher:` und `Besser nicht:` (derzeit ungenutzt) und 3 bis 5 Schritten (je 38). Kartenzusammenfassung: erste zwei Sätze aus «Wofür». `tools/build.mjs` prüft das.
 - Format: A4 quer, 4 × 2 Karten à 65,75 × 94 mm, 6 mm Abstand für den Siegelrand, 8 mm Rand. Rückseiten sind gespiegelt angeordnet (Duplex, Wenden an der kurzen Kante). Testblatt zur Kontrolle der Wendekante.
 - QR-Codes: `js/vendor/qrcode.js` (qrcode-generator 1.4.4, MIT); Ziel-URL in `js/cards.js` (`SITE`).
 - Drucken: Browser-Druckdialog (A4 quer, 100 %, Hintergrund an), «Als PDF speichern» möglich.

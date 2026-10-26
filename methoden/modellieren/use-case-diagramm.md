@@ -80,7 +80,7 @@ Vorher helfen Stakeholder-Analyse und Kontextdiagramm. Danach beschreiben Sie je
 
 ## Karte
 Teaser: Welche Akteure nutzen welche Funktionen? Überblick auf einer Seite.
-Gut wenn: Funktionsumfang klären | Überblick für Fachleute
+Gut wenn: Funktionsumfang klären | Überblick für Fachleute | Als Einstieg in Use-Case-Beschreibungen
 Vorher: Akteure und Ziele sammeln | Systemgrenze festlegen
 Besser nicht: Details gefragt: besser Beschreibungen
 - Systemgrenze zeichnen

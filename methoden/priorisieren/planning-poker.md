@@ -84,7 +84,7 @@ Vorher müssen Stories verstanden und annähernd gleich gross sein, etwa nach St
 
 ## Karte
 Teaser: Das Team schätzt gleichzeitig mit Karten, Abweichungen werden besprochen.
-Gut wenn: Im Refinement, vor dem Sprint | Meinungen zum Aufwand gehen auseinander
+Gut wenn: Im Refinement, vor dem Sprint | Meinungen zum Aufwand gehen auseinander | Wenn das Team Kapazität einschätzen soll
 Vorher: Stories mit Kriterien vorbereiten | Referenzstory und Karten bereit
 Besser nicht: Stories sind unklar: erst klären
 - Story kurz erklären

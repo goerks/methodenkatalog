@@ -35,7 +35,7 @@ Cucumber führt Akzeptanzkriterien im Format Gegeben-Wenn-Dann (Gherkin) als aut
 
 ## Karte
 Teaser: Führt Kriterien im Format Gegeben-Wenn-Dann als automatische Tests aus.
-Gut wenn: Kriterien als lebende Dokumentation | Fachbereich, Test, Entwicklung teilen Szenarien
+Gut wenn: Kriterien als lebende Dokumentation | Fachbereich, Test, Entwicklung teilen Szenarien | Wenn Fachbereich und Test Szenarien teilen
 Besser nicht: Niemand pflegt die Szenarien
 - Szenarien in Gherkin schreiben
 - Mit Testcode verbinden

@@ -12,7 +12,7 @@ const PHASEN = ['verstehen', 'ermitteln', 'spezifizieren', 'bewerten', 'planen',
 const FORMEN = ['methode', 'artefakt', 'modell', 'meeting', 'werkzeug'];
 const ARTEN = { vorher: 'vorher', danach: 'danach', ergaenzt: 'ergaenzt', 'ergänzt': 'ergaenzt', alternative: 'alternative' };
 const STATUS = ['entwurf', 'geprueft', 'veroeffentlicht'];
-const LINKS_MIN = 3, LINKS_MAX = 7, TOOL_MIN = 2, KT_MAX = 105, KS_MAX = 38, GW_MAX = 60, VK_MAX = 44, BN_MAX = 78;
+const LINKS_MIN = 3, LINKS_MAX = 7, TOOL_MIN = 2, KT_MAX = 105, KS_MAX = 38, GW_MAX = 60, RG_MAX = 62, VK_MAX = 44, BN_MAX = 78;
 
 const errors = [];
 const err = (id, msg) => errors.push(`${id}: ${msg}`);
@@ -52,7 +52,7 @@ function parseFile(file, folder) {
     bsp: beispielKey ? { t: beispielKey.replace(/^Beispiel:?\s*/, '') || 'Beispiel', x: sec[beispielKey] } : null,
     zw: prose('Wofür'), wa: bullets('Wann sinnvoll'), wn: bullets('Wann besser nicht'), vb: bullets('Vorbereitung'),
     nr: meta.karte || '', kt: ((sec['Karte'] || '').match(/^Teaser:\s*(.*)$/m) || [])[1] || '', ks: bullets('Karte'),
-    gw: kline('Gut wenn'), vk: kline('Vorher'), bn: (kline('Besser nicht')[0] || ''),
+    gw: kline('Gut wenn'), rg: kline('Regeln'), vk: kline('Vorher'), bn: (kline('Besser nicht')[0] || ''),
     pr: prose('In der Praxis'), em: prose('Empfehlung'), qu: bullets('Quellen'),
     io: isTool ? null : { lf: bullets('Lieferanten'), in: ioItems('Eingaben'), out: ioItems('Ergebnisse'), ko: bullets('Konsumenten') },
     li: [],
@@ -86,7 +86,10 @@ function parseFile(file, folder) {
   else if (m.kt.length > KT_MAX) err(id, `Kartenteaser hat ${m.kt.length} Zeichen, erlaubt sind ${KT_MAX}`);
   if (m.ks.length < 3 || m.ks.length > 5) err(id, `Abschnitt «Karte» braucht 3 bis 5 Kurzschritte, hat ${m.ks.length}`);
   for (const x of m.ks) if (x.length > KS_MAX) err(id, `Kurzschritt «${x}» hat ${x.length} Zeichen, erlaubt sind ${KS_MAX}`);
-  if (m.gw.length !== 2) err(id, 'Abschnitt «Karte» braucht «Gut wenn: A | B» mit 2 Punkten');
+  if (m.gw.length !== 3) err(id, 'Abschnitt «Karte» braucht «Gut wenn: A | B | C» mit 3 Punkten');
+  if (!m.rg.length) m.rg = (isTool ? m.re : m.re).filter(x => x.length <= RG_MAX).slice(0, 3);
+  if (m.rg.length !== 3) err(id, `Kartenregeln: 3 Punkte bis ${RG_MAX} Zeichen nötig (Zeile «Regeln: A | B | C» ergänzen), gefunden ${m.rg.length}`);
+  for (const x of m.rg) if (x.length > RG_MAX) err(id, `Kartenregel hat ${x.length} Zeichen, erlaubt sind ${RG_MAX}: ${x}`);
   if (!isTool && m.vk.length !== 2) err(id, 'Abschnitt «Karte» braucht «Vorher: A | B» mit 2 Punkten');
   if (!m.bn) err(id, 'Abschnitt «Karte» braucht «Besser nicht: …»');
   for (const x of m.gw) if (x.length > GW_MAX) err(id, `«Gut wenn» hat ${x.length} Zeichen, erlaubt sind ${GW_MAX}: ${x}`);

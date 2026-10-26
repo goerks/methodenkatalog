@@ -35,7 +35,7 @@ Figma ist ein Online-Werkzeug für Oberflächenentwürfe und klickbare Prototype
 
 ## Karte
 Teaser: Online-Werkzeug für Oberflächenentwürfe und klickbare Prototypen.
-Gut wenn: Entwürfe früh mit Nutzern testen | Design und Anforderungen arbeiten zusammen
+Gut wenn: Entwürfe früh mit Nutzern testen | Design und Anforderungen arbeiten zusammen | Wenn Design und Anforderungen zusammenwirken
 Besser nicht: Als Ersatz für Anforderungsverwaltung
 - Wireframes und Prototypen bauen
 - Nutzertests durchführen

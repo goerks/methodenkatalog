@@ -84,7 +84,7 @@ Vorher sollten Sie wissen, wer die Beteiligten sind und wen Sie zuerst sprechen 
 
 ## Karte
 Teaser: Gespräch mit einer Person: was sie braucht, tut und stört.
-Gut wenn: Der Bereich ist neu, Hintergrund fehlt | Heikle Themen, die nicht in die Gruppe gehören
+Gut wenn: Der Bereich ist neu, Hintergrund fehlt | Heikle Themen, die nicht in die Gruppe gehören | Mit Schlüsselpersonen, die in Gruppen schweigen
 Vorher: Ziel in einem Satz festhalten | Leitfaden mit offenen Fragen
 Besser nicht: Viele gleiche Fragen: besser Fragebogen
 - Ziel und Leitfaden festlegen

@@ -84,9 +84,10 @@ Vorher liefern Stories, Personas und Workshop die Zutaten. Danach übernehmen Si
 
 ## Karte
 Teaser: Stories entlang der Nutzerreise ordnen: Überblick statt flacher Liste.
-Gut wenn: Das Backlog ist flach und unübersichtlich | Erstes Release mit minimalem Umfang
+Gut wenn: Das Backlog ist flach und unübersichtlich | Erstes Release mit minimalem Umfang | Beim Planen eines ersten Releases
 Vorher: Personas und Ziele bereithalten | Wand, zwei Zettelfarben
 Besser nicht: Kleines Vorhaben mit wenigen Stories
+Regeln: Von links nach rechts erzählen | Wichtiges oben, Details unten | Release-Linie quer ziehen
 - Persona und Ziel wählen
 - Aktivitäten links nach rechts
 - Stories darunter ordnen

@@ -84,7 +84,7 @@ Vorher liefern Stories, Priorisierung und Story Map den Inhalt. Danach pflegen S
 
 ## Karte
 Teaser: Die geordnete Liste von allem, was das Produkt braucht. Nie fertig.
-Gut wenn: In jedem agilen Vorhaben | Arbeit soll transparent und geordnet sein
+Gut wenn: In jedem agilen Vorhaben | Arbeit soll transparent und geordnet sein | Als einzige Quelle für kommende Arbeit
 Vorher: Product Owner bestimmen | Werkzeug und Eintragsformat wählen
 Besser nicht: Fester Vertrag: nur als Ergänzung
 - Verantwortliche bestimmen

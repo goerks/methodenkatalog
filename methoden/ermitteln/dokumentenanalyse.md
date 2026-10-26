@@ -83,6 +83,9 @@ Vorher klären Sie mit den Stakeholdern, welche Dokumente gelten. Danach gehen S
 
 ## Karte
 Teaser: Bestehende Unterlagen auswerten: Regeln, Begriffe, Zahlen, Widersprüche.
+Gut wenn: Fachgebiet und Begriffe verstehen | Gesetzliche Vorgaben oder Altsystem
+Vorher: Relevante Dokumente finden | Zugriff und Vertraulichkeit klären
+Besser nicht: Dokumente sind veraltet und niemand merkt es
 - Dokumente und Aktualität klären
 - Gezielt lesen, markieren
 - Fundstellen notieren

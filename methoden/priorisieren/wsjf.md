@@ -83,6 +83,9 @@ Vorher brauchen Sie Aufwandsschätzungen aus Planning Poker oder Story Points. D
 
 ## Karte
 Teaser: Priorisieren nach Verzögerungskosten geteilt durch Aufwand. Was zuerst?
+Gut wenn: Viele Anfragen, knappe Kapazität | Wert und Dringlichkeit begründen
+Vorher: Kandidaten mit Aufwand schätzen | Relative Skala wählen
+Besser nicht: Die Zahlen liefern nur Scheingenauigkeit
 - Kandidaten und Aufwand sammeln
 - Wert, Dringlichkeit, Risiko bewerten
 - Summe durch Aufwand teilen

@@ -41,6 +41,32 @@
 .kcard .tag{font-family:var(--f-body,system-ui,sans-serif)}
 .kcard .top{padding:0}
 .kcard .lg{gap:calc(var(--mm)*1.2)}
+.kcard .sum{font-size:calc(var(--mm)*3);line-height:1.27}
+.kcard .pic{border-radius:calc(var(--mm)*2);background:var(--v-bg,#F2F4F9);border:calc(var(--mm)*.25) solid var(--f);padding:calc(var(--mm)*1);display:grid;place-items:center;overflow:hidden}
+.kcard .pic svg{display:block;width:100%;height:auto;max-width:none}
+.kcard .ghostpic{aspect-ratio:420/230;background:var(--f)}
+.kcard .hero{margin:calc(var(--mm)*-4) calc(var(--mm)*-4) 0;padding:calc(var(--mm)*2.6) calc(var(--mm)*4) calc(var(--mm)*2.6);background:var(--f);border-bottom:calc(var(--mm)*.8) solid var(--c);display:grid;gap:calc(var(--mm)*2)}
+.kcard .band.flat{background:none;border:0;padding:0;margin:0}
+.kcard .hero .pic{background:#fff;border:0;width:84%;margin:0 auto}
+ul.ck{margin:0;padding:0;list-style:none;display:grid;gap:calc(var(--mm)*1.3);font-size:calc(var(--mm)*2.8)}
+ul.ck li{display:grid;grid-template-columns:calc(var(--mm)*3.6) 1fr;gap:calc(var(--mm)*1);line-height:1.2}
+ul.ck li::before{content:"✓";color:var(--c);font-weight:700}
+.kcard ol.cl.big{font-size:calc(var(--mm)*3.3);gap:calc(var(--mm)*2.2)}
+.kcard ol.cl.tight{font-size:calc(var(--mm)*2.8);gap:calc(var(--mm)*1.1)}
+.kcard .box{background:var(--f);border-radius:calc(var(--mm)*2);padding:calc(var(--mm)*2) calc(var(--mm)*2.6);display:grid;gap:calc(var(--mm)*1)}
+.kcard .box p{font-size:calc(var(--mm)*2.7);line-height:1.22}
+.kcard .box .sub{margin:0}
+.kcard .box.warn{background:#fff;border:calc(var(--mm)*.3) dashed var(--c)}
+.kcard .box.warn{padding:calc(var(--mm)*1.4) calc(var(--mm)*2.2)}.kcard ol.cl.tight{font-size:calc(var(--mm)*2.7)}
+.kcard .cin:has(.box.warn){gap:calc(var(--mm)*1.2)}
+.kcard .cin:has(.box.warn) ol.cl.tight{font-size:calc(var(--mm)*3);gap:calc(var(--mm)*1.2)}
+.kcard .cin:has(.box.warn) ul.ck{font-size:calc(var(--mm)*3);gap:calc(var(--mm)*1)}
+.kcard .cin:has(.box.warn) .fz{padding-block:calc(var(--mm)*1.6)}
+.kcard .sum{font-size:calc(var(--mm)*3.25)}
+.kcard .cin>ul.ck{font-size:calc(var(--mm)*3.05);gap:calc(var(--mm)*1.8)}
+
+.kcard .hero .pic svg{width:100%;height:calc(var(--mm)*26)}
+.kcard .hero .ghostpic{height:calc(var(--mm)*26);aspect-ratio:auto}
 /* Druckbogen: A4 quer, 4 x 2 Zellen, 6 mm Lücke (Siegelrand), Schneidführung in der Lückenmitte */
 .pg{width:297mm;height:210mm;padding:8mm;display:grid;grid-template-columns:repeat(4,65.75mm);grid-template-rows:repeat(2,94mm);gap:6mm;background:#fff;box-sizing:border-box;position:relative;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .pg .cell{position:relative;width:65.75mm;height:94mm}

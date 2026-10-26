@@ -85,6 +85,9 @@ Vorher sollten die Stakeholder bekannt sein und möglichst einige Einzelintervie
 
 ## Karte
 Teaser: Moderierte Sitzung, in der Beteiligte Anforderungen gemeinsam klären und entscheiden.
+Gut wenn: Mehrere Bereiche müssen sich einigen | Gemeinsames Bild zählt mehr als Detail
+Vorher: Ziel und Agenda schriftlich festlegen | Moderation und Protokoll trennen
+Besser nicht: Entscheider können nicht teilnehmen
 - Ziel und Agenda festlegen
 - Richtige Leute einladen
 - Ideen sammeln, Zeitboxen setzen

@@ -85,6 +85,9 @@ Vorher liefern SWOT oder die 5-Whys-Analyse Kandidaten. Danach fliessen die Risi
 
 ## Karte
 Teaser: Mögliche Schäden finden, nach Wahrscheinlichkeit und Wirkung bewerten.
+Gut wenn: Zu Beginn und bei grossen Änderungen | Abhängig von Technik, Terminen, Dritten
+Vorher: Kategorien und Skalen vereinbaren | Verschiedene Sichten einladen
+Besser nicht: Die Liste wird nie angeschaut
 - Risiken sammeln
 - Als Wenn-dann-Satz formulieren
 - Wahrscheinlichkeit und Wirkung

@@ -85,6 +85,9 @@ Vorher helfen SWOT oder Business Model Canvas für die Ausgangslage. Danach brec
 
 ## Karte
 Teaser: In wenigen Sätzen: für wen, welches Problem, welcher Nutzen. Zielpunkt des Teams.
+Gut wenn: Zu Beginn eines Produkts | Streit über Ziele oder Prioritäten
+Vorher: Zielgruppe und Problem klären | Entscheider im Raum haben
+Besser nicht: Nur ein Slogan ohne Zielgruppe
 - Zielgruppe und Problem klären
 - Vorlage ausfüllen
 - Auf eine Karte kürzen

@@ -79,6 +79,9 @@ Vorher helfen Aktivitätsdiagramm und Use Cases, um Ereignisse zu finden. Danach
 
 ## Karte
 Teaser: Zustände eines Objekts und die Ereignisse, die sie wechseln.
+Gut wenn: Objekt mit Lebenszyklus (Antrag, Vertrag) | Unklar, was in welchem Zustand gilt
+Vorher: Objekt und Lebensphasen benennen | Ereignisse der Übergänge sammeln
+Besser nicht: Objekt hat keine relevanten Zustände
 - Objekt und Lebensphasen nennen
 - Zustände benennen
 - Übergänge mit Ereignis

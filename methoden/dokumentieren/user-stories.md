@@ -90,6 +90,9 @@ Vorher klären Personas, für wen geschrieben wird. Direkt danach ergänzen Sie 
 
 ## Karte
 Teaser: Eine Anforderung aus Nutzersicht: Wer will was, wozu. Anlass für ein Gespräch.
+Gut wenn: Agil, mit laufender Verfeinerung | Fachbereich und Team arbeiten eng zusammen
+Vorher: Personas oder Rollen bereithalten | Zeit im Refinement einplanen
+Besser nicht: Vertrag verlangt Detail: zusätzlich Use Cases
 - Rolle, Wunsch, Nutzen nennen
 - INVEST prüfen
 - Akzeptanzkriterien ergänzen

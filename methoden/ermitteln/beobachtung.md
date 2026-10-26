@@ -82,6 +82,9 @@ Vorher helfen ein erstes Interview und eine Stakeholder-Analyse, um die richtige
 
 ## Karte
 Teaser: Menschen bei der echten Arbeit zusehen: Was sie tun, nicht was sie sagen.
+Gut wenn: Abläufe lassen sich schwer beschreiben | Verdacht: Alltag weicht von Doku ab
+Vorher: Fokus und Ziel festlegen | Erlaubnis der Betroffenen holen
+Besser nicht: Arbeit ist vertraulich, kein Zutritt
 - Fokus und Erlaubnis klären
 - Ruhig mitgehen, nichts erklären
 - Handlung und Deutung trennen

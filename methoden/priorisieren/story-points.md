@@ -84,6 +84,9 @@ Vorher schätzt das Team mit Planning Poker. Danach nutzen Sie die Punkte im Bac
 
 ## Karte
 Teaser: Relativer Aufwand einer Story statt Stunden. Die Velocity zeigt die Teamleistung.
+Gut wenn: Sprints und Prognosen sind nötig | Stundenschätzungen täuschen Genauigkeit vor
+Vorher: Referenzstories festlegen | Skala vereinbaren, Velocity führen
+Besser nicht: Kunde verlangt Festpreis nach Stunden
 - Referenzstories festlegen
 - Skala vereinbaren
 - Stories relativ vergleichen

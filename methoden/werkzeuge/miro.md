@@ -35,6 +35,8 @@ Miro ist ein digitales Whiteboard mit unendlicher Fläche für Workshops. Haftno
 
 ## Karte
 Teaser: Digitales Whiteboard für Workshops mit Haftnotizen, Diagrammen und Vorlagen.
+Gut wenn: Workshops mit verteilten Teams | Event Storming, Story Maps, Canvas
+Besser nicht: Ergebnisse müssen versioniert sein
 - Workshops mit Haftnotizen
 - Story Maps, Impact Maps, Canvas
 - Abstimmen und Zeitboxen

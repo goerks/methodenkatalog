@@ -35,6 +35,8 @@ Enterprise Architect ist ein umfassendes Modellierungswerkzeug für UML, BPMN un
 
 ## Karte
 Teaser: Modellierungswerkzeug für UML, BPMN und Anforderungen mit gemeinsamem Modell.
+Gut wenn: Grosse Vorhaben mit gemeinsamem Modell | Berichte aus dem Modell erzeugen
+Besser nicht: Kleine Vorhaben: oft zu schwergewichtig
 - UML und BPMN modellieren
 - Anforderungen verknüpfen
 - Berichte aus dem Modell

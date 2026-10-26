@@ -84,6 +84,9 @@ Vorher steht ein verfeinertes Backlog mit geschätzten Stories. Danach arbeitet 
 
 ## Karte
 Teaser: Das Team legt fest, was im Sprint erreicht wird: Ziel, Auswahl, Plan.
+Gut wenn: Zu Beginn jedes Sprints | Backlog und Kapazität sind bekannt
+Vorher: Backlog vorsortiert und verfeinert | Velocity und Verfügbarkeit kennen
+Besser nicht: Backlog nicht vorbereitet: erst Refinement
 - Sprintziel formulieren
 - Einträge auswählen
 - Kapazität prüfen

@@ -54,6 +54,15 @@ const M = [
    "Notizen gleich ergänzen",
    "Protokoll bestätigen lassen"
   ],
+  "gw": [
+   "Der Bereich ist neu, Hintergrund fehlt",
+   "Heikle Themen, die nicht in die Gruppe gehören"
+  ],
+  "vk": [
+   "Ziel in einem Satz festhalten",
+   "Leitfaden mit offenen Fragen"
+  ],
+  "bn": "Viele gleiche Fragen: besser Fragebogen",
   "pr": "Offene Fragen («Erzählen Sie, wie der letzte Auftrag ablief») liefern mehr als Ja-Nein-Fragen. Wer Lösungen vorschlägt, lenkt das Gespräch: erst das Problem verstehen, dann über Lösungen reden. Bewährt hat sich, zu zweit zu gehen, eine Person fragt, die andere schreibt mit. Direkt nach dem Gespräch die Notizen ergänzen, solange die Erinnerung frisch ist, und der Person das Protokoll zur Bestätigung schicken.",
   "em": "Vorher sollten Sie wissen, wer die Beteiligten sind und wen Sie zuerst sprechen (Stakeholder-Analyse). Danach lohnt es sich, die Aussagen mehrerer Interviews zu Personas zu verdichten oder offene Streitpunkte in einem Workshop zu klären. Interviews allein bilden selten ein vollständiges Bild, kombinieren Sie sie mit Beobachtung oder Dokumentenanalyse.",
   "qu": [
@@ -187,6 +196,15 @@ const M = [
    "Ergebnisse sofort sichtbar machen",
    "Protokoll mit Entscheiden senden"
   ],
+  "gw": [
+   "Mehrere Bereiche müssen sich einigen",
+   "Gemeinsames Bild zählt mehr als Detail"
+  ],
+  "vk": [
+   "Ziel und Agenda schriftlich festlegen",
+   "Moderation und Protokoll trennen"
+  ],
+  "bn": "Entscheider können nicht teilnehmen",
   "pr": "Ein guter Workshop hat eine klare Regel: Alle Beiträge zählen, Diskussionen werden zeitlich begrenzt, offene Punkte kommen auf einen Themenspeicher. Die Moderation steuert den Prozess, nicht den Inhalt. Visualisieren Sie Zwischenergebnisse sofort (Clustern, Punkte kleben), das macht Einigkeit sichtbar. Typische Fehler sind zu viele Themen, fehlende Entscheider und ein Ergebnis, das niemand nachträglich zusammenträgt.",
   "em": "Vorher sollten die Stakeholder bekannt sein und möglichst einige Einzelinterviews stattgefunden haben, damit nicht alle bei null starten. Direkt danach das Protokoll mit Entscheidungen und offenen Punkten verschicken. Meist folgen Priorisierung (MoSCoW) oder Story Mapping, je nachdem ob agil oder klassisch gearbeitet wird.",
   "qu": [
@@ -320,6 +338,15 @@ const M = [
    "Auffälligkeiten festhalten",
    "Eindrücke im Gespräch prüfen"
   ],
+  "gw": [
+   "Abläufe lassen sich schwer beschreiben",
+   "Verdacht: Alltag weicht von Doku ab"
+  ],
+  "vk": [
+   "Fokus und Ziel festlegen",
+   "Erlaubnis der Betroffenen holen"
+  ],
+  "bn": "Arbeit ist vertraulich, kein Zutritt",
   "pr": "Ankommen und zurückhalten: Sie sind Gast, nicht Prüfer. Notieren Sie Beobachtungen und Deutungen getrennt. Fragen stellen Sie am besten in Pausen oder in der Variante «Meister und Lehrling», bei der die Person erklärt, was sie tut. Achten Sie auf Medienbrüche, Zettel am Bildschirm, doppelte Eingaben und Wartezeiten. Das sind meist die besten Hinweise auf Verbesserungen.",
   "em": "Vorher helfen ein erstes Interview und eine Stakeholder-Analyse, um die richtigen Personen zu wählen. Nachher werden die Beobachtungen zu Aktivitätsdiagrammen und Personas verdichtet. Gleichen Sie Ihre Eindrücke in einem Folgeinterview ab, um Fehldeutungen zu vermeiden.",
   "qu": [
@@ -441,6 +468,15 @@ const M = [
    "Vertraulich dokumentieren",
    "Bei Meilensteinen aktualisieren"
   ],
+  "gw": [
+   "Ganz am Anfang, vor der Erhebung",
+   "Viele Bereiche oder externe Parteien"
+  ],
+  "vk": [
+   "Erste Liste im Team sammeln",
+   "Vertraulichkeit der Bewertung klären"
+  ],
+  "bn": "Sehr kleines Vorhaben: Liste genügt",
   "pr": "Fragen Sie sich je Gruppe: Wer nutzt, wer bezahlt, wer entscheidet, wer wird betroffen, wer kann blockieren? Bewerten Sie nach Einfluss und Interesse und leiten Sie daraus die Strategie ab: eng einbinden, informieren, zufriedenstellen oder beobachten. Die Analyse ist ein lebendes Dokument. Prüfen Sie sie bei jedem Meilenstein und gehen Sie vertraulich damit um.",
   "em": "Vorher ist ein Kontextdiagramm nützlich, weil es externe Parteien sichtbar macht. Danach folgen Interviews mit den Schlüsselpersonen und der Anforderungsworkshop. Aus den Gruppen entstehen später Personas, wenn Nutzer im Zentrum stehen.",
   "qu": [
@@ -569,6 +605,15 @@ const M = [
    "Zitate aus Gesprächen nutzen",
    "Sichtbar aufhängen, verwenden"
   ],
+  "gw": [
+   "Das Team sieht die Nutzer verschieden",
+   "Vor User Stories und Oberflächen"
+  ],
+  "vk": [
+   "Interviews und Nutzungsdaten sammeln",
+   "Muster in Zielen und Frust suchen"
+  ],
+  "bn": "Ohne echte Daten: erst Interviews führen",
   "pr": "Drei bis fünf Personas reichen. Eine Persona pro Nutzergruppe, mit klarer primärer Persona, die Entscheidungen leitet. Verwenden Sie Zitate und Details aus echten Gesprächen, erfundene Eigenschaften ohne Datenbasis führen in die Irre. Hängen Sie die Personas sichtbar auf und beziehen Sie sich in Diskussionen darauf («Würde Frau Keller das so tun?»).",
   "em": "Vorher müssen Interviews oder Beobachtungen vorliegen, sonst entsteht ein Wunschbild. Danach schreiben Sie User Stories aus der Sicht der Persona und prüfen Entwürfe an Prototypen mit echten Vertretern der Gruppe.",
   "qu": [
@@ -696,6 +741,15 @@ const M = [
    "Verschicken, Rücklauf verfolgen",
    "Auswerten, Verzerrung prüfen"
   ],
+  "gw": [
+   "Viele Personen an mehreren Standorten",
+   "Aussagen aus Interviews überprüfen"
+  ],
+  "vk": [
+   "Zielgruppe und Frage festlegen",
+   "Pilot mit 3 bis 5 Personen"
+  ],
+  "bn": "Fragen noch unklar: erst Interviews",
   "pr": "Kurz halten: Unter zehn Minuten sinkt die Abbruchquote deutlich. Formulieren Sie neutral und eindeutig, vermeiden Sie doppelte Fragen («schnell und günstig?») und Suggestivfragen. Schliessen Sie mit einem offenen Feld für Anmerkungen. Werten Sie ehrlich aus: Ein kleiner Rücklauf von nur engagierten Personen ist verzerrt.",
   "em": "Vorher klären Interviews, welche Fragen überhaupt relevant sind, und die Stakeholder-Analyse, wen Sie befragen. Danach fliessen die Ergebnisse in Personas, oder in Kano und Priorisierung. Auffällige Antworten besprechen Sie anschliessend im Gespräch nach.",
   "qu": [
@@ -832,6 +886,15 @@ const M = [
    "Stärken und Chancen kombinieren",
    "3 bis 5 Folgerungen ableiten"
   ],
+  "gw": [
+   "Zu Beginn, um die Lage zu klären",
+   "Die Lagebilder gehen auseinander"
+  ],
+  "vk": [
+   "Gegenstand klar abgrenzen",
+   "Teilnehmende mit unterschiedlichen Sichten"
+  ],
+  "bn": "Für Details der Umsetzung zu grob",
   "pr": "Erst sammeln, dann ordnen: Jeder schreibt still Punkte auf Zettel, danach gruppieren. Trennen Sie strikt zwischen innen (Stärken, Schwächen) und aussen (Chancen, Risiken). Die Analyse wird erst nützlich, wenn Sie Kombinationen betrachten: Welche Stärke nutzt welche Chance? Welche Schwäche verstärkt welches Risiko? Leiten Sie daraus drei bis fünf konkrete Folgerungen ab.",
   "em": "Vorher helfen Stakeholder-Analyse und Business Model Canvas für ein gemeinsames Bild der Lage. Danach schärfen Sie die Produktvision und vertiefen die wichtigsten Risiken in der Risikoanalyse.",
   "qu": [
@@ -966,6 +1029,15 @@ const M = [
    "Kette rückwärts prüfen",
    "Gegenmassnahme ableiten"
   ],
+  "gw": [
+   "Eine Lösung wird gefordert, Problem unklar",
+   "Fehler oder Störungen kehren wieder"
+  ],
+  "vk": [
+   "Problem in einem Satz formulieren",
+   "Leute einladen, die es kennen"
+  ],
+  "bn": "Mehrere Ursachen: eine Kette reicht nicht",
   "pr": "Fünf ist ein Richtwert, nicht eine Pflicht: Hören Sie auf, wenn eine beeinflussbare Ursache erreicht ist. Fragen Sie nach Prozess und System, nicht nach Personen («Warum konnte das passieren?» statt «Wer war es?»). Prüfen Sie die Kette rückwärts: Würde die Ursache das Problem wirklich erklären? Bei verzweigten Ursachen verfolgen Sie mehrere Ketten.",
   "em": "Vorher steht meist eine Beobachtung oder ein Interview, das ein Problem sichtbar gemacht hat. Danach formulieren Sie User Stories, die die Ursache beheben, und bewerten verbleibende Risiken in der Risikoanalyse.",
   "qu": [
@@ -1099,6 +1171,15 @@ const M = [
    "Widersprüche klären",
    "Begriffe ins Glossar"
   ],
+  "gw": [
+   "Fachgebiet und Begriffe verstehen",
+   "Gesetzliche Vorgaben oder Altsystem"
+  ],
+  "vk": [
+   "Relevante Dokumente finden",
+   "Zugriff und Vertraulichkeit klären"
+  ],
+  "bn": "Dokumente sind veraltet und niemand merkt es",
   "pr": "Lesen Sie gezielt, nicht vollständig: Markieren Sie Regeln, Begriffe, Zahlen und Widersprüche. Führen Sie eine Quellenliste mit Fundstelle, damit sich später jede Anforderung belegen lässt. Fragen Sie bei Widersprüchen nach, bevor Sie sich entscheiden. Begriffe sammeln Sie direkt für das Glossar.",
   "em": "Vorher klären Sie mit den Stakeholdern, welche Dokumente gelten. Danach gehen Sie mit konkreten Fragen in Interviews und übernehmen Begriffe ins Glossar und Regeln in die Geschäftsregeln.",
   "qu": [
@@ -1233,6 +1314,15 @@ const M = [
    "Befehle, Akteure, Regeln ergänzen",
    "Offene Fragen markieren"
   ],
+  "gw": [
+   "Komplexer, unbekannter Geschäftsbereich",
+   "Fachleute und Technik reden aneinander vorbei"
+  ],
+  "vk": [
+   "Lange freie Wand oder digitales Board",
+   "Orange Zettel und dicke Stifte"
+  ],
+  "bn": "Schlüsselpersonen können nicht kommen",
   "pr": "Beginnen Sie mit dem «Chaos»: Alle schreiben Ereignisse in der Vergangenheitsform («Auftrag erfasst») und kleben sie ohne viel Reden an die Wand. Danach sortieren Sie nach Zeit, entfernen Doppelte und markieren offene Fragen mit lila Zetteln. Ergänzen Sie Befehle, Akteure und Regeln erst, wenn die Ereignislinie steht. Offene Fragen sind kein Fehler, sondern das wertvollste Ergebnis.",
   "em": "Vorher klären Workshop-Grundlagen und Stakeholder-Analyse, wer dabei sein muss. Nachher überführen Sie die Ergebnisse in Domänenmodell, Glossar und Aktivitätsdiagramme und leiten User Stories ab.",
   "qu": [
@@ -1380,6 +1470,15 @@ const M = [
    "Im Team schätzen",
    "Zu grosse Stories teilen"
   ],
+  "gw": [
+   "Agil, mit laufender Verfeinerung",
+   "Fachbereich und Team arbeiten eng zusammen"
+  ],
+  "vk": [
+   "Personas oder Rollen bereithalten",
+   "Zeit im Refinement einplanen"
+  ],
+  "bn": "Vertrag verlangt Detail: zusätzlich Use Cases",
   "pr": "Gute Stories folgen INVEST: unabhängig, verhandelbar, wertvoll, schätzbar, klein, testbar. Die drei C nach Ron Jeffries gelten bis heute: Card (Karte), Conversation (Gespräch), Confirmation (Akzeptanzkriterien). Schreiben Sie zuerst den Nutzen, formulieren Sie Rolle und Wunsch danach. Sind Stories zu gross, teilen Sie sie vertikal, so dass jede Teilstory einen sichtbaren Nutzen liefert.",
   "em": "Vorher klären Personas, für wen geschrieben wird. Direkt danach ergänzen Sie Akzeptanzkriterien und schätzen im Team. Zu grosse Stories teilen Sie mit Story Splitting, bevor sie in den Sprint kommen.",
   "qu": [
@@ -1535,6 +1634,15 @@ const M = [
    "Vor- und Nachbedingung",
    "Mit Fachleuten prüfen"
   ],
+  "gw": [
+   "Komplexe Abläufe mit vielen Ausnahmen",
+   "Formale Vorgaben, Basis für Abnahme"
+  ],
+  "vk": [
+   "Akteure und Ziele sammeln",
+   "Vorlage wählen, Fachleute einplanen"
+  ],
+  "bn": "Anforderungen ändern sich schnell",
   "pr": "Ein Use Case hat ein Ziel eines Akteurs, nicht eine Funktion des Systems. Schreiben Sie in kurzen Sätzen der Form Akteur-Verb-Objekt. Der Hauptablauf läuft ohne Fehler durch, Alternativen und Fehlerfälle folgen separat. Typische Fehler sind zu feine Schritte («Knopf klicken») und die Vermischung mit Oberflächen- und Datenbankdetails.",
   "em": "Vorher klären das Use-Case-Diagramm und das Kontextdiagramm, welche Akteure und Ziele es gibt. Danach leiten Sie Akzeptanzkriterien und Testfälle ab und nehmen den Use Case ins Pflichtenheft auf.",
   "qu": [
@@ -1672,6 +1780,15 @@ const M = [
    "Dann: erwartetes Ergebnis",
    "Grenz- und Fehlerfälle ergänzen"
   ],
+  "gw": [
+   "Für jede Story vor dem Sprint",
+   "Alle verstehen «fertig» gleich"
+  ],
+  "vk": [
+   "Story mit Rolle und Nutzen",
+   "Product Owner, Entwicklung, Test im Gespräch"
+  ],
+  "bn": "Rein technische Aufgaben ohne Verhalten",
   "pr": "Arbeiten Sie mit Beispielen: Ein konkreter Fall verrät mehr als eine allgemeine Regel. Ein Szenario testet eine Sache. Verwenden Sie die Sprache des Fachbereichs, keine Technik. Besonders wertvoll sind Grenz- und Fehlerfälle: «Was passiert bei Betrag null?». Halten Sie Kriterien so kurz, dass sie lesbar bleiben, meist drei bis sieben je Story.",
   "em": "Vorher steht die Story oder der Use Case, aus dem sie abgeleitet werden. Danach prüft das Team die Kriterien im Review, ergänzt sie in der Definition of Ready und nutzt sie für den Abnahmetest.",
   "qu": [
@@ -1811,6 +1928,15 @@ const M = [
    "Bei Fehlern erweitern",
    "Regelmässig überprüfen"
   ],
+  "gw": [
+   "Stories bleiben halbfertig liegen",
+   "Neues Team oder mehrere Teams"
+  ],
+  "vk": [
+   "Probleme im Ablauf sammeln",
+   "Ganzes Team einladen"
+  ],
+  "bn": "Die DoR wird zur starren Hürde",
   "pr": "Starten Sie klein mit fünf bis acht Punkten und erweitern Sie nur, wenn Fehler auftreten. DoD-Beispiele: Code geprüft, Tests grün, Dokumentation aktualisiert, vom Product Owner angeschaut. DoR-Beispiele: Nutzen klar, Akzeptanzkriterien vorhanden, geschätzt, Abhängigkeiten bekannt. Behandeln Sie die DoD als verbindlich und die DoR als Leitplanke.",
   "em": "Vorher helfen Stories und Akzeptanzkriterien, damit die Kriterien konkret werden. Danach prüfen Sie im Refinement gegen die DoR und im Review gegen die DoD.",
   "qu": [
@@ -1944,6 +2070,15 @@ const M = [
    "Konflikte gewichten",
    "Annahmen notieren"
   ],
+  "gw": [
+   "Früh, bevor die Architektur steht",
+   "«Schnell» und «sicher» bleiben vage"
+  ],
+  "vk": [
+   "ISO 25010 als Checkliste",
+   "Betrieb, Sicherheit, Nutzer einladen"
+  ],
+  "bn": "Zahlen sind nur geraten: erst messen",
   "pr": "Gehen Sie die Qualitätsmerkmale durch und fragen Sie je Merkmal: Wie viel genügt, woran messen wir es? «Antwortzeit unter zwei Sekunden bei 200 gleichzeitigen Nutzern» ist prüfbar, «schnell» nicht. Priorisieren Sie, denn Qualitäten stehen im Konflikt (Sicherheit gegen Bedienbarkeit). Halten Sie Annahmen fest.",
   "em": "Vorher sind die wichtigsten Stories und Nutzer bekannt. Danach nehmen Sie die Kriterien in die Definition of Done auf und ins Pflichtenheft. Kano hilft, Qualitätsmerkmale nach Wirkung auf die Zufriedenheit zu sortieren.",
   "qu": [
@@ -2074,6 +2209,15 @@ const M = [
    "Im Review prüfen",
    "Änderungen geregelt führen"
   ],
+  "gw": [
+   "Festpreis oder Ausschreibung",
+   "Hohe regulatorische Anforderungen"
+  ],
+  "vk": [
+   "Struktur festlegen (ISO 29148)",
+   "Glossar und Kontextdiagramm bereit"
+  ],
+  "bn": "Ziele unklar, schnelles Lernen: agil",
   "pr": "Jede Anforderung sollte eindeutig nummeriert, einzeln prüfbar und widerspruchsfrei sein. Trennen Sie Muss- und Kann-Anforderungen. Halten Sie den Umfang schlank: Was nicht gelesen wird, wird nicht geprüft. Pflegen Sie Änderungen über ein geregeltes Verfahren, sonst weichen Dokument und Realität auseinander.",
   "em": "Vorher müssen Use Cases, Qualitätsanforderungen und Kontext vorliegen. Danach prüfen Sie das Dokument im Review, halten Rückverfolgbarkeit zu Tests fest und steuern Änderungen im Änderungsmanagement.",
   "qu": [
@@ -2222,6 +2366,15 @@ const M = [
    "Sichtbar aufhängen",
    "Grosse Wünsche daran messen"
   ],
+  "gw": [
+   "Zu Beginn eines Produkts",
+   "Streit über Ziele oder Prioritäten"
+  ],
+  "vk": [
+   "Zielgruppe und Problem klären",
+   "Entscheider im Raum haben"
+  ],
+  "bn": "Nur ein Slogan ohne Zielgruppe",
   "pr": "Eine gute Vision passt auf eine Karteikarte und ist so konkret, dass sie auch Nein sagen lässt. Vorlage nach Moore: Für [Zielgruppe], die [Bedürfnis] hat, ist [Produkt] ein [Kategorie], das [Nutzen]. Anders als [Alternative] bietet es [Unterscheidung]. Hängen Sie die Vision sichtbar auf und prüfen Sie jede grosse Anforderung daran.",
   "em": "Vorher helfen SWOT oder Business Model Canvas für die Ausgangslage. Danach brechen Sie die Vision im Impact Mapping auf Ziele und Wirkungen herunter und planen Etappen in der Roadmap.",
   "qu": [
@@ -2368,6 +2521,15 @@ const M = [
    "Streit bis zur Einigung",
    "Aus Stories darauf verweisen"
   ],
+  "gw": [
+   "Ab Projektstart, laufend",
+   "Begriffe führen zu Missverständnissen"
+  ],
+  "vk": [
+   "Verantwortliche Person bestimmen",
+   "Ablageort für alle wählen"
+  ],
+  "bn": "Begriffe werden nie benutzt",
   "pr": "Fachbegriffe in der Sprache des Fachbereichs definieren, nicht der IT. Ein Begriff, eine Bedeutung: Streiten Sie bei Mehrdeutigkeit, bis eine Definition gilt. Verlinken Sie das Glossar aus Stories und Spezifikationen. Ein kurzes Glossar, das gelesen wird, ist besser als ein vollständiges, das niemand kennt.",
   "em": "Vorher liefern Dokumentenanalyse und Event Storming die Begriffe. Danach hilft es dem Domänenmodell und den Geschäftsregeln, und es gehört ins Pflichtenheft.",
   "qu": [
@@ -2511,6 +2673,15 @@ const M = [
    "Auf Widersprüche prüfen",
    "In Tests übernehmen"
   ],
+  "gw": [
+   "Regelreiche Bereiche wie Bank, Versicherung",
+   "Eine Regel gilt an mehreren Stellen"
+  ],
+  "vk": [
+   "Regelquellen und Verantwortliche klären",
+   "Vorlage: Nummer, Text, Quelle, Gültigkeit"
+  ],
+  "bn": "Wenige stabile Regeln: Kriterien genügen",
   "pr": "Formulieren Sie Regeln atomar und im Aktiv («Eine Bestellung über 500 Franken braucht eine Freigabe»). Unterscheiden Sie Bedingungen, Berechnungen und Ableitungen. Nennen Sie je Regel die Quelle und den Eigner. Entscheidungstabellen helfen bei Kombinationen. Prüfen Sie Regeln auf Widersprüche.",
   "em": "Vorher liefern Dokumentenanalyse und Glossar die Grundlage. Danach werden Regeln in Akzeptanzkriterien umgesetzt und ins Pflichtenheft übernommen. Das Domänenmodell und BPMN zeigen, wo Regeln im Ablauf greifen.",
   "qu": [
@@ -2651,6 +2822,15 @@ const M = [
    "Teile gegen INVEST prüfen",
    "Neu schätzen"
   ],
+  "gw": [
+   "Die Story passt nicht in einen Sprint",
+   "Das Team kann sie nicht schätzen"
+  ],
+  "vk": [
+   "Story und Kriterien im Blick",
+   "Teilungsmuster bereithalten"
+  ],
+  "bn": "Die Story ist schon klein und klar",
   "pr": "Fragen Sie: Welcher kleinste Teil bringt schon Nutzen? Bewährte Schnitte: nach Workflow-Schritten, nach Geschäftsregeln, nach Datenvarianten, nach einfachem und kompliziertem Fall, nach Nutzerrolle. Schneiden Sie nie nach Schichten («Datenbank», «Oberfläche»). Neue Teile prüfen Sie wieder gegen INVEST.",
   "em": "Vorher steht die grosse Story im Backlog. Danach schätzen Sie die Teile mit Planning Poker. Die Story Map zeigt die Reihenfolge der Teile, und die Definition of Ready prüft, ob sie bereit sind.",
   "qu": [
@@ -2786,6 +2966,15 @@ const M = [
    "Schwimmbahnen für Rollen",
    "Mit Beteiligten prüfen"
   ],
+  "gw": [
+   "Ablauf verstehen und klären",
+   "Entscheidungen und parallele Schritte"
+  ],
+  "vk": [
+   "Ablauf und Ziel abgrenzen",
+   "Notation klären, die alle kennen"
+  ],
+  "bn": "Zuständigkeiten im Vordergrund: BPMN",
   "pr": "Ein Start, mindestens ein Ende. Jede Verzweigung hat Bedingungen an allen ausgehenden Pfeilen. Benennen Sie Aktionen mit Verb und Objekt («Antrag prüfen»). Halten Sie eine Seite lesbar, grössere Abläufe zerlegen Sie. Mit Schwimmbahnen zeigen Sie, wer was tut.",
   "em": "Vorher liefern Beobachtung oder Interviews den Ablauf. Danach beschreiben Use Cases Details, und das Zustandsdiagramm hilft, wenn Objekte ihren Zustand wechseln. Bei organisationsübergreifenden Prozessen wechseln Sie zu BPMN.",
   "qu": [
@@ -2919,6 +3108,15 @@ const M = [
    "Verbindungen ziehen",
    "Beschreibungen ankündigen"
   ],
+  "gw": [
+   "Funktionsumfang klären",
+   "Überblick für Fachleute"
+  ],
+  "vk": [
+   "Akteure und Ziele sammeln",
+   "Systemgrenze festlegen"
+  ],
+  "bn": "Details gefragt: besser Beschreibungen",
   "pr": "Benennen Sie Use Cases mit Verb und Objekt. Zeichnen Sie nur, was Gegenstand des Systems ist, nicht Abläufe. Zu viele «include» und «extend» verwirren, nutzen Sie sie sparsam. Das Diagramm ist ein Überblick, die Substanz liegt in den Beschreibungen.",
   "em": "Vorher helfen Stakeholder-Analyse und Kontextdiagramm. Danach beschreiben Sie jeden Use Case im Detail.",
   "qu": [
@@ -3041,6 +3239,15 @@ const M = [
    "Entscheidungen ergänzen",
    "Mit Beteiligten prüfen"
   ],
+  "gw": [
+   "Prozesse über mehrere Rollen",
+   "Verbessern oder automatisieren"
+  ],
+  "vk": [
+   "Prozessgrenzen und Ziel festlegen",
+   "Notation auf den Kern beschränken"
+  ],
+  "bn": "Kleiner Ablauf: eine Liste genügt",
   "pr": "Starten Sie auf hoher Ebene und verfeinern Sie nur das Wichtige. Benennen Sie Aufgaben mit Verb und Objekt und Ereignisse im Partizip («Antrag eingegangen»). Nutzen Sie wenige Symbole, das macht das Modell verständlich. Prüfen Sie jedes Modell im Gespräch mit den Beteiligten, nicht nur am Schreibtisch.",
   "em": "Vorher klären Kontextdiagramm und Workshop den Umfang. Danach leiten Sie aus den Aufgaben User Stories ab und klären Regeln in den Geschäftsregeln. Bei einfacheren Abläufen reicht ein Aktivitätsdiagramm.",
   "qu": [
@@ -3175,6 +3382,15 @@ const M = [
    "Was liefern wir dafür?",
    "Wirksamste Pfade wählen"
   ],
+  "gw": [
+   "Wunschliste ohne erkennbares Ziel",
+   "Start einer agilen Entwicklung"
+  ],
+  "vk": [
+   "Messbares Ziel als Startfrage",
+   "Wand und Zettel in vier Farben"
+  ],
+  "bn": "Das Ziel darf nicht diskutiert werden",
   "pr": "Gehen Sie von der Mitte nach aussen: Ziel, dann Akteure, dann Wirkungen auf deren Verhalten, zuletzt Lieferungen. Resultate sollten messbar sein («Anteil Neukunden steigt von 5 auf 8 Prozent»). Prüfen Sie jede Lieferung: Welche Wirkung erzeugt sie? Zweige ohne Antwort streichen Sie. Wählen Sie die erfolgversprechendsten Pfade als nächste Schritte.",
   "em": "Vorher sollten Vision oder Geschäftsmodell vorliegen. Danach entwickeln Sie aus den Lieferungen User Stories oder legen sie auf die Story Map.",
   "qu": [
@@ -3309,6 +3525,15 @@ const M = [
    "Grenze mit allen klären",
    "In die Spezifikation"
   ],
+  "gw": [
+   "Zu Beginn: Umfang und Schnittstellen",
+   "Viele Nachbarsysteme"
+  ],
+  "vk": [
+   "Vorhaben grob beschreiben",
+   "Akteure und Nachbarsysteme auflisten"
+  ],
+  "bn": "Für Details: Prozess- und Datenmodelle",
   "pr": "Das System ist genau ein Kasten, Details bleiben drinnen. Benennen Sie jeden Pfeil mit dem, was fliesst (Auftrag, Rechnung, Statusmeldung). Alles, was Sie nicht kontrollieren, liegt ausserhalb. Wenn die Grenze strittig ist, zeichnen Sie sie zweimal und diskutieren Sie die Differenz. Das ist oft der klärendste Teil.",
   "em": "Vorher sollten die Stakeholder bekannt sein. Danach folgt das Use-Case-Diagramm für die Funktionen aus Sicht der Akteure und eine BPMN-Sicht auf die Prozesse. Das Diagramm gehört später ins Pflichtenheft.",
   "qu": [
@@ -3442,6 +3667,15 @@ const M = [
    "Ressourcen, Aktivitäten, Partner",
    "Ist und Ziel vergleichen"
   ],
+  "gw": [
+   "Geschäftlicher Zusammenhang ist unklar",
+   "Neue Produkte oder Geschäftsfelder"
+  ],
+  "vk": [
+   "Canvas und Zettel bereitstellen",
+   "Geschäfts- und Fachsicht einladen"
+  ],
+  "bn": "Interne Systeme ohne Erlösmodell",
   "pr": "Starten Sie rechts mit den Kunden und dem Wertangebot, erst dann die linke Seite. Nutzen Sie je Baustein wenige knappe Stichworte. Vergleichen Sie Ist und Ziel mit zwei Farben. Mit der Frage «Was wäre, wenn sich dieser Baustein ändert?» entstehen die interessantesten Diskussionen.",
   "em": "Vorher klären Sie Beteiligte und, wenn nötig, die Lage mit einer SWOT-Analyse. Danach schärfen Sie die Produktvision und leiten im Impact Mapping Ziele ab.",
   "qu": [
@@ -3578,6 +3812,15 @@ const M = [
    "Sackgassen prüfen",
    "Tests je Übergang ableiten"
   ],
+  "gw": [
+   "Objekt mit Lebenszyklus (Antrag, Vertrag)",
+   "Unklar, was in welchem Zustand gilt"
+  ],
+  "vk": [
+   "Objekt und Lebensphasen benennen",
+   "Ereignisse der Übergänge sammeln"
+  ],
+  "bn": "Objekt hat keine relevanten Zustände",
   "pr": "Zustände sind Substantive oder Adjektive («offen», «geprüft»), Übergänge benennen Sie mit Ereignis und Bedingung. Prüfen Sie: Gibt es Zustände ohne Ausgang? Sind Endzustände erreichbar? Gibt es unzulässige Übergänge? Gerade diese Fragen decken Fachlücken auf.",
   "em": "Vorher helfen Aktivitätsdiagramm und Use Cases, um Ereignisse zu finden. Danach leiten Sie Akzeptanzkriterien für jeden Übergang ab.",
   "qu": [
@@ -3696,6 +3939,15 @@ const M = [
    "Kardinalitäten ergänzen",
    "Fachleute lesen laut vor"
   ],
+  "gw": [
+   "Komplexe Fachlichkeit",
+   "Technik und Fachbereich uneins über Begriffe"
+  ],
+  "vk": [
+   "Glossar bereitlegen",
+   "Fachleute und Architektur einladen"
+  ],
+  "bn": "Die Domäne ist einfach",
   "pr": "Zeichnen Sie nur fachlich relevante Begriffe und benennen Sie Beziehungen mit Verben («Kunde erteilt Auftrag»), mit Kardinalitäten. Verzichten Sie auf technische Felder. Lassen Sie Fachleute das Modell laut vorlesen: Wenn der Satz falsch klingt, stimmt das Modell nicht.",
   "em": "Vorher liefern Glossar und Event Storming die Begriffe. Danach ergänzen Geschäftsregeln und Zustandsdiagramm das Modell. Es gehört ins Pflichtenheft.",
   "qu": [
@@ -3835,6 +4087,15 @@ const M = [
    "Won't bewusst festhalten",
    "Mit Stakeholdern abstimmen"
   ],
+  "gw": [
+   "Feste Frist, mehr Wünsche als Platz",
+   "Schnelle Entscheide im Workshop"
+  ],
+  "vk": [
+   "Anforderungsliste bereitlegen",
+   "Zeitrahmen und Ziel klären"
+  ],
+  "bn": "Fast alles ist Must: dann WSJF",
   "pr": "Streiten Sie zuerst über die Definition von Must: Ohne dieses Merkmal geht das Release nicht live, ist rechtswidrig oder unsicher. Als Faustregel höchstens 60 Prozent des Aufwands als Must, der Rest ist Puffer. Won't ist eine Entscheidung, keine Ablage: Halten Sie fest, dass es nur für diesen Zeitraum gilt. Ein Gespräch über Grenzfälle ist wertvoller als die Einteilung selbst.",
   "em": "Vorher sammelt ein Workshop die Anforderungen. Danach übernehmen Sie die Reihenfolge ins Backlog. Bei Zweifeln kann Kano oder WSJF eine zweite Meinung liefern.",
   "qu": [
@@ -3966,6 +4227,15 @@ const M = [
    "Antworten auswerten",
    "Einordnen, später wiederholen"
   ],
+  "gw": [
+   "Viele Nutzer mit freier Wahl",
+   "Features nach Wirkung sortieren"
+  ],
+  "vk": [
+   "Fragenpaare je Merkmal formulieren",
+   "Stichprobe der Zielgruppe befragen"
+  ],
+  "bn": "Interne Pflichtsysteme ohne Wahl",
   "pr": "Je Merkmal stellen Sie zwei Fragen und lassen aus den Antworten ablesen, ob es erwartet, linear oder begeisternd ist. Begeisterungsmerkmale von heute sind morgen Basis. Wiederholen Sie die Erhebung deshalb von Zeit zu Zeit. Mit mindestens 15 bis 20 Befragten je Zielgruppe sind Muster erkennbar.",
   "em": "Vorher helfen Personas, die richtigen Befragten zu wählen. Danach ordnen Sie die Merkmale im Backlog ein. Basismerkmale sind Pflicht und gehören zu den Qualitätsanforderungen.",
   "qu": [
@@ -4096,6 +4366,15 @@ const M = [
    "Rangliste bilden",
    "Ausreisser besprechen"
   ],
+  "gw": [
+   "Viele Anfragen, knappe Kapazität",
+   "Wert und Dringlichkeit begründen"
+  ],
+  "vk": [
+   "Kandidaten mit Aufwand schätzen",
+   "Relative Skala wählen"
+  ],
+  "bn": "Die Zahlen liefern nur Scheingenauigkeit",
   "pr": "Verzögerungskosten setzen sich zusammen aus Geschäftswert, Zeitkritikalität und Risikominderung. Teilen Sie die Summe durch den Aufwand. Bewerten Sie relativ: Zuerst den kleinsten Eintrag je Spalte bestimmen und alle anderen dagegen. Diskutieren Sie Ausreisser, das Gespräch ist wichtiger als die Nachkommastelle.",
   "em": "Vorher brauchen Sie Aufwandsschätzungen aus Planning Poker oder Story Points. Danach fliesst die Reihenfolge ins Backlog und die Roadmap. Als Alternative zu MoSCoW, wenn feinere Unterscheidung nötig ist.",
   "qu": [
@@ -4229,6 +4508,15 @@ const M = [
    "Höchste und tiefste begründen",
    "Neu schätzen bis Einigung"
   ],
+  "gw": [
+   "Im Refinement, vor dem Sprint",
+   "Meinungen zum Aufwand gehen auseinander"
+  ],
+  "vk": [
+   "Stories mit Kriterien vorbereiten",
+   "Referenzstory und Karten bereit"
+  ],
+  "bn": "Stories sind unklar: erst klären",
   "pr": "Die Story wird kurz erklärt, dann legen alle verdeckt eine Karte und decken gleichzeitig auf. Die höchste und die niedrigste Schätzung begründen ihre Sicht, danach wird neu geschätzt. Meist genügen zwei bis drei Runden. Geht es nicht, ist die Story nicht verstanden oder zu gross: Zurück ins Splitting.",
   "em": "Vorher müssen Stories verstanden und annähernd gleich gross sein, etwa nach Story Splitting. Danach sind die Schätzungen Story Points und fliessen ins Backlog. Sie sind Grundlage für WSJF und für die Sprintplanung.",
   "qu": [
@@ -4361,6 +4649,15 @@ const M = [
    "Velocity der letzten Sprints",
    "Nie in Stunden umrechnen"
   ],
+  "gw": [
+   "Sprints und Prognosen sind nötig",
+   "Stundenschätzungen täuschen Genauigkeit vor"
+  ],
+  "vk": [
+   "Referenzstories festlegen",
+   "Skala vereinbaren, Velocity führen"
+  ],
+  "bn": "Kunde verlangt Festpreis nach Stunden",
   "pr": "Punkte sind relativ: Eine 8 ist ungefähr viermal so viel wie eine 2. Sie gehören dem Team, andere nutzen sie nicht als Leistungsmass. Die Velocity ist der Durchschnitt der letzten drei bis fünf Sprints. Rechnen Sie nicht auf Stunden um, das zerstört den Nutzen.",
   "em": "Vorher schätzt das Team mit Planning Poker. Danach nutzen Sie die Punkte im Backlog und in der Sprintplanung und als Aufwand für WSJF.",
   "qu": [
@@ -4493,6 +4790,15 @@ const M = [
    "Massnahme und Eigner",
    "Regelmässig überprüfen"
   ],
+  "gw": [
+   "Zu Beginn und bei grossen Änderungen",
+   "Abhängig von Technik, Terminen, Dritten"
+  ],
+  "vk": [
+   "Kategorien und Skalen vereinbaren",
+   "Verschiedene Sichten einladen"
+  ],
+  "bn": "Die Liste wird nie angeschaut",
   "pr": "Formulieren Sie Risiken als Ursache-Wirkung-Satz («Wenn der Partner spät liefert, verschiebt sich der Start»). Bewerten Sie in einer Matrix und konzentrieren Sie sich auf die obersten. Jede Massnahme hat eine verantwortliche Person und ein Datum. Prüfen Sie die Liste regelmässig, zum Beispiel in jedem Sprint.",
   "em": "Vorher liefern SWOT oder die 5-Whys-Analyse Kandidaten. Danach fliessen die Risiken in die Priorisierung (WSJF) und das Backlog, etwa als Spike-Stories.",
   "qu": [
@@ -4633,6 +4939,15 @@ const M = [
    "Oben klein, unten grob",
    "Regelmässig ausmisten"
   ],
+  "gw": [
+   "In jedem agilen Vorhaben",
+   "Arbeit soll transparent und geordnet sein"
+  ],
+  "vk": [
+   "Product Owner bestimmen",
+   "Werkzeug und Eintragsformat wählen"
+  ],
+  "bn": "Fester Vertrag: nur als Ergänzung",
   "pr": "Oben stehen kleine, klare, bereite Einträge, unten grobe Ideen. Der Product Owner ordnet nach Wert, Risiko und Abhängigkeiten. Halten Sie die Liste schlank: Einträge, die Sie in einem halben Jahr nicht angehen, löschen Sie. Das Backlog ist ein Gesprächsmittel, kein Vertrag.",
   "em": "Vorher liefern Stories, Priorisierung und Story Map den Inhalt. Danach pflegen Sie es im Refinement und entnehmen die Sprint-Einträge in der Sprintplanung. Die Roadmap zeigt den grossen Bogen.",
   "qu": [
@@ -4776,6 +5091,15 @@ const M = [
    "Schätzen",
    "Gegen DoR prüfen"
   ],
+  "gw": [
+   "Laufend, einmal pro Sprint-Woche",
+   "Stories sind unklar oder zu gross"
+  ],
+  "vk": [
+   "Zeitbox festlegen (z. B. 60 Min.)",
+   "Obere Einträge vorsortieren"
+  ],
+  "bn": "Das Treffen wird endlos: Zeitbox kürzen",
   "pr": "Nehmen Sie sich so viele Einträge vor, wie in zwei Sprints gebraucht werden, nicht mehr. Je Eintrag: Nutzen verstehen, Kriterien ergänzen, grosse Teile teilen, schätzen. Was nicht klar wird, geht mit einer Frage an Fachleute zurück. Prüfen Sie am Ende gegen die Definition of Ready.",
   "em": "Vorher hat der Product Owner das Backlog vorsortiert. Danach ist das Team bereit für die Sprintplanung. Bei Bedarf hilft Story Splitting.",
   "qu": [
@@ -4912,6 +5236,15 @@ const M = [
    "Release-Linie ziehen",
    "Ins Backlog übernehmen"
   ],
+  "gw": [
+   "Das Backlog ist flach und unübersichtlich",
+   "Erstes Release mit minimalem Umfang"
+  ],
+  "vk": [
+   "Personas und Ziele bereithalten",
+   "Wand, zwei Zettelfarben"
+  ],
+  "bn": "Kleines Vorhaben mit wenigen Stories",
   "pr": "Erzählen Sie die Geschichte aus Sicht der Persona von links nach rechts. Die oberste Ebene bilden Aktivitäten, darunter Schritte, ganz unten Stories. Ziehen Sie eine Linie quer: alles darüber ist das erste Release («Walking Skeleton»). So entsteht eine Liefersequenz, die den Nutzen früh zeigt.",
   "em": "Vorher liefern Stories, Personas und Workshop die Zutaten. Danach übernehmen Sie die geschnittene Liste ins Backlog und planen Releases.",
   "qu": [
@@ -5049,6 +5382,15 @@ const M = [
    "Jetzt, Nächstes, Später",
    "Änderungen begründen"
   ],
+  "gw": [
+   "Management braucht Orientierung",
+   "Mehrere Teams abstimmen"
+  ],
+  "vk": [
+   "Vision und Ziele bereitlegen",
+   "Zeithorizont: Quartale statt Tage"
+  ],
+  "bn": "Sie wird als Terminversprechen gelesen",
   "pr": "Gliedern Sie nach Zielen und Zeiträumen (jetzt, als Nächstes, später) statt nach Funktionen und Daten. Für das nahe Quartal sind Details bekannt, für später nur Themen. Überprüfen Sie die Roadmap regelmässig und kommunizieren Sie Änderungen mit Begründung. So bleibt Vertrauen.",
   "em": "Vorher klären Vision und Priorisierung die Richtung. Danach plant das Team im Sprint die Umsetzung kleinster Teile. Risiken sollten Sie in der Roadmap sichtbar machen.",
   "qu": [
@@ -5190,6 +5532,15 @@ const M = [
    "Aufgaben herunterbrechen",
    "Sprint-Backlog festhalten"
   ],
+  "gw": [
+   "Zu Beginn jedes Sprints",
+   "Backlog und Kapazität sind bekannt"
+  ],
+  "vk": [
+   "Backlog vorsortiert und verfeinert",
+   "Velocity und Verfügbarkeit kennen"
+  ],
+  "bn": "Backlog nicht vorbereitet: erst Refinement",
   "pr": "Drei Fragen strukturieren das Treffen: Warum ist der Sprint wertvoll (Sprintziel)? Was kann fertig werden (Auswahl)? Wie wird die Arbeit erledigt (Plan)? Wählen Sie so viel aus, wie das Team nach eigener Einschätzung schafft, nicht mehr. Das Sprintziel gibt Orientierung, wenn sich Details ändern.",
   "em": "Vorher steht ein verfeinertes Backlog mit geschätzten Stories. Danach arbeitet das Team im Sprint, und das Review am Ende prüft das Ergebnis.",
   "qu": [
@@ -5326,6 +5677,15 @@ const M = [
    "Befunde sammeln, bewerten",
    "Entscheiden, nachprüfen"
   ],
+  "gw": [
+   "Vor der Umsetzung",
+   "Kritische Dokumente prüfen"
+  ],
+  "vk": [
+   "Prüfgegenstand und Ziel festlegen",
+   "Checkliste und Rollen verteilen"
+  ],
+  "bn": "Das Dokument fehlt noch grösstenteils",
   "pr": "Prüfende lesen vorab und notieren Befunde. Im Treffen werden Befunde gesammelt, nicht diskutiert, wie sie zu beheben sind. Bewerten Sie die Schwere und legen Sie Verantwortliche fest. Prüfen Sie Personen nicht, sondern das Dokument. Bei Mängeln folgt ein Nachreview.",
   "em": "Vorher müssen Akzeptanzkriterien oder ein Pflichtenheft vorliegen. Nachher fliessen Befunde in Änderungen, und die Definition of Done benennt, welche Reviews nötig sind. Prototypen sind eine Alternative, wenn Nutzer das Ergebnis erleben sollen.",
   "qu": [
@@ -5456,6 +5816,15 @@ const M = [
    "Still beobachten",
    "Erkenntnisse festhalten"
   ],
+  "gw": [
+   "Oberfläche und Ablauf sind unklar",
+   "Worte erzeugen Missverständnisse"
+  ],
+  "vk": [
+   "Ziel und Hypothesen festlegen",
+   "Wichtige Abläufe auswählen"
+  ],
+  "bn": "Nur Hintergrundverarbeitung ohne Oberfläche",
   "pr": "Bauen Sie so wenig wie nötig, um die Frage zu beantworten. Lassen Sie Testpersonen Aufgaben lösen und beobachten Sie still, anstatt zu erklären. Notieren Sie, wo sie stocken. Fünf Personen decken die meisten Probleme auf. Machen Sie deutlich, dass der Prototyp getestet wird, nicht die Person.",
   "em": "Vorher helfen Personas bei der Auswahl der Testpersonen. Danach schreiben Sie User Stories mit den gelernten Details, und Aktivitätsdiagramme klären Abläufe dahinter.",
   "qu": [
@@ -5583,6 +5952,15 @@ const M = [
    "Lücken berichten",
    "Bei Änderungen nutzen"
   ],
+  "gw": [
+   "Nachweispflicht, regulierte Bereiche",
+   "Viele Anforderungen und Änderungen"
+  ],
+  "vk": [
+   "Festlegen, was verknüpft wird",
+   "Eindeutige IDs vergeben"
+  ],
+  "bn": "Kleines Vorhaben: Pflege lohnt nicht",
   "pr": "Weniger ist mehr: Verknüpfen Sie nur, was Sie später brauchen. Pflegen Sie Verknüpfungen bei der Entstehung, nicht nachträglich. Mit Werkzeugunterstützung erzeugen Sie Berichte wie «Anforderungen ohne Test». Prüfen Sie diese Lücken regelmässig.",
   "em": "Vorher brauchen Sie ein Pflichtenheft oder Stories mit eindeutigen IDs. Danach bildet die Matrix die Grundlage für die Änderungsbewertung und den Abnahmetest.",
   "qu": [
@@ -5718,6 +6096,15 @@ const M = [
    "Umsetzen und nachführen",
    "Alle informieren"
   ],
+  "gw": [
+   "Anforderungen sind freigegeben",
+   "Festpreis und formale Abnahme"
+  ],
+  "vk": [
+   "Verfahren und Gremium klären",
+   "Vorlage für Änderungsanträge"
+  ],
+  "bn": "Rein agil: das Backlog genügt",
   "pr": "Jeder Antrag enthält Begründung, Nutzen, betroffene Anforderungen und Aufwandsschätzung. Die Auswirkungsanalyse nutzt die Rückverfolgbarkeit. Entscheiden Sie zeitnah, lange Wartezeiten fördern Umgehung. Halten Sie Entscheidungen fest und informieren Sie alle Betroffenen.",
   "em": "Vorher braucht es ein freigegebenes Pflichtenheft und eine Traceability-Matrix. Im agilen Umfeld übernimmt die Pflege des Backlogs diese Aufgabe.",
   "qu": [
@@ -5841,6 +6228,15 @@ const M = [
    "Fehler klassieren",
    "Entscheid dokumentieren"
   ],
+  "gw": [
+   "Vor jeder Freigabe",
+   "Fachbereich nimmt formal ab"
+  ],
+  "vk": [
+   "Testfälle aus Kriterien ableiten",
+   "Realistische Daten und Testpersonen"
+  ],
+  "bn": "Als Ersatz früherer Tests: zu spät",
   "pr": "Fachleute testen echte Aufgaben, nicht Einzelfunktionen. Jeder Fehler wird mit Schritten, Erwartung und Ergebnis erfasst und klassifiziert (Showstopper, schwer, leicht). Legen Sie vorab fest, bei welchen Fehlern die Abnahme verweigert wird. Dokumentieren Sie das Ergebnis mit Unterschrift oder Freigabe im Werkzeug.",
   "em": "Vorher brauchen Sie klare Akzeptanzkriterien und eine Rückverfolgbarkeit von Anforderungen zu Tests. Nachher folgt Freigabe oder Nachbesserung.",
   "qu": [
@@ -5962,6 +6358,12 @@ const M = [
    "Kriterien an Tickets halten",
    "Burndown und Velocity auswerten"
   ],
+  "gw": [
+   "Sprints mit Backlog, Board, Berichten",
+   "Tickets mit Stories und Fehlern verknüpfen"
+  ],
+  "vk": [],
+  "bn": "Für Zeichnungen: besser Miro oder draw.io",
   "pr": "",
   "em": "",
   "qu": [
@@ -6028,6 +6430,12 @@ const M = [
    "Abstimmen und Zeitboxen",
    "Ergebnisse als Link teilen"
   ],
+  "gw": [
+   "Workshops mit verteilten Teams",
+   "Event Storming, Story Maps, Canvas"
+  ],
+  "vk": [],
+  "bn": "Ergebnisse müssen versioniert sein",
   "pr": "",
   "em": "",
   "qu": [
@@ -6099,6 +6507,12 @@ const M = [
    "Dateien im Repository ablegen",
    "Ohne Lizenzkosten nutzen"
   ],
+  "gw": [
+   "Diagramme teilen und versionieren",
+   "Keine Lizenzkosten gewünscht"
+  ],
+  "vk": [],
+  "bn": "Modelle sollen geprüft und verknüpft werden",
   "pr": "",
   "em": "",
   "qu": [
@@ -6160,6 +6574,12 @@ const M = [
    "Änderungen nachvollziehen",
    "Klassen und Zustände darstellen"
   ],
+  "gw": [
+   "Diagramme liegen im Code-Repository",
+   "Änderungen müssen nachvollziehbar sein"
+  ],
+  "vk": [],
+  "bn": "Fachleute ohne Technik sollen zeichnen",
   "pr": "",
   "em": "",
   "qu": [
@@ -6219,6 +6639,12 @@ const M = [
    "Gemeinsam kommentieren",
    "Jira-Tickets einbetten"
   ],
+  "gw": [
+   "Wissen gemeinsam pflegen und finden",
+   "Doku mit Tickets verbinden"
+  ],
+  "vk": [],
+  "bn": "Strenge Versionierung wie im Repository",
   "pr": "",
   "em": "",
   "qu": [
@@ -6282,6 +6708,12 @@ const M = [
    "Personas und Journeys gestalten",
    "Entwürfe kommentieren"
   ],
+  "gw": [
+   "Entwürfe früh mit Nutzern testen",
+   "Design und Anforderungen arbeiten zusammen"
+  ],
+  "vk": [],
+  "bn": "Als Ersatz für Anforderungsverwaltung",
   "pr": "",
   "em": "",
   "qu": [
@@ -6338,6 +6770,12 @@ const M = [
    "Bei jedem Build ausführen",
    "Als lebende Dokumentation nutzen"
   ],
+  "gw": [
+   "Kriterien als lebende Dokumentation",
+   "Fachbereich, Test, Entwicklung teilen Szenarien"
+  ],
+  "vk": [],
+  "bn": "Niemand pflegt die Szenarien",
   "pr": "",
   "em": "",
   "qu": [
@@ -6394,6 +6832,12 @@ const M = [
    "Berichte aus dem Modell",
    "Im Team gemeinsam pflegen"
   ],
+  "gw": [
+   "Grosse Vorhaben mit gemeinsamem Modell",
+   "Berichte aus dem Modell erzeugen"
+  ],
+  "vk": [],
+  "bn": "Kleine Vorhaben: oft zu schwergewichtig",
   "pr": "",
   "em": "",
   "qu": [

@@ -86,6 +86,9 @@ Vorher helfen Stakeholder-Analyse und Business Model Canvas für ein gemeinsames
 
 ## Karte
 Teaser: Stärken, Schwächen, Chancen, Risiken in vier Feldern: die Ausgangslage klären.
+Gut wenn: Zu Beginn, um die Lage zu klären | Die Lagebilder gehen auseinander
+Vorher: Gegenstand klar abgrenzen | Teilnehmende mit unterschiedlichen Sichten
+Besser nicht: Für Details der Umsetzung zu grob
 - Gegenstand abgrenzen
 - Punkte still sammeln
 - In vier Felder ordnen

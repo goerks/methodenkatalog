@@ -85,6 +85,9 @@ Vorher klären Interviews, welche Fragen überhaupt relevant sind, und die Stake
 
 ## Karte
 Teaser: Viele Personen vergleichbar befragen, um Bedarf und Verbreitung zu messen.
+Gut wenn: Viele Personen an mehreren Standorten | Aussagen aus Interviews überprüfen
+Vorher: Zielgruppe und Frage festlegen | Pilot mit 3 bis 5 Personen
+Besser nicht: Fragen noch unklar: erst Interviews
 - Frage und Zielgruppe festlegen
 - Fragen neutral formulieren
 - Mit 3 bis 5 Personen testen

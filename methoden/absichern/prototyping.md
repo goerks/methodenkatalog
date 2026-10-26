@@ -83,6 +83,9 @@ Vorher helfen Personas bei der Auswahl der Testpersonen. Danach schreiben Sie Us
 
 ## Karte
 Teaser: Anforderungen erlebbar machen: Nutzer testen eine einfache Version.
+Gut wenn: Oberfläche und Ablauf sind unklar | Worte erzeugen Missverständnisse
+Vorher: Ziel und Hypothesen festlegen | Wichtige Abläufe auswählen
+Besser nicht: Nur Hintergrundverarbeitung ohne Oberfläche
 - Ziel und Fragen festlegen
 - Kleinsten Prototyp bauen
 - Aufgaben testen lassen

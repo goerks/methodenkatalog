@@ -83,6 +83,9 @@ Vorher müssen Akzeptanzkriterien oder ein Pflichtenheft vorliegen. Nachher flie
 
 ## Karte
 Teaser: Arbeitsergebnisse gemeinsam auf Fehler, Lücken und Widersprüche prüfen.
+Gut wenn: Vor der Umsetzung | Kritische Dokumente prüfen
+Vorher: Prüfgegenstand und Ziel festlegen | Checkliste und Rollen verteilen
+Besser nicht: Das Dokument fehlt noch grösstenteils
 - Gegenstand und Kriterien klären
 - Rollen verteilen
 - Vorab lesen

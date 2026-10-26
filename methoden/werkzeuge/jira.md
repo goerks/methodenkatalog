@@ -35,6 +35,8 @@ Jira ist ein Ticketsystem von Atlassian, das im agilen Umfeld Backlog, Sprints u
 
 ## Karte
 Teaser: Ticketsystem für Backlog, Sprints und Aufgaben im agilen Team.
+Gut wenn: Sprints mit Backlog, Board, Berichten | Tickets mit Stories und Fehlern verknüpfen
+Besser nicht: Für Zeichnungen: besser Miro oder draw.io
 - Backlog und Stories führen
 - Sprints und Boards planen
 - Kriterien an Tickets halten

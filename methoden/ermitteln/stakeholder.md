@@ -82,6 +82,9 @@ Vorher ist ein Kontextdiagramm nützlich, weil es externe Parteien sichtbar mach
 
 ## Karte
 Teaser: Wer ist betroffen, wer entscheidet, wer kann blockieren? Einfluss und Interesse sichtbar machen.
+Gut wenn: Ganz am Anfang, vor der Erhebung | Viele Bereiche oder externe Parteien
+Vorher: Erste Liste im Team sammeln | Vertraulichkeit der Bewertung klären
+Besser nicht: Sehr kleines Vorhaben: Liste genügt
 - Betroffene sammeln
 - Einfluss und Interesse bewerten
 - Einbindung je Gruppe festlegen

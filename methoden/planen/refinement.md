@@ -84,6 +84,9 @@ Vorher hat der Product Owner das Backlog vorsortiert. Danach ist das Team bereit
 
 ## Karte
 Teaser: Das Team bereitet kommende Einträge für den Sprint vor.
+Gut wenn: Laufend, einmal pro Sprint-Woche | Stories sind unklar oder zu gross
+Vorher: Zeitbox festlegen (z. B. 60 Min.) | Obere Einträge vorsortieren
+Besser nicht: Das Treffen wird endlos: Zeitbox kürzen
 - Obere Einträge vorwählen
 - Nutzen verstehen
 - Kriterien ergänzen, teilen

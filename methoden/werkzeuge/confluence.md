@@ -35,6 +35,8 @@ Confluence ist ein Wiki von Atlassian für Dokumentation, Protokolle und Spezifi
 
 ## Karte
 Teaser: Wiki für Dokumentation, Protokolle und Spezifikationen, eng mit Jira verbunden.
+Gut wenn: Wissen gemeinsam pflegen und finden | Doku mit Tickets verbinden
+Besser nicht: Strenge Versionierung wie im Repository
 - Spezifikationen und Glossar pflegen
 - Protokolle ablegen
 - Gemeinsam kommentieren

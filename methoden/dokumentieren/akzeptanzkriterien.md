@@ -86,6 +86,9 @@ Vorher steht die Story oder der Use Case, aus dem sie abgeleitet werden. Danach 
 
 ## Karte
 Teaser: Wann ist eine Anforderung erfüllt? Beispiele im Format Gegeben-Wenn-Dann.
+Gut wenn: Für jede Story vor dem Sprint | Alle verstehen «fertig» gleich
+Vorher: Story mit Rolle und Nutzen | Product Owner, Entwicklung, Test im Gespräch
+Besser nicht: Rein technische Aufgaben ohne Verhalten
 - Story und Beispiele sammeln
 - Gegeben: Ausgangslage
 - Wenn: Aktion

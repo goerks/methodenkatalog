@@ -83,6 +83,9 @@ Vorher liefern Dokumentenanalyse und Glossar die Grundlage. Danach werden Regeln
 
 ## Karte
 Teaser: Was in der Organisation gilt, getrennt von Prozess und Funktion gepflegt.
+Gut wenn: Regelreiche Bereiche wie Bank, Versicherung | Eine Regel gilt an mehreren Stellen
+Vorher: Regelquellen und Verantwortliche klären | Vorlage: Nummer, Text, Quelle, Gültigkeit
+Besser nicht: Wenige stabile Regeln: Kriterien genügen
 - Regelquellen finden
 - Regeln atomar formulieren
 - Eigner und Quelle nennen

@@ -84,6 +84,9 @@ Vorher helfen Stories und Akzeptanzkriterien, damit die Kriterien konkret werden
 
 ## Karte
 Teaser: Zwei Checklisten: wann ist eine Story bereit (DoR), wann ist sie fertig (DoD).
+Gut wenn: Stories bleiben halbfertig liegen | Neues Team oder mehrere Teams
+Vorher: Probleme im Ablauf sammeln | Ganzes Team einladen
+Besser nicht: Die DoR wird zur starren Hürde
 - Probleme im Ablauf sammeln
 - Kurze Liste gemeinsam festlegen
 - Sichtbar aushängen

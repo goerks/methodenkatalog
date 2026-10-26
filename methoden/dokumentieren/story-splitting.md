@@ -81,6 +81,9 @@ Vorher steht die grosse Story im Backlog. Danach schätzen Sie die Teile mit Pla
 
 ## Karte
 Teaser: Eine grosse Story so teilen, dass jeder Teil Nutzen liefert. Senkrecht schneiden.
+Gut wenn: Die Story passt nicht in einen Sprint | Das Team kann sie nicht schätzen
+Vorher: Story und Kriterien im Blick | Teilungsmuster bereithalten
+Besser nicht: Die Story ist schon klein und klar
 - Kleinsten nützlichen Teil suchen
 - Nach Ablauf, Regel, Daten teilen
 - Nie nach Technikschichten

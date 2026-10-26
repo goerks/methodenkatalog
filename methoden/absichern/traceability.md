@@ -83,6 +83,9 @@ Vorher brauchen Sie ein Pflichtenheft oder Stories mit eindeutigen IDs. Danach b
 
 ## Karte
 Teaser: Anforderungen mit Herkunft, Entwurf und Tests verknüpfen. Folgen sichtbar.
+Gut wenn: Nachweispflicht, regulierte Bereiche | Viele Anforderungen und Änderungen
+Vorher: Festlegen, was verknüpft wird | Eindeutige IDs vergeben
+Besser nicht: Kleines Vorhaben: Pflege lohnt nicht
 - Verknüpfungsziele festlegen
 - Eindeutige IDs vergeben
 - Beim Entstehen verknüpfen

@@ -12,7 +12,7 @@ const PHASEN = ['verstehen', 'ermitteln', 'spezifizieren', 'bewerten', 'planen',
 const FORMEN = ['methode', 'artefakt', 'modell', 'meeting', 'werkzeug'];
 const ARTEN = { vorher: 'vorher', danach: 'danach', ergaenzt: 'ergaenzt', 'ergänzt': 'ergaenzt', alternative: 'alternative' };
 const STATUS = ['entwurf', 'geprueft', 'veroeffentlicht'];
-const LINKS_MIN = 3, LINKS_MAX = 7, TOOL_MIN = 2, KT_MAX = 105, KS_MAX = 38;
+const LINKS_MIN = 3, LINKS_MAX = 7, TOOL_MIN = 2, KT_MAX = 105, KS_MAX = 38, GW_MAX = 60, VK_MAX = 44, BN_MAX = 78;
 
 const errors = [];
 const err = (id, msg) => errors.push(`${id}: ${msg}`);
@@ -42,6 +42,7 @@ function parseFile(file, folder) {
   const bullets = key => lines(key).map(l => l.match(/^-\s+(.*)/)).filter(Boolean).map(x => x[1]);
 
   const prose = key => (sec[key] || '').trim();
+  const kline = key => { const r = ((sec['Karte'] || '').match(new RegExp('^' + key + ':\\s*(.*)$', 'm')) || [])[1]; return r ? r.split('|').map(x => x.trim()).filter(Boolean) : []; };
   const ioItems = key => bullets(key).map(s => { const x = s.match(/^(.*?)\s*>>\s*\[\[([^\]]+)\]\]\s*(.*)$/); return x ? { t: x[1].trim(), to: x[2], v: x[3].trim() } : { t: s }; });
   const m = {
     id, n: meta.name, c: KAT[meta.kategorie], f: meta.form, m: meta.vorgehen, ph: isTool ? 'alle' : meta.phase, t: meta.typ,
@@ -51,6 +52,7 @@ function parseFile(file, folder) {
     bsp: beispielKey ? { t: beispielKey.replace(/^Beispiel:?\s*/, '') || 'Beispiel', x: sec[beispielKey] } : null,
     zw: prose('Wofür'), wa: bullets('Wann sinnvoll'), wn: bullets('Wann besser nicht'), vb: bullets('Vorbereitung'),
     nr: meta.karte || '', kt: ((sec['Karte'] || '').match(/^Teaser:\s*(.*)$/m) || [])[1] || '', ks: bullets('Karte'),
+    gw: kline('Gut wenn'), vk: kline('Vorher'), bn: (kline('Besser nicht')[0] || ''),
     pr: prose('In der Praxis'), em: prose('Empfehlung'), qu: bullets('Quellen'),
     io: isTool ? null : { lf: bullets('Lieferanten'), in: ioItems('Eingaben'), out: ioItems('Ergebnisse'), ko: bullets('Konsumenten') },
     li: [],
@@ -84,6 +86,12 @@ function parseFile(file, folder) {
   else if (m.kt.length > KT_MAX) err(id, `Kartenteaser hat ${m.kt.length} Zeichen, erlaubt sind ${KT_MAX}`);
   if (m.ks.length < 3 || m.ks.length > 5) err(id, `Abschnitt «Karte» braucht 3 bis 5 Kurzschritte, hat ${m.ks.length}`);
   for (const x of m.ks) if (x.length > KS_MAX) err(id, `Kurzschritt «${x}» hat ${x.length} Zeichen, erlaubt sind ${KS_MAX}`);
+  if (m.gw.length !== 2) err(id, 'Abschnitt «Karte» braucht «Gut wenn: A | B» mit 2 Punkten');
+  if (!isTool && m.vk.length !== 2) err(id, 'Abschnitt «Karte» braucht «Vorher: A | B» mit 2 Punkten');
+  if (!m.bn) err(id, 'Abschnitt «Karte» braucht «Besser nicht: …»');
+  for (const x of m.gw) if (x.length > GW_MAX) err(id, `«Gut wenn» hat ${x.length} Zeichen, erlaubt sind ${GW_MAX}: ${x}`);
+  for (const x of m.vk) if (x.length > VK_MAX) err(id, `«Vorher» hat ${x.length} Zeichen, erlaubt sind ${VK_MAX}: ${x}`);
+  if (m.bn.length > BN_MAX) err(id, `«Besser nicht» hat ${m.bn.length} Zeichen, erlaubt sind ${BN_MAX}`);
   if (!m.zw) err(id, 'Abschnitt «Wofür» fehlt');
   if (m.wa.length < 2) err(id, 'Abschnitt «Wann sinnvoll» braucht mindestens 2 Punkte');
   if (!m.wn.length) err(id, 'Abschnitt «Wann besser nicht» fehlt');

@@ -84,6 +84,9 @@ Vorher sollten die Stakeholder bekannt sein. Danach folgt das Use-Case-Diagramm 
 
 ## Karte
 Teaser: Das System als ein Kasten, umgeben von Akteuren und Fremdsystemen.
+Gut wenn: Zu Beginn: Umfang und Schnittstellen | Viele Nachbarsysteme
+Vorher: Vorhaben grob beschreiben | Akteure und Nachbarsysteme auflisten
+Besser nicht: Für Details: Prozess- und Datenmodelle
 - System als einen Kasten zeichnen
 - Akteure und Systeme ergänzen
 - Datenflüsse benennen

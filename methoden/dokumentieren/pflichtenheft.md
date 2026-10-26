@@ -85,6 +85,9 @@ Vorher müssen Use Cases, Qualitätsanforderungen und Kontext vorliegen. Danach 
 
 ## Karte
 Teaser: Vertragliche Beschreibung, wie die Anforderungen umgesetzt werden. Klassisch.
+Gut wenn: Festpreis oder Ausschreibung | Hohe regulatorische Anforderungen
+Vorher: Struktur festlegen (ISO 29148) | Glossar und Kontextdiagramm bereit
+Besser nicht: Ziele unklar, schnelles Lernen: agil
 - Struktur festlegen
 - Anforderungen nummerieren
 - Muss und Kann trennen

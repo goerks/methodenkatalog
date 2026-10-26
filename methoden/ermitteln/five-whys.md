@@ -84,6 +84,9 @@ Vorher steht meist eine Beobachtung oder ein Interview, das ein Problem sichtbar
 
 ## Karte
 Teaser: Mehrmals «Warum?» fragen, bis die beeinflussbare Ursache sichtbar wird.
+Gut wenn: Eine Lösung wird gefordert, Problem unklar | Fehler oder Störungen kehren wieder
+Vorher: Problem in einem Satz formulieren | Leute einladen, die es kennen
+Besser nicht: Mehrere Ursachen: eine Kette reicht nicht
 - Problem in einem Satz nennen
 - Warum? Antwort aufschreiben
 - Wiederholen bis zur Ursache

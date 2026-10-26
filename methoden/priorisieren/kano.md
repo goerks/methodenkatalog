@@ -83,6 +83,9 @@ Vorher helfen Personas, die richtigen Befragten zu wählen. Danach ordnen Sie di
 
 ## Karte
 Teaser: Merkmale nach Wirkung auf die Zufriedenheit ordnen: Basis, Leistung, Begeisterung.
+Gut wenn: Viele Nutzer mit freier Wahl | Features nach Wirkung sortieren
+Vorher: Fragenpaare je Merkmal formulieren | Stichprobe der Zielgruppe befragen
+Besser nicht: Interne Pflichtsysteme ohne Wahl
 - Merkmale auflisten
 - Pro Merkmal zwei Fragen stellen
 - Zielgruppe befragen

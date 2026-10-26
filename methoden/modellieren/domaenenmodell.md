@@ -84,6 +84,9 @@ Vorher liefern Glossar und Event Storming die Begriffe. Danach ergänzen Geschä
 
 ## Karte
 Teaser: Fachliche Begriffe und ihre Beziehungen, kein Datenbankentwurf.
+Gut wenn: Komplexe Fachlichkeit | Technik und Fachbereich uneins über Begriffe
+Vorher: Glossar bereitlegen | Fachleute und Architektur einladen
+Besser nicht: Die Domäne ist einfach
 - Begriffe aus dem Glossar
 - Als Klassen zeichnen
 - Beziehungen mit Verb benennen

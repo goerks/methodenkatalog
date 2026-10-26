@@ -84,6 +84,9 @@ Vorher sollten Vision oder Geschäftsmodell vorliegen. Danach entwickeln Sie aus
 
 ## Karte
 Teaser: Ziel, Akteure, Wirkungen, Lieferungen: Funktionen mit Nutzen verbinden.
+Gut wenn: Wunschliste ohne erkennbares Ziel | Start einer agilen Entwicklung
+Vorher: Messbares Ziel als Startfrage | Wand und Zettel in vier Farben
+Besser nicht: Das Ziel darf nicht diskutiert werden
 - Messbares Ziel in die Mitte
 - Wer beeinflusst es?
 - Wie ändert sich ihr Verhalten?

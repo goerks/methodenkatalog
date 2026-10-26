@@ -82,6 +82,9 @@ Vorher klären Kontextdiagramm und Workshop den Umfang. Danach leiten Sie aus de
 
 ## Karte
 Teaser: Standardnotation für Geschäftsprozesse mit Ereignissen, Aufgaben und Rollen.
+Gut wenn: Prozesse über mehrere Rollen | Verbessern oder automatisieren
+Vorher: Prozessgrenzen und Ziel festlegen | Notation auf den Kern beschränken
+Besser nicht: Kleiner Ablauf: eine Liste genügt
 - Prozessgrenzen festlegen
 - Rollen als Bahnen
 - Ereignisse und Aufgaben setzen

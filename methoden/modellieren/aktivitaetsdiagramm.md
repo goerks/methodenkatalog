@@ -83,6 +83,9 @@ Vorher liefern Beobachtung oder Interviews den Ablauf. Danach beschreiben Use Ca
 
 ## Karte
 Teaser: Ein Ablauf mit Aktionen, Verzweigungen und Zuständigkeiten (UML).
+Gut wenn: Ablauf verstehen und klären | Entscheidungen und parallele Schritte
+Vorher: Ablauf und Ziel abgrenzen | Notation klären, die alle kennen
+Besser nicht: Zuständigkeiten im Vordergrund: BPMN
 - Start und Ende festlegen
 - Aktionen mit Verb und Objekt
 - Verzweigungen mit Bedingung

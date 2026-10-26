@@ -84,6 +84,9 @@ Vorher liefern Dokumentenanalyse und Event Storming die Begriffe. Danach hilft e
 
 ## Karte
 Teaser: Fachbegriffe mit abgestimmten Definitionen: eine gemeinsame Sprache.
+Gut wenn: Ab Projektstart, laufend | Begriffe führen zu Missverständnissen
+Vorher: Verantwortliche Person bestimmen | Ablageort für alle wählen
+Besser nicht: Begriffe werden nie benutzt
 - Verantwortliche bestimmen
 - Begriffe sammeln
 - Definition, Synonym, Quelle

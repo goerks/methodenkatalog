@@ -6,6 +6,7 @@ typ: Diagramme aus Text
 form: werkzeug
 reihenfolge: 4
 status: entwurf
+karte: W-04
 ---
 
 Erzeugt UML-Diagramme aus einer Textbeschreibung. Die Quelle ist versionierbar und lässt sich leicht anpassen.
@@ -31,6 +32,13 @@ PlantUML erzeugt UML-Diagramme aus einer Textbeschreibung. Die Quelle ist versio
 - Layout nur begrenzt steuerbar
 - Einarbeitung in die Syntax nötig
 - Für Fachbereich weniger zugänglich
+
+## Karte
+Teaser: Diagramme aus Text: versionierbar und leicht anzupassen.
+- Diagramme als Text beschreiben
+- In Dokumentation einbetten
+- Änderungen nachvollziehen
+- Klassen und Zustände darstellen
 
 ## Quellen
 - PlantUML: Sprachreferenz (plantuml.com)

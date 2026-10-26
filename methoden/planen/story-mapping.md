@@ -11,6 +11,7 @@ werkzeuge: [Miro, Mural, StoriesOnBoard]
 grafik: storymap
 reihenfolge: 3
 status: entwurf
+karte: P-03
 ---
 
 Zeigt die Nutzerreise horizontal und Stories vertikal nach Priorität. Macht Umfang und Releases sichtbar.
@@ -80,6 +81,14 @@ Vorher liefern Stories, Personas und Workshop die Zutaten. Danach übernehmen Si
 - danach: [[product-backlog]] Die Karte wird zum Backlog.
 - vorher: [[workshop]] Gemeinsam im Workshop erstellen.
 - alternative: [[use-case-diagramm]] Klassischer Überblick über Funktionen.
+
+## Karte
+Teaser: Stories entlang der Nutzerreise ordnen: Überblick statt flacher Liste.
+- Persona und Ziel wählen
+- Aktivitäten links nach rechts
+- Stories darunter ordnen
+- Release-Linie ziehen
+- Ins Backlog übernehmen
 
 ## Quellen
 - Patton, J.: User Story Mapping (O'Reilly, 2014)

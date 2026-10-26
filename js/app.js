@@ -1,5 +1,5 @@
 // Ansichten und Navigation. Daten und Beziehungen kommen aus core.js, die Karte aus graph.js.
-const VIEWS = {karte: 'Wissenslandkarte', kategorien: 'Kategorien', landkarte: 'Phasen', suche: 'Alle Methoden'};
+const VIEWS = {karte: 'Wissenslandkarte', kategorien: 'Kategorien', landkarte: 'Phasen', suche: 'Alle Methoden', karten: 'Karten'};
 let view = 'karte', lastView = 'karte', toolsOn = false, pathIdx = -1, panelId = null;
 const main = document.getElementById('main'), tabs = document.getElementById('tabs'), qi = document.getElementById('q');
 const NM = M.filter(m => !isTool(m)), TL = M.filter(isTool);
@@ -109,7 +109,7 @@ function vDetail(id) {
   return `<div ${cc(m)}><button class="back" data-back>← ${VIEWS[lastView]}</button>
   <header class="dh"><span class="lbl" style="color:var(--cc)">${icon(m.f, phk(m), 18)} ${t ? 'Werkzeug' : CAT[m.c].n + ' · ' + FORMS[m.f]}</span><h1>${esc(plain(m.n))}</h1>
     <div class="meta">${meta}${m.s === 'entwurf' ? '<span>Status: <b>Entwurf, fachlich noch nicht geprüft</b></span>' : ''}</div>
-    <p class="lead">${esc(m.k)}</p><button class="pill" data-show="${m.id}">Auf der Karte zeigen</button></header>
+    <p class="lead">${esc(m.k)}</p><button class="pill" data-show="${m.id}">Auf der Karte zeigen</button>${m.nr ? ` <button class="pill" aria-pressed="${KS.sel.has(m.id)}" data-kadd="${m.id}">${KS.sel.has(m.id) ? '✓ In der Druckauswahl' : 'Karte zur Druckauswahl'}</button>` : ''}</header>
   <div class="dg"><div>
     ${sec('Wofür', `<p class="prose">${esc(m.zw)}</p>`)}
     <div class="two">${sec('Wann sinnvoll', li(m.wa), 'yes')}${sec('Wann besser nicht', li(m.wn), 'no')}</div>
@@ -139,8 +139,9 @@ function render() {
   Graph.unmount();
   if (isD) { main.innerHTML = vDetail(h.m); window.scrollTo(0, 0); return; }
   lastView = view;
-  main.innerHTML = view === 'karte' ? vKarte() : view === 'kategorien' ? vKategorien() : view === 'landkarte' ? vLandkarte() : vSuche();
+  main.innerHTML = view === 'karte' ? vKarte() : view === 'kategorien' ? vKategorien() : view === 'landkarte' ? vLandkarte() : view === 'karten' ? vKarten() : vSuche();
   if (view === 'karte') mountKarte();
+  if (view === 'karten') ksScale();
 }
 // Filter ändern: auf der Karte nur abblenden, sonst Ansicht neu zeichnen
 function refilter() {

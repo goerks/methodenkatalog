@@ -10,6 +10,7 @@ aufwand: Je Antrag 30 Min. bis 2 Stunden
 werkzeuge: [Jira, ServiceNow, Excel]
 reihenfolge: 4
 status: entwurf
+karte: A-04
 ---
 
 Geregelter Umgang mit Änderungswünschen: erfassen, bewerten, entscheiden, umsetzen.
@@ -77,6 +78,14 @@ Vorher braucht es ein freigegebenes Pflichtenheft und eine Traceability-Matrix. 
 - vorher: [[traceability]] Auswirkungen zeigt die Matrix.
 - ergaenzt: [[pflichtenheft]] Verbindliche Basis.
 - alternative: [[product-backlog]] Agil: Änderungen laufen über das Backlog.
+
+## Karte
+Teaser: Änderungswünsche erfassen, bewerten, entscheiden und umsetzen.
+- Antrag mit Begründung erfassen
+- Auswirkungen prüfen
+- Gremium entscheidet
+- Umsetzen und nachführen
+- Alle informieren
 
 ## Quellen
 - IIBA: BABOK Guide, Version 3 (2015), Wissensgebiet «Requirements Life Cycle Management»

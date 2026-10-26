@@ -10,6 +10,7 @@ aufwand: 1 bis 2 Stunden
 werkzeuge: [Jira]
 reihenfolge: 5
 status: entwurf
+karte: P-05
 ---
 
 Meeting zu Beginn eines Sprints: Das Team wählt Einträge aus dem Backlog, legt das Sprintziel fest und plant, wie es sie umsetzt.
@@ -80,6 +81,14 @@ Vorher steht ein verfeinertes Backlog mit geschätzten Stories. Danach arbeitet 
 - vorher: [[story-points]] Die Velocity bestimmt den Umfang.
 - vorher: [[roadmap]] Die Etappe gibt das Ziel.
 - ergaenzt: [[dor-dod]] Ready und Done leiten die Auswahl.
+
+## Karte
+Teaser: Das Team legt fest, was im Sprint erreicht wird: Ziel, Auswahl, Plan.
+- Sprintziel formulieren
+- Einträge auswählen
+- Kapazität prüfen
+- Aufgaben herunterbrechen
+- Sprint-Backlog festhalten
 
 ## Quellen
 - Schwaber, K., Sutherland, J.: The Scrum Guide (2020)

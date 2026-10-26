@@ -10,6 +10,7 @@ aufwand: 1 bis 3 Tage
 werkzeuge: [Umfrage-Tool, Excel]
 reihenfolge: 6
 status: entwurf
+karte: E-04
 ---
 
 Standardisierte Fragen an viele Personen, um Bedürfnisse, Häufigkeiten und Meinungen zahlenmässig zu erfassen.
@@ -81,6 +82,14 @@ Vorher klären Interviews, welche Fragen überhaupt relevant sind, und die Stake
 - ergaenzt: [[kano]] Die Kano-Befragung ist ein spezieller Fragebogen.
 - danach: [[persona]] Daten zu Personas verdichten.
 - ergaenzt: [[dokumentenanalyse]] Dokumente und Befragung ergänzen sich.
+
+## Karte
+Teaser: Viele Personen vergleichbar befragen, um Bedarf und Verbreitung zu messen.
+- Frage und Zielgruppe festlegen
+- Fragen neutral formulieren
+- Mit 3 bis 5 Personen testen
+- Verschicken, Rücklauf verfolgen
+- Auswerten, Verzerrung prüfen
 
 ## Quellen
 - Dillman, D., Smyth, J., Christian, L.: Internet, Phone, Mail, and Mixed-Mode Surveys (Wiley, 2014)

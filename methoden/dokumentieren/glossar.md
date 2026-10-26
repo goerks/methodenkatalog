@@ -10,6 +10,7 @@ aufwand: Laufend
 werkzeuge: [Confluence, Wiki]
 reihenfolge: 8
 status: entwurf
+karte: S-07
 ---
 
 Sammlung der Fachbegriffe des Vorhabens mit einheitlicher Definition. Verhindert Missverständnisse zwischen Fachbereich und Entwicklung.
@@ -80,6 +81,14 @@ Vorher liefern Dokumentenanalyse und Event Storming die Begriffe. Danach hilft e
 - ergaenzt: [[user-stories]] Stories verwenden die Begriffe.
 - danach: [[pflichtenheft]] Als Anhang im Pflichtenheft.
 - ergaenzt: [[geschaeftsregeln]] Regeln stützen sich auf Begriffe.
+
+## Karte
+Teaser: Fachbegriffe mit abgestimmten Definitionen: eine gemeinsame Sprache.
+- Verantwortliche bestimmen
+- Begriffe sammeln
+- Definition, Synonym, Quelle
+- Streit bis zur Einigung
+- Aus Stories darauf verweisen
 
 ## Quellen
 - IIBA: BABOK Guide, Version 3 (2015), Technik «Glossar»

@@ -11,6 +11,7 @@ werkzeuge: [Umfrage-Tool, Excel]
 reihenfolge: 2
 grafik: kano
 status: entwurf
+karte: B-02
 ---
 
 Ordnet Merkmale nach Wirkung auf die Zufriedenheit ein: Basis-, Leistungs- und Begeisterungsfaktoren.
@@ -79,6 +80,14 @@ Vorher helfen Personas, die richtigen Befragten zu wählen. Danach ordnen Sie di
 - vorher: [[persona]] Personas als Befragungsgruppe.
 - ergaenzt: [[nfr]] Basisfaktoren sind oft Qualitätsanforderungen.
 - danach: [[product-backlog]] Ergebnis fliesst in die Reihenfolge.
+
+## Karte
+Teaser: Merkmale nach Wirkung auf die Zufriedenheit ordnen: Basis, Leistung, Begeisterung.
+- Merkmale auflisten
+- Pro Merkmal zwei Fragen stellen
+- Zielgruppe befragen
+- Antworten auswerten
+- Einordnen, später wiederholen
 
 ## Quellen
 - Kano, N., Seraku, N., Takahashi, F., Tsuji, S.: Attractive Quality and Must-be Quality (1984), Journal of the Japanese Society for Quality Control

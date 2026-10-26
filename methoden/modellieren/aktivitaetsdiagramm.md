@@ -11,6 +11,7 @@ werkzeuge: [draw.io, PlantUML, Enterprise Architect, Miro]
 grafik: activity
 reihenfolge: 1
 status: entwurf
+karte: S-10
 ---
 
 Zeigt einen Ablauf als Folge von Aktionen mit Entscheidungen, Verzweigungen und parallelen Strängen. Ideal für Prozesse und Use-Case-Abläufe.
@@ -79,6 +80,14 @@ Vorher liefern Beobachtung oder Interviews den Ablauf. Danach beschreiben Use Ca
 - alternative: [[bpmn]] BPMN eignet sich besser für Geschäftsprozesse mit mehreren Beteiligten.
 - ergaenzt: [[zustandsdiagramm]] Zustandsdiagramm zeigt den Lebenszyklus eines Objekts.
 - vorher: [[beobachtung]] Beobachtete Abläufe modellieren.
+
+## Karte
+Teaser: Ein Ablauf mit Aktionen, Verzweigungen und Zuständigkeiten (UML).
+- Start und Ende festlegen
+- Aktionen mit Verb und Objekt
+- Verzweigungen mit Bedingung
+- Schwimmbahnen für Rollen
+- Mit Beteiligten prüfen
 
 ## Quellen
 - OMG: Unified Modeling Language (UML), Version 2.5.1 (2017)

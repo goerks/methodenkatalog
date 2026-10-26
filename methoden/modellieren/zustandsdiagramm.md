@@ -11,6 +11,7 @@ werkzeuge: [draw.io, PlantUML, Enterprise Architect]
 reihenfolge: 5
 grafik: zustand
 status: entwurf
+karte: S-13
 ---
 
 Zeigt Zustände eines Objekts und die Ereignisse, die zwischen ihnen wechseln. Gut für Lebenszyklen wie Bestellungen oder Tickets.
@@ -75,6 +76,14 @@ Vorher helfen Aktivitätsdiagramm und Use Cases, um Ereignisse zu finden. Danach
 - ergaenzt: [[aktivitaetsdiagramm]] Ablauf (Aktivität) und Zustand (Objekt) ergänzen sich.
 - ergaenzt: [[use-cases]] Vor-/Nachbedingungen entsprechen Zuständen.
 - danach: [[akzeptanzkriterien]] Zustandsübergänge als Testfälle.
+
+## Karte
+Teaser: Zustände eines Objekts und die Ereignisse, die sie wechseln.
+- Objekt und Lebensphasen nennen
+- Zustände benennen
+- Übergänge mit Ereignis
+- Sackgassen prüfen
+- Tests je Übergang ableiten
 
 ## Quellen
 - Harel, D.: Statecharts: A Visual Formalism for Complex Systems (1987)

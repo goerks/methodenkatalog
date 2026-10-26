@@ -11,6 +11,7 @@ werkzeuge: [draw.io, Miro, PlantUML]
 grafik: context
 reihenfolge: 4
 status: entwurf
+karte: V-07
 ---
 
 Zeigt das System als Black Box mit seinen Nachbarn (Nutzer, Fremdsysteme) und den Datenflüssen. Klärt den Umfang früh.
@@ -80,6 +81,14 @@ Vorher sollten die Stakeholder bekannt sein. Danach folgt das Use-Case-Diagramm 
 - danach: [[use-case-diagramm]] Funktionen pro Akteur aufschlüsseln.
 - danach: [[bpmn]] Prozesse innerhalb der Grenze modellieren.
 - danach: [[pflichtenheft]] Als Kapitel Systemkontext.
+
+## Karte
+Teaser: Das System als ein Kasten, umgeben von Akteuren und Fremdsystemen.
+- System als einen Kasten zeichnen
+- Akteure und Systeme ergänzen
+- Datenflüsse benennen
+- Grenze mit allen klären
+- In die Spezifikation
 
 ## Quellen
 - Pohl, K., Rupp, C.: Basiswissen Requirements Engineering (dpunkt.verlag)

@@ -10,6 +10,7 @@ aufwand: Laufend
 werkzeuge: [Jira, Azure DevOps, Burndown-Chart]
 reihenfolge: 5
 status: entwurf
+karte: B-05
 ---
 
 Relative Einheit für Grösse und Komplexität einer Story, unabhängig von Stunden. Mit der Velocity wird planbar.
@@ -80,6 +81,14 @@ Vorher schätzt das Team mit Planning Poker. Danach nutzen Sie die Punkte im Bac
 - vorher: [[user-stories]] Punkte hängen an Stories.
 - danach: [[product-backlog]] Backlog mit Punkten bewerten.
 - danach: [[wsjf]] Aufwandsteil von WSJF.
+
+## Karte
+Teaser: Relativer Aufwand einer Story statt Stunden. Die Velocity zeigt die Teamleistung.
+- Referenzstories festlegen
+- Skala vereinbaren
+- Stories relativ vergleichen
+- Velocity der letzten Sprints
+- Nie in Stunden umrechnen
 
 ## Quellen
 - Cohn, M.: Agile Estimating and Planning (Prentice Hall, 2005)

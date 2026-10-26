@@ -11,6 +11,7 @@ werkzeuge: [Karten, Planning-Poker-App, Jira-Plugin]
 grafik: poker
 reihenfolge: 4
 status: entwurf
+karte: B-04
 ---
 
 Teambasierte Schätzmethode: Alle zeigen gleichzeitig eine Karte mit ihrer Schätzung. Abweichungen werden besprochen.
@@ -80,6 +81,14 @@ Vorher müssen Stories verstanden und annähernd gleich gross sein, etwa nach St
 - ergaenzt: [[story-points]] Das Ergebnis sind Story Points.
 - ergaenzt: [[refinement]] Findet oft im Refinement statt.
 - danach: [[product-backlog]] Schätzung im Backlog festhalten.
+
+## Karte
+Teaser: Das Team schätzt gleichzeitig mit Karten, Abweichungen werden besprochen.
+- Story kurz erklären
+- Alle legen verdeckt eine Karte
+- Gleichzeitig aufdecken
+- Höchste und tiefste begründen
+- Neu schätzen bis Einigung
 
 ## Quellen
 - Grenning, J.: Planning Poker or How to Avoid Analysis Paralysis while Release Planning (2002)

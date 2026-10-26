@@ -10,6 +10,7 @@ aufwand: 1 bis 3 Stunden je Themenfeld
 werkzeuge: [ISO 25010, Planguage, Quality Attribute Workshop]
 reihenfolge: 5
 status: entwurf
+karte: S-05
 ---
 
 Nichtfunktionale Anforderungen wie Performance, Sicherheit, Bedienbarkeit oder Verfügbarkeit, messbar formuliert.
@@ -78,6 +79,14 @@ Vorher sind die wichtigsten Stories und Nutzer bekannt. Danach nehmen Sie die Kr
 - ergaenzt: [[dor-dod]] Wichtige NFR in der Definition of Done verankern.
 - danach: [[pflichtenheft]] NFR haben ein eigenes Kapitel im Pflichtenheft.
 - ergaenzt: [[kano]] Basisfaktoren im Kano-Modell sind oft NFR.
+
+## Karte
+Teaser: Wie gut muss das System sein? Schnell, sicher, bedienbar: messbar formuliert.
+- Qualitätsmerkmale durchgehen
+- Je Merkmal Zielwert festlegen
+- Messmethode festhalten
+- Konflikte gewichten
+- Annahmen notieren
 
 ## Quellen
 - ISO/IEC 25010:2011 – Systems and software quality models

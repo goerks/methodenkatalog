@@ -11,6 +11,7 @@ werkzeuge: [Jira, Confluence]
 grafik: roadmap
 reihenfolge: 4
 status: entwurf
+karte: P-04
 ---
 
 Zeigt in groben Etappen, welche Ziele und Themen das Produkt in welcher Reihenfolge erreichen soll, ohne feste Termine für Details.
@@ -81,6 +82,14 @@ Vorher klären Vision und Priorisierung die Richtung. Danach plant das Team im S
 - ergaenzt: [[story-mapping]] Releases der Story Map.
 - danach: [[sprint-planning]] Etappen werden in Sprints umgesetzt.
 - ergaenzt: [[risikoanalyse]] Risiken beeinflussen die Reihenfolge.
+
+## Karte
+Teaser: Grobe Etappen und Ziele über die Zeit: Orientierung, kein Terminversprechen.
+- Vision und Ziele klären
+- Horizont wählen
+- Nach Zielen gliedern
+- Jetzt, Nächstes, Später
+- Änderungen begründen
 
 ## Quellen
 - Lombardo, C. T., McCarthy, B., Ryan, E., Connors, M.: Product Roadmaps Relaunched (O'Reilly, 2017)

@@ -10,6 +10,7 @@ aufwand: 1 bis 2 Stunden pro Woche
 werkzeuge: [Jira, Miro, Planning-Poker-App]
 reihenfolge: 2
 status: entwurf
+karte: P-02
 ---
 
 Regelmässige Sitzung, in der das Team Backlog-Einträge klärt, aufteilt, schätzt und bereit für den Sprint macht.
@@ -80,6 +81,14 @@ Vorher hat der Product Owner das Backlog vorsortiert. Danach ist das Team bereit
 - ergaenzt: [[planning-poker]] Schätzung im Refinement.
 - ergaenzt: [[dor-dod]] Ziel ist Definition of Ready.
 - ergaenzt: [[user-stories]] Stories werden verfeinert.
+
+## Karte
+Teaser: Das Team bereitet kommende Einträge für den Sprint vor.
+- Obere Einträge vorwählen
+- Nutzen verstehen
+- Kriterien ergänzen, teilen
+- Schätzen
+- Gegen DoR prüfen
 
 ## Quellen
 - Schwaber, K., Sutherland, J.: The Scrum Guide (2020)

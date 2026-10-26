@@ -11,6 +11,7 @@ werkzeuge: [Matrix (Einfluss/Interesse), Miro, Excel]
 reihenfolge: 4
 grafik: stakeholder
 status: entwurf
+karte: V-01
 ---
 
 Identifiziert alle Personen und Gruppen mit Einfluss oder Interesse am Vorhaben und legt fest, wie man mit ihnen umgeht.
@@ -78,6 +79,14 @@ Vorher ist ein Kontextdiagramm nützlich, weil es externe Parteien sichtbar mach
 - danach: [[interview]] Schlüsselpersonen einzeln befragen.
 - danach: [[workshop]] Teilnehmer für Workshops auswählen.
 - danach: [[persona]] Nutzergruppen zu Personas verdichten.
+
+## Karte
+Teaser: Wer ist betroffen, wer entscheidet, wer kann blockieren? Einfluss und Interesse sichtbar machen.
+- Betroffene sammeln
+- Einfluss und Interesse bewerten
+- Einbindung je Gruppe festlegen
+- Vertraulich dokumentieren
+- Bei Meilensteinen aktualisieren
 
 ## Quellen
 - Mendelow, A.: Environmental Scanning – The Impact of the Stakeholder Concept (1981)

@@ -11,6 +11,7 @@ werkzeuge: [Camunda Modeler, Signavio, draw.io, Bizagi]
 reihenfolge: 3
 grafik: bpmn
 status: entwurf
+karte: S-12
 ---
 
 Standardnotation für Geschäftsprozesse mit Pools, Lanes, Ereignissen, Aufgaben und Gateways. Verständlich für Fachbereich und IT.
@@ -78,6 +79,14 @@ Vorher klären Kontextdiagramm und Workshop den Umfang. Danach leiten Sie aus de
 - vorher: [[workshop]] Prozess im Workshop erheben.
 - vorher: [[kontextdiagramm]] Systemgrenze zuerst klären.
 - danach: [[user-stories]] Aus Prozessschritten Stories ableiten.
+
+## Karte
+Teaser: Standardnotation für Geschäftsprozesse mit Ereignissen, Aufgaben und Rollen.
+- Prozessgrenzen festlegen
+- Rollen als Bahnen
+- Ereignisse und Aufgaben setzen
+- Entscheidungen ergänzen
+- Mit Beteiligten prüfen
 
 ## Quellen
 - OMG: Business Process Model and Notation (BPMN), Version 2.0 (2011)

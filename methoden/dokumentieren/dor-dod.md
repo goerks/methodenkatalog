@@ -10,6 +10,7 @@ aufwand: 1 Stunde zur Einführung, danach laufend
 werkzeuge: [Teamboard, Jira-Workflow, Wiki]
 reihenfolge: 4
 status: entwurf
+karte: S-04
 ---
 
 Zwei Checklisten des Teams: Wann ist eine Story bereit für den Sprint (Ready) und wann gilt sie als fertig (Done).
@@ -80,6 +81,14 @@ Vorher helfen Stories und Akzeptanzkriterien, damit die Kriterien konkret werden
 - ergaenzt: [[refinement]] Im Refinement wird Ready hergestellt.
 - ergaenzt: [[akzeptanzkriterien]] Erfüllte Kriterien sind Teil von Done.
 - danach: [[review]] Prüfung im Sprint Review.
+
+## Karte
+Teaser: Zwei Checklisten: wann ist eine Story bereit (DoR), wann ist sie fertig (DoD).
+- Probleme im Ablauf sammeln
+- Kurze Liste gemeinsam festlegen
+- Sichtbar aushängen
+- Bei Fehlern erweitern
+- Regelmässig überprüfen
 
 ## Quellen
 - Schwaber, K., Sutherland, J.: The Scrum Guide (2020), scrumguides.org

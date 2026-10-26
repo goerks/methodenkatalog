@@ -11,6 +11,7 @@ werkzeuge: [draw.io, PlantUML, Enterprise Architect]
 grafik: domaene
 reihenfolge: 6
 status: entwurf
+karte: S-14
 ---
 
 Zeigt die wichtigen Fachbegriffe eines Bereichs als Klassen mit ihren Beziehungen, ohne technische Details. Schafft ein gemeinsames Bild der Fachwelt.
@@ -80,6 +81,14 @@ Vorher liefern Glossar und Event Storming die Begriffe. Danach ergänzen Geschä
 - ergaenzt: [[geschaeftsregeln]] Regeln verbinden Begriffe.
 - ergaenzt: [[zustandsdiagramm]] Zustände der Objekte darstellen.
 - danach: [[pflichtenheft]] Als Kapitel Datenmodell einbinden.
+
+## Karte
+Teaser: Fachliche Begriffe und ihre Beziehungen, kein Datenbankentwurf.
+- Begriffe aus dem Glossar
+- Als Klassen zeichnen
+- Beziehungen mit Verb benennen
+- Kardinalitäten ergänzen
+- Fachleute lesen laut vor
 
 ## Quellen
 - Evans, E.: Domain-Driven Design (Addison-Wesley, 2003)

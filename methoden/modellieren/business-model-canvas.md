@@ -11,6 +11,7 @@ werkzeuge: [Miro, Confluence]
 grafik: bmc
 reihenfolge: 5
 status: entwurf
+karte: V-08
 ---
 
 Beschreibt ein Geschäftsmodell auf einer Seite mit neun Bausteinen, von Kundensegmenten über Nutzenversprechen bis zu Kosten und Erlösen.
@@ -80,6 +81,14 @@ Vorher klären Sie Beteiligte und, wenn nötig, die Lage mit einer SWOT-Analyse.
 - vorher: [[workshop]] Im Workshop gemeinsam füllen.
 - danach: [[produktvision]] Das Modell schärft die Vision.
 - danach: [[impact-mapping]] Ziele des Modells in eine Impact Map überführen.
+
+## Karte
+Teaser: Neun Bausteine: wie eine Organisation Wert schafft, liefert und einnimmt.
+- Kunden und Wertangebot zuerst
+- Kanäle und Beziehungen
+- Einnahmen und Kosten
+- Ressourcen, Aktivitäten, Partner
+- Ist und Ziel vergleichen
 
 ## Quellen
 - Osterwalder, A., Pigneur, Y.: Business Model Generation (Wiley, 2010)

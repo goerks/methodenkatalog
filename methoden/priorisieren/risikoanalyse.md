@@ -11,6 +11,7 @@ werkzeuge: [Excel, Miro]
 grafik: risiko
 reihenfolge: 6
 status: entwurf
+karte: B-06
 ---
 
 Erfasst mögliche Risiken, bewertet Eintrittswahrscheinlichkeit und Auswirkung und legt Gegenmassnahmen fest.
@@ -81,6 +82,14 @@ Vorher liefern SWOT oder die 5-Whys-Analyse Kandidaten. Danach fliessen die Risi
 - danach: [[product-backlog]] Risikoreiche Einträge früh einplanen.
 - ergaenzt: [[nfr]] Viele Risiken betreffen Qualität.
 - ergaenzt: [[change-management]] Änderungen verändern Risiken.
+
+## Karte
+Teaser: Mögliche Schäden finden, nach Wahrscheinlichkeit und Wirkung bewerten.
+- Risiken sammeln
+- Als Wenn-dann-Satz formulieren
+- Wahrscheinlichkeit und Wirkung
+- Massnahme und Eigner
+- Regelmässig überprüfen
 
 ## Quellen
 - ISO 31000:2018 – Risk management guidelines

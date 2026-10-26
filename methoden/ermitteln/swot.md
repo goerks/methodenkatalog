@@ -11,6 +11,7 @@ werkzeuge: [Miro, Excel]
 grafik: swot
 reihenfolge: 6
 status: entwurf
+karte: V-03
 ---
 
 Stellt Stärken, Schwächen, Chancen und Risiken eines Vorhabens, Produkts oder Bereichs in vier Feldern gegenüber und zeigt, wo Handlungsbedarf besteht.
@@ -82,6 +83,14 @@ Vorher helfen Stakeholder-Analyse und Business Model Canvas für ein gemeinsames
 - ergaenzt: [[business-model-canvas]] Das Geschäftsmodell zeigt, wo Stärken wirken.
 - danach: [[produktvision]] Aus der Lage ergibt sich die Vision.
 - danach: [[risikoanalyse]] Bedrohungen werden als Risiken weiterverfolgt.
+
+## Karte
+Teaser: Stärken, Schwächen, Chancen, Risiken in vier Feldern: die Ausgangslage klären.
+- Gegenstand abgrenzen
+- Punkte still sammeln
+- In vier Felder ordnen
+- Stärken und Chancen kombinieren
+- 3 bis 5 Folgerungen ableiten
 
 ## Quellen
 - Gürel, E.: SWOT Analysis: A Theoretical Review, Journal of International Social Research 10 (2017)

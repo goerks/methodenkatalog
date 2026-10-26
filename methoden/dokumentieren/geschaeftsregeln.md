@@ -10,6 +10,7 @@ aufwand: Stunden bis Tage
 werkzeuge: [Confluence, Excel]
 reihenfolge: 9
 status: entwurf
+karte: S-08
 ---
 
 Verbindliche Regeln der Fachseite, etwa Berechnungen, Fristen und Bedingungen. Werden getrennt von Funktionen beschrieben und eindeutig nummeriert.
@@ -79,6 +80,14 @@ Vorher liefern Dokumentenanalyse und Glossar die Grundlage. Danach werden Regeln
 - danach: [[akzeptanzkriterien]] Regeln werden zu testbaren Kriterien.
 - danach: [[pflichtenheft]] Regeln stehen im Pflichtenheft.
 - ergaenzt: [[bpmn]] Gateways im Prozess folgen den Regeln.
+
+## Karte
+Teaser: Was in der Organisation gilt, getrennt von Prozess und Funktion gepflegt.
+- Regelquellen finden
+- Regeln atomar formulieren
+- Eigner und Quelle nennen
+- Auf Widersprüche prüfen
+- In Tests übernehmen
 
 ## Quellen
 - Ross, R.: Business Rule Concepts (Business Rule Solutions, 2013)

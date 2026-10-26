@@ -6,6 +6,7 @@ typ: Modellierungswerkzeug
 form: werkzeug
 reihenfolge: 8
 status: entwurf
+karte: W-08
 ---
 
 Umfassendes Modellierungswerkzeug für UML, BPMN und Anforderungen mit gemeinsamem Modell und Rückverfolgbarkeit.
@@ -31,6 +32,13 @@ Enterprise Architect ist ein umfassendes Modellierungswerkzeug für UML, BPMN un
 - Hoher Einarbeitungsaufwand
 - Lizenzkosten
 - Für kleine Vorhaben oft zu schwergewichtig
+
+## Karte
+Teaser: Modellierungswerkzeug für UML, BPMN und Anforderungen mit gemeinsamem Modell.
+- UML und BPMN modellieren
+- Anforderungen verknüpfen
+- Berichte aus dem Modell
+- Im Team gemeinsam pflegen
 
 ## Quellen
 - Sparx Systems: Enterprise Architect Benutzerhandbuch (sparxsystems.com)

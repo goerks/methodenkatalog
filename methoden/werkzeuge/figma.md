@@ -6,6 +6,7 @@ typ: Designwerkzeug
 form: werkzeug
 reihenfolge: 6
 status: entwurf
+karte: W-06
 ---
 
 Online-Werkzeug für Oberflächenentwürfe und klickbare Prototypen. Mehrere Personen arbeiten gleichzeitig.
@@ -31,6 +32,13 @@ Figma ist ein Online-Werkzeug für Oberflächenentwürfe und klickbare Prototype
 - Gestaltungsarbeit braucht Übung
 - Nicht für Anforderungsverwaltung gedacht
 - Lizenzkosten für Teams
+
+## Karte
+Teaser: Online-Werkzeug für Oberflächenentwürfe und klickbare Prototypen.
+- Wireframes und Prototypen bauen
+- Nutzertests durchführen
+- Personas und Journeys gestalten
+- Entwürfe kommentieren
 
 ## Quellen
 - Figma: Hilfe-Center (help.figma.com)

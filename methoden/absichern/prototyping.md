@@ -10,6 +10,7 @@ aufwand: Stunden bis Tage
 werkzeuge: [Figma, Balsamiq, Papier]
 reihenfolge: 2
 status: entwurf
+karte: A-02
 ---
 
 Früh sichtbare oder klickbare Entwürfe, mit denen Anforderungen mit Nutzern getestet werden.
@@ -79,6 +80,14 @@ Vorher helfen Personas bei der Auswahl der Testpersonen. Danach schreiben Sie Us
 - alternative: [[review]] Review für Dokumente, Prototyp für Bedienung.
 - danach: [[user-stories]] Erkenntnisse als neue Stories.
 - ergaenzt: [[aktivitaetsdiagramm]] Ablauf mit dem Prototyp abgleichen.
+
+## Karte
+Teaser: Anforderungen erlebbar machen: Nutzer testen eine einfache Version.
+- Ziel und Fragen festlegen
+- Kleinsten Prototyp bauen
+- Aufgaben testen lassen
+- Still beobachten
+- Erkenntnisse festhalten
 
 ## Quellen
 - Rubin, J., Chisnell, D.: Handbook of Usability Testing, 2. Auflage (Wiley, 2008)

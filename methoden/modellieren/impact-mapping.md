@@ -11,6 +11,7 @@ werkzeuge: [Miro, draw.io]
 grafik: impact
 reihenfolge: 4
 status: entwurf
+karte: V-06
 ---
 
 Verbindet ein Ziel über Akteure und deren gewünschtes Verhalten mit den Lieferobjekten, die dazu beitragen. Zeigt, warum etwas gebaut wird.
@@ -80,6 +81,14 @@ Vorher sollten Vision oder Geschäftsmodell vorliegen. Danach entwickeln Sie aus
 - ergaenzt: [[stakeholder]] Akteure der Map sind Stakeholder.
 - danach: [[user-stories]] Lieferobjekte werden zu User Stories.
 - alternative: [[story-mapping]] Story Map ordnet Stories, Impact Map begründet sie.
+
+## Karte
+Teaser: Ziel, Akteure, Wirkungen, Lieferungen: Funktionen mit Nutzen verbinden.
+- Messbares Ziel in die Mitte
+- Wer beeinflusst es?
+- Wie ändert sich ihr Verhalten?
+- Was liefern wir dafür?
+- Wirksamste Pfade wählen
 
 ## Quellen
 - Adzic, G.: Impact Mapping (Provoking Thoughts, 2012)

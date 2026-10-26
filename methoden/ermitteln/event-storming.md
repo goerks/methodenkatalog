@@ -11,6 +11,7 @@ werkzeuge: [Miro, Haftnotizen]
 grafik: event
 reihenfolge: 8
 status: entwurf
+karte: E-06
 ---
 
 Ein Workshop, in dem Fachleute und Entwicklung alle Ereignisse eines Geschäftsbereichs auf einer langen Zeitachse sammeln und daraus Zusammenhänge ableiten.
@@ -84,6 +85,14 @@ Vorher klären Workshop-Grundlagen und Stakeholder-Analyse, wer dabei sein muss.
 - danach: [[user-stories]] Ereignisse werden zu Stories.
 - alternative: [[bpmn]] BPMN ist formaler, Event Storming schneller.
 - danach: [[glossar]] Gemeinsame Begriffe festhalten.
+
+## Karte
+Teaser: Fachleute kleben Ereignisse auf eine lange Wand. So wird Prozesswissen sichtbar.
+- Grosse Wand, orange Zettel
+- Ereignisse chaotisch sammeln
+- Zeitlich ordnen, Doppelte streichen
+- Befehle, Akteure, Regeln ergänzen
+- Offene Fragen markieren
 
 ## Quellen
 - Brandolini, A.: Introducing EventStorming (Leanpub, 2021)

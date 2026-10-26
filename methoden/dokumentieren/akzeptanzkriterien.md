@@ -11,6 +11,7 @@ werkzeuge: [Cucumber, SpecFlow, Behave, Jira]
 grafik: gherkin
 reihenfolge: 3
 status: entwurf
+karte: S-03
 ---
 
 Überprüfbare Bedingungen, unter denen eine Anforderung als erfüllt gilt. Häufig im Format Gegeben / Wenn / Dann (Gherkin).
@@ -82,6 +83,14 @@ Vorher steht die Story oder der Use Case, aus dem sie abgeleitet werden. Danach 
 - ergaenzt: [[dor-dod]] Definition of Done verlangt, dass Kriterien erfüllt sind.
 - danach: [[review]] Kriterien in der Abnahme prüfen.
 - vorher: [[use-cases]] Kriterien lassen sich aus Use-Case-Abläufen ableiten.
+
+## Karte
+Teaser: Wann ist eine Anforderung erfüllt? Beispiele im Format Gegeben-Wenn-Dann.
+- Story und Beispiele sammeln
+- Gegeben: Ausgangslage
+- Wenn: Aktion
+- Dann: erwartetes Ergebnis
+- Grenz- und Fehlerfälle ergänzen
 
 ## Quellen
 - North, D.: Introducing BDD (2006), dannorth.net

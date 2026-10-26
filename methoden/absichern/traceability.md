@@ -11,6 +11,7 @@ werkzeuge: [Doors, Polarion, Jira, Excel]
 reihenfolge: 3
 grafik: trace
 status: entwurf
+karte: A-03
 ---
 
 Verbindet Anforderungen mit Quellen, Design, Code und Tests. Zeigt Abdeckung und Auswirkungen von Änderungen.
@@ -79,6 +80,14 @@ Vorher brauchen Sie ein Pflichtenheft oder Stories mit eindeutigen IDs. Danach b
 - ergaenzt: [[change-management]] Auswirkungsanalyse bei Änderungen.
 - ergaenzt: [[akzeptanzkriterien]] Tests verlinken.
 - ergaenzt: [[use-cases]] Use Cases verlinken.
+
+## Karte
+Teaser: Anforderungen mit Herkunft, Entwurf und Tests verknüpfen. Folgen sichtbar.
+- Verknüpfungsziele festlegen
+- Eindeutige IDs vergeben
+- Beim Entstehen verknüpfen
+- Lücken berichten
+- Bei Änderungen nutzen
 
 ## Quellen
 - Gotel, O., Finkelstein, A.: An Analysis of the Requirements Traceability Problem (1994), ICRE

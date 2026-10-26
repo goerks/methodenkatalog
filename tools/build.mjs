@@ -12,7 +12,7 @@ const PHASEN = ['verstehen', 'ermitteln', 'spezifizieren', 'bewerten', 'planen',
 const FORMEN = ['methode', 'artefakt', 'modell', 'meeting', 'werkzeug'];
 const ARTEN = { vorher: 'vorher', danach: 'danach', ergaenzt: 'ergaenzt', 'ergänzt': 'ergaenzt', alternative: 'alternative' };
 const STATUS = ['entwurf', 'geprueft', 'veroeffentlicht'];
-const LINKS_MIN = 3, LINKS_MAX = 7, TOOL_MIN = 2;
+const LINKS_MIN = 3, LINKS_MAX = 7, TOOL_MIN = 2, KT_MAX = 105, KS_MAX = 38;
 
 const errors = [];
 const err = (id, msg) => errors.push(`${id}: ${msg}`);
@@ -50,6 +50,7 @@ function parseFile(file, folder) {
     re: isTool ? bullets('Grenzen') : bullets('Regeln'),
     bsp: beispielKey ? { t: beispielKey.replace(/^Beispiel:?\s*/, '') || 'Beispiel', x: sec[beispielKey] } : null,
     zw: prose('Wofür'), wa: bullets('Wann sinnvoll'), wn: bullets('Wann besser nicht'), vb: bullets('Vorbereitung'),
+    nr: meta.karte || '', kt: ((sec['Karte'] || '').match(/^Teaser:\s*(.*)$/m) || [])[1] || '', ks: bullets('Karte'),
     pr: prose('In der Praxis'), em: prose('Empfehlung'), qu: bullets('Quellen'),
     io: isTool ? null : { lf: bullets('Lieferanten'), in: ioItems('Eingaben'), out: ioItems('Ergebnisse'), ko: bullets('Konsumenten') },
     li: [],
@@ -76,6 +77,13 @@ function parseFile(file, folder) {
   if (!STATUS.includes(m.s)) err(id, `status «${m.s}» unbekannt`);
   if (!meta.typ) err(id, 'typ fehlt');
   if (!intro) err(id, 'Einleitungstext fehlt');
+  const PL = { verstehen: 'V', ermitteln: 'E', spezifizieren: 'S', bewerten: 'B', planen: 'P', absichern: 'A' };
+  const want = isTool ? 'W' : PL[m.ph];
+  if (!new RegExp(`^${want || 'X'}-\\d{2}$`).test(m.nr)) err(id, `karte (Kartennummer) fehlt oder passt nicht, erwartet ${want}-NN`);
+  if (!m.kt) err(id, 'Abschnitt «Karte» braucht eine Zeile «Teaser: …»');
+  else if (m.kt.length > KT_MAX) err(id, `Kartenteaser hat ${m.kt.length} Zeichen, erlaubt sind ${KT_MAX}`);
+  if (m.ks.length < 3 || m.ks.length > 5) err(id, `Abschnitt «Karte» braucht 3 bis 5 Kurzschritte, hat ${m.ks.length}`);
+  for (const x of m.ks) if (x.length > KS_MAX) err(id, `Kurzschritt «${x}» hat ${x.length} Zeichen, erlaubt sind ${KS_MAX}`);
   if (!m.zw) err(id, 'Abschnitt «Wofür» fehlt');
   if (m.wa.length < 2) err(id, 'Abschnitt «Wann sinnvoll» braucht mindestens 2 Punkte');
   if (!m.wn.length) err(id, 'Abschnitt «Wann besser nicht» fehlt');
@@ -132,9 +140,14 @@ if (errors.length) {
   process.exit(1);
 }
 
+const nrs = new Map();
+for (const m of all) { if (nrs.has(m.nr)) err(m.id, `Kartennummer ${m.nr} ist schon vergeben an ${nrs.get(m.nr)}`); nrs.set(m.nr, m.id); }
+const sets = JSON.parse(readFileSync(join(ROOT, 'methoden', 'sets.json'), 'utf8'));
+for (const s of sets) for (const id of s.s) if (!ids.has(id)) err('sets.json', `Set «${s.n}» enthält unbekannte ID «${id}»`);
+if (errors.length) { console.error(`\n${errors.length} Fehler:\n- ` + errors.join('\n- ')); process.exit(1); }
 const ki = m => KAT_ORDER.indexOf(Object.keys(KAT).find(k => KAT[k] === m.c));
 all.sort((a, b) => ki(a) - ki(b) || a.o - b.o || a.n.localeCompare(b.n, 'de'));
 for (const m of all) delete m.o;
 writeFileSync(join(ROOT, 'data', 'catalog.js'),
-  '// Erzeugt von tools/build.mjs aus methoden/*/*.md. Nicht von Hand bearbeiten.\nconst M = ' + JSON.stringify(all, null, 1) + ';\n');
+  '// Erzeugt von tools/build.mjs aus methoden/*/*.md und methoden/sets.json. Nicht von Hand bearbeiten.\nconst M = ' + JSON.stringify(all, null, 1) + ';\nconst SETS = ' + JSON.stringify(sets) + ';\n');
 console.log(`${methods.length} Methoden und ${tools.length} Werkzeuge geschrieben (${all.filter(m => m.s === 'entwurf').length} Entwurf).`);

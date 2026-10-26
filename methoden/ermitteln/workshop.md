@@ -10,6 +10,7 @@ aufwand: 2 bis 4 Stunden, Vorbereitung 1 Tag
 werkzeuge: [Miro, Mural, Haftnotizen, Flipchart]
 reihenfolge: 2
 status: entwurf
+karte: E-02
 ---
 
 Moderierte Sitzung mit mehreren Beteiligten, in der Anforderungen gemeinsam gesammelt, geklärt und abgestimmt werden.
@@ -81,6 +82,14 @@ Vorher sollten die Stakeholder bekannt sein und möglichst einige Einzelintervie
 - danach: [[moscow]] Gesammelte Anforderungen im Workshop mit MoSCoW einordnen.
 - danach: [[story-mapping]] Ergebnisse als Story Map ordnen.
 - alternative: [[interview]] Für sensible Themen sind Einzelgespräche offener.
+
+## Karte
+Teaser: Moderierte Sitzung, in der Beteiligte Anforderungen gemeinsam klären und entscheiden.
+- Ziel und Agenda festlegen
+- Richtige Leute einladen
+- Ideen sammeln, Zeitboxen setzen
+- Ergebnisse sofort sichtbar machen
+- Protokoll mit Entscheiden senden
 
 ## Quellen
 - Gottesdiener, E.: Requirements by Collaboration (Addison-Wesley, 2002)

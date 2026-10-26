@@ -10,6 +10,7 @@ aufwand: Tage bis Wochen
 werkzeuge: [Word, Confluence, Doors, Polarion]
 reihenfolge: 6
 status: entwurf
+karte: S-06
 ---
 
 Klassische Dokumentation: Das Lastenheft beschreibt, was der Auftraggeber will, das Pflichtenheft, wie der Auftragnehmer es umsetzt.
@@ -81,6 +82,14 @@ Vorher müssen Use Cases, Qualitätsanforderungen und Kontext vorliegen. Danach 
 - ergaenzt: [[traceability]] Rückverfolgbarkeit der IDs sicherstellen.
 - danach: [[change-management]] Änderungen kontrolliert abwickeln.
 - alternative: [[product-backlog]] Agile Teams ersetzen das Dokument durch ein lebendes Backlog.
+
+## Karte
+Teaser: Vertragliche Beschreibung, wie die Anforderungen umgesetzt werden. Klassisch.
+- Struktur festlegen
+- Anforderungen nummerieren
+- Muss und Kann trennen
+- Im Review prüfen
+- Änderungen geregelt führen
 
 ## Quellen
 - ISO/IEC/IEEE 29148:2018 – Requirements engineering

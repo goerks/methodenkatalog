@@ -1,0 +1,72 @@
+[
+ {
+  "id": "workshop-koffer",
+  "n": "Workshop-Koffer",
+  "m": "W",
+  "s": [
+   "workshop",
+   "event-storming",
+   "story-mapping",
+   "impact-mapping",
+   "moscow",
+   "persona",
+   "miro"
+  ]
+ },
+ {
+  "id": "backlog-aufbauen",
+  "n": "Backlog aufbauen",
+  "m": "B",
+  "s": [
+   "persona",
+   "user-stories",
+   "akzeptanzkriterien",
+   "story-splitting",
+   "story-mapping",
+   "product-backlog",
+   "refinement",
+   "dor-dod"
+  ]
+ },
+ {
+  "id": "schaetzen-planen",
+  "n": "Schätzen und Planen",
+  "m": "S",
+  "s": [
+   "planning-poker",
+   "story-points",
+   "wsjf",
+   "roadmap",
+   "sprint-planning",
+   "risikoanalyse"
+  ]
+ },
+ {
+  "id": "spezifikation-klassisch",
+  "n": "Spezifikation klassisch",
+  "m": "K",
+  "s": [
+   "kontextdiagramm",
+   "use-case-diagramm",
+   "use-cases",
+   "aktivitaetsdiagramm",
+   "nfr",
+   "pflichtenheft",
+   "review",
+   "traceability"
+  ]
+ },
+ {
+  "id": "prozesse-verstehen",
+  "n": "Prozesse verstehen",
+  "m": "P",
+  "s": [
+   "beobachtung",
+   "event-storming",
+   "aktivitaetsdiagramm",
+   "bpmn",
+   "geschaeftsregeln",
+   "glossar"
+  ]
+ }
+]

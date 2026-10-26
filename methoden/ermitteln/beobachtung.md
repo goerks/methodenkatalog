@@ -10,6 +10,7 @@ aufwand: Halber bis ganzer Tag pro Person
 werkzeuge: [Notizen, Foto (mit Einverständnis), Beobachtungsbogen]
 reihenfolge: 3
 status: entwurf
+karte: E-03
 ---
 
 Anwender bei der echten Arbeit beobachten und dabei Fragen stellen. Zeigt, was Menschen tun, nicht nur, was sie sagen.
@@ -78,6 +79,14 @@ Vorher helfen ein erstes Interview und eine Stakeholder-Analyse, um die richtige
 - ergaenzt: [[interview]] Im Anschluss ein Interview, um das Beobachtete zu klären.
 - danach: [[persona]] Beobachtungen fliessen in Personas ein.
 - danach: [[aktivitaetsdiagramm]] Den beobachteten Ablauf als Aktivitätsdiagramm modellieren.
+
+## Karte
+Teaser: Menschen bei der echten Arbeit zusehen: Was sie tun, nicht was sie sagen.
+- Fokus und Erlaubnis klären
+- Ruhig mitgehen, nichts erklären
+- Handlung und Deutung trennen
+- Auffälligkeiten festhalten
+- Eindrücke im Gespräch prüfen
 
 ## Quellen
 - Beyer, H., Holtzblatt, K.: Contextual Design (Morgan Kaufmann, 1998)

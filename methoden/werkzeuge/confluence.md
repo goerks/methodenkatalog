@@ -6,6 +6,7 @@ typ: Wiki
 form: werkzeug
 reihenfolge: 5
 status: entwurf
+karte: W-05
 ---
 
 Wiki von Atlassian für Dokumentation, Protokolle und Spezifikationen. Eng mit Jira verbunden.
@@ -31,6 +32,13 @@ Confluence ist ein Wiki von Atlassian für Dokumentation, Protokolle und Spezifi
 - Struktur verwildert ohne Pflege
 - Keine strenge Versionierung wie ein Repository
 - Suche liefert bei grossen Beständen viel Rauschen
+
+## Karte
+Teaser: Wiki für Dokumentation, Protokolle und Spezifikationen, eng mit Jira verbunden.
+- Spezifikationen und Glossar pflegen
+- Protokolle ablegen
+- Gemeinsam kommentieren
+- Jira-Tickets einbetten
 
 ## Quellen
 - Atlassian: Confluence Dokumentation (atlassian.com)

@@ -10,6 +10,7 @@ aufwand: 1 bis 2 Stunden
 werkzeuge: [Miro, Confluence]
 reihenfolge: 7
 status: entwurf
+karte: V-05
 ---
 
 Kurze, überprüfbare Beschreibung, für wen das Produkt welchen Nutzen schafft und was es von Alternativen abhebt. Gibt dem Team Richtung.
@@ -81,6 +82,14 @@ Vorher helfen SWOT oder Business Model Canvas für die Ausgangslage. Danach brec
 - danach: [[roadmap]] Die Roadmap setzt die Vision in Etappen um.
 - danach: [[product-backlog]] Backlog-Einträge dienen der Vision.
 - ergaenzt: [[stakeholder]] Stakeholder prüfen die Vision.
+
+## Karte
+Teaser: In wenigen Sätzen: für wen, welches Problem, welcher Nutzen. Zielpunkt des Teams.
+- Zielgruppe und Problem klären
+- Vorlage ausfüllen
+- Auf eine Karte kürzen
+- Sichtbar aufhängen
+- Grosse Wünsche daran messen
 
 ## Quellen
 - Moore, G.: Crossing the Chasm (HarperBusiness, 1991)

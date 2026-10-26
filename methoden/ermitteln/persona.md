@@ -10,6 +10,7 @@ aufwand: 2 bis 3 Stunden pro Persona
 werkzeuge: [Persona-Vorlage, Miro, Figma]
 reihenfolge: 5
 status: entwurf
+karte: V-02
 ---
 
 Fiktive, aber datenbasierte Beschreibung einer typischen Nutzerin mit Zielen, Frust und Kontext. Hilft dem Team, für echte Menschen zu entscheiden.
@@ -78,6 +79,14 @@ Vorher müssen Interviews oder Beobachtungen vorliegen, sonst entsteht ein Wunsc
 - vorher: [[interview]] Interviews liefern die Datengrundlage.
 - vorher: [[beobachtung]] Beobachtungen zeigen echtes Verhalten.
 - danach: [[user-stories]] Personas sind Rollen in User Stories («Als Disponentin ...»).
+
+## Karte
+Teaser: Ein erfundenes, datenbasiertes Profil einer typischen Nutzergruppe mit Zielen und Frust.
+- Interviews und Daten sammeln
+- Muster in Zielen suchen
+- 3 bis 5 Profile ausarbeiten
+- Zitate aus Gesprächen nutzen
+- Sichtbar aufhängen, verwenden
 
 ## Quellen
 - Cooper, A.: The Inmates Are Running the Asylum (Sams, 1999)

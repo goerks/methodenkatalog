@@ -11,6 +11,7 @@ werkzeuge: [Miro]
 grafik: fivewhys
 reihenfolge: 7
 status: entwurf
+karte: V-04
 ---
 
 Fragt fünfmal nacheinander nach dem Warum, um von einem Symptom zur eigentlichen Ursache eines Problems zu kommen.
@@ -80,6 +81,14 @@ Vorher steht meist eine Beobachtung oder ein Interview, das ein Problem sichtbar
 - ergaenzt: [[workshop]] Im Workshop gemeinsam durchführen.
 - danach: [[risikoanalyse]] Ursachen fliessen in die Risiken ein.
 - danach: [[user-stories]] Ursachen führen zu besseren Stories.
+
+## Karte
+Teaser: Mehrmals «Warum?» fragen, bis die beeinflussbare Ursache sichtbar wird.
+- Problem in einem Satz nennen
+- Warum? Antwort aufschreiben
+- Wiederholen bis zur Ursache
+- Kette rückwärts prüfen
+- Gegenmassnahme ableiten
 
 ## Quellen
 - Ohno, T.: Toyota Production System (Productivity Press, 1988)

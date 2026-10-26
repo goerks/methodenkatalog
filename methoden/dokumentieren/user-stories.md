@@ -11,6 +11,7 @@ werkzeuge: [Jira, Azure DevOps, Trello, Haftnotizen]
 grafik: story
 reihenfolge: 1
 status: entwurf
+karte: S-01
 ---
 
 Kurze Anforderung aus Sicht des Nutzers im Format «Als ... möchte ich ..., damit ...». Dient als Gesprächsanlass, nicht als vollständige Spezifikation.
@@ -86,6 +87,14 @@ Vorher klären Personas, für wen geschrieben wird. Direkt danach ergänzen Sie 
 - danach: [[product-backlog]] Stories wohnen im Product Backlog.
 - alternative: [[use-cases]] Für komplexe Abläufe mit Alternativen sind Use Cases ausführlicher.
 - ergaenzt: [[dor-dod]] Die Definition of Ready sagt, wann eine Story bereit ist.
+
+## Karte
+Teaser: Eine Anforderung aus Nutzersicht: Wer will was, wozu. Anlass für ein Gespräch.
+- Rolle, Wunsch, Nutzen nennen
+- INVEST prüfen
+- Akzeptanzkriterien ergänzen
+- Im Team schätzen
+- Zu grosse Stories teilen
 
 ## Quellen
 - Cohn, M.: User Stories Applied (Addison-Wesley, 2004)

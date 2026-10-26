@@ -10,6 +10,7 @@ aufwand: Stunden bis Tage
 werkzeuge: [Confluence, Excel]
 reihenfolge: 7
 status: entwurf
+karte: E-05
 ---
 
 Wertet vorhandene Unterlagen wie Handbücher, Verträge, Berichte und Altsysteme aus, um Anforderungen, Regeln und Begriffe zu finden.
@@ -79,6 +80,14 @@ Vorher klären Sie mit den Stakeholdern, welche Dokumente gelten. Danach gehen S
 - danach: [[glossar]] Begriffe sammeln.
 - danach: [[geschaeftsregeln]] Regeln aus Dokumenten ableiten.
 - ergaenzt: [[fragebogen]] Dokumente und Befragung ergänzen sich.
+
+## Karte
+Teaser: Bestehende Unterlagen auswerten: Regeln, Begriffe, Zahlen, Widersprüche.
+- Dokumente und Aktualität klären
+- Gezielt lesen, markieren
+- Fundstellen notieren
+- Widersprüche klären
+- Begriffe ins Glossar
 
 ## Quellen
 - IIBA: BABOK Guide, Version 3 (2015), Technik «Dokumentenanalyse»

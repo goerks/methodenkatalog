@@ -10,6 +10,7 @@ aufwand: 10 bis 20 Min. pro Story
 werkzeuge: [Jira, Miro]
 reihenfolge: 10
 status: entwurf
+karte: S-09
 ---
 
 Teilt zu grosse User Stories in kleinere auf, die jeweils für sich Nutzen bringen und in einen Sprint passen.
@@ -77,6 +78,14 @@ Vorher steht die grosse Story im Backlog. Danach schätzen Sie die Teile mit Pla
 - ergaenzt: [[story-mapping]] Schnitte entlang der Nutzerreise.
 - ergaenzt: [[dor-dod]] Ready verlangt kleine Stories.
 - danach: [[planning-poker]] Danach neu schätzen.
+
+## Karte
+Teaser: Eine grosse Story so teilen, dass jeder Teil Nutzen liefert. Senkrecht schneiden.
+- Kleinsten nützlichen Teil suchen
+- Nach Ablauf, Regel, Daten teilen
+- Nie nach Technikschichten
+- Teile gegen INVEST prüfen
+- Neu schätzen
 
 ## Quellen
 - Lawrence, R., Green, P.: The Humanizing Work Guide to Splitting User Stories (humanizingwork.com)

@@ -11,6 +11,7 @@ werkzeuge: [draw.io, PlantUML, Enterprise Architect]
 grafik: usecase
 reihenfolge: 2
 status: entwurf
+karte: S-11
 ---
 
 Übersicht über Akteure und die Funktionen (Use Cases), die das System für sie bereitstellt. Zeigt den Umfang auf einer Seite.
@@ -76,6 +77,14 @@ Vorher helfen Stakeholder-Analyse und Kontextdiagramm. Danach beschreiben Sie je
 - ergaenzt: [[kontextdiagramm]] Kontextdiagramm zeigt Nachbarsysteme.
 - vorher: [[stakeholder]] Akteure aus der Stakeholder-Analyse.
 - alternative: [[story-mapping]] Agile Teams nutzen oft die Story Map als Überblick.
+
+## Karte
+Teaser: Welche Akteure nutzen welche Funktionen? Überblick auf einer Seite.
+- Systemgrenze zeichnen
+- Akteure ausserhalb ergänzen
+- Use Cases als Ziele benennen
+- Verbindungen ziehen
+- Beschreibungen ankündigen
 
 ## Quellen
 - OMG: Unified Modeling Language (UML), Version 2.5.1 (2017)

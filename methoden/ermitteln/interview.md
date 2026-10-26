@@ -10,6 +10,7 @@ aufwand: 30 bis 60 Min. pro Gespräch
 werkzeuge: [Interviewleitfaden, Aufnahmegerät (mit Einverständnis), Miro]
 reihenfolge: 1
 status: entwurf
+karte: E-01
 ---
 
 Strukturiertes Einzelgespräch, um Wünsche, Probleme und Rahmenbedingungen einer Person aus erster Hand zu erfahren.
@@ -80,6 +81,14 @@ Vorher sollten Sie wissen, wer die Beteiligten sind und wen Sie zuerst sprechen 
 - alternative: [[workshop]] Bei vielen Beteiligten und Konflikten ist ein Workshop effizienter.
 - danach: [[persona]] Aus mehreren Interviews lassen sich Personas verdichten.
 - danach: [[user-stories]] Erkenntnisse werden als User Stories festgehalten.
+
+## Karte
+Teaser: Gespräch mit einer Person: was sie braucht, tut und stört.
+- Ziel und Leitfaden festlegen
+- Offene Fragen stellen, zuhören
+- Zu zweit: fragen und mitschreiben
+- Notizen gleich ergänzen
+- Protokoll bestätigen lassen
 
 ## Quellen
 - Wiegers, K., Beatty, J.: Software Requirements, 3. Auflage (Microsoft Press, 2013), Kapitel zu Interviews

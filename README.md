@@ -72,3 +72,11 @@ Alternativ ohne Workflow: Source «Deploy from a branch», Branch `main`, Ordner
 - Methodenseiten mit Wofür, Wann sinnvoll und besser nicht, Vorbereitung, Praxis, Empfehlung, Quellen.
 - Abschnitte `Lieferanten`, `Eingaben`, `Ergebnisse`, `Konsumenten` (SIPOC). Eingaben und Ergebnisse verweisen mit `Text >> [[id]] Verb` auf andere Methoden. Die Seite zeigt sie in vier umschaltbaren Darstellungen (Weg, Tabelle, Artefaktfluss, Sätze).
 - Karte für Touch: Antippen wählt, «Methode öffnen» öffnet, zwei Finger zoomen.
+
+## Stand 0.4: Methodenkarten zum Drucken
+
+- Ansicht «Karten»: Karten antippen (Warenkorb), 5 Sets nach Situation (`methoden/sets.json`), Legendenkarte, Bogenvorschau, Testblatt.
+- Pro Methode: Front-Matter `karte: X-NN` (stabile Nummer, Präfix = Phase) und Abschnitt `## Karte` mit `Teaser:` (max. 105 Zeichen) und 3 bis 5 Schritten (max. 38 Zeichen). `tools/build.mjs` prüft das.
+- Format: A4 quer, 4 × 2 Karten à 65,75 × 94 mm, 6 mm Abstand für den Siegelrand, 8 mm Rand. Rückseiten sind gespiegelt angeordnet (Duplex, Wenden an der kurzen Kante). Testblatt zur Kontrolle der Wendekante.
+- QR-Codes: `js/vendor/qrcode.js` (qrcode-generator 1.4.4, MIT); Ziel-URL in `js/cards.js` (`SITE`).
+- Drucken: Browser-Druckdialog (A4 quer, 100 %, Hintergrund an), «Als PDF speichern» möglich.

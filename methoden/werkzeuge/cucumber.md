@@ -6,6 +6,7 @@ typ: Testautomatisierung
 form: werkzeug
 reihenfolge: 7
 status: entwurf
+karte: W-07
 ---
 
 Führt Akzeptanzkriterien im Format Gegeben, Wenn, Dann (Gherkin) als automatische Tests aus. Verbindet Anforderung und Test.
@@ -31,6 +32,13 @@ Cucumber führt Akzeptanzkriterien im Format Gegeben-Wenn-Dann (Gherkin) als aut
 - Braucht Disziplin bei der Formulierung
 - Entwicklungsaufwand für den Testcode
 - Zu viele Szenarien verlangsamen den Build
+
+## Karte
+Teaser: Führt Kriterien im Format Gegeben-Wenn-Dann als automatische Tests aus.
+- Szenarien in Gherkin schreiben
+- Mit Testcode verbinden
+- Bei jedem Build ausführen
+- Als lebende Dokumentation nutzen
 
 ## Quellen
 - Cucumber: Dokumentation (cucumber.io)

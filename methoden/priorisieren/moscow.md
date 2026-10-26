@@ -11,6 +11,7 @@ werkzeuge: [Miro, Excel, Jira-Label]
 grafik: moscow
 reihenfolge: 1
 status: entwurf
+karte: B-01
 ---
 
 Einteilung von Anforderungen in Must, Should, Could und Won't (diesmal nicht). Einfach und im Workshop schnell anwendbar.
@@ -80,6 +81,14 @@ Vorher sammelt ein Workshop die Anforderungen. Danach übernehmen Sie die Reihen
 - alternative: [[kano]] Kano fragt direkt nach Nutzerzufriedenheit.
 - alternative: [[wsjf]] WSJF rechnet Wert gegen Aufwand.
 - danach: [[product-backlog]] Reihenfolge im Backlog übernehmen.
+
+## Karte
+Teaser: Anforderungen in Must, Should, Could, Won't einteilen: Wichtiges zuerst.
+- Zeitrahmen und Ziel klären
+- Jede Anforderung einordnen
+- Must auf Notwendigkeit prüfen
+- Won't bewusst festhalten
+- Mit Stakeholdern abstimmen
 
 ## Quellen
 - Clegg, D., Barker, R.: Case Method Fast-Track: A RAD Approach (Addison-Wesley, 1994)

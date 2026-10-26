@@ -10,6 +10,7 @@ aufwand: Stunden bis Tage
 werkzeuge: [Jira, Cucumber]
 reihenfolge: 5
 status: entwurf
+karte: A-05
 ---
 
 Der Fachbereich prüft das fertige System anhand echter Abläufe und entscheidet, ob es die Anforderungen erfüllt und produktiv gehen darf.
@@ -80,6 +81,14 @@ Vorher brauchen Sie klare Akzeptanzkriterien und eine Rückverfolgbarkeit von An
 - ergaenzt: [[review]] Review prüft Dokumente, UAT das System.
 - ergaenzt: [[dor-dod]] Die Abnahme ist Teil von Done.
 - ergaenzt: [[traceability]] Tests mit Anforderungen verknüpfen.
+
+## Karte
+Teaser: Anwender prüfen, ob das Ergebnis ihre Erwartungen erfüllt. Letzter Schritt vor Freigabe.
+- Kriterien und Testfälle ableiten
+- Testumgebung bereitstellen
+- Fachleute testen echte Aufgaben
+- Fehler klassieren
+- Entscheid dokumentieren
 
 ## Quellen
 - ISTQB: Certified Tester Foundation Level Syllabus (istqb.org), Abnahmetest

@@ -10,6 +10,7 @@ aufwand: Laufend
 werkzeuge: [Jira, Azure DevOps, Trello]
 reihenfolge: 1
 status: entwurf
+karte: P-01
 ---
 
 Priorisierte, lebende Liste aller Anforderungen. Der Product Owner verantwortet sie, das Team schätzt.
@@ -80,6 +81,14 @@ Vorher liefern Stories, Priorisierung und Story Map den Inhalt. Danach pflegen S
 - ergaenzt: [[story-mapping]] Story Map gibt dem Backlog Struktur.
 - vorher: [[moscow]] Priorisierung bestimmt die Reihenfolge.
 - alternative: [[pflichtenheft]] Ersetzt das Pflichtenheft im agilen Vorgehen.
+
+## Karte
+Teaser: Die geordnete Liste von allem, was das Produkt braucht. Nie fertig.
+- Verantwortliche bestimmen
+- Einträge einheitlich schreiben
+- Nach Wert und Risiko ordnen
+- Oben klein, unten grob
+- Regelmässig ausmisten
 
 ## Quellen
 - Schwaber, K., Sutherland, J.: The Scrum Guide (2020)

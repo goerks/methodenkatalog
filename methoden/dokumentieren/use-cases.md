@@ -11,6 +11,7 @@ werkzeuge: [Word-Vorlage, Enterprise Architect, Confluence]
 grafik: usecase-text
 reihenfolge: 2
 status: entwurf
+karte: S-02
 ---
 
 Beschreibt die Interaktion zwischen Akteur und System zu einem Ziel, mit Hauptablauf, Alternativen und Fehlerfällen.
@@ -80,6 +81,14 @@ Vorher klären das Use-Case-Diagramm und das Kontextdiagramm, welche Akteure und
 - alternative: [[user-stories]] Für kleine, agile Einheiten sind User Stories leichter.
 - danach: [[akzeptanzkriterien]] Aus Abläufen entstehen Testfälle und Kriterien.
 - danach: [[pflichtenheft]] Use Cases sind Kern des Pflichtenhefts.
+
+## Karte
+Teaser: Ein Akteur erreicht ein Ziel in Schritten mit Haupt- und Alternativablauf.
+- Akteur und Ziel bestimmen
+- Hauptablauf in Schritten
+- Alternativen und Fehler
+- Vor- und Nachbedingung
+- Mit Fachleuten prüfen
 
 ## Quellen
 - Cockburn, A.: Writing Effective Use Cases (Addison-Wesley, 2001)

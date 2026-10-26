@@ -10,6 +10,7 @@ aufwand: 1 bis 2 Stunden
 werkzeuge: [Checkliste, Confluence, Jira]
 reihenfolge: 1
 status: entwurf
+karte: A-01
 ---
 
 Gemeinsame Prüfung von Anforderungen oder Ergebnissen auf Vollständigkeit, Verständlichkeit und Widerspruchsfreiheit.
@@ -79,6 +80,14 @@ Vorher müssen Akzeptanzkriterien oder ein Pflichtenheft vorliegen. Nachher flie
 - vorher: [[pflichtenheft]] Dokumente reviewen.
 - ergaenzt: [[dor-dod]] Done verlangt ein Review.
 - alternative: [[prototyping]] Prototypen erlauben praktische Prüfung.
+
+## Karte
+Teaser: Arbeitsergebnisse gemeinsam auf Fehler, Lücken und Widersprüche prüfen.
+- Gegenstand und Kriterien klären
+- Rollen verteilen
+- Vorab lesen
+- Befunde sammeln, bewerten
+- Entscheiden, nachprüfen
 
 ## Quellen
 - Fagan, M.: Design and code inspections to reduce errors in program development (1976), IBM Systems Journal 15(3)

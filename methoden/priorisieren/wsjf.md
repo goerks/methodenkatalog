@@ -10,6 +10,7 @@ aufwand: 1 Stunde
 werkzeuge: [Excel, Jira (WSJF-Feld)]
 reihenfolge: 3
 status: entwurf
+karte: B-03
 ---
 
 Rechnet die Kosten der Verzögerung gegen die Dauer. Höchster Wert pro Aufwand kommt zuerst.
@@ -79,6 +80,14 @@ Vorher brauchen Sie Aufwandsschätzungen aus Planning Poker oder Story Points. D
 - vorher: [[planning-poker]] Aufwand per Planning Poker schätzen.
 - alternative: [[moscow]] Einfacher, aber ohne Rechnung.
 - danach: [[product-backlog]] Reihenfolge ins Backlog.
+
+## Karte
+Teaser: Priorisieren nach Verzögerungskosten geteilt durch Aufwand. Was zuerst?
+- Kandidaten und Aufwand sammeln
+- Wert, Dringlichkeit, Risiko bewerten
+- Summe durch Aufwand teilen
+- Rangliste bilden
+- Ausreisser besprechen
 
 ## Quellen
 - Reinertsen, D.: The Principles of Product Development Flow (Celeritas, 2009)

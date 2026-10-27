@@ -20,11 +20,12 @@ function vKarten() {
   return `<div class="kview"><p class="hint kintro">Methodenkarten zum Ausdrucken und Laminieren: 8 Karten pro A4-Blatt (quer), Vorder- und Rückseite, ca. 66 × 94 mm. Karten antippen wählt sie aus, ein Set wählt alle passenden auf einmal.</p>
     <div class="fg"><span class="lbl">Set nach Situation</span>${sets}</div>
     <div class="fg"><button class="pill" aria-pressed="${KS.leg}" data-kleg>Legendenkarte beilegen</button><button class="pill" data-kall>Alle ${NM.filter(m => m.nr).length + TL.filter(m => m.nr).length} Karten</button><button class="pill" data-ktest>Testblatt drucken</button></div>
+    <div class="kshift"><span class="lbl">Rückseite verschieben (mm)</span><label>seitwärts <input type="number" step="0.1" min="-5" max="5" id="kx" value="${Cards.shift().x}"></label><label>hoch/runter <input type="number" step="0.1" min="-5" max="5" id="ky" value="${Cards.shift().y}"></label><button class="pill" data-kshr>Zurücksetzen</button></div>
     <div class="kbar" id="ksum">${ksSummary()}</div>
     <p class="hint" id="kmsg" hidden></p>
     ${groups.map(g => `<h2 class="h2 kh" style="--cc:var(--p-${g.c})"><i class="dot"></i>${g.n} <small>${g.a.length}</small></h2><div class="kgrid">${g.a.map(kcell).join('')}</div>`).join('')}
     <div id="kpv">${ksPreview()}</div>
-    <details class="fdet"><summary>Druckhinweise</summary><div class="prose khelp"><ol><li>Im Druckdialog: Papier A4, Ausrichtung quer, Skalierung 100 % (nicht «An Seite anpassen»), Ränder «Keine» oder «Standard», Hintergrundgrafiken einschalten.</li><li>Doppelseitig drucken, Wenden an der <b>kurzen</b> Kante. Die Rückseiten sind bereits gespiegelt angeordnet.</li><li>Zuerst das <b>Testblatt</b> drucken: Die Zahl hinten muss genau hinter derselben Zahl vorne liegen. Stimmt es nicht, im Druckdialog «kurze» und «lange Kante» tauschen.</li><li>Zwischen den Karten sind 6 mm Abstand für den Siegelrand der Laminiertasche. Gestrichelte Linien zeigen den Schnitt, 3 mm vom Kartenrand.</li><li>Laminierfolie 80 oder 100 µm genügt. Ecken danach abrunden.</li></ol></div></details></div>`;
+    <details class="fdet"><summary>Druckhinweise</summary><div class="prose khelp"><ol><li>Im Druckdialog: Papier A4, Ausrichtung quer, Skalierung 100 % (nicht «An Seite anpassen»), Ränder «Keine» oder «Standard», Hintergrundgrafiken einschalten.</li><li>Doppelseitig drucken, Wenden an der <b>kurzen</b> Kante. Die Rückseiten sind bereits gespiegelt angeordnet.</li><li>Zuerst das <b>Testblatt</b> drucken: Die Zahl hinten muss genau hinter derselben Zahl vorne liegen. Stimmt es nicht, im Druckdialog «kurze» und «lange Kante» tauschen. Bleibt eine Abweichung im Millimeterbereich: Blatt gegen das Licht halten, Versatz des Fadenkreuzes messen und oben unter «Rückseite verschieben» ausgleichen (positiv = nach rechts bzw. nach unten). Der Wert wird im Browser gespeichert.</li><li>Zwischen den Karten sind 6 mm Abstand für den Siegelrand der Laminiertasche. Gestrichelte Linien zeigen den Schnitt, 3 mm vom Kartenrand.</li><li>Laminierfolie 80 oder 100 µm genügt. Ecken danach abrunden.</li></ol></div></details></div>`;
 }
 function ksRefresh() {
   ksSave();
@@ -45,7 +46,10 @@ function ksPrint(sheets) {
   const msg = document.getElementById('kmsg');
   try { window.print(); if (msg) msg.hidden = true; } catch (e) { if (msg) { msg.hidden = false; msg.textContent = 'Drucken ist in dieser Umgebung gesperrt. Auf der veröffentlichten Seite funktioniert es.'; } }
 }
+const ksShift = (x, y) => { try { localStorage.setItem('mk-versatz', JSON.stringify({x, y})); } catch (e) {} ksRefresh(); };
+document.addEventListener('change', e => { if (e.target.id === 'kx' || e.target.id === 'ky') ksShift(Number(document.getElementById('kx').value) || 0, Number(document.getElementById('ky').value) || 0); });
 document.addEventListener('click', e => {
+  if (e.target.closest('[data-kshr]')) { document.getElementById('kx').value = 0; document.getElementById('ky').value = 0; ksShift(0, 0); return; }
   const t = e.target.closest('[data-kt],[data-kset],[data-kleg],[data-kall],[data-kclear],[data-kprint],[data-ktest],[data-kadd]');
   if (!t) return;
   const d = t.dataset;

@@ -55,23 +55,26 @@ const Cards = (() => {
   const sortIds = ids => ids.slice().sort((a, b) => ORDER.indexOf(phk(BY[a])) - ORDER.indexOf(phk(BY[b])) || BY[a].nr.localeCompare(BY[b].nr));
   const cell = (h, i, extra) => `<div class="cell" ${extra || ''}>${h}</div>`;
   // Rückseiten stehen spiegelverkehrt (Spalten getauscht), damit sie bei Duplexdruck mit Wenden an der kurzen Kante hinter ihrer Vorderseite liegen.
+  // Rückseiten-Versatz in mm (Druckerkalibrierung), gespeichert im Browser
+  const shift = () => { let o = {}; try { o = JSON.parse(localStorage.getItem('mk-versatz') || '{}'); } catch (e) {} const n = v => Math.max(-5, Math.min(5, Number(v) || 0)); return {x: n(o.x), y: n(o.y)}; };
+  const bsec = h => { const o = shift(); return `<section class="pg"${o.x || o.y ? ` style="transform:translate(${o.x}mm,${o.y}mm)"` : ''}>${h}</section>`; };
   function pages(ids, legend) {
     const list = (legend ? ['legende'] : []).concat(sortIds(ids)), per = COLS * ROWS, out = [];
     for (let i = 0; i < list.length; i += per) {
       const g = list.slice(i, i + per), fr = [], bk = [];
       g.forEach((id, k) => { fr[k] = id === 'legende' ? legendFront() : front(BY[id]); const r = Math.floor(k / COLS), c = k % COLS; bk[r * COLS + (COLS - 1 - c)] = id === 'legende' ? legendBack() : back(BY[id]); });
       const fill = a => Array.from({length: per}, (_, k) => cell(a[k] || '')).join('');
-      out.push({f: `<section class="pg">${fill(fr)}</section>`, b: `<section class="pg">${fill(bk)}</section>`, n: g.length});
+      out.push({f: `<section class="pg">${fill(fr)}</section>`, b: bsec(fill(bk)), n: g.length});
     }
     return out;
   }
   function test() {
-    const per = COLS * ROWS, tc = (n, side) => `<div class="tcell ${side}"><b>${n}</b><span>${side === 'v' ? 'VORNE' : 'HINTEN'}</span><i>↑ oben</i></div>`;
+    const per = COLS * ROWS, tc = (n, side) => `<div class="tcell ${side}"><b>${n}</b><span>${side === 'v' ? 'VORNE' : 'HINTEN'}</span><i>↑ oben</i><u></u></div>`;
     const fr = [], bk = [];
     for (let k = 0; k < per; k++) { fr[k] = tc(k + 1, 'v'); const r = Math.floor(k / COLS), c = k % COLS; bk[r * COLS + (COLS - 1 - c)] = tc(k + 1, 'h'); }
     const fill = a => Array.from({length: per}, (_, k) => cell(a[k])).join('');
-    return [{f: `<section class="pg">${fill(fr)}</section>`, b: `<section class="pg">${fill(bk)}</section>`, n: per}];
+    return [{f: `<section class="pg">${fill(fr)}</section>`, b: bsec(fill(bk)), n: per}];
   }
   const sheetCount = (n, legend) => Math.ceil((n + (legend ? 1 : 0)) / (COLS * ROWS));
-  return {ico, vp, qr, marks, titleOf, clip, first, wrap, SITE, pages, test, sheetCount, sortIds, front, back, legendFront, legendBack, PER: COLS * ROWS, CW, CH};
+  return {shift, ico, vp, qr, marks, titleOf, clip, first, wrap, SITE, pages, test, sheetCount, sortIds, front, back, legendFront, legendBack, PER: COLS * ROWS, CW, CH};
 })();

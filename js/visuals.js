@@ -1,20 +1,45 @@
-// Grafikbaukasten im Stil «Weiche Flächen». Farben kommen aus CSS-Tokens (--v-*), Hell und Dunkel gelten automatisch.
+// Grafikbaukasten im Stil «Dezent handgezeichnet»: Flächen mit Hauch Farbe, Konturen in Rollenfarbe, leicht unruhige Linien, grauer versetzter Schatten.
+// Farben kommen aus CSS-Tokens (--v-*), Hell und Dunkel gelten automatisch. Die Linien werden beim Zeichnen leicht versetzt (stabil je Grafik, reine Vektorpfade).
 // Rollen: n neutral, a Hauptfarbe, b zweite Farbe, c Warnung/Betonung, k dunkel.
-let VU = 0;
+let VU = 0, VP = null;
+const vHash = s => { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; };
+const vRand = seed => { let a = seed >>> 0; return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; };
+// Pfad abtasten, Punkte leicht versetzen und glätten. Ohne DOM bleibt der Pfad unverändert.
+function vRough(d, amp, closed) {
+  if (typeof document === 'undefined' || !document.body) return [{d, a: null, b: null}];
+  if (!VP) { const sv = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); sv.setAttribute('style', 'position:absolute;width:0;height:0;visibility:hidden'); VP = document.createElementNS('http://www.w3.org/2000/svg', 'path'); sv.appendChild(VP); document.body.appendChild(sv); }
+  const rnd = vRand(vHash(d)), out = [];
+  d.split(/(?=M)/).filter(q => q.trim()).forEach(sub => {
+    VP.setAttribute('d', sub); const L = VP.getTotalLength(); if (!L) return;
+    const n = Math.max(closed ? 12 : 2, Math.ceil(L / 20)), pts = [];
+    for (let i = 0; i <= n; i++) { const q = VP.getPointAtLength(L * i / n), e = (i === 0 || i === n) ? .5 : 1; pts.push([q.x + (rnd() - .5) * 2 * amp * e, q.y + (rnd() - .5) * 2 * amp * e]); }
+    if (closed) pts[pts.length - 1] = pts[0].slice();
+    let r = `M${pts[0][0].toFixed(1)} ${pts[0][1].toFixed(1)}`;
+    for (let i = 1; i < pts.length - 1; i++) r += `Q${pts[i][0].toFixed(1)} ${pts[i][1].toFixed(1)} ${((pts[i][0] + pts[i + 1][0]) / 2).toFixed(1)} ${((pts[i][1] + pts[i + 1][1]) / 2).toFixed(1)}`;
+    const l = pts[pts.length - 1]; r += `L${l[0].toFixed(1)} ${l[1].toFixed(1)}`;
+    out.push({d: r, a: pts[Math.max(0, pts.length - 4)], b: l});
+  });
+  return out;
+}
 function vb() {
-  const id = 'v' + (++VU), B = [], L = [], T = [], H = [];
-  const geo = (kind, x, y, w, h, cls) => {
-    if (kind === 'ellipse') return `<ellipse class="${cls}" cx="${x + w / 2}" cy="${y + h / 2}" rx="${w / 2}" ry="${h / 2}"/>`;
-    if (kind === 'diamond') return `<path class="${cls}" d="M${x + w / 2} ${y}L${x + w} ${y + h / 2}L${x + w / 2} ${y + h}L${x} ${y + h / 2}Z" stroke-linejoin="round"/>`;
-    return `<rect class="${cls}" x="${x}" y="${y}" width="${w}" height="${h}" rx="${kind === 'pill' ? h / 2 : 12}"/>`;
-  };
+  const id = 'v' + (++VU), B = [], L = [], T = [], H = [], AMP = .8;
+  const rr = (x, y, w, h, r) => `M${x + r} ${y}H${x + w - r}A${r} ${r} 0 0 1 ${x + w} ${y + r}V${y + h - r}A${r} ${r} 0 0 1 ${x + w - r} ${y + h}H${x + r}A${r} ${r} 0 0 1 ${x} ${y + h - r}V${y + r}A${r} ${r} 0 0 1 ${x + r} ${y}Z`;
+  const geoD = (kind, x, y, w, h) => kind === 'ellipse' ? `M${x} ${y + h / 2}A${w / 2} ${h / 2} 0 1 1 ${x + w} ${y + h / 2}A${w / 2} ${h / 2} 0 1 1 ${x} ${y + h / 2}Z`
+    : kind === 'diamond' ? `M${x + w / 2} ${y}L${x + w} ${y + h / 2}L${x + w / 2} ${y + h}L${x} ${y + h / 2}Z` : rr(x, y, w, h, kind === 'pill' ? h / 2 : Math.min(7, h / 3));
+  const flat = a => a.map(r => r.d).join('');
+  const geo = (kind, x, y, w, h, cls, amp) => `<path class="${cls}" d="${flat(vRough(geoD(kind, x, y, w, h), amp, true))}" stroke-linejoin="round"/>`;
   const b = {
-    shape(kind, x, y, w, h, role) { H.push(geo(kind, x + 4, y + 4, w, h, 'vsh')); B.push(geo(kind, x, y, w, h, 'f' + role)); },
-    ring(cx, cy, r, thick) { B.push(`<circle class="fn vr${thick ? ' vr2' : ''}" cx="${cx}" cy="${cy}" r="${r}"/>`); },
-    ln(d, dash) { L.push(`<path class="vl${dash ? ' vd' : ''}" d="${d}"${dash ? '' : ` marker-end="url(#m${id})"`}/>`); },
-    plain(d) { L.push(`<path class="vl" d="${d}"/>`); },
-    curve(d, role) { L.push(`<path class="c${role}" d="${d}"/>`); },
-    box(x, y, w, h) { L.push(`<rect class="vbx" x="${x}" y="${y}" width="${w}" height="${h}" rx="10"/>`); },
+    shape(kind, x, y, w, h, role) { const A = AMP * Math.max(.3, Math.min(1, Math.min(w, h) / 34)); H.push(geo(kind, x + 4, y + 4, w, h, 'vsh', A * .6)); B.push(geo(kind, x, y, w, h, 'f' + role, A)); },
+    ring(cx, cy, r, thick) { B.push(`<path class="fn vr${thick ? ' vr2' : ''}" d="${flat(vRough(geoD('ellipse', cx - r, cy - r, 2 * r, 2 * r), AMP * .6, true))}"/>`); },
+    ln(d, dash) {
+      const rs = vRough(d, AMP * .6, false);
+      L.push(`<path class="vl${dash ? ' vd' : ''}" d="${flat(rs)}"/>`);
+      const e = rs[rs.length - 1];
+      if (!dash && e && e.a) { const ang = Math.atan2(e.b[1] - e.a[1], e.b[0] - e.a[0]); [.5, -.5].forEach(o => L.push(`<path class="vl" d="M${e.b[0].toFixed(1)} ${e.b[1].toFixed(1)}l${(-Math.cos(ang + o) * 13).toFixed(1)} ${(-Math.sin(ang + o) * 13).toFixed(1)}"/>`)); }
+    },
+    plain(d) { L.push(`<path class="vl" d="${flat(vRough(d, AMP * .6, false))}"/>`); },
+    curve(d, role) { L.push(`<path class="c${role}" d="${flat(vRough(d, AMP * .5, false))}"/>`); },
+    box(x, y, w, h) { L.push(`<path class="vbx" d="${flat(vRough(rr(x, y, w, h, 10), AMP * .5, true))}"/>`); },
     txt(x, y, s, role, o) {
       o = o || {}; const size = 13 * (o.k || 1), lines = String(s).split('\n'), y0 = y - ((lines.length - 1) * size * 1.15) / 2;
       T.push(`<text class="${role ? 't' + role : 'ti'}" x="${x}" y="${y0}" text-anchor="${o.a || 'middle'}" dominant-baseline="central" font-size="${size}"${o.w ? ` style="font-weight:${o.w}"` : ''}${o.rot ? ` transform="rotate(${o.rot} ${x} ${y})"` : ''}>${lines.map((l, i) => `<tspan x="${x}" dy="${i ? size * 1.15 : 0}">${l}</tspan>`).join('')}</text>`);
@@ -25,12 +50,12 @@ function vb() {
       b.txt(cx, top + 92, label);
     },
     out(label) {
-      return `<svg viewBox="0 0 420 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${label}"><defs><marker id="m${id}" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path class="vm" d="M0 0L10 5L0 10z"/></marker><filter id="s${id}" x="-12%" y="-12%" width="124%" height="150%"><feDropShadow dx="0" dy="3" stdDeviation="3.5" style="flood-color:var(--v-shadow);flood-opacity:var(--v-shadow-o)"/></filter></defs><rect class="vbg" width="420" height="230" rx="14"/><g>${H.join('')}</g><g>${L.join('')}</g><g>${B.join('')}</g>${T.join('')}</svg>`;
+      return `<svg viewBox="0 0 420 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${label}"><rect class="vbg" width="420" height="230" rx="14"/><g>${H.join('')}</g><g>${L.join('')}</g><g>${B.join('')}</g>${T.join('')}</svg>`;
     }
   };
   return b;
 }
-const draw = (label, fn) => () => { const b = vb(); fn(b); return b.out(label); };
+const draw = (label, fn) => { let c = null; return () => c || (c = (() => { const b = vb(); fn(b); return b.out(label); })()); };
 const small = {k: .8, w: 500};
 
 const VIS = {

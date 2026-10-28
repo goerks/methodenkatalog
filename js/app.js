@@ -165,7 +165,7 @@ document.addEventListener('click', e => {
   else if (d.z) { ({in: Graph.zoomIn, out: Graph.zoomOut, fit: Graph.fit, reset: Graph.reset})[d.z](); }
   else if (d.path !== undefined) { Graph.setPath(PFADE[+d.path].s); const g = document.getElementById('graph'); if (g && g.scrollIntoView) g.scrollIntoView({block: 'center'}); }
   else if (d.rv) { refVar = d.rv; const m = BY[readHash().m]; document.getElementById('refs').innerHTML = refs(m); document.querySelectorAll('[data-rv]').forEach(b => b.setAttribute('aria-pressed', b.dataset.rv === refVar)); }
-  else if (d.fs) { ksPrint([{f: Factsheet.html(BY[d.fs]), b: ''}]); }
+  else if (d.fs) { ksPrint([{f: Factsheet.fit(BY[d.fs]), b: ''}]); }
   else if (d.show) { view = 'karte'; panelId = d.show; if (isTool(BY[panelId])) toolsOn = true; go('karte'); }
   else if (t.hasAttribute('data-back')) go(lastView);
 });

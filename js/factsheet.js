@@ -4,7 +4,7 @@ const Factsheet = (() => {
   const sec = (h, b) => `<section class="sec"><h2>${h}</h2>${b}</section>`;
   function html(m) {
     const t = isTool(m), nb = NB[m.id];
-    const vis = !t && m.vis && VIS[m.vis] ? VIS[m.vis]() : (typeof KV !== 'undefined' && KV[m.id] ? KV[m.id]() : '');
+    const v0 = !t && m.vis && VIS[m.vis] ? VIS[m.vis]() : '', vis = typeof KV !== 'undefined' && KV[m.id] ? KV[m.id]() : (v0.trim().startsWith('<svg') ? v0 : '');
     const meta = t ? `<span>Art: <b>${esc(m.t)}</b></span><span>Unterstützt: <b>${m.sp.length} Methoden</b></span>`
       : `<span>Vorgehen: <b>${MODE[m.m]}</b></span><span>Phase: <b>${PHN[m.ph]}</b></span><span>Typ: <b>${esc(m.t)}</b></span><span>Aufwand: <b>${esc(m.aufwand)}</b></span>`;
     const rel = Object.keys(REL).filter(r => nb[r].length && r !== 'werkzeuge').map(r => `<li><b>${REL[r]}:</b> ${nb[r].map(x => esc(plain(BY[x[0]].n))).join(', ')}</li>`).join('');
@@ -29,5 +29,24 @@ const Factsheet = (() => {
       <div class="ft"><span>Methodenkatalog RE und BA · ${esc(Cards.SITE.replace('https://', ''))}</span><span>${m.s === 'entwurf' ? 'Entwurf, fachlich noch nicht geprüft' : ''}</span></div>
     </div></td></tr></tbody><tfoot><tr><td><div class="sp12"></div></td></tr></tfoot></table></div>`;
   }
-  return {html};
+  // Passt der Inhalt knapp nicht auf eine Seite (bis etwa 20 % darüber), wird die Schrift schrittweise verkleinert. Läuft er deutlich länger, bleibt es bei zwei Seiten.
+  function fit(m) {
+    const host = document.createElement('div');
+    host.style.cssText = 'position:absolute;left:-9999px;top:0;width:210mm;visibility:hidden';
+    document.body.appendChild(host);
+    const avail = 277 * 96 / 25.4;
+    let out = html(m);
+    try {
+      host.innerHTML = out;
+      const f = host.querySelector('.fsheet'), fin = host.querySelector('.fin'), h0 = fin.offsetHeight;
+      if (h0 > avail && h0 <= avail * 1.2) {
+        for (let pt = 8.6; pt >= 7.6; pt -= 0.2) {
+          f.style.fontSize = pt + 'pt';
+          if (fin.offsetHeight <= avail) { out = html(m).replace('<div class="fsheet"', `<div class="fsheet" data-fit="${pt.toFixed(1)}"`).replace('style="--cc', `style="font-size:${pt.toFixed(1)}pt;--cc`); break; }
+        }
+      }
+    } finally { host.remove(); }
+    return out;
+  }
+  return {html, fit};
 })();

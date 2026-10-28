@@ -1,6 +1,6 @@
 // Ansichten und Navigation. Daten und Beziehungen kommen aus core.js, die Karte aus graph.js.
 const VIEWS = {karte: 'Wissenslandkarte', kategorien: 'Kategorien', landkarte: 'Phasen', suche: 'Alle Methoden', karten: 'Karten'};
-let view = 'karte', lastView = 'karte', toolsOn = false, pathIdx = -1, panelId = null;
+let view = 'karte', lastView = 'karte', toolsOn = false, ergOn = false, pathIdx = -1, panelId = null;
 const main = document.getElementById('main'), tabs = document.getElementById('tabs'), qi = document.getElementById('q');
 const NM = M.filter(m => !isTool(m)), TL = M.filter(isTool);
 
@@ -31,7 +31,7 @@ const cardHtml = m => { const sn = F.q ? snippet(SR.get(m.id)) : null; return `<
 function vKarte() {
   const n = NM.filter(pass).length;
   const nf = F.ph.size + F.form.size + (F.mode !== 'alle') + (F.q ? 1 : 0);
-  return `<div class="mapbox"><div class="maptools"><button class="pill" aria-pressed="${toolsOn}" data-tools>Werkzeuge ${toolsOn ? 'ausblenden' : 'einblenden'}</button><span class="sp"></span>
+  return `<div class="mapbox"><div class="maptools"><button class="pill" aria-pressed="${toolsOn}" data-tools>Werkzeuge ${toolsOn ? 'ausblenden' : 'einblenden'}</button><button class="pill" aria-pressed="${ergOn}" data-erg>Ergänzt-Linien ${ergOn ? 'ausblenden' : 'einblenden'}</button><span class="sp"></span>
     <button class="pill" data-z="in" aria-label="Vergrössern">+</button><button class="pill" data-z="out" aria-label="Verkleinern">−</button><button class="pill" data-z="fit">Einpassen</button><button class="pill" data-z="reset">Neu anordnen</button></div>
     <div class="mapgrid"><div id="graph" class="graph"></div><aside id="panel" class="panel"></aside></div>
     <p class="hint">${filtered() ? `${n} von ${NM.length} Methoden passen, die übrigen sind abgeblendet. ` : ''}Antippen wählt eine Methode, «Methode öffnen» im Feld daneben öffnet sie (Doppelklick geht auch), Ziehen verschiebt. Zoom mit Strg und Mausrad, den Knöpfen oder zwei Fingern.</p></div>
@@ -51,6 +51,7 @@ function mountKarte() {
   const g = document.getElementById('graph'); if (!g) return;
   const show = id => { panelId = id; document.getElementById('panel').innerHTML = panelHtml(id); };
   Graph.mount(g, {onSelect: show, onOpen: id => go(id)});
+  Graph.setErg(ergOn);
   Graph.setTools(toolsOn);
   if (panelId && BY[panelId] && (toolsOn || !isTool(BY[panelId]))) Graph.select(panelId); else panelId = null;
   show(panelId);
@@ -98,6 +99,24 @@ function refs(m) {
    <h4>Sie liefert</h4><ul>${io.out.map(x => `<li>${esc(x.t)}${x.to ? ` <span class="vb">${esc(v(x))}</span> ${chip(x.to)}` : ''}</li>`).join('')}</ul>
    <p class="who"><b>Geliefert von:</b> ${io.lf.map(esc).join(', ')}. <b>Genutzt von:</b> ${io.ko.map(esc).join(', ')}.</p></div>`;
 }
+
+// Einordnung: Davor/Danach/Alternative mit Obergrenzen, eigene Einträge der Autorin zuerst, dann nach Verbreitung
+const CAP = {vorher: 2, danach: 3, alternative: 2};
+function einordnung(m) {
+  const nb = NB[m.id], own = m.li ? m.li.map(x => x[0]) : [];
+  const rank = ([to]) => { const i = own.indexOf(to); return i >= 0 ? i : 100 - DEG[to]; };
+  return Object.keys(CAP).map(k => ({k, all: nb[k].length, a: nb[k].slice().sort((x, y) => rank(x) - rank(y)).slice(0, CAP[k])})).filter(g => g.a.length);
+}
+const noThen = s => s.replace(/:\s*dann [^.]*$/, '').replace(/\s*dann [^.]*$/, '');
+
+let ioMode = 'l';
+function ioBlock(m, mode) {
+  const li = a => `<ul class="rules">${a.map(x => `<li>${esc(x.t)}</li>`).join('')}</ul>`;
+  const body = mode === 's' ? (() => { const keep = refVar; refVar = 'a'; try { return refs(m); } finally { refVar = keep; } })()
+    : `<div class="two"><div class="rg"><h3>Du brauchst</h3>${li(m.io.in)}</div><div class="rg"><h3>Du erhältst</h3>${li(m.io.out)}</div></div>`;
+  return `<div class="rv" role="group" aria-label="Darstellung"><span class="lbl">Darstellung</span><button class="pill" aria-pressed="${mode === 'l'}" data-iov="l">Liste</button><button class="pill" aria-pressed="${mode === 's'}" data-iov="s">Tabelle (SIPOC)</button></div><div id="iob">${body}</div>`;
+}
+document.addEventListener('click', e => { const b = e.target.closest('[data-iov]'); if (!b) return; ioMode = b.dataset.iov; const m = BY[readHash().m]; document.getElementById('iosec').innerHTML = ioBlock(m, ioMode); });
 function vDetail(id) {
   const m = BY[id], t = isTool(m), nb = NB[id];
   const vis = !t && m.vis && VIS[m.vis] ? `<div class="vis" ${cc(m)}>${VIS[m.vis]()}</div>` : (typeof KV !== 'undefined' && KV[m.id] ? `<div class="vis" ${cc(m)}>${KV[m.id]()}</div>` : '');
@@ -112,19 +131,18 @@ function vDetail(id) {
     <p class="lead">${esc(m.k)}</p><button class="pill" data-show="${m.id}">Auf der Karte zeigen</button> <button class="pill" data-fs="${m.id}">Factsheet drucken (A4)</button>${m.nr ? ` <button class="pill" aria-pressed="${KS.sel.has(m.id)}" data-kadd="${m.id}">${KS.sel.has(m.id) ? '✓ In der Druckauswahl' : 'Karte zur Druckauswahl'}</button>` : ''}</header>
   <div class="dg"><div>
     ${sec('Wofür', `<p class="prose">${esc(m.zw)}</p>`)}
-    <div class="two">${sec('Wann sinnvoll', li(m.wa), 'yes')}${sec('Wann besser nicht', li(m.wn), 'no')}</div>
+    <div class="two">${sec('Wann sinnvoll', li(m.wa), 'yes')}${sec('Wann besser nicht', li(m.wn.map(noThen)), 'no')}</div>
     ${t ? '' : sec('Vorbereitung und Material', li(m.vb))}
     ${sec(t ? 'Einsatz' : 'Ablauf', t ? li(m.ab) : `<ol class="steps">${m.ab.map(s => `<li><span>${esc(s)}</span></li>`).join('')}</ol>`)}
     ${t ? '' : sec('In der Praxis', `<p class="prose">${esc(m.pr)}</p>`)}
     ${sec(t ? 'Grenzen' : 'Regeln', li(m.re))}
     ${m.bsp ? sec('Beispiel', `${vis}<div class="ex"><h3>${esc(m.bsp.t)}</h3><p>${esc(m.bsp.x)}</p></div>`) : ''}
     ${t ? '' : sec('Empfehlung', `<p class="prose">${esc(m.em)}</p>`)}
-    ${t ? '' : `<section class="sec"><h2>Zusammenhänge</h2><div class="rv" role="group" aria-label="Darstellung der Referenzen"><span class="lbl">Darstellung</span>${Object.entries(REFV).map(([k, n]) => `<button class="pill" aria-pressed="${refVar === k}" data-rv="${k}">${n}</button>`).join('')}</div><div id="refs" class="refbox">${refs(m)}</div></section>`}
+    ${t ? '' : `<section class="sec"><h2>Du brauchst und du erhältst</h2><div id="iosec">${ioBlock(m, ioMode)}</div></section>`}
     ${sec('Quellen', `<ul class="src">${m.qu.map(q => `<li>${esc(q)}</li>`).join('')}</ul><p class="hint">Quellen sind anerkannte Fachliteratur und Standards. Titel und Jahr wurden stichprobenartig geprüft, Kapitel und Inhalte noch nicht. Vor einer Veröffentlichung bitte gegenlesen.</p>`)}
   </div><aside>
-    <section class="sec"><h2>${t ? 'Unterstützte Methoden' : 'Verknüpft'}</h2><div class="rel">${groups.map(r =>
-      `<div class="rg"><h3>${REL[r]}</h3>${nb[r].map(([to, why]) => { const x = BY[to]; return `<button class="rl" ${cc(x)} data-m="${x.id}"><b>${icon(x.f, phk(x), 14)}${esc(plain(x.n))}</b>${why ? `<span>${esc(why)}</span>` : ''}</button>`; }).join('')}</div>`).join('') || '<p class="empty">Keine Verknüpfungen.</p>'}</div></section>
-    ${t ? '' : `<section class="sec"><h2>Werkzeuge</h2><div class="tools">${m.tools.map(toolLink).join('') || '<span>keine genannt</span>'}</div></section>`}
+    ${t ? `<section class="sec"><h2>Unterstützte Methoden</h2><div class="rel"><div class="rg">${nb.unterstuetzt.map(([to]) => { const x = BY[to]; return `<button class="rl" ${cc(x)} data-m="${x.id}"><b>${icon(x.f, phk(x), 14)}${esc(plain(x.n))}</b></button>`; }).join('')}</div></div></section>` : `<section class="sec"><h2>Einordnung</h2><div class="rel">${einordnung(m).map(g => `<div class="rg"><h3>${REL[g.k]}</h3>${g.a.map(([to, why]) => { const x = BY[to]; return `<button class="rl" ${cc(x)} data-m="${x.id}"><b>${icon(x.f, phk(x), 14)}${esc(plain(x.n))}</b>${g.k === 'alternative' && why ? `<span>${esc(why)}</span>` : ''}</button>`; }).join('')}</div>`).join('')}</div><p class="hint"><button class="pill" data-show="${m.id}">Alle Beziehungen auf der Wissenslandkarte</button></p></section>
+    <section class="sec"><h2>Werkzeuge</h2><div class="tools">${m.tools.slice(0, 3).map(toolLink).join('') || '<span>keine genannt</span>'}</div></section>`}
   </aside></div></div>`;
 }
 
@@ -151,7 +169,7 @@ function refilter() {
 }
 const flip = (set, v) => set.has(v) ? set.delete(v) : set.add(v);
 document.addEventListener('click', e => {
-  const t = e.target.closest('[data-m],[data-v],[data-fc],[data-fp],[data-ff],[data-fm],[data-back],[data-reset],[data-tools],[data-z],[data-path],[data-show],[data-rv],[data-fs]');
+  const t = e.target.closest('[data-m],[data-v],[data-fc],[data-fp],[data-ff],[data-fm],[data-back],[data-reset],[data-tools],[data-z],[data-path],[data-show],[data-rv],[data-fs],[data-erg]');
   if (!t) return;
   const d = t.dataset;
   if (d.m) { if (e.target.closest('#panel') && !t.classList.contains('act')) { Graph.select(d.m); panelId = d.m; document.getElementById('panel').innerHTML = panelHtml(d.m); } else go(d.m); }
@@ -161,6 +179,7 @@ document.addEventListener('click', e => {
   else if (d.ff) { flip(F.form, d.ff); refilter(); }
   else if (d.fm) { F.mode = d.fm; refilter(); }
   else if (t.hasAttribute('data-reset')) { setQuery(''); qi.value = ''; F.cat.clear(); F.ph.clear(); F.form.clear(); F.mode = 'alle'; refilter(); }
+  else if (t.hasAttribute('data-erg')) { ergOn = !ergOn; main.innerHTML = vKarte(); mountKarte(); }
   else if (t.hasAttribute('data-tools')) { toolsOn = !toolsOn; const keep = panelId; main.innerHTML = vKarte(); mountKarte(); }
   else if (d.z) { ({in: Graph.zoomIn, out: Graph.zoomOut, fit: Graph.fit, reset: Graph.reset})[d.z](); }
   else if (d.path !== undefined) { Graph.setPath(PFADE[+d.path].s); const g = document.getElementById('graph'); if (g && g.scrollIntoView) g.scrollIntoView({block: 'center'}); }

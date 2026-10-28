@@ -139,6 +139,13 @@ for (const m of methods) {
     else if (ids.get(to).f === 'werkzeug') err(m.id, `«${to}» ist ein Werkzeug, Werkzeuge werden über das Feld werkzeuge verbunden`);
   }
 }
+// Hinweise zu Verknüpfungen: Gegenrichtung muss zusammenpassen (davor <-> danach, sonst gleiche Art). Nur Warnung, kein Abbruch.
+{
+  const INV = {vorher: 'danach', danach: 'vorher', ergaenzt: 'ergaenzt', alternative: 'alternative'}, D = new Map(), warn = [];
+  for (const m of methods) for (const [to, t] of m.li) D.set(m.id + '>' + to, t);
+  for (const [k, t] of D) { const [a, b] = k.split('>'), r = D.get(b + '>' + a); if (r && r !== INV[t] && a < b) warn.push(`${a} ${t} ${b}, aber ${b} ${r} ${a}`); }
+  if (warn.length) console.warn(`\nHinweis: ${warn.length} widersprüchliche Verknüpfungen (Art stimmt in Gegenrichtung nicht überein):\n- ` + warn.join('\n- '));
+}
 // Werkzeuge: Zuordnung über den Namen im Feld werkzeuge der Methoden
 const norm = s => s.toLowerCase().replace(/[^a-z0-9]/g, '');
 for (const t of tools) {

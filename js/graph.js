@@ -2,7 +2,7 @@
 const Graph = (() => {
   const POS = new Map();           // gemerkte Positionen, damit die Karte beim Wiederöffnen gleich aussieht
   let svg, root, wrap, ro, cb = {}, W = 900, H = 560, nodes = [], links = [], byId = {}, el = {}, tr = {x: 0, y: 0, k: 1};
-  let sel = null, hover = null, path = null, tools = false, alpha = 0, raf = 0, drag = null, pan = null, moved = false, touched = false, uid = 0;
+  let sel = null, hover = null, path = null, tools = false, erg = false, alpha = 0, raf = 0, drag = null, pan = null, moved = false, touched = false, uid = 0;
   const reduce = () => window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   const rng = (s => () => (s = (s * 16807) % 2147483647) / 2147483647)(7);
   const label = m => m.kz || plain(m.n).replace(/\s*\(.*?\)/g, '');
@@ -24,7 +24,7 @@ const Graph = (() => {
       const sp = n.m.sp.map(id => byId[id]).filter(Boolean);
       if (sp.length) { n.x = sp.reduce((s, q) => s + q.x, 0) / sp.length + (rng() - .5) * 40; n.y = sp.reduce((s, q) => s + q.y, 0) / sp.length + (rng() - .5) * 40; }
     });
-    links = EDGES.filter(e => byId[e.a] && byId[e.b]).map(e => ({
+    links = EDGES.filter(e => byId[e.a] && byId[e.b] && (erg || e.t !== 'e')).map(e => ({
       e, s: byId[e.a], t: byId[e.b], len: {f: LEN, e: LEN * 1.3, a: LEN * 1.6, t: LEN * 1.8}[e.t], k: {f: .1, e: .06, a: .035, t: .02}[e.t]
     }));
   }
@@ -200,6 +200,7 @@ const Graph = (() => {
     refresh() { if (svg) styles(); },
     select(id) { sel = id; if (svg) styles(); },
     selected: () => sel,
+    setErg(on) { erg = !!on; if (!svg) return; setup(); settle(80, .5); build(); fit(); },
     setTools(on) { tools = !!on; if (!svg) return; setup(); settle(80, .5); build(); fit(); if (sel && !byId[sel]) { sel = null; if (cb.onSelect) cb.onSelect(null); } },
     setPath(ids) { path = ids && ids.length ? ids : null; if (svg) { place(); styles(); } },
     fit() { touched = false; fit(); }, zoomIn() { zoom(1.25); }, zoomOut() { zoom(.8); },

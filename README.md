@@ -47,7 +47,7 @@ Text des Beispiels.
 - danach: [[product-backlog]] Begründung in einem Satz.
 ```
 
-Arten der Verknüpfung: `vorher`, `danach`, `ergaenzt`, `alternative`.
+Arten der Verknüpfung: `vorher`, `danach`, `alternative` und `ergaenzt`. Die Detailseite zeigt nur Davor (bis 2), Danach (bis 3) und Alternativen (bis 2, mit Begründung) im Block «Einordnung»; die Reihenfolge der Einträge in der Methodendatei entscheidet, was bei Hubs gezeigt wird. `ergaenzt` erscheint nur auf der Wissenslandkarte (Schalter «Ergänzt-Linien») und im Seitenpanel. Die Begründung ist nur bei Alternativen wichtig. Der Build warnt, wenn sich Gegenrichtungen widersprechen.
 
 3. `node tools/build.mjs` ausführen (Node 18 oder neuer). Der Prüfer meldet fehlende Pflichtfelder, unbekannte Verknüpfungen, doppelte IDs und Methoden, auf die niemand verweist. Pro Methode sind 3 bis 7 Verknüpfungen erlaubt.
 4. Geänderte Dateien und `data/catalog.js` committen.

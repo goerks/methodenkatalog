@@ -109,7 +109,7 @@ function vDetail(id) {
   return `<div ${cc(m)}><button class="back" data-back>← ${VIEWS[lastView]}</button>
   <header class="dh"><span class="lbl" style="color:var(--cc)">${icon(m.f, phk(m), 18)} ${t ? 'Werkzeug' : CAT[m.c].n + ' · ' + FORMS[m.f]}</span><h1>${esc(plain(m.n))}</h1>
     <div class="meta">${meta}${m.s === 'entwurf' ? '<span>Status: <b>Entwurf, fachlich noch nicht geprüft</b></span>' : ''}</div>
-    <p class="lead">${esc(m.k)}</p><button class="pill" data-show="${m.id}">Auf der Karte zeigen</button>${m.nr ? ` <button class="pill" aria-pressed="${KS.sel.has(m.id)}" data-kadd="${m.id}">${KS.sel.has(m.id) ? '✓ In der Druckauswahl' : 'Karte zur Druckauswahl'}</button>` : ''}</header>
+    <p class="lead">${esc(m.k)}</p><button class="pill" data-show="${m.id}">Auf der Karte zeigen</button> <button class="pill" data-fs="${m.id}">Factsheet drucken (A4)</button>${m.nr ? ` <button class="pill" aria-pressed="${KS.sel.has(m.id)}" data-kadd="${m.id}">${KS.sel.has(m.id) ? '✓ In der Druckauswahl' : 'Karte zur Druckauswahl'}</button>` : ''}</header>
   <div class="dg"><div>
     ${sec('Wofür', `<p class="prose">${esc(m.zw)}</p>`)}
     <div class="two">${sec('Wann sinnvoll', li(m.wa), 'yes')}${sec('Wann besser nicht', li(m.wn), 'no')}</div>
@@ -151,7 +151,7 @@ function refilter() {
 }
 const flip = (set, v) => set.has(v) ? set.delete(v) : set.add(v);
 document.addEventListener('click', e => {
-  const t = e.target.closest('[data-m],[data-v],[data-fc],[data-fp],[data-ff],[data-fm],[data-back],[data-reset],[data-tools],[data-z],[data-path],[data-show],[data-rv]');
+  const t = e.target.closest('[data-m],[data-v],[data-fc],[data-fp],[data-ff],[data-fm],[data-back],[data-reset],[data-tools],[data-z],[data-path],[data-show],[data-rv],[data-fs]');
   if (!t) return;
   const d = t.dataset;
   if (d.m) { if (e.target.closest('#panel') && !t.classList.contains('act')) { Graph.select(d.m); panelId = d.m; document.getElementById('panel').innerHTML = panelHtml(d.m); } else go(d.m); }
@@ -165,6 +165,7 @@ document.addEventListener('click', e => {
   else if (d.z) { ({in: Graph.zoomIn, out: Graph.zoomOut, fit: Graph.fit, reset: Graph.reset})[d.z](); }
   else if (d.path !== undefined) { Graph.setPath(PFADE[+d.path].s); const g = document.getElementById('graph'); if (g && g.scrollIntoView) g.scrollIntoView({block: 'center'}); }
   else if (d.rv) { refVar = d.rv; const m = BY[readHash().m]; document.getElementById('refs').innerHTML = refs(m); document.querySelectorAll('[data-rv]').forEach(b => b.setAttribute('aria-pressed', b.dataset.rv === refVar)); }
+  else if (d.fs) { ksPrint([{f: Factsheet.html(BY[d.fs]), b: ''}]); }
   else if (d.show) { view = 'karte'; panelId = d.show; if (isTool(BY[panelId])) toolsOn = true; go('karte'); }
   else if (t.hasAttribute('data-back')) go(lastView);
 });

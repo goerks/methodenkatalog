@@ -5,7 +5,7 @@
   --f-display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
   --f-body:'Source Sans 3','Segoe UI',system-ui,sans-serif;
   --f-mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
-  --shadow:0 1px 2px rgba(20,32,51,.08);
+  --shadow:0 1px 2px rgba(20,32,51,.08); --sh:#D3D8E1;
   --p-verstehen:var(--c-erm); --p-ermitteln:var(--c-dok); --p-spezifizieren:var(--c-mod); --p-bewerten:var(--c-prio); --p-planen:var(--c-plan); --p-absichern:var(--c-qs); --p-werkzeug:var(--muted);
   --pf-verstehen:#CFEBEE; --pt-verstehen:#0B5F67; --pf-ermitteln:#D9E4FF; --pt-ermitteln:#1B3A9E; --pf-spezifizieren:#E6DCFA; --pt-spezifizieren:#5530A6;
   --pf-bewerten:#FFE0CC; --pt-bewerten:#9A3F08; --pf-planen:#D5EFDB; --pt-planen:#1F6B31; --pf-absichern:#FADCE6; --pt-absichern:#8A2147; --pf-werkzeug:#E4E8EF; --pt-werkzeug:#3A4558;
@@ -14,7 +14,7 @@
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#0F1621; --surface:#172131; --ink:#E6EBF3; --muted:#9AA7BA; --line:#2B3A50; --accent:#7C9BFF; --accent-ink:#0F1621;
-  --c-erm:#4DC3CE; --c-dok:#7C9BFF; --c-mod:#B79BF2; --c-prio:#F0985A; --c-plan:#6FCB84; --c-qs:#EE7FA0; --shadow:none;
+  --c-erm:#4DC3CE; --c-dok:#7C9BFF; --c-mod:#B79BF2; --c-prio:#F0985A; --c-plan:#6FCB84; --c-qs:#EE7FA0; --shadow:none; --sh:#0B111B;
   --pf-verstehen:#1D4A4F; --pt-verstehen:#BDEDF1; --pf-ermitteln:#2B3F7A; --pt-ermitteln:#C9D8FF; --pf-spezifizieren:#42337A; --pt-spezifizieren:#DACCFF;
   --pf-bewerten:#5A3322; --pt-bewerten:#FFD3BF; --pf-planen:#1F4B3E; --pt-planen:#BDEBD7; --pf-absichern:#5A2A3E; --pt-absichern:#FFCFE0; --pf-werkzeug:#2C384D; --pt-werkzeug:#D5DDEB;
   --map:var(--v-bg); --v-bg:#1B2538; --v-ink:#D5DDEB; --v-shadow:#000000; --v-shadow-o:.4;
@@ -22,7 +22,7 @@
   color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0F1621; --surface:#172131; --ink:#E6EBF3; --muted:#9AA7BA; --line:#2B3A50; --accent:#7C9BFF; --accent-ink:#0F1621;
-  --c-erm:#4DC3CE; --c-dok:#7C9BFF; --c-mod:#B79BF2; --c-prio:#F0985A; --c-plan:#6FCB84; --c-qs:#EE7FA0; --shadow:none;
+  --c-erm:#4DC3CE; --c-dok:#7C9BFF; --c-mod:#B79BF2; --c-prio:#F0985A; --c-plan:#6FCB84; --c-qs:#EE7FA0; --shadow:none; --sh:#0B111B;
   --pf-verstehen:#1D4A4F; --pt-verstehen:#BDEDF1; --pf-ermitteln:#2B3F7A; --pt-ermitteln:#C9D8FF; --pf-spezifizieren:#42337A; --pt-spezifizieren:#DACCFF;
   --pf-bewerten:#5A3322; --pt-bewerten:#FFD3BF; --pf-planen:#1F4B3E; --pt-planen:#BDEBD7; --pf-absichern:#5A2A3E; --pt-absichern:#FFCFE0; --pf-werkzeug:#2C384D; --pt-werkzeug:#D5DDEB;
   --map:var(--v-bg); --v-bg:#1B2538; --v-ink:#D5DDEB; --v-shadow:#000000; --v-shadow-o:.4;
@@ -288,3 +288,18 @@ mark{background:color-mix(in srgb,var(--accent) 25%,transparent);color:inherit;b
 @media (max-width:600px){.sug{left:0;right:0;min-width:0}}
 
 .top .logo{display:block;width:56px;height:56px;margin-bottom:10px;border-radius:14px}
+
+/* Designrichtung «Linie und Schatten»: weisse Flächen, Farbkontur, kurzer Farbstrich unter Überschriften, grauer versetzter Schatten (passt zu den Grafiken) */
+.dh{border-top:0;padding-top:8px}
+.dh .lbl{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--cc);border-radius:999px;padding:2px 12px;color:var(--cc);background:var(--surface)}
+.dg .sec h2{border-bottom:0;padding-bottom:0}
+.dg .sec h2::after{content:"";display:block;width:34px;height:3px;border-radius:3px;background:var(--cc);margin-top:6px}
+.dg .two .sec,.dg .ex,.dg .rl,.dh .pill{background:var(--surface);border:1.5px solid var(--line);border-radius:10px;box-shadow:3px 3px 0 var(--sh)}
+.dg .rl{border-left:1.5px solid var(--line)}.dg .rl:hover{border-color:var(--cc)}
+.dg .two .sec{padding:12px 14px;margin:0}
+.dh .pill{border-radius:999px;box-shadow:2px 2px 0 var(--sh)}
+ol.steps li::before{background:var(--surface);color:var(--cc);border:1.8px solid var(--cc);font-weight:700}
+.cat,.card{border:1.5px solid var(--line);border-top:4px solid var(--cc);box-shadow:3px 3px 0 var(--sh)}
+.card{border-left:5px solid var(--cc)}
+.chip{border:1.5px solid var(--line);border-left:5px solid var(--cc)}
+.dh .pill[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}

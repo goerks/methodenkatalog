@@ -150,3 +150,14 @@ ul.ck li::before{content:"✓";color:var(--c);font-weight:700}
 #printroot .fsheet{break-after:auto}
 .fsheet ul.rel{display:block;gap:0}.fsheet .rel li{display:list-item;margin:0 0 .5mm;padding:0;border:0;background:none}
 .fsheet .src{margin:1mm 0 0;padding:1.6mm 0 0;border-radius:0}.fsheet .src ul{padding-left:4mm}.fsheet .src h2{font-size:7.6pt}
+
+/* Designrichtung «Linie und Schatten» für Karten und Factsheet */
+.kcard{box-shadow:3px 3px 0 #D3D8E1;border:1.5px solid #C9D1DE}
+.kcard .cin{box-shadow:inset 0 0 0 calc(var(--mm)*.45) var(--c)}
+.kcard .cin .band{background:#fff;border:calc(var(--mm)*.35) solid var(--c)}
+.kcard .cin .fz{background:#fff;border-top:calc(var(--mm)*.35) solid var(--c)}
+.kcard .box{background:#fff;border:calc(var(--mm)*.35) solid var(--c);box-shadow:calc(var(--mm)*.8) calc(var(--mm)*.8) 0 var(--f)}
+.kcard .box.warn{border-style:solid}
+.fsheet .fh{border-top:0}.fsheet .fh .lbl{display:inline-block;justify-self:start;border:.3mm solid var(--cc);border-radius:99px;padding:.3mm 3mm}
+.fsheet h2{border-bottom:0}.fsheet h2::after{content:"";display:block;width:8mm;height:.8mm;background:var(--cc);margin-top:.8mm}
+.fsheet .ex{border:.3mm solid #C9D1DE;border-left:.3mm solid #C9D1DE;box-shadow:.8mm .8mm 0 #D3D8E1;background:#fff}

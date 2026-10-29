@@ -9,6 +9,7 @@ const KV = {};
   const ck = (b, x, y, r) => b.txt(x, y, '✓', r || 'b', {k: 1.8, w: 700});
   const head = (b, cx, cy, r, role) => b.ring(cx, cy, r || 14);
   const person = (b, cx, top) => { b.plain(`M${cx + 14} ${top + 14}A14 14 0 1 1 ${cx - 14} ${top + 14}A14 14 0 1 1 ${cx + 14} ${top + 14}`); b.plain(`M${cx} ${top + 28}V${top + 72}M${cx - 26} ${top + 44}H${cx + 26}M${cx} ${top + 72}L${cx - 20} ${top + 104}M${cx} ${top + 72}L${cx + 20} ${top + 104}`); };
+  const bd = (b, x, y, n) => { b.ring(x, y, 8); tx(b, x, y + 1, String(n), null, {k: .85, w: 700}); };
   const D = (id, label, fn) => { KV[id] = draw(label, fn); };
 
   D('interview', 'Interview: Frage und Antwort', b => {
@@ -52,8 +53,10 @@ const KV = {};
   D('pflichtenheft', 'Pflichtenheft: Gliederung', b => {
     nd(b, 90, 10, 240, 210, '', 'n'); [['1  Ziele', 'a'], ['2  Umfang', 'b'], ['3  Anforderungen', 'c'], ['4  Abnahme', 'n']].forEach((r, i) => { pl(b, 112, 28 + i * 47, 196, 36, r[0], r[1], 1.3); });
   });
-  D('produktvision', 'Produktvision: vier Fragen', b => {
-    [['Für wen?', 'a'], ['Welcher Bedarf?', 'b'], ['Welches Produkt?', 'c'], ['Welcher Nutzen?', 'k']].forEach((r, i) => pl(b, 40 + (i % 2) * 20, 14 + i * 54, 320, 44, r[0], r[1], 1.6));
+  D('produktvision', 'Product Vision Board: Vision, Zielgruppe, Bedürfnisse, Produkt, Geschäftsziele', b => {
+    nd(b, 10, 8, 400, 48, 'Vision', 'k', 1.7);
+    [['Zielgruppe', 'a', 10, 64, 1], ['Bedürfnisse', 'b', 212, 64, 1], ['Produkt', 'c', 10, 144, 2], ['Geschäftsziele', 'n', 212, 144, 3]].forEach(c => { nd(b, c[2], c[3], 198, 72, c[0], c[1], 1.6); bd(b, c[2] + 14, c[3] + 14, c[4]); });
+    bd(b, 24, 22, 4);
   });
   D('glossar', 'Glossar: Begriff und Bedeutung', b => {
     nd(b, 18, 16, 170, 46, 'Begriff', 'a', 1.6); nd(b, 198, 16, 204, 46, 'Bedeutung', 'b', 1.6);
@@ -130,21 +133,29 @@ const KV = {};
     nd(b, 8, 8, 404, 214, '', 'n'); nd(b, 26, 80, 100, 70, 'Anfor-\nderung', 'a', 1.35); nd(b, 160, 80, 100, 70, 'Use\nCase', 'b', 1.35); nd(b, 294, 80, 100, 70, 'Test', 'c', 1.35); b.ln('M126 115H158'); b.ln('M260 115H292'); tx(b, 210, 30, 'Modell', null, {k: 1.5, w: 700});
   });
 
-  D('customer-journey-map', 'Journey Map: Phasen und Stimmung', b => {
-    ['Planen', 'Prüfen', 'Freigeben', 'Folgen'].forEach((t, i) => nd(b, 12 + i * 102, 14, 96, 46, t, 'a', 1.35));
-    b.plain('M30 150C80 70 120 190 170 140S250 70 300 130S370 170 396 110'); [[30, 150], [170, 140], [300, 130], [396, 110]].forEach(c => b.ring(c[0], c[1], 7)); nd(b, 128, 176, 84, 40, 'Frust', 'c', 1.35, 'pill'); tx(b, 20, 215, 'Stimmung', null, {a: 'start', k: 1.3});
+  D('customer-journey-map', 'Customer Journey Map: Phasen, Handlungen, Stimmung, Pain und Chance', b => {
+    const X = i => 78 + i * 84;
+    ['Planen', 'Prüfen', 'Freigeben', 'Folgen'].forEach((t, i) => nd(b, X(i), 6, 80, 38, t, 'a', 1.02));
+    [['Tour\nanlegen'], ['Konflikt\nprüfen'], ['Freigabe\nsenden'], ['Status\nverfolgen']].forEach((t, i) => nd(b, X(i), 52, 80, 40, t[0], 'n', .95));
+    b.ln('M118 132C160 132 160 162 202 162S244 130 286 130S328 114 370 114'); [[118, 132], [202, 162], [286, 130], [370, 114]].forEach(c => b.ring(c[0], c[1], 7));
+    pl(b, 162, 176, 80, 34, 'Frust', 'c', 1.15); pl(b, 330, 176, 80, 34, 'Chance', 'b', 1.15);
+    tx(b, 6, 25, 'Phase', null, {a: 'start', k: 1}); tx(b, 6, 72, 'Handlung', null, {a: 'start', k: 1}); tx(b, 6, 132, 'Stimmung', null, {a: 'start', k: 1}); tx(b, 6, 193, 'Pain /\nChance', null, {a: 'start', k: 1});
   });
   D('jobs-to-be-done', 'Jobs to be Done: Situation, Ziel, Nutzen', b => {
     pl(b, 24, 16, 372, 56, 'Wenn ich abends plane …', 'n', 1.55); pl(b, 24, 87, 372, 56, '… will ich Sicherheit …', 'a', 1.55); pl(b, 24, 158, 372, 56, '… damit der Morgen ruhig ist.', 'b', 1.55);
   });
-  D('value-proposition-canvas', 'Value Proposition Canvas: Angebot und Kunde', b => {
-    nd(b, 12, 36, 170, 160, 'Angebot', 'a', 1.7); nd(b, 238, 36, 170, 160, 'Kunde', 'b', 1.7, 'ellipse'); b.ln('M184 116H236'); tx(b, 210, 90, 'passt?', null, {k: 1.4});
+  D('value-proposition-canvas', 'Value Proposition Canvas: Wertversprechen und Kundenprofil mit Problemlösern, Gewinnbringern und Aufgaben, Problemen, Gewinnen', b => {
+    tx(b, 93, 14, 'Wertversprechen', null, {k: 1.25}); tx(b, 327, 14, 'Kundenprofil', null, {k: 1.25});
+    b.box(4, 28, 178, 196); b.box(238, 28, 178, 196);
+    [['Gewinnbringer', 'Gewinne', 'b', 36], ['Produkte', 'Aufgaben', 'n', 96], ['Problemlöser', 'Probleme', 'c', 156]].forEach(r => { nd(b, 12, r[3], 162, 52, r[0], r[2], 1.45); nd(b, 246, r[3], 162, 52, r[1], r[2], 1.45); b.ln(`M178 ${r[3] + 26}H244`); });
   });
   D('rich-picture', 'Rich Picture: Beteiligte und Konflikte', b => {
     person(b, 40, 70); person(b, 380, 70); nd(b, 130, 90, 160, 70, 'System', 'a', 1.6); nd(b, 130, 14, 120, 50, '?', 'n', 1.9, 'ellipse'); nd(b, 270, 176, 130, 44, 'Konflikt', 'c', 1.5, 'pill'); b.ln('M90 125H128'); b.ln('M292 125H330');
   });
-  D('empathy-map', 'Empathy Map: sehen, hören, sagen, denken', b => {
-    [['Sieht', 'a', 12, 14], ['Hört', 'b', 214, 14], ['Sagt', 'c', 12, 120], ['Denkt', 'n', 214, 120]].forEach(c => nd(b, c[2], c[3], 194, 96, c[0], c[1], 1.7)); b.ring(210, 115, 22, true);
+  D('empathy-map', 'Empathy Map: sieht, hört, sagt und tut, denkt und fühlt, Schmerzen und Gewinne', b => {
+    [['Sieht', 'a', 8, 8], ['Hört', 'b', 214, 8], ['Sagt & tut', 'c', 8, 88], ['Denkt & fühlt', 'n', 214, 88]].forEach(c => nd(b, c[2], c[3], 198, 74, c[0], c[1], 1.5));
+    b.ring(211, 85, 26, true); tx(b, 211, 86, 'Person', null, {k: .95, w: 600});
+    nd(b, 8, 172, 198, 48, 'Schmerzen', 'c', 1.5); nd(b, 214, 172, 198, 48, 'Gewinne', 'b', 1.5);
   });
   D('fokusgruppe', 'Fokusgruppe: Runde um ein Thema', b => {
     nd(b, 140, 70, 140, 90, 'Thema', 'a', 1.7, 'ellipse'); [[60, 20], [190, 4], [320, 20], [60, 160], [190, 176], [320, 160]].forEach((c, i) => b.shape('ellipse', c[0], c[1], 48, 48, ['b', 'c', 'b', 'c', 'b', 'c'][i]));
@@ -196,8 +207,19 @@ const KV = {};
   D('retrospektive', 'Retrospektive: Rückblick in drei Spalten', b => {
     [['Gut', 'b'], ['Besser', 'c'], ['Ideen', 'a']].forEach((c, i) => { nd(b, 12 + i * 138, 14, 130, 48, c[0], c[1], 1.5); nd(b, 22 + i * 138, 76, 110, 48, '', c[1], 1); nd(b, 22 + i * 138, 134, 110, 48, '', 'n', 1); });
   });
+  D('business-model-canvas', 'Business Model Canvas: neun Bausteine in der Reihenfolge der Bearbeitung', b => {
+    const bl = (x, y, w, h, t, r, k, n) => { nd(b, x, y, w, h, t, r, k); bd(b, x + 12, y + 12, n); };
+    bl(6, 6, 76, 124, 'Schlüssel-\npartner', 'b', .95, 3); bl(86, 6, 76, 60, 'Schlüssel-\naktivitäten', 'b', .74, 3); bl(86, 70, 76, 60, 'Schlüssel-\nressourcen', 'b', .74, 3);
+    bl(166, 6, 86, 124, 'Nutzen-\nversprechen', 'c', .95, 1); bl(256, 6, 76, 60, 'Kunden-\nbeziehungen', 'a', .72, 2); bl(256, 70, 76, 60, 'Kanäle', 'a', 1.15, 2); bl(336, 6, 78, 124, 'Kunden-\nsegmente', 'a', 1.0, 1);
+    bl(6, 134, 206, 54, 'Kostenstruktur', 'n', 1.2, 4); bl(216, 134, 198, 54, 'Einnahmequellen', 'n', 1.2, 4);
+  });  D('swot', 'SWOT: Stärken, Schwächen, Chancen, Risiken nach intern und extern', b => {
+    tx(b, 128, 12, 'hilft', null, {k: 1.05}); tx(b, 316, 12, 'schadet', null, {k: 1.05}); tx(b, 14, 76, 'intern', null, {k: 1.05, rot: -90}); tx(b, 14, 172, 'extern', null, {k: 1.05, rot: -90});
+    [['Stärken', 'b', 34, 26], ['Schwächen', 'c', 224, 26], ['Chancen', 'b', 34, 124], ['Risiken', 'c', 224, 124]].forEach(c => nd(b, c[2], c[3], 184, 90, c[0], c[1], 1.6));
+  });
 })();
 
 // Ausschnitt je Grafik (x0, y0, x1, y1 des Inhalts), automatisch erzeugt mit tools/crop-kartengrafik.mjs
-const KVB = {"interview":[34,22,386,186],"workshop":[22,24,402,204],"beobachtung":[18,34,402,208],"persona":[30,14,390,216],"fragebogen":[30,24,390,227],"dokumentenanalyse":[22,30,404,208],"use-cases":[18,14,400,220],"akzeptanzkriterien":[12,38,408,158],"dor-dod":[10,62,410,202],"nfr":[20,20,400,204],"pflichtenheft":[90,10,330,220],"produktvision":[40,14,380,220],"glossar":[18,16,402,210],"geschaeftsregeln":[18,14,408,216],"story-splitting":[12,20,400,204],"wsjf":[14,20,408,200],"story-points":[18,71,419,225],"product-backlog":[14,14,406,226],"refinement":[10,46,410,150],"story-mapping":[10,14,410,212],"sprint-planning":[10,40,410,190],"review":[30,14,404,216],"prototyping":[120,8,300,222],"change-management":[10,70,410,225],"abnahmetest":[14,20,408,192],"jira":[12,12,418,218],"miro":[14,20,400,210],"drawio":[10,14,410,216],"plantuml":[10,20,410,212],"confluence":[10,14,410,216],"figma":[14,20,406,210],"cucumber":[10,14,410,216],"enterprise-architect":[8,8,412,222],"customer-journey-map":[12,14,414,225],"jobs-to-be-done":[24,16,396,214],"value-proposition-canvas":[12,36,408,196],"rich-picture":[14,14,406,220],"empathy-map":[12,14,408,216],"fokusgruppe":[60,4,368,224],"brainstorming":[14,16,408,212],"contextual-inquiry":[24,60,396,207],"spike":[20,45,400,217],"example-mapping":[20,12,406,184],"entscheidungstabelle":[12,14,406,218],"datenmodell":[12,14,408,206],"sequenzdiagramm":[-15,10,435,220],"dot-voting":[12,18,378,208],"rice":[12,20,406,170],"kosten-nutzen":[70,30,350,210],"affinity-estimation":[12,6,408,212],"release-planning":[12,24,408,192],"usability-test":[24,60,376,212],"retrospektive":[12,14,418,182]};
+const KVB = {"interview":[34,22,386,190],"workshop":[22,24,406,208],"beobachtung":[18,34,404,212],"persona":[29,13,394,220],"fragebogen":[30,23,394,227],"dokumentenanalyse":[22,29,406,212],"use-cases":[18,13,400,224],"akzeptanzkriterien":[12,38,412,162],"dor-dod":[10,62,414,202],"nfr":[20,20,401,208],"pflichtenheft":[90,9,334,224],"produktvision":[9,7,414,220],"glossar":[18,15,406,214],"geschaeftsregeln":[17,14,412,220],"story-splitting":[12,19,404,208],"wsjf":[14,20,411,204],"story-points":[18,72,422,225],"product-backlog":[14,13,406,226],"refinement":[11,46,413,154],"story-mapping":[10,13,412,216],"sprint-planning":[10,40,414,194],"review":[29,13,406,220],"prototyping":[119,8,304,226],"change-management":[11,70,413,225],"abnahmetest":[13,19,411,196],"jira":[11,12,422,222],"miro":[13,20,404,214],"drawio":[10,14,414,220],"plantuml":[10,20,414,216],"confluence":[9,13,414,220],"figma":[14,20,410,214],"cucumber":[9,13,414,220],"enterprise-architect":[7,7,416,226],"customer-journey-map":[6,6,414,214],"jobs-to-be-done":[25,16,398,218],"value-proposition-canvas":[4,4,416,224],"rich-picture":[14,14,406,224],"empathy-map":[8,7,416,224],"fokusgruppe":[60,5,371,227],"brainstorming":[13,16,412,216],"contextual-inquiry":[24,60,396,207],"spike":[20,46,403,217],"example-mapping":[19,11,410,188],"entscheidungstabelle":[12,13,410,222],"datenmodell":[11,14,412,210],"sequenzdiagramm":[-15,9,439,220],"dot-voting":[12,18,382,212],"rice":[12,20,409,174],"kosten-nutzen":[70,29,354,214],"affinity-estimation":[12,6,412,216],"release-planning":[12,24,412,196],"usability-test":[24,60,376,212],"retrospektive":[12,13,422,186],"business-model-canvas":[6,6,419,192],"swot":[-7,4,412,218]};
 Object.keys(KV).forEach(id => { const f = KV[id]; KV[id] = () => { const c = KVB[id]; const svg = f(); if (!c) return svg; const p = 10, w = c[2] - c[0] + 2 * p, h = c[3] - c[1] + 2 * p; return svg.replace('viewBox="0 0 420 230"', `viewBox="${c[0] - p} ${c[1] - p} ${w} ${h}"`); }; });
+// Detailseite und Factsheet verwenden dieselben Zeichnungen wie die Karte
+VIS.bmc = KV['business-model-canvas']; VIS.swot = KV['swot'];

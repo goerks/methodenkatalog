@@ -92,7 +92,7 @@ ul.ck li::before{content:"✓";color:var(--c);font-weight:700}
 .ksum{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
 .ksum span{color:var(--muted);font-size:.9rem}.ksum .sp{flex:1}
 .kh{display:flex;align-items:center;gap:8px;color:var(--cc)}.kh small{color:var(--muted);font-weight:400}
-.kgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin-bottom:8px}
+.kgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:18px;margin-bottom:8px}
 .ksel{position:relative;display:grid;gap:4px;justify-items:center}
 .kpick{position:relative;display:block;width:100%;padding:0;background:none;border:3px solid transparent;border-radius:14px;cursor:pointer;transition:transform .12s}
 .kpick:hover{transform:translateY(-2px)}.kpick:focus-visible{outline:3px solid var(--cc);outline-offset:2px}
@@ -106,7 +106,7 @@ ul.ck li::before{content:"✓";color:var(--c);font-weight:700}
 .pvin{transform-origin:0 0;width:297mm}
 .khelp ol{padding-left:1.2em;display:grid;gap:6px}
 .pill[disabled]{opacity:.45;pointer-events:none}
-@media(max-width:600px){.kgrid{grid-template-columns:repeat(2,1fr);gap:10px}.kbar{padding:6px 0}}
+@media(max-width:600px){.kgrid{grid-template-columns:minmax(0,360px);justify-content:center}.kbar{padding:6px 0}}
 
 /* Bild auf der Vorderseite: ohne Hintergrundfläche */
 .kcard .pic{background:none;border:0;padding:0;display:grid;place-items:center;overflow:hidden}
@@ -161,3 +161,4 @@ ul.ck li::before{content:"✓";color:var(--c);font-weight:700}
 .fsheet .fh{border-top:0}.fsheet .fh .lbl{display:inline-block;justify-self:start;border:.3mm solid var(--cc);border-radius:99px;padding:.3mm 3mm}
 .fsheet h2{border-bottom:0}.fsheet h2::after{content:"";display:block;width:8mm;height:.8mm;background:var(--cc);margin-top:.8mm}
 .fsheet .ex{border:.3mm solid #C9D1DE;border-left:.3mm solid #C9D1DE;box-shadow:.8mm .8mm 0 #D3D8E1;background:#fff}
+.kchk{right:-8px!important;top:-8px!important}

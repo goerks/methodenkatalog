@@ -79,7 +79,9 @@ Vorher ist ein Kontextdiagramm nützlich, weil es externe Parteien sichtbar mach
 - danach: [[interview]] Schlüsselpersonen einzeln befragen.
 - danach: [[workshop]] Teilnehmer für Workshops auswählen.
 - danach: [[persona]] Nutzergruppen zu Personas verdichten.
-
+- danach: [[design-thinking]] Danach folgt «Design Thinking».
+- danach: [[zielmodell]] Danach folgt «Zielmodell».
+- danach: [[capability-map]] Danach folgt «Capability Map».
 ## Karte
 Teaser: Wer ist betroffen, wer entscheidet, wer kann blockieren? Einfluss und Interesse sichtbar machen.
 Gut wenn: Ganz am Anfang, vor der Erhebung | Viele Bereiche oder externe Parteien | Bei Konflikten über Ziele oder Prioritäten

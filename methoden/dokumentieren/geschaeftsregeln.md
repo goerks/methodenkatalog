@@ -80,7 +80,7 @@ Vorher liefern Dokumentenanalyse und Glossar die Grundlage. Danach werden Regeln
 - danach: [[akzeptanzkriterien]] Regeln werden zu testbaren Kriterien.
 - danach: [[pflichtenheft]] Regeln stehen im Pflichtenheft.
 - ergaenzt: [[bpmn]] Gateways im Prozess folgen den Regeln.
-
+- ergänzt: [[gherkin-bdd]] «Gherkin und BDD» ergänzt diese Methode.
 ## Karte
 Teaser: Was in der Organisation gilt, getrennt von Prozess und Funktion gepflegt.
 Gut wenn: Regelreiche Bereiche wie Bank, Versicherung | Eine Regel gilt an mehreren Stellen | Regeln ändern sich häufig

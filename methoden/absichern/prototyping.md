@@ -80,7 +80,9 @@ Vorher helfen Personas bei der Auswahl der Testpersonen. Danach schreiben Sie Us
 - alternative: [[review]] Review für Dokumente, Prototyp für Bedienung.
 - danach: [[user-stories]] Erkenntnisse als neue Stories.
 - ergaenzt: [[aktivitaetsdiagramm]] Ablauf mit dem Prototyp abgleichen.
-
+- vorher: [[design-thinking]] Davor liegt «Design Thinking».
+- vorher: [[wireframes]] Davor liegt «Wireframes und Mockups».
+- alternative: [[mvp-poc]] Alternative: «MVP und Proof of Concept».
 ## Karte
 Teaser: Anforderungen erlebbar machen: Nutzer testen eine einfache Version.
 Gut wenn: Oberfläche und Ablauf sind unklar | Worte erzeugen Missverständnisse | Wenn Nutzer am Bild besser urteilen

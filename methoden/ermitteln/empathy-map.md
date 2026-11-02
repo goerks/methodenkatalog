@@ -82,7 +82,7 @@ Vorher liefern Interviews und Beobachtung die Aussagen. Danach entsteht daraus e
 - danach: [[persona]] Aus mehreren Karten wird eine Persona.
 - danach: [[customer-journey-map]] Schmerzpunkte fliessen in die Journey Map ein.
 - alternative: [[jobs-to-be-done]] Jobs to be Done fragt nach dem Ziel statt nach dem Erleben.
-
+- ergänzt: [[design-thinking]] «Design Thinking» ergänzt diese Methode.
 ## Karte
 Teaser: Eine Person in einer Situation: sieht, hört, sagt, tut, denkt, fühlt. Auf einer Seite.
 Gut wenn: Nach Interviews, um Erkenntnisse zu bündeln | Das Team soll Nutzer besser verstehen | Einstieg in einen Design-Workshop

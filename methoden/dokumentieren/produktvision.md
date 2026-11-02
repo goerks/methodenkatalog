@@ -82,7 +82,7 @@ Vorher helfen SWOT oder Business Model Canvas für die Ausgangslage. Danach brec
 - danach: [[roadmap]] Die Roadmap setzt die Vision in Etappen um.
 - danach: [[product-backlog]] Backlog-Einträge dienen der Vision.
 - ergaenzt: [[stakeholder]] Stakeholder prüfen die Vision.
-
+- danach: [[gap-analyse]] Danach folgt «Gap-Analyse».
 ## Karte
 Teaser: In wenigen Sätzen: für wen, welches Problem, welcher Nutzen. Zielpunkt des Teams.
 Gut wenn: Zu Beginn eines Produkts | Streit über Ziele oder Prioritäten | Als Leitplanke im Priorisierungsstreit

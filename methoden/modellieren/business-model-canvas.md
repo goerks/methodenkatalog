@@ -81,7 +81,8 @@ Vorher klären Sie Beteiligte und, wenn nötig, die Lage mit einer SWOT-Analyse.
 - vorher: [[workshop]] Im Workshop gemeinsam füllen.
 - danach: [[produktvision]] Das Modell schärft die Vision.
 - danach: [[impact-mapping]] Ziele des Modells in eine Impact Map überführen.
-
+- alternative: [[lean-canvas]] Alternative: «Lean Canvas».
+- alternative: [[capability-map]] Alternative: «Capability Map».
 ## Karte
 Teaser: Neun Bausteine: wie eine Organisation Wert schafft, liefert und einnimmt.
 Gut wenn: Geschäftlicher Zusammenhang ist unklar | Neue Produkte oder Geschäftsfelder | Gemeinsames Bild für Fachbereich und Technik

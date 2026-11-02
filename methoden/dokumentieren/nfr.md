@@ -79,7 +79,7 @@ Vorher sind die wichtigsten Stories und Nutzer bekannt. Danach nehmen Sie die Kr
 - ergaenzt: [[dor-dod]] Wichtige NFR in der Definition of Done verankern.
 - danach: [[pflichtenheft]] NFR haben ein eigenes Kapitel im Pflichtenheft.
 - ergaenzt: [[kano]] Basisfaktoren im Kano-Modell sind oft NFR.
-
+- ergänzt: [[anforderungsschablonen]] «Anforderungsschablonen (EARS)» ergänzt diese Methode.
 ## Karte
 Teaser: Wie gut muss das System sein? Schnell, sicher, bedienbar: messbar formuliert.
 Gut wenn: Früh, bevor die Architektur steht | «Schnell» und «sicher» bleiben vage | Bei Lastspitzen, Sicherheit oder Regulierung

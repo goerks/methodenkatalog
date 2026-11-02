@@ -80,7 +80,9 @@ Vorher brauchen Sie ein Pflichtenheft oder Stories mit eindeutigen IDs. Danach b
 - ergaenzt: [[change-management]] Auswirkungsanalyse bei Änderungen.
 - ergaenzt: [[akzeptanzkriterien]] Tests verlinken.
 - ergaenzt: [[use-cases]] Use Cases verlinken.
-
+- ergänzt: [[zielmodell]] «Zielmodell» ergänzt diese Methode.
+- ergänzt: [[feature-tree]] «Feature Tree» ergänzt diese Methode.
+- ergänzt: [[srs]] «Anforderungsspezifikation (SRS)» ergänzt diese Methode.
 ## Karte
 Teaser: Anforderungen mit Herkunft, Entwurf und Tests verknüpfen. Folgen sichtbar.
 Gut wenn: Nachweispflicht, regulierte Bereiche | Viele Anforderungen und Änderungen | Wenn Auswirkungen von Änderungen zählen

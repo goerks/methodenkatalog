@@ -80,7 +80,7 @@ Vorher müssen Akzeptanzkriterien oder ein Pflichtenheft vorliegen. Nachher flie
 - vorher: [[pflichtenheft]] Dokumente reviewen.
 - ergaenzt: [[dor-dod]] Done verlangt ein Review.
 - alternative: [[prototyping]] Prototypen erlauben praktische Prüfung.
-
+- alternative: [[anforderungsreview]] Alternative: «Anforderungsreview (Inspektion)».
 ## Karte
 Teaser: Arbeitsergebnisse gemeinsam auf Fehler, Lücken und Widersprüche prüfen.
 Gut wenn: Vor der Umsetzung | Kritische Dokumente prüfen | Am Sprintende mit den Stakeholdern

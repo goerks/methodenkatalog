@@ -81,7 +81,8 @@ Vorher brauchen Sie klare Akzeptanzkriterien und eine Rückverfolgbarkeit von An
 - ergaenzt: [[review]] Review prüft Dokumente, UAT das System.
 - ergaenzt: [[dor-dod]] Die Abnahme ist Teil von Done.
 - ergaenzt: [[traceability]] Tests mit Anforderungen verknüpfen.
-
+- vorher: [[gherkin-bdd]] Davor liegt «Gherkin und BDD».
+- vorher: [[srs]] Davor liegt «Anforderungsspezifikation (SRS)».
 ## Karte
 Teaser: Anwender prüfen, ob das Ergebnis ihre Erwartungen erfüllt. Letzter Schritt vor Freigabe.
 Gut wenn: Vor jeder Freigabe | Fachbereich nimmt formal ab | Bei Verträgen mit Abnahmekriterien

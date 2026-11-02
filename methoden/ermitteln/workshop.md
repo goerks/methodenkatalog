@@ -82,7 +82,8 @@ Vorher sollten die Stakeholder bekannt sein und möglichst einige Einzelintervie
 - danach: [[moscow]] Gesammelte Anforderungen im Workshop mit MoSCoW einordnen.
 - danach: [[story-mapping]] Ergebnisse als Story Map ordnen.
 - alternative: [[interview]] Für sensible Themen sind Einzelgespräche offener.
-
+- ergänzt: [[root-cause-analyse]] «Root-Cause-Analyse (Ishikawa)» ergänzt diese Methode.
+- ergänzt: [[konfliktloesung]] «Konfliktlösung bei Anforderungen» ergänzt diese Methode.
 ## Karte
 Teaser: Moderierte Sitzung, in der Beteiligte Anforderungen gemeinsam klären und entscheiden.
 Gut wenn: Mehrere Bereiche müssen sich einigen | Gemeinsames Bild zählt mehr als Detail | Zum Priorisieren und Modellieren im Team

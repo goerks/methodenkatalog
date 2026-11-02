@@ -15,7 +15,9 @@
    "dot-voting",
    "fokusgruppe",
    "empathy-map",
-   "example-mapping"
+   "example-mapping",
+   "design-thinking",
+   "lean-canvas"
   ]
  },
  {
@@ -33,7 +35,9 @@
    "dor-dod",
    "example-mapping",
    "jobs-to-be-done",
-   "spike"
+   "spike",
+   "gherkin-bdd",
+   "wireframes"
   ]
  },
  {
@@ -51,7 +55,10 @@
    "affinity-estimation",
    "release-planning",
    "kosten-nutzen",
-   "retrospektive"
+   "retrospektive",
+   "value-vs-effort",
+   "cost-of-delay",
+   "mvp-poc"
   ]
  },
  {
@@ -69,7 +76,11 @@
    "traceability",
    "entscheidungstabelle",
    "datenmodell",
-   "sequenzdiagramm"
+   "sequenzdiagramm",
+   "anforderungsschablonen",
+   "srs",
+   "anforderungsreview",
+   "klassendiagramm"
   ]
  },
  {
@@ -86,7 +97,11 @@
    "rich-picture",
    "customer-journey-map",
    "contextual-inquiry",
-   "value-proposition-canvas"
+   "value-proposition-canvas",
+   "prozessanalyse",
+   "gap-analyse",
+   "root-cause-analyse",
+   "capability-map"
   ]
  }
 ]

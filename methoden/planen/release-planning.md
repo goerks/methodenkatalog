@@ -82,7 +82,8 @@ Vorher liefern Backlog, Schätzung und Roadmap die Eingaben. Danach plant jeder 
 - danach: [[sprint-planning]] Jeder Sprint plant seinen Ausschnitt.
 - ergaenzt: [[story-mapping]] Die Release-Linie der Story Map zeigt den Umfang.
 - ergaenzt: [[moscow]] MoSCoW legt fest, was zum Release gehört.
-
+- vorher: [[feature-tree]] Davor liegt «Feature Tree».
+- vorher: [[mvp-poc]] Davor liegt «MVP und Proof of Concept».
 ## Karte
 Teaser: Welche Funktionen kommen in welches Release, mit Spanne statt Stichtag? Plan mit Puffer.
 Gut wenn: Termine und Umfang für Management nötig | Mehrere Teams oder Abhängigkeiten | Ziel steht fest, der Weg wird gesucht

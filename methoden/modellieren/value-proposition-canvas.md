@@ -82,7 +82,7 @@ Vorher liefern Persona und Interviews das Kundenprofil. Danach übernimmt das Bu
 - danach: [[business-model-canvas]] Das Wertversprechen ist ein Baustein des Business Model Canvas.
 - danach: [[prototyping]] Annahmen werden mit einem Prototyp getestet.
 - ergaenzt: [[impact-mapping]] Impact Mapping verbindet Ziel und Wirkung.
-
+- alternative: [[lean-canvas]] Alternative: «Lean Canvas».
 ## Karte
 Teaser: Kundenprofil und Wertversprechen gegenüberstellen: trifft die Lösung echte Probleme?
 Gut wenn: Unklar, ob die Idee ein Problem löst | Neue Produkte oder Zielgruppen | Verschiedene Annahmen über den Nutzen

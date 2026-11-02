@@ -82,7 +82,7 @@ Vorher sammelt das Refinement die Stories. Danach schreiben Sie die Beispiele al
 - danach: [[akzeptanzkriterien]] Die Beispiele werden zu Akzeptanzkriterien.
 - alternative: [[story-splitting]] Zu grosse Stories werden zuerst geteilt.
 - ergaenzt: [[geschaeftsregeln]] Die Regeln lassen sich in einem Regelkatalog sammeln.
-
+- danach: [[gherkin-bdd]] Danach folgt «Gherkin und BDD».
 ## Karte
 Teaser: 25 Minuten, vier Kartenfarben: Story, Regeln, Beispiele, Fragen. Zeigt, ob eine Story bereit ist.
 Gut wenn: Im Refinement vor dem Sprint | Regeln einer Story sind unklar | Beispiele statt Prosa-Kriterien

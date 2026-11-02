@@ -81,7 +81,7 @@ Vorher klärt das Glossar die Begriffe, das Domänenmodell die Fachlichkeit. Dan
 - vorher: [[domaenenmodell]] Das Domänenmodell legt die Fachlichkeit fest.
 - danach: [[pflichtenheft]] Datenanforderungen kommen ins Pflichtenheft.
 - ergaenzt: [[zustandsdiagramm]] Das Zustandsdiagramm ergänzt Lebenszyklen der Entitäten.
-
+- vorher: [[klassendiagramm]] Davor liegt «Klassendiagramm».
 ## Karte
 Teaser: Entitäten, Attribute und Beziehungen mit Kardinalitäten: was das System speichern muss.
 Gut wenn: Das System speichert Daten dauerhaft | Vor Entwurf von Datenbank oder Schnittstelle | Beziehungen zwischen Begriffen klären

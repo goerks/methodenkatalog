@@ -81,7 +81,7 @@ Vorher steht meist eine Beobachtung oder ein Interview, das ein Problem sichtbar
 - ergaenzt: [[workshop]] Im Workshop gemeinsam durchführen.
 - danach: [[risikoanalyse]] Ursachen fliessen in die Risiken ein.
 - danach: [[user-stories]] Ursachen führen zu besseren Stories.
-
+- alternative: [[root-cause-analyse]] Alternative: «Root-Cause-Analyse (Ishikawa)».
 ## Karte
 Teaser: Mehrmals «Warum?» fragen, bis die beeinflussbare Ursache sichtbar wird.
 Gut wenn: Eine Lösung wird gefordert, Problem unklar | Fehler oder Störungen kehren wieder | Wenn die Frage lautet: Warum ist das wichtig?

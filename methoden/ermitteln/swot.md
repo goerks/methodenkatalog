@@ -83,7 +83,7 @@ Vorher helfen Stakeholder-Analyse und Business Model Canvas für ein gemeinsames
 - ergaenzt: [[business-model-canvas]] Das Geschäftsmodell zeigt, wo Stärken wirken.
 - danach: [[produktvision]] Aus der Lage ergibt sich die Vision.
 - danach: [[risikoanalyse]] Bedrohungen werden als Risiken weiterverfolgt.
-
+- alternative: [[gap-analyse]] Alternative: «Gap-Analyse».
 ## Karte
 Teaser: Stärken, Schwächen, Chancen, Risiken in vier Feldern: die Ausgangslage klären.
 Gut wenn: Zu Beginn, um die Lage zu klären | Die Lagebilder gehen auseinander | Vor Vision oder Strategiediskussion

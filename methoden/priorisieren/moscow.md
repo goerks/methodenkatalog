@@ -81,7 +81,8 @@ Vorher sammelt ein Workshop die Anforderungen. Danach übernehmen Sie die Reihen
 - alternative: [[kano]] Kano fragt direkt nach Nutzerzufriedenheit.
 - alternative: [[wsjf]] WSJF rechnet Wert gegen Aufwand.
 - danach: [[product-backlog]] Reihenfolge im Backlog übernehmen.
-
+- alternative: [[value-vs-effort]] Alternative: «Wert-Aufwand-Matrix».
+- alternative: [[konfliktloesung]] Alternative: «Konfliktlösung bei Anforderungen».
 ## Karte
 Teaser: Anforderungen in Must, Should, Could, Won't einteilen: Wichtiges zuerst.
 Gut wenn: Feste Frist, mehr Wünsche als Platz | Schnelle Entscheide im Workshop | Zur Umfangsabgrenzung eines Releases

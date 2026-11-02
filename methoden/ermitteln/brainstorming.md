@@ -81,7 +81,7 @@ Vorher legt der Workshop die Frage fest. Danach ordnen Sie die Ideen und bewerte
 - danach: [[moscow]] MoSCoW ordnet die Ideen nach Wichtigkeit.
 - alternative: [[five-whys]] Fünf Whys gehen einer Ursache nach, Brainstorming sammelt breit.
 - ergaenzt: [[swot]] SWOT strukturiert gesammelte Ideen.
-
+- ergänzt: [[design-thinking]] «Design Thinking» ergänzt diese Methode.
 ## Karte
 Teaser: Viele Ideen in kurzer Zeit sammeln, erst ohne Bewertung, dann ordnen und auswählen.
 Gut wenn: Viele Ideen zu einer offenen Frage | Anforderungen oder Risiken breit sammeln | Neue Lösungswege finden

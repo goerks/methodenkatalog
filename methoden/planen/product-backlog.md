@@ -81,7 +81,8 @@ Vorher liefern Stories, Priorisierung und Story Map den Inhalt. Danach pflegen S
 - ergaenzt: [[story-mapping]] Story Map gibt dem Backlog Struktur.
 - vorher: [[moscow]] Priorisierung bestimmt die Reihenfolge.
 - alternative: [[pflichtenheft]] Ersetzt das Pflichtenheft im agilen Vorgehen.
-
+- vorher: [[gap-analyse]] Davor liegt «Gap-Analyse».
+- danach: [[value-vs-effort]] Danach folgt «Wert-Aufwand-Matrix».
 ## Karte
 Teaser: Die geordnete Liste von allem, was das Produkt braucht. Nie fertig.
 Gut wenn: In jedem agilen Vorhaben | Arbeit soll transparent und geordnet sein | Als einzige Quelle für kommende Arbeit

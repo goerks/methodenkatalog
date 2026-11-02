@@ -82,7 +82,7 @@ Vorher müssen Use Cases, Qualitätsanforderungen und Kontext vorliegen. Danach 
 - ergaenzt: [[traceability]] Rückverfolgbarkeit der IDs sicherstellen.
 - danach: [[change-management]] Änderungen kontrolliert abwickeln.
 - alternative: [[product-backlog]] Agile Teams ersetzen das Dokument durch ein lebendes Backlog.
-
+- vorher: [[anforderungsschablonen]] Davor liegt «Anforderungsschablonen (EARS)».
 ## Karte
 Teaser: Vertragliche Beschreibung, wie die Anforderungen umgesetzt werden. Klassisch.
 Gut wenn: Festpreis oder Ausschreibung | Hohe regulatorische Anforderungen | Auftraggeber und Auftragnehmer sind getrennt

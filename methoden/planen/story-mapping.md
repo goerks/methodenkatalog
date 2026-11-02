@@ -81,7 +81,8 @@ Vorher liefern Stories, Personas und Workshop die Zutaten. Danach übernehmen Si
 - danach: [[product-backlog]] Die Karte wird zum Backlog.
 - vorher: [[workshop]] Gemeinsam im Workshop erstellen.
 - alternative: [[use-case-diagramm]] Klassischer Überblick über Funktionen.
-
+- vorher: [[design-thinking]] Davor liegt «Design Thinking».
+- alternative: [[feature-tree]] Alternative: «Feature Tree».
 ## Karte
 Teaser: Stories entlang der Nutzerreise ordnen: Überblick statt flacher Liste.
 Gut wenn: Das Backlog ist flach und unübersichtlich | Erstes Release mit minimalem Umfang | Beim Planen eines ersten Releases

@@ -81,7 +81,8 @@ Vorher schätzt das Team mit Planning Poker. Danach nutzen Sie die Punkte im Bac
 - vorher: [[user-stories]] Punkte hängen an Stories.
 - danach: [[product-backlog]] Backlog mit Punkten bewerten.
 - danach: [[wsjf]] Aufwandsteil von WSJF.
-
+- danach: [[value-vs-effort]] Danach folgt «Wert-Aufwand-Matrix».
+- danach: [[cost-of-delay]] Danach folgt «Cost of Delay (CD3)».
 ## Karte
 Teaser: Relativer Aufwand einer Story statt Stunden. Die Velocity zeigt die Teamleistung.
 Gut wenn: Sprints und Prognosen sind nötig | Stundenschätzungen täuschen Genauigkeit vor | Wenn Planung auf Teamerfahrung beruhen soll

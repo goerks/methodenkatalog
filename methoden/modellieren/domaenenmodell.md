@@ -81,7 +81,7 @@ Vorher liefern Glossar und Event Storming die Begriffe. Danach ergänzen Geschä
 - ergaenzt: [[geschaeftsregeln]] Regeln verbinden Begriffe.
 - ergaenzt: [[zustandsdiagramm]] Zustände der Objekte darstellen.
 - danach: [[pflichtenheft]] Als Kapitel Datenmodell einbinden.
-
+- danach: [[klassendiagramm]] Danach folgt «Klassendiagramm».
 ## Karte
 Teaser: Fachliche Begriffe und ihre Beziehungen, kein Datenbankentwurf.
 Gut wenn: Komplexe Fachlichkeit | Technik und Fachbereich uneins über Begriffe | Vor dem Entwurf der Systemstruktur

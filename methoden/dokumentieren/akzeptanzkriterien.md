@@ -83,7 +83,8 @@ Vorher steht die Story oder der Use Case, aus dem sie abgeleitet werden. Danach 
 - ergaenzt: [[dor-dod]] Definition of Done verlangt, dass Kriterien erfüllt sind.
 - danach: [[review]] Kriterien in der Abnahme prüfen.
 - vorher: [[use-cases]] Kriterien lassen sich aus Use-Case-Abläufen ableiten.
-
+- ergänzt: [[wireframes]] «Wireframes und Mockups» ergänzt diese Methode.
+- ergänzt: [[gherkin-bdd]] «Gherkin und BDD» ergänzt diese Methode.
 ## Karte
 Teaser: Wann ist eine Anforderung erfüllt? Beispiele im Format Gegeben-Wenn-Dann.
 Gut wenn: Für jede Story vor dem Sprint | Alle verstehen «fertig» gleich | Wenn automatisierte Tests gewünscht sind

@@ -81,7 +81,9 @@ Vorher sollten Sie wissen, wer die Beteiligten sind und wen Sie zuerst sprechen 
 - alternative: [[workshop]] Bei vielen Beteiligten und Konflikten ist ein Workshop effizienter.
 - danach: [[persona]] Aus mehreren Interviews lassen sich Personas verdichten.
 - danach: [[user-stories]] Erkenntnisse werden als User Stories festgehalten.
-
+- danach: [[prozessanalyse]] Danach folgt «Prozessanalyse (Ist-Aufnahme)».
+- vorher: [[lean-canvas]] Davor liegt «Lean Canvas».
+- danach: [[feature-tree]] Danach folgt «Feature Tree».
 ## Karte
 Teaser: Gespräch mit einer Person: was sie braucht, tut und stört.
 Gut wenn: Der Bereich ist neu, Hintergrund fehlt | Heikle Themen, die nicht in die Gruppe gehören | Mit Schlüsselpersonen, die in Gruppen schweigen

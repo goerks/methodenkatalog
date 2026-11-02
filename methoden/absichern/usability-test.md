@@ -82,7 +82,7 @@ Vorher liefert ein Prototyp die Basis, und die Persona die Auswahl der Teilnehme
 - danach: [[product-backlog]] Erkenntnisse werden Backlog-Einträge.
 - alternative: [[fragebogen]] Ein Fragebogen misst Meinungen vieler Menschen.
 - ergaenzt: [[abnahmetest]] Der Abnahmetest prüft Kriterien, der Usability-Test das Erleben.
-
+- vorher: [[wireframes]] Davor liegt «Wireframes und Mockups».
 ## Karte
 Teaser: Echte Nutzer lösen Aufgaben, das Team schaut zu: Probleme zeigen sich früh und billig.
 Gut wenn: Oberfläche und Abläufe prüfen | Vor der Entwicklung mit einem Prototyp | Meinungen gehen auseinander, Fakten fehlen

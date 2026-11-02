@@ -81,7 +81,7 @@ Vorher zeigt das Refinement, welche Story nicht schätzbar ist. Danach schätzt 
 - danach: [[product-backlog]] Das Ergebnis passt das Backlog an.
 - alternative: [[prototyping]] Ein Prototyp erkundet die Oberfläche statt der Technik.
 - ergaenzt: [[story-splitting]] Statt eines Spikes hilft manchmal ein Teilen der Story.
-
+- ergänzt: [[mvp-poc]] «MVP und Proof of Concept» ergänzt diese Methode.
 ## Karte
 Teaser: Kurze, begrenzte Erkundung, die eine offene Frage beantwortet. Ergebnis ist Wissen, keine Funktion.
 Gut wenn: Story lässt sich nicht schätzen | Neue Technik, Schnittstelle oder Regel | Mehrere Lösungswege zur Wahl

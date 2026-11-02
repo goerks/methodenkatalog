@@ -78,7 +78,7 @@ Vorher braucht es ein freigegebenes Pflichtenheft und eine Traceability-Matrix. 
 - vorher: [[traceability]] Auswirkungen zeigt die Matrix.
 - ergaenzt: [[pflichtenheft]] Verbindliche Basis.
 - alternative: [[product-backlog]] Agil: Änderungen laufen über das Backlog.
-
+- vorher: [[konfliktloesung]] Davor liegt «Konfliktlösung bei Anforderungen».
 ## Karte
 Teaser: Änderungswünsche erfassen, bewerten, entscheiden und umsetzen.
 Gut wenn: Anforderungen sind freigegeben | Festpreis und formale Abnahme | Wenn mehrere Parteien Änderungen verlangen

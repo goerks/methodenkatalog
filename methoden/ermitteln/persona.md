@@ -79,7 +79,8 @@ Vorher müssen Interviews oder Beobachtungen vorliegen, sonst entsteht ein Wunsc
 - vorher: [[interview]] Interviews liefern die Datengrundlage.
 - vorher: [[beobachtung]] Beobachtungen zeigen echtes Verhalten.
 - danach: [[user-stories]] Personas sind Rollen in User Stories («Als Disponentin ...»).
-
+- danach: [[lean-canvas]] Danach folgt «Lean Canvas».
+- danach: [[wireframes]] Danach folgt «Wireframes und Mockups».
 ## Karte
 Teaser: Ein erfundenes, datenbasiertes Profil einer typischen Nutzergruppe mit Zielen und Frust.
 Gut wenn: Das Team sieht die Nutzer verschieden | Vor User Stories und Oberflächen | Bei mehreren sehr verschiedenen Nutzergruppen

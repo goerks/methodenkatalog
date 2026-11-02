@@ -81,7 +81,8 @@ Vorher sollten die Stakeholder bekannt sein. Danach folgt das Use-Case-Diagramm 
 - danach: [[use-case-diagramm]] Funktionen pro Akteur aufschlüsseln.
 - danach: [[bpmn]] Prozesse innerhalb der Grenze modellieren.
 - danach: [[pflichtenheft]] Als Kapitel Systemkontext.
-
+- danach: [[prozessanalyse]] Danach folgt «Prozessanalyse (Ist-Aufnahme)».
+- danach: [[srs]] Danach folgt «Anforderungsspezifikation (SRS)».
 ## Karte
 Teaser: Das System als ein Kasten, umgeben von Akteuren und Fremdsystemen.
 Gut wenn: Zu Beginn: Umfang und Schnittstellen | Viele Nachbarsysteme | Wenn der Umfang diskutiert wird

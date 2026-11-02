@@ -80,7 +80,7 @@ Vorher brauchen Sie Aufwandsschätzungen aus Planning Poker oder Story Points. D
 - vorher: [[planning-poker]] Aufwand per Planning Poker schätzen.
 - alternative: [[moscow]] Einfacher, aber ohne Rechnung.
 - danach: [[product-backlog]] Reihenfolge ins Backlog.
-
+- alternative: [[cost-of-delay]] Alternative: «Cost of Delay (CD3)».
 ## Karte
 Teaser: Priorisieren nach Verzögerungskosten geteilt durch Aufwand. Was zuerst?
 Gut wenn: Viele Anfragen, knappe Kapazität | Wert und Dringlichkeit begründen | In skalierten agilen Umgebungen

@@ -79,7 +79,7 @@ Vorher klären Kontextdiagramm und Workshop den Umfang. Danach leiten Sie aus de
 - vorher: [[workshop]] Prozess im Workshop erheben.
 - vorher: [[kontextdiagramm]] Systemgrenze zuerst klären.
 - danach: [[user-stories]] Aus Prozessschritten Stories ableiten.
-
+- vorher: [[prozessanalyse]] Davor liegt «Prozessanalyse (Ist-Aufnahme)».
 ## Karte
 Teaser: Standardnotation für Geschäftsprozesse mit Ereignissen, Aufgaben und Rollen.
 Gut wenn: Prozesse über mehrere Rollen | Verbessern oder automatisieren | Wenn eine Prozessengine im Einsatz ist

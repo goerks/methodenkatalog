@@ -81,7 +81,7 @@ Vorher sollten Vision oder Geschäftsmodell vorliegen. Danach entwickeln Sie aus
 - ergaenzt: [[stakeholder]] Akteure der Map sind Stakeholder.
 - danach: [[user-stories]] Lieferobjekte werden zu User Stories.
 - alternative: [[story-mapping]] Story Map ordnet Stories, Impact Map begründet sie.
-
+- vorher: [[zielmodell]] Davor liegt «Zielmodell».
 ## Karte
 Teaser: Ziel, Akteure, Wirkungen, Lieferungen: Funktionen mit Nutzen verbinden.
 Gut wenn: Wunschliste ohne erkennbares Ziel | Start einer agilen Entwicklung | Wenn Stakeholder verschiedene Ziele verfolgen

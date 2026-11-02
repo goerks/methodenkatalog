@@ -82,7 +82,7 @@ Vorher liefert der Use Case den Hauptablauf. Danach prüft das Team die Schnitts
 - danach: [[abnahmetest]] Szenarien werden zu Testfällen.
 - alternative: [[aktivitaetsdiagramm]] Das Aktivitätsdiagramm zeigt Entscheidungen, das Sequenzdiagramm Nachrichten.
 - alternative: [[bpmn]] BPMN zeigt Prozesse über mehrere Rollen.
-
+- ergänzt: [[klassendiagramm]] «Klassendiagramm» ergänzt diese Methode.
 ## Karte
 Teaser: Nachrichten zwischen Beteiligten in zeitlicher Reihenfolge: Zusammenspiel und Schnittstellen klären.
 Gut wenn: Zusammenspiel mehrerer Systeme klären | Schnittstellen und Integrationen | Use Case als Ablauf zeigen

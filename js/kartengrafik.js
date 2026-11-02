@@ -216,10 +216,94 @@ const KV = {};
     tx(b, 128, 12, 'hilft', null, {k: 1.05}); tx(b, 316, 12, 'schadet', null, {k: 1.05}); tx(b, 14, 76, 'intern', null, {k: 1.05, rot: -90}); tx(b, 14, 172, 'extern', null, {k: 1.05, rot: -90});
     [['Stärken', 'b', 34, 26], ['Schwächen', 'c', 224, 26], ['Chancen', 'b', 34, 124], ['Risiken', 'c', 224, 124]].forEach(c => nd(b, c[2], c[3], 184, 90, c[0], c[1], 1.6));
   });
+  D('gap-analyse', 'Gap-Analyse: Ist, Soll und die Lücke', b => {
+    nd(b, 8, 30, 118, 150, 'Ist', 'n', 1.7); nd(b, 294, 30, 118, 150, 'Soll', 'b', 1.7); nd(b, 150, 78, 120, 54, 'Lücke', 'c', 1.6);
+    b.ln('M126 105H148'); b.ln('M294 105H272'); [0, 1, 2].forEach(i => { b.plain(`M26 ${150 - i * 20}H${60 + i * 10}`); b.plain(`M312 ${150 - i * 20}H${360 - i * 6}`); });
+  });
+  D('root-cause-analyse', 'Ishikawa: Ursachen in Gruppen zum Problem', b => {
+    b.ln('M12 118H292'); nd(b, 296, 84, 118, 68, 'Problem', 'c', 1.5);
+    [['Mensch', 60, 1], ['Methode', 160, 1], ['Technik', 60, 0], ['Umfeld', 160, 0]].forEach(r => { const x = r[1], up = r[2]; pl(b, x - 36, up ? 8 : 188, 84, 34, r[0], up ? 'a' : 'b', 1.1); b.plain(`M${x + 6} ${up ? 44 : 186}L${x + 40} 118`); b.plain(`M${x + 14} ${up ? 62 : 168}H${x + 26}`); });
+  });
+  D('prozessanalyse', 'Prozessanalyse: Schritte, Wartezeit und Schwachstelle', b => {
+    [['Anlegen', 8], ['Prüfen', 150], ['Freigabe', 292]].forEach(s => nd(b, s[1], 40, 120, 70, s[0], 'a', 1.45)); b.ln('M128 75H148'); b.ln('M270 75H290');
+    pl(b, 112, 150, 196, 44, '2 Tage Wartezeit', 'c', 1.2); b.plain('M210 148V112');
+  });
+  D('design-thinking', 'Design Thinking: fünf Schritte in Schleifen', b => {
+    nd(b, 8, 14, 120, 56, 'Verstehen', 'a', 1.4); nd(b, 150, 14, 120, 56, 'Sichtweise', 'a', 1.3); nd(b, 292, 14, 120, 56, 'Ideen', 'b', 1.5);
+    nd(b, 292, 150, 120, 56, 'Prototyp', 'c', 1.4); nd(b, 150, 150, 120, 56, 'Testen', 'c', 1.5);
+    b.ln('M128 42H148'); b.ln('M270 42H290'); b.ln('M352 70V148'); b.ln('M290 178H272'); b.ln('M150 178H68V72', true); tx(b, 114, 118, 'lernen', null, {k: 1.1, a: 'start'});
+  });
+  D('lean-canvas', 'Lean Canvas: neun Felder, Reihenfolge der Bearbeitung', b => {
+    const bl = (x, y, w, h, t, r, k, n) => { nd(b, x, y, w, h, t, r, k); bd(b, x + 12, y + 12, n); };
+    bl(6, 6, 76, 124, 'Problem', 'c', .95, 1); bl(86, 6, 76, 60, 'Lösung', 'b', .9, 2); bl(86, 70, 76, 60, 'Kenn-\nzahlen', 'n', .8, 4);
+    bl(166, 6, 86, 124, 'Allein-\nstellung', 'c', .95, 2); bl(256, 6, 76, 60, 'Unfairer\nVorteil', 'n', .8, 5); bl(256, 70, 76, 60, 'Kanäle', 'a', .95, 3); bl(336, 6, 78, 124, 'Kunden-\nsegmente', 'a', .95, 1);
+    bl(6, 134, 206, 54, 'Kosten', 'n', 1.2, 4); bl(216, 134, 198, 54, 'Einnahmen', 'n', 1.2, 3);
+  });
+  D('klassendiagramm', 'Klassendiagramm: Klassen und Beziehungen', b => {
+    const cls = (x, y, w, h, t, a, r) => { nd(b, x, y, w, h, '', r); tx(b, x + w / 2, y + 16, t, r, {k: 1.2, w: 700}); b.plain(`M${x + 6} ${y + 30}H${x + w - 6}`); tx(b, x + 12, y + 44, a, r, {a: 'start', k: .95}); };
+    cls(150, 8, 120, 64, 'Tour', 'Datum', 'a'); cls(10, 140, 120, 64, 'Fahrzeug', 'Kennzeichen', 'b'); cls(290, 140, 120, 64, 'Fahrer', 'Name', 'c');
+    b.plain('M180 72L70 140'); b.plain('M240 72L350 140'); tx(b, 116, 98, '1', null, {k: 1.1}); tx(b, 84, 126, '*', null, {k: 1.2}); tx(b, 300, 98, '1', null, {k: 1.1}); tx(b, 338, 126, '*', null, {k: 1.2});
+  });
+  D('zielmodell', 'Zielmodell: Oberziel, Teilziele, Konflikt, Anforderungen', b => {
+    nd(b, 120, 6, 180, 40, 'Oberziel', 'k', 1.5); [['Schnell', 6], ['Sicher', 150], ['Günstig', 294]].forEach((c, i) => { nd(b, c[1], 70, 120, 38, c[0], 'a', 1.4); b.plain(`M210 46L${c[1] + 60} 70`); b.ln(`M${c[1] + 60} 108V${i === 1 ? 168 : 172}`); });
+    pl(b, 78, 124, 120, 28, 'Konflikt', 'c', 1.1); b.plain('M66 108L110 126'); b.plain('M210 108L168 126');
+    [6, 150, 294].forEach(x => nd(b, x, 174, 120, 42, 'Anforderung', 'n', 1.1));
+  });
+  D('capability-map', 'Capability Map: Fähigkeiten nach Bereichen, nach Reife eingefärbt', b => {
+    [['Kunden', 8], ['Planung', 148], ['Durchführung', 288]].forEach((h, i) => nd(b, h[1], 6, 124, 34, h[0], 'k', 1.0));
+    [['Anfragen', 'b'], ['Touren', 'c'], ['Fahrzeuge', 'b'], ['Angebote', 'n'], ['Konflikte', 'c'], ['Tracking', 'n'], ['Verträge', 'b'], ['Auslastung', 'n'], ['Abrechnung', 'b']].forEach((c, i) => nd(b, 8 + (i % 3) * 140, 50 + Math.floor(i / 3) * 52, 124, 44, c[0], c[1], 1.0));
+    [['stark', 'b', 70], ['mittel', 'n', 180], ['Lücke', 'c', 290]].forEach(l => { b.shape('rect', l[2], 212, 14, 12, l[1]); tx(b, l[2] + 22, 219, l[0], null, {a: 'start', k: .95}); });
+  });
+  D('feature-tree', 'Feature Tree: Produkt, Bereiche, Funktionen', b => {
+    nd(b, 6, 84, 104, 62, 'Tourenplaner', 'k', 1.0);
+    [['Planen', 18, 'a'], ['Freigeben', 94, 'a'], ['Auswerten', 170, 'a']].forEach(r => { nd(b, 142, r[1] + 6, 100, 40, r[0], r[2], 1.2); b.plain(`M110 115C126 115 126 ${r[1] + 26} 142 ${r[1] + 26}`); });
+    [['Tour anlegen', 8, 'n'], ['Konflikt prüfen', 46, 'b'], ['Freigabe', 96, 'n'], ['Auslastung', 178, 'n']].forEach(l => { nd(b, 286, l[1], 126, 32, l[0], l[2], 1.0); });
+    b.plain('M242 44C264 44 264 24 286 24'); b.plain('M242 44C264 44 264 62 286 62'); b.plain('M242 120C264 120 264 112 286 112'); b.plain('M242 196C264 196 264 194 286 194');
+  });
+  D('wireframes', 'Wireframe: Aufbau eines Bildschirms', b => {
+    b.plain('M50 6H370V224H50Z'); b.plain('M50 42H370'); b.ring(70, 24, 6); b.plain('M96 24H200');
+    b.shape('rect', 66, 58, 84, 150, 'a'); b.shape('rect', 164, 58, 190, 76, 'n'); tx(b, 259, 96, 'Bild', 'n', {k: 1.2});
+    b.plain('M164 150H340'); b.plain('M164 166H300'); pl(b, 164, 180, 110, 32, 'Speichern', 'b', 1.0);
+  });
+  D('gherkin-bdd', 'Gherkin: Feature mit Gegeben, Wenn, Dann', b => {
+    nd(b, 10, 8, 400, 42, 'Feature: Doppelbelegung', 'k', 1.3);
+    [['Gegeben', 'n'], ['Wenn', 'a'], ['Dann', 'b']].forEach((r, i) => { pl(b, 10, 66 + i * 52, 112, 40, r[0], r[1], 1.35); b.plain(`M140 ${86 + i * 52}H${380 - i * 30}`); });
+    ck(b, 396, 188);
+  });
+  D('anforderungsschablonen', 'Satzschablone: Bedingung, System, Wirkung', b => {
+    [['Wenn', 'Bedingung', 'a'], ['muss', 'das System', 'c'], ['Wirkung', 'innerhalb 2 s', 'b']].forEach((r, i) => { pl(b, 8, 18 + i * 72, 108, 52, r[0], 'n', 1.3); nd(b, 132, 18 + i * 72, 280, 52, r[1], r[2], 1.5); });
+  });
+  D('srs', 'SRS: Gliederung nach ISO 29148', b => {
+    nd(b, 70, 6, 250, 218, '', 'n'); [['1 Einleitung', 'a'], ['2 Gesamtbild', 'n'], ['3 Funktionen', 'b'], ['4 Qualität', 'c'], ['5 Schnittstellen', 'n']].forEach((r, i) => pl(b, 90, 22 + i * 38, 210, 30, r[0], r[1], 1.0));
+    pl(b, 290, 4, 112, 30, 'ISO 29148', 'k', .9);
+  });
+  D('value-vs-effort', 'Wert-Aufwand-Matrix: vier Felder', b => {
+    tx(b, 18, 20, 'Wert', null, {k: 1.05, rot: -90}); tx(b, 232, 222, 'Aufwand', null, {k: 1.05});
+    [['Schnelle\nGewinne', 'b', 34, 6], ['Grosse\nWetten', 'a', 228, 6], ['Füller', 'n', 34, 108], ['Zeitfresser', 'c', 228, 108]].forEach(c => nd(b, c[2], c[3], 180, 96, c[0], c[1], 1.4));
+  });
+  D('cost-of-delay', 'Cost of Delay: Verlust je Woche Verzögerung', b => {
+    b.plain('M30 20V190H404'); [130, 106, 82, 58, 34].forEach((h, i) => b.shape('rect', 54 + i * 70, 190 - h, 54, h, i < 2 ? 'b' : 'c'));
+    tx(b, 232, 214, 'Wochen', null, {k: 1.05}); pl(b, 150, 12, 200, 36, 'Wert geht verloren', 'c', 1.1);
+  });
+  D('anforderungsreview', 'Review: Dokument gegen Checkliste prüfen', b => {
+    b.plain('M10 10H170V218H10Z'); [0, 1, 2, 3, 4].forEach(i => b.plain(`M26 ${40 + i * 34}H${130 - (i % 2) * 24}`)); b.ring(148, 108, 10); b.ring(140, 176, 10);
+    [['eindeutig', 'b'], ['prüfbar', 'b'], ['vollständig', 'c']].forEach((r, i) => { pl(b, 214, 30 + i * 62, 190, 44, r[0], r[1], 1.2); }); ck(b, 196, 52); ck(b, 196, 114); tx(b, 196, 176, '✗', 'c', {k: 1.6, w: 700});
+    b.plain('M170 108L190 108', false);
+  });
+  D('konfliktloesung', 'Konfliktlösung: Positionen, Interessen, Lösung', b => {
+    nd(b, 8, 8, 150, 44, 'Position A', 'c', 1.2); nd(b, 262, 8, 150, 44, 'Position B', 'a', 1.2);
+    pl(b, 8, 82, 150, 38, 'Interesse', 'n', 1.1); pl(b, 262, 82, 150, 38, 'Interesse', 'n', 1.1); b.plain('M83 52V82'); b.plain('M337 52V82');
+    nd(b, 130, 160, 160, 58, 'Lösung', 'b', 1.7); b.ln('M83 120L150 160'); b.ln('M337 120L270 160');
+  });
+  D('mvp-poc', 'MVP: kleinster Schritt, prüfen, lernen', b => {
+    nd(b, 8, 20, 250, 190, '', 'n'); tx(b, 133, 44, 'Ausbau', 'n', {k: 1.2}); nd(b, 28, 78, 120, 108, 'MVP', 'b', 1.8);
+    pl(b, 292, 24, 118, 46, 'Nutzer', 'a', 1.3); pl(b, 292, 94, 118, 46, 'Lernen', 'c', 1.3); pl(b, 292, 164, 118, 46, 'Entscheid', 'k', 1.2);
+    b.ln('M148 120H290'); b.ln('M351 70V92'); b.ln('M351 140V162');
+  });
 })();
 
 // Ausschnitt je Grafik (x0, y0, x1, y1 des Inhalts), automatisch erzeugt mit tools/crop-kartengrafik.mjs
-const KVB = {"interview":[34,22,386,190],"workshop":[22,24,406,208],"beobachtung":[18,34,404,212],"persona":[29,13,394,220],"fragebogen":[30,23,394,227],"dokumentenanalyse":[22,29,406,212],"use-cases":[18,13,400,224],"akzeptanzkriterien":[12,38,412,162],"dor-dod":[10,62,414,202],"nfr":[20,20,401,208],"pflichtenheft":[90,9,334,224],"produktvision":[9,7,414,220],"glossar":[18,15,406,214],"geschaeftsregeln":[17,14,412,220],"story-splitting":[12,19,404,208],"wsjf":[14,20,411,204],"story-points":[18,72,422,225],"product-backlog":[14,13,406,226],"refinement":[11,46,413,154],"story-mapping":[10,13,412,216],"sprint-planning":[10,40,414,194],"review":[29,13,406,220],"prototyping":[119,8,304,226],"change-management":[11,70,413,225],"abnahmetest":[13,19,411,196],"jira":[11,12,422,222],"miro":[13,20,404,214],"drawio":[10,14,414,220],"plantuml":[10,20,414,216],"confluence":[9,13,414,220],"figma":[14,20,410,214],"cucumber":[9,13,414,220],"enterprise-architect":[7,7,416,226],"customer-journey-map":[6,6,414,214],"jobs-to-be-done":[25,16,398,218],"value-proposition-canvas":[4,4,416,224],"rich-picture":[14,14,406,224],"empathy-map":[8,7,416,224],"fokusgruppe":[60,5,371,227],"brainstorming":[13,16,412,216],"contextual-inquiry":[24,60,396,207],"spike":[20,46,403,217],"example-mapping":[19,11,410,188],"entscheidungstabelle":[12,13,410,222],"datenmodell":[11,14,412,210],"sequenzdiagramm":[-15,9,439,220],"dot-voting":[12,18,382,212],"rice":[12,20,409,174],"kosten-nutzen":[70,29,354,214],"affinity-estimation":[12,6,412,216],"release-planning":[12,24,412,196],"usability-test":[24,60,376,212],"retrospektive":[12,13,422,186],"business-model-canvas":[6,6,419,192],"swot":[-7,4,412,218]};
+const KVB = {"interview":[34,22,386,190],"workshop":[22,24,406,208],"beobachtung":[18,34,404,212],"persona":[29,13,394,220],"fragebogen":[30,23,394,227],"dokumentenanalyse":[22,29,406,212],"use-cases":[18,13,400,224],"akzeptanzkriterien":[12,38,412,162],"dor-dod":[10,62,414,202],"nfr":[20,20,401,208],"pflichtenheft":[90,9,334,224],"produktvision":[9,7,414,220],"glossar":[18,15,406,214],"geschaeftsregeln":[17,14,412,220],"story-splitting":[12,19,404,208],"wsjf":[14,20,411,204],"story-points":[18,72,422,225],"product-backlog":[14,13,406,226],"refinement":[11,46,413,154],"story-mapping":[10,13,412,216],"sprint-planning":[10,40,414,194],"review":[29,13,406,220],"prototyping":[119,8,304,226],"change-management":[11,70,413,225],"abnahmetest":[13,19,411,196],"jira":[11,12,422,222],"miro":[13,20,404,214],"drawio":[10,14,414,220],"plantuml":[10,20,414,216],"confluence":[9,13,414,220],"figma":[14,20,410,214],"cucumber":[9,13,414,220],"enterprise-architect":[7,7,416,226],"customer-journey-map":[6,6,414,214],"jobs-to-be-done":[25,16,398,218],"value-proposition-canvas":[4,4,416,224],"rich-picture":[14,14,406,224],"empathy-map":[8,7,416,224],"fokusgruppe":[60,5,371,227],"brainstorming":[13,16,412,216],"contextual-inquiry":[24,60,396,207],"spike":[20,46,403,217],"example-mapping":[19,11,410,188],"entscheidungstabelle":[12,13,410,222],"datenmodell":[11,14,412,210],"sequenzdiagramm":[-15,9,439,220],"dot-voting":[12,18,382,212],"rice":[12,20,409,174],"kosten-nutzen":[70,29,354,214],"affinity-estimation":[12,6,412,216],"release-planning":[12,24,412,196],"usability-test":[24,60,376,212],"retrospektive":[12,13,422,186],"business-model-canvas":[6,6,419,192],"swot":[-7,4,412,218],"gap-analyse":[8,30,416,184],"root-cause-analyse":[12,8,418,226],"prozessanalyse":[8,39,416,198],"design-thinking":[8,13,416,210],"lean-canvas":[6,6,419,192],"klassendiagramm":[10,7,414,208],"zielmodell":[6,6,418,220],"capability-map":[8,6,416,228],"feature-tree":[6,8,415,220],"wireframes":[50,6,370,224],"gherkin-bdd":[9,7,414,214],"anforderungsschablonen":[10,17,416,218],"srs":[69,4,403,228],"value-vs-effort":[3,6,412,230],"cost-of-delay":[30,11,404,222],"anforderungsreview":[10,10,406,218],"konfliktloesung":[8,7,416,222],"mvp-poc":[7,20,412,214]};
 Object.keys(KV).forEach(id => { const f = KV[id]; KV[id] = () => { const c = KVB[id]; const svg = f(); if (!c) return svg; const p = 10, w = c[2] - c[0] + 2 * p, h = c[3] - c[1] + 2 * p; return svg.replace('viewBox="0 0 420 230"', `viewBox="${c[0] - p} ${c[1] - p} ${w} ${h}"`); }; });
 // Detailseite und Factsheet verwenden dieselben Zeichnungen wie die Karte
 VIS.bmc = KV['business-model-canvas']; VIS.swot = KV['swot'];

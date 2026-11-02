@@ -82,7 +82,7 @@ Vorher liefern Schätzung und Stakeholder-Analyse die Zahlen. Danach fliesst das
 - danach: [[roadmap]] Entscheid und Reihenfolge landen in der Roadmap.
 - alternative: [[rice]] RICE ist leichter und kommt ohne Geldbeträge aus.
 - alternative: [[kano]] Kano fragt nach Zufriedenheit statt nach Geld.
-
+- vorher: [[gap-analyse]] Davor liegt «Gap-Analyse».
 ## Karte
 Teaser: Kosten und Nutzen einer Lösung gegenüberstellen: Investitionen mit Zahlen begründen.
 Gut wenn: Entscheider verlangen Zahlen | Mehrere Lösungsvarianten vergleichen | Kosten und Nutzen in Geld darstellbar

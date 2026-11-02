@@ -82,7 +82,8 @@ Vorher sammeln Backlog und Daten die Kandidaten. Danach ordnen Sie das Backlog n
 - danach: [[roadmap]] Die Rangliste prägt die Reihenfolge der Roadmap.
 - alternative: [[wsjf]] WSJF bewertet mit Kosten der Verzögerung.
 - alternative: [[moscow]] MoSCoW kommt ohne Rechnen aus.
-
+- alternative: [[value-vs-effort]] Alternative: «Wert-Aufwand-Matrix».
+- alternative: [[cost-of-delay]] Alternative: «Cost of Delay (CD3)».
 ## Karte
 Teaser: Reichweite mal Wirkung mal Zuversicht, geteilt durch Aufwand: vergleichbare Zahl für jede Idee.
 Gut wenn: Viele Ideen, knappe Kapazität | Nutzerzahlen liegen vor | Die Reihenfolge soll begründbar sein

@@ -80,7 +80,7 @@ Vorher liefern Beobachtung oder Interviews den Ablauf. Danach beschreiben Use Ca
 - alternative: [[bpmn]] BPMN eignet sich besser für Geschäftsprozesse mit mehreren Beteiligten.
 - ergaenzt: [[zustandsdiagramm]] Zustandsdiagramm zeigt den Lebenszyklus eines Objekts.
 - vorher: [[beobachtung]] Beobachtete Abläufe modellieren.
-
+- alternative: [[prozessanalyse]] Alternative: «Prozessanalyse (Ist-Aufnahme)».
 ## Karte
 Teaser: Ein Ablauf mit Aktionen, Verzweigungen und Zuständigkeiten (UML).
 Gut wenn: Ablauf verstehen und klären | Entscheidungen und parallele Schritte | Um Use Cases mit Logik zu zeigen

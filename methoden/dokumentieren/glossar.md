@@ -81,7 +81,7 @@ Vorher liefern Dokumentenanalyse und Event Storming die Begriffe. Danach hilft e
 - ergaenzt: [[user-stories]] Stories verwenden die Begriffe.
 - danach: [[pflichtenheft]] Als Anhang im Pflichtenheft.
 - ergaenzt: [[geschaeftsregeln]] Regeln stützen sich auf Begriffe.
-
+- danach: [[klassendiagramm]] Danach folgt «Klassendiagramm».
 ## Karte
 Teaser: Fachbegriffe mit abgestimmten Definitionen: eine gemeinsame Sprache.
 Gut wenn: Ab Projektstart, laufend | Begriffe führen zu Missverständnissen | Neue Teammitglieder sollen schnell einsteigen

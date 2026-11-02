@@ -138,6 +138,21 @@ const M = [
     "user-stories",
     "danach",
     "Erkenntnisse werden als User Stories festgehalten."
+   ],
+   [
+    "prozessanalyse",
+    "danach",
+    "Danach folgt «Prozessanalyse (Ist-Aufnahme)»."
+   ],
+   [
+    "lean-canvas",
+    "vorher",
+    "Davor liegt «Lean Canvas»."
+   ],
+   [
+    "feature-tree",
+    "danach",
+    "Danach folgt «Feature Tree»."
    ]
   ],
   "tools": [
@@ -286,6 +301,16 @@ const M = [
     "interview",
     "alternative",
     "Für sensible Themen sind Einzelgespräche offener."
+   ],
+   [
+    "root-cause-analyse",
+    "ergaenzt",
+    "«Root-Cause-Analyse (Ishikawa)» ergänzt diese Methode."
+   ],
+   [
+    "konfliktloesung",
+    "ergaenzt",
+    "«Konfliktlösung bei Anforderungen» ergänzt diese Methode."
    ]
   ],
   "tools": [
@@ -426,6 +451,16 @@ const M = [
     "aktivitaetsdiagramm",
     "danach",
     "Den beobachteten Ablauf als Aktivitätsdiagramm modellieren."
+   ],
+   [
+    "root-cause-analyse",
+    "danach",
+    "Danach folgt «Root-Cause-Analyse (Ishikawa)»."
+   ],
+   [
+    "prozessanalyse",
+    "ergaenzt",
+    "«Prozessanalyse (Ist-Aufnahme)» ergänzt diese Methode."
    ]
   ],
   "tools": [
@@ -566,6 +601,21 @@ const M = [
     "persona",
     "danach",
     "Nutzergruppen zu Personas verdichten."
+   ],
+   [
+    "design-thinking",
+    "danach",
+    "Danach folgt «Design Thinking»."
+   ],
+   [
+    "zielmodell",
+    "danach",
+    "Danach folgt «Zielmodell»."
+   ],
+   [
+    "capability-map",
+    "danach",
+    "Danach folgt «Capability Map»."
    ]
   ],
   "tools": [
@@ -708,6 +758,16 @@ const M = [
     "user-stories",
     "danach",
     "Personas sind Rollen in User Stories («Als Disponentin ...»)."
+   ],
+   [
+    "lean-canvas",
+    "danach",
+    "Danach folgt «Lean Canvas»."
+   ],
+   [
+    "wireframes",
+    "danach",
+    "Danach folgt «Wireframes und Mockups»."
    ]
   ],
   "tools": [
@@ -1009,6 +1069,11 @@ const M = [
     "risikoanalyse",
     "danach",
     "Bedrohungen werden als Risiken weiterverfolgt."
+   ],
+   [
+    "gap-analyse",
+    "alternative",
+    "Alternative: «Gap-Analyse»."
    ]
   ],
   "tools": [
@@ -1159,6 +1224,11 @@ const M = [
     "user-stories",
     "danach",
     "Ursachen führen zu besseren Stories."
+   ],
+   [
+    "root-cause-analyse",
+    "alternative",
+    "Alternative: «Root-Cause-Analyse (Ishikawa)»."
    ]
   ],
   "tools": [
@@ -1772,6 +1842,11 @@ const M = [
     "kano",
     "ergaenzt",
     "Kano zeigt, wie wichtig ein Job den Nutzern ist."
+   ],
+   [
+    "design-thinking",
+    "alternative",
+    "Alternative: «Design Thinking»."
    ]
   ],
   "tools": [
@@ -1922,6 +1997,11 @@ const M = [
     "swot",
     "ergaenzt",
     "SWOT strukturiert gesammelte Ideen."
+   ],
+   [
+    "design-thinking",
+    "ergaenzt",
+    "«Design Thinking» ergänzt diese Methode."
    ]
   ],
   "tools": [
@@ -2223,6 +2303,11 @@ const M = [
     "jobs-to-be-done",
     "alternative",
     "Jobs to be Done fragt nach dem Ziel statt nach dem Erleben."
+   ],
+   [
+    "design-thinking",
+    "ergaenzt",
+    "«Design Thinking» ergänzt diese Methode."
    ]
   ],
   "tools": [
@@ -2371,11 +2456,634 @@ const M = [
     "story-splitting",
     "ergaenzt",
     "Statt eines Spikes hilft manchmal ein Teilen der Story."
+   ],
+   [
+    "mvp-poc",
+    "ergaenzt",
+    "«MVP und Proof of Concept» ergänzt diese Methode."
    ]
   ],
   "tools": [
    "Jira",
    "Confluence"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "gap-analyse",
+  "n": "Gap-Analyse",
+  "c": "erm",
+  "f": "methode",
+  "m": "beide",
+  "ph": "verstehen",
+  "t": "Vergleichsanalyse",
+  "kz": "",
+  "k": "Vergleicht Ist-Zustand und Soll-Zustand und macht die Lücken sichtbar, die ein Vorhaben schliessen muss.",
+  "aufwand": "2 bis 4 Stunden",
+  "ab": [
+   "Dimensionen und Zielbild festlegen",
+   "Ist-Zustand je Dimension beschreiben",
+   "Soll-Zustand je Dimension beschreiben",
+   "Lücke benennen und nach Grösse bewerten",
+   "Massnahmen zuordnen und Reihenfolge klären"
+  ],
+  "re": [
+   "Ist und Soll in gleicher Gliederung beschreiben",
+   "Jede Lücke bekommt einen Besitzer",
+   "Lücken nicht mit Lösungen vermischen",
+   "Bewertung mit einer gemeinsamen Skala"
+  ],
+  "bsp": {
+   "t": "Tourenplanung",
+   "x": "Dimension Freigabe: Ist fünf Tage per E-Mail, Soll ein Tag im System, Lücke gross, Massnahme Workflow. Dimension Auslastung: Ist nur im Kopf der Disponenten, Soll Anzeige je Fahrzeug, Lücke mittel, Massnahme Übersicht im Tool."
+  },
+  "zw": "Die Gap-Analyse beschreibt, wo eine Organisation heute steht und wo sie hin will, und benennt die Abstände dazwischen. Jede Lücke wird beschrieben, bewertet und möglichen Massnahmen zugeordnet. So entsteht aus einem vagen «es muss besser werden» eine Liste konkreter Themen.",
+  "wa": [
+   "Wenn ein Zielbild vorliegt und der Weg dorthin geklärt werden soll",
+   "Wenn Fähigkeiten, Prozesse oder Systeme mit einer Vorgabe verglichen werden",
+   "Wenn der Umfang eines Vorhabens begründet werden muss"
+  ],
+  "wn": [
+   "Wenn das Ziel noch gar nicht bekannt ist: zuerst Vision oder Zielmodell",
+   "Wenn der Ist-Zustand nicht erhoben werden kann",
+   "Bei sehr kleinen Änderungen, die ein Gespräch klärt"
+  ],
+  "vb": [
+   "Bereiche oder Dimensionen festlegen (Prozess, Daten, Systeme, Organisation)",
+   "Quellen für den Ist-Zustand klären",
+   "Zielbild oder Soll-Vorgabe bereithalten",
+   "Skala zur Bewertung der Lücke vereinbaren"
+  ],
+  "nr": "V-14",
+  "kt": "Ist und Soll nebeneinander: Die Lücke dazwischen zeigt, was ein Vorhaben leisten muss.",
+  "ks": [
+   "Dimensionen festlegen",
+   "Ist beschreiben",
+   "Soll beschreiben",
+   "Lücke bewerten",
+   "Massnahmen zuordnen"
+  ],
+  "gw": [
+   "Ein Zielbild liegt vor",
+   "Der Umfang muss begründet werden",
+   "Prozesse oder Systeme werden verglichen"
+  ],
+  "rg": [
+   "Ist und Soll gleich gegliedert",
+   "Jede Lücke hat einen Besitzer",
+   "Lücke und Lösung getrennt halten"
+  ],
+  "vk": [
+   "Zielbild klären",
+   "Ist-Zustand erheben"
+  ],
+  "bn": "Das Ziel ist noch völlig offen",
+  "pr": "Viele Gap-Analysen scheitern an einem zu weichen Ist-Bild. Belegen Sie den Ist-Zustand mit Zahlen, Dokumenten oder Beobachtungen, nicht nur mit Meinungen. Trennen Sie sauber zwischen der Lücke («Freigaben dauern fünf Tage, Soll ein Tag») und der Massnahme («Freigabe automatisieren»). So bleibt die Liste prüfbar und lässt sich gut priorisieren.",
+  "em": "Vorher klären Vision oder Zielmodell das Soll, Prozessanalyse oder Interviews liefern den Ist-Zustand. Danach bewerten Sie die Lücken, etwa mit Kosten-Nutzen oder MoSCoW. Für die Suche nach Ursachen hilft die Root-Cause-Analyse.",
+  "qu": [
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Gap Analysis»",
+   "Pohl, K.; Rupp, C.: Basiswissen Requirements Engineering (dpunkt, 5. Auflage 2021)"
+  ],
+  "io": {
+   "lf": [
+    "Fachbereich mit Prozesswissen",
+    "Management mit Zielbild"
+   ],
+   "in": [
+    {
+     "t": "Zielbild",
+     "to": "produktvision",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Beschreibung des heutigen Ablaufs",
+     "to": "prozessanalyse",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Befunde aus Gesprächen",
+     "to": "interview",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Liste der Lücken mit Bewertung"
+    },
+    {
+     "t": "Priorisierte Themen",
+     "to": "kosten-nutzen",
+     "v": "genutzt in"
+    },
+    {
+     "t": "Themen für das Backlog",
+     "to": "product-backlog",
+     "v": "übernommen in"
+    }
+   ],
+   "ko": [
+    "Auftraggeber",
+    "Business Analysten",
+    "Projektleitung"
+   ]
+  },
+  "li": [
+   [
+    "produktvision",
+    "vorher",
+    "Die Vision beschreibt das Soll."
+   ],
+   [
+    "prozessanalyse",
+    "vorher",
+    "Die Prozessanalyse beschreibt das Ist."
+   ],
+   [
+    "kosten-nutzen",
+    "danach",
+    "Die Lücken werden nach Nutzen und Aufwand bewertet."
+   ],
+   [
+    "product-backlog",
+    "danach",
+    "Massnahmen wandern in das Backlog."
+   ],
+   [
+    "root-cause-analyse",
+    "danach",
+    "Sie sucht die Ursachen hinter den Lücken."
+   ],
+   [
+    "swot",
+    "alternative",
+    "SWOT betrachtet Lage statt Abstand zum Ziel."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Excel"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "root-cause-analyse",
+  "n": "Root-Cause-Analyse (Ishikawa)",
+  "c": "erm",
+  "f": "methode",
+  "m": "beide",
+  "ph": "verstehen",
+  "t": "Ursachenanalyse",
+  "kz": "Ishikawa",
+  "k": "Sucht systematisch die Ursachen eines Problems und ordnet sie in Gruppen, im Ursache-Wirkungs-Diagramm nach Ishikawa.",
+  "aufwand": "1 bis 2 Stunden",
+  "ab": [
+   "Problem als Wirkung an den Kopf schreiben",
+   "Ursachengruppen als Hauptäste anlegen",
+   "Mögliche Ursachen je Gruppe sammeln",
+   "Mit «Warum?» in die Tiefe fragen",
+   "Wahrscheinliche Ursachen markieren und prüfen"
+  ],
+  "re": [
+   "Das Problem steht messbar am Kopf",
+   "Zuerst sammeln, dann bewerten",
+   "Ursachen sind Vermutungen, bis sie geprüft sind",
+   "Keine Schuldzuweisung an Personen"
+  ],
+  "bsp": {
+   "t": "Verspätete Touren",
+   "x": "Problem: Touren starten im Schnitt 20 Minuten zu spät. Gruppe Mensch: Disponenten wechseln oft. Gruppe Methode: Freigabe erst am Morgen. Gruppe Technik: Karte lädt langsam. Gruppe Organisation: Fahrzeuge werden spät übergeben. Geprüft wird zuerst die späte Freigabe."
+  },
+  "zw": "Die Methode geht von einem klar benannten Problem aus und fragt nach möglichen Ursachen in festen Gruppen, etwa Mensch, Methode, Technik, Material, Umfeld und Organisation. Das Diagramm sieht aus wie eine Fischgräte, daher der Zweitname. Es verhindert, dass ein Team beim ersten Verdacht stehen bleibt.",
+  "wa": [
+   "Wenn ein Problem mehrere mögliche Ursachen haben kann",
+   "Wenn ein Team verschiedene Sichten zusammentragen soll",
+   "Wenn die eigentliche Ursache vor einer Lösung geklärt werden muss"
+  ],
+  "wn": [
+   "Wenn die Ursache offensichtlich und belegt ist",
+   "Wenn das Problem unscharf formuliert ist: zuerst das Problem klären",
+   "Als Ersatz für Messung und Daten"
+  ],
+  "vb": [
+   "Problem als konkrete Wirkung formulieren",
+   "Gruppen für Ursachen wählen",
+   "Teilnehmende aus verschiedenen Bereichen einladen",
+   "Fläche mit Fischgräte vorbereiten"
+  ],
+  "nr": "V-15",
+  "kt": "Problem an den Kopf der Fischgräte, Ursachen in Gruppen sammeln und die wahrscheinlichsten prüfen.",
+  "ks": [
+   "Problem an den Kopf",
+   "Gruppen als Äste anlegen",
+   "Ursachen sammeln",
+   "Mit Warum vertiefen",
+   "Wahrscheinliche prüfen"
+  ],
+  "gw": [
+   "Mehrere Ursachen möglich",
+   "Sichten sollen zusammenkommen",
+   "Vor einer Lösung klären"
+  ],
+  "rg": [
+   "Problem messbar am Kopf",
+   "Erst sammeln, dann bewerten",
+   "Ursachen sind Vermutungen bis zur Prüfung"
+  ],
+  "vk": [
+   "Problem messbar formulieren",
+   "Ursachengruppen wählen"
+  ],
+  "bn": "Die Ursache ist offensichtlich und belegt",
+  "pr": "Das Diagramm liefert Hypothesen, keine Wahrheit. Wählen Sie die zwei bis drei plausibelsten Ursachen und prüfen Sie diese mit Daten oder Beobachtung, bevor Sie Massnahmen planen. Wenn eine Kette von Gründen sehr linear wirkt, ist die Fünf-Warum-Frage oft schneller.",
+  "em": "Vorher klärt die Gap-Analyse oder eine Beobachtung, wo das Problem liegt. Danach prüfen Sie die Ursachen und leiten Anforderungen oder Massnahmen ab. Bei einfachen Ketten reicht Five Whys.",
+  "qu": [
+   "Ishikawa, K.: Guide to Quality Control (Asian Productivity Organization, 1976)",
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Root Cause Analysis»"
+  ],
+  "io": {
+   "lf": [
+    "Betroffene Fachbereiche",
+    "Team mit Prozesswissen"
+   ],
+   "in": [
+    {
+     "t": "Beschriebenes Problem",
+     "to": "gap-analyse",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Beobachtungen aus dem Alltag",
+     "to": "beobachtung",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Ursache-Wirkungs-Diagramm"
+    },
+    {
+     "t": "Liste geprüfter Ursachen"
+    },
+    {
+     "t": "Anforderungen und Massnahmen",
+     "to": "user-stories",
+     "v": "übernommen in"
+    }
+   ],
+   "ko": [
+    "Auftraggeber",
+    "Team",
+    "Prozessverantwortliche"
+   ]
+  },
+  "li": [
+   [
+    "gap-analyse",
+    "vorher",
+    "Die Lücke zeigt das Problem."
+   ],
+   [
+    "beobachtung",
+    "vorher",
+    "Beobachtung liefert Fakten zum Problem."
+   ],
+   [
+    "user-stories",
+    "danach",
+    "Aus geprüften Ursachen entstehen Anforderungen."
+   ],
+   [
+    "five-whys",
+    "alternative",
+    "Fünfmal Warum für einfache Ursachenketten."
+   ],
+   [
+    "workshop",
+    "ergaenzt",
+    "Das Diagramm entsteht gut im Workshop."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Haftnotizen"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "prozessanalyse",
+  "n": "Prozessanalyse (Ist-Aufnahme)",
+  "c": "erm",
+  "f": "methode",
+  "m": "klassisch",
+  "ph": "verstehen",
+  "t": "Analyse",
+  "kz": "Prozessanalyse",
+  "k": "Erhebt, wie ein Ablauf heute wirklich läuft, mit Schritten, Beteiligten, Zeiten und Schwachstellen.",
+  "aufwand": "1 bis 3 Tage",
+  "ab": [
+   "Prozessgrenzen und Ziel der Analyse klären",
+   "Schritte mit den Ausführenden erheben",
+   "Als Ablaufmodell zeichnen und gegenprüfen",
+   "Zeiten, Wartezeiten und Medienbrüche messen",
+   "Schwachstellen markieren und bewerten"
+  ],
+  "re": [
+   "Ist-Zustand abbilden, nicht den gewünschten",
+   "Mit den Ausführenden sprechen, nicht nur mit Führung",
+   "Ausnahmen und Umwege mit aufnehmen",
+   "Das Modell vom Fachbereich bestätigen lassen"
+  ],
+  "bsp": {
+   "t": "Tour freigeben",
+   "x": "Schritte: Disponentin legt Tour an, schickt Mail an Leitung, Leitung prüft, antwortet am Folgetag, Disponentin trägt Freigabe ein. Durchlaufzeit zwei Tage, davon 90 Prozent Wartezeit. Schwachstelle: Freigabe per E-Mail ohne Erinnerung."
+  },
+  "zw": "Die Prozessanalyse beschreibt den Ist-Ablauf Schritt für Schritt: wer macht was, womit, wie lange und wo es hakt. Sie ist die Grundlage, um Verbesserungen und Anforderungen zu begründen. Typische Ergebnisse sind ein Ablaufmodell, eine Liste der Schwachstellen und Kennzahlen wie Durchlaufzeit.",
+  "wa": [
+   "Wenn ein bestehender Ablauf verbessert oder abgelöst wird",
+   "Wenn niemand den ganzen Ablauf überblickt",
+   "Wenn Zeiten, Medienbrüche oder Wartezeiten sichtbar werden sollen"
+  ],
+  "wn": [
+   "Bei völlig neuen Abläufen ohne Vorbild",
+   "Wenn der Aufwand der Aufnahme grösser ist als der Nutzen",
+   "Wenn nur ein einzelner Schritt betroffen ist"
+  ],
+  "vb": [
+   "Start und Ende des Prozesses festlegen",
+   "Beteiligte und Rollen benennen",
+   "Beobachtung und Gespräche einplanen",
+   "Darstellung wählen (Swimlane, Flussdiagramm)"
+  ],
+  "nr": "V-16",
+  "kt": "Den Ist-Ablauf mit den Ausführenden erheben, zeichnen, messen und Schwachstellen markieren.",
+  "ks": [
+   "Grenzen klären",
+   "Schritte erheben",
+   "Ablauf zeichnen",
+   "Zeiten messen",
+   "Schwachstellen markieren"
+  ],
+  "gw": [
+   "Ein Ablauf wird verbessert",
+   "Niemand überblickt alles",
+   "Wartezeiten sollen sichtbar werden"
+  ],
+  "rg": [
+   "Ist-Zustand, nicht Wunschbild",
+   "Mit den Ausführenden sprechen",
+   "Ausnahmen mit aufnehmen"
+  ],
+  "vk": [
+   "Prozessgrenzen festlegen",
+   "Beteiligte benennen"
+  ],
+  "bn": "Der Ablauf ist neu und hat kein Vorbild",
+  "pr": "Zwischen dem dokumentierten und dem gelebten Prozess liegen oft Welten. Gehen Sie den Weg eines konkreten Vorgangs vom Anfang bis zum Ende nach und fragen Sie nach Umwegen. Zeichnen Sie grob und schnell, damit der Fachbereich korrigiert. Ein sauberes Modell folgt erst, wenn der Ablauf stimmt.",
+  "em": "Vorher legen Kontextdiagramm oder Rich Picture die Grenzen fest. Danach modellieren Sie sauber, etwa mit BPMN, und vergleichen mit dem Soll in der Gap-Analyse. Für das Ausprobieren im Alltag hilft Beobachtung.",
+  "qu": [
+   "Object Management Group: BPMN 2.0 Specification (2011)",
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Process Analysis»",
+   "Dumas, M. u. a.: Fundamentals of Business Process Management (Springer, 2. Auflage 2018)"
+  ],
+  "io": {
+   "lf": [
+    "Prozessbeteiligte",
+    "Fachbereichsleitung",
+    "Vorhandene Prozessdokumente"
+   ],
+   "in": [
+    {
+     "t": "Systemgrenzen",
+     "to": "kontextdiagramm",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Beobachtungen",
+     "to": "beobachtung",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Interviews",
+     "to": "interview",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Ablaufmodell des Ist-Zustands",
+     "to": "bpmn",
+     "v": "weitergeführt in"
+    },
+    {
+     "t": "Kennzahlen zu Zeiten und Wartezeiten"
+    },
+    {
+     "t": "Liste der Schwachstellen",
+     "to": "gap-analyse",
+     "v": "genutzt in"
+    }
+   ],
+   "ko": [
+    "Business Analysten",
+    "Prozessverantwortliche",
+    "Auftraggeber"
+   ]
+  },
+  "li": [
+   [
+    "kontextdiagramm",
+    "vorher",
+    "Der Rahmen des Prozesses ist abgesteckt."
+   ],
+   [
+    "interview",
+    "vorher",
+    "Gespräche liefern die Schritte."
+   ],
+   [
+    "beobachtung",
+    "ergaenzt",
+    "Beobachtung zeigt, wie es wirklich läuft."
+   ],
+   [
+    "bpmn",
+    "danach",
+    "Das saubere Modell folgt in BPMN."
+   ],
+   [
+    "gap-analyse",
+    "danach",
+    "Ist wird mit Soll verglichen."
+   ],
+   [
+    "aktivitaetsdiagramm",
+    "alternative",
+    "Einfacher für kleine Abläufe."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "draw.io"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "design-thinking",
+  "n": "Design Thinking",
+  "c": "erm",
+  "f": "methode",
+  "m": "agil",
+  "ph": "ermitteln",
+  "t": "Vorgehen",
+  "kz": "",
+  "k": "Nutzerzentriertes Vorgehen in Schleifen: verstehen, Sichtweise bilden, Ideen finden, Prototyp bauen, testen.",
+  "aufwand": "1 bis 5 Tage",
+  "ab": [
+   "Verstehen: Nutzer beobachten und befragen",
+   "Sichtweise bilden: Erkenntnisse zu einer Problemfrage bündeln",
+   "Ideen finden: viele Ansätze sammeln",
+   "Prototyp bauen: günstige Version der besten Idee",
+   "Testen: mit Nutzern prüfen und lernen"
+  ],
+  "re": [
+   "Mit echten Nutzern, nicht nur über sie sprechen",
+   "Viele Ideen, bevor eine gewählt wird",
+   "Früh und günstig Prototypen bauen",
+   "Aus Tests lernen, auch wenn die Idee fällt"
+  ],
+  "bsp": {
+   "t": "Tourenübersicht",
+   "x": "Beobachtung: Disponenten zeichnen Touren auf Papier. Problemfrage: Wie sehen sie Konflikte, ohne zu rechnen? Idee: Farbbalken je Fahrzeug. Prototyp: Papierskizze, Test mit zwei Disponentinnen, Ergebnis: Balken helfen, Zeitachse fehlt."
+  },
+  "zw": "Design Thinking hilft, Bedürfnisse von Menschen zu verstehen und darauf passende Lösungen zu entwickeln, bevor Anforderungen festgeschrieben werden. Es besteht aus kurzen Schleifen: Empathie, Problemdefinition, Ideenfindung, Prototyp und Test. Das Ergebnis sind überprüfte Ideen und ein klares Problembild.",
+  "wa": [
+   "Wenn das Problem oder die Zielgruppe noch unklar sind",
+   "Wenn neue Produkte oder Services entstehen sollen",
+   "Wenn schnelles Lernen wichtiger ist als vollständige Planung"
+  ],
+  "wn": [
+   "Wenn Anforderungen bereits feststehen",
+   "Wenn Nutzer nicht erreichbar sind",
+   "Wenn Entscheidungen bereits gefallen sind und nur umgesetzt wird"
+  ],
+  "vb": [
+   "Herausforderung als offene Frage formulieren",
+   "Interdisziplinäres Team zusammenstellen",
+   "Zugang zu echten Nutzern klären",
+   "Material für Skizzen und Prototypen bereitstellen"
+  ],
+  "nr": "E-11",
+  "kt": "In kurzen Schleifen Nutzer verstehen, Ideen finden, Prototyp bauen und mit Nutzern testen.",
+  "ks": [
+   "Nutzer verstehen",
+   "Problemfrage bilden",
+   "Ideen finden",
+   "Prototyp bauen",
+   "Mit Nutzern testen"
+  ],
+  "gw": [
+   "Problem oder Zielgruppe unklar",
+   "Neues Produkt oder neuer Service",
+   "Lernen vor Planen geht"
+  ],
+  "rg": [
+   "Mit echten Nutzern sprechen",
+   "Viele Ideen vor der Wahl",
+   "Früh und günstig Prototypen bauen"
+  ],
+  "vk": [
+   "Offene Herausforderungsfrage",
+   "Zugang zu Nutzern klären"
+  ],
+  "bn": "Die Lösung steht schon fest",
+  "pr": "Der Wert liegt im Lernen, nicht in der Methode. Planen Sie die Schleifen kurz und wiederholen Sie sie, wenn der Test überrascht. Die Ergebnisse brauchen anschliessend den Weg in Anforderungen: Persona, Empathy Map und Story Map machen aus Erkenntnissen Backlog-Einträge.",
+  "em": "Vorher klärt die Stakeholder-Analyse, wen Sie einbeziehen. Danach kommen Persona, Empathy Map und Prototyp. Für feste Anforderungen übernehmen Sie die Ergebnisse in User Stories und Story Map.",
+  "qu": [
+   "Plattner, H.; Meinel, C.; Leifer, L.: Design Thinking Research (Springer, 2012)",
+   "IDEO.org: The Field Guide to Human-Centered Design (2015)",
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Design Thinking»"
+  ],
+  "io": {
+   "lf": [
+    "Nutzerinnen und Nutzer",
+    "Fachbereich",
+    "Interdisziplinäres Team"
+   ],
+   "in": [
+    {
+     "t": "Beteiligte Gruppen",
+     "to": "stakeholder",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Beobachtungen",
+     "to": "beobachtung",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Ideen aus Sammlung",
+     "to": "brainstorming",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Problemfrage und Erkenntnisse",
+     "to": "persona",
+     "v": "weitergeführt in"
+    },
+    {
+     "t": "Geprüfte Prototypen",
+     "to": "prototyping",
+     "v": "weitergeführt in"
+    },
+    {
+     "t": "Anforderungen für das Backlog",
+     "to": "story-mapping",
+     "v": "übernommen in"
+    }
+   ],
+   "ko": [
+    "Produktteam",
+    "Auftraggeber",
+    "Entwicklungsteam"
+   ]
+  },
+  "li": [
+   [
+    "stakeholder",
+    "vorher",
+    "Wer wird einbezogen?"
+   ],
+   [
+    "empathy-map",
+    "ergaenzt",
+    "Hilft beim Verstehen der Nutzer."
+   ],
+   [
+    "brainstorming",
+    "ergaenzt",
+    "Liefert Ideen in der Ideenphase."
+   ],
+   [
+    "prototyping",
+    "danach",
+    "Der Prototyp prüft die Idee."
+   ],
+   [
+    "story-mapping",
+    "danach",
+    "Erkenntnisse werden zur Story Map."
+   ],
+   [
+    "jobs-to-be-done",
+    "alternative",
+    "Fokus auf Aufgabe statt auf Lösung."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Haftnotizen"
   ],
   "s": "entwurf"
  },
@@ -2846,6 +3554,16 @@ const M = [
     "use-cases",
     "vorher",
     "Kriterien lassen sich aus Use-Case-Abläufen ableiten."
+   ],
+   [
+    "wireframes",
+    "ergaenzt",
+    "«Wireframes und Mockups» ergänzt diese Methode."
+   ],
+   [
+    "gherkin-bdd",
+    "ergaenzt",
+    "«Gherkin und BDD» ergänzt diese Methode."
    ]
   ],
   "tools": [
@@ -3141,6 +3859,11 @@ const M = [
     "kano",
     "ergaenzt",
     "Basisfaktoren im Kano-Modell sind oft NFR."
+   ],
+   [
+    "anforderungsschablonen",
+    "ergaenzt",
+    "«Anforderungsschablonen (EARS)» ergänzt diese Methode."
    ]
   ],
   "tools": [
@@ -3303,6 +4026,11 @@ const M = [
     "product-backlog",
     "alternative",
     "Agile Teams ersetzen das Dokument durch ein lebendes Backlog."
+   ],
+   [
+    "anforderungsschablonen",
+    "vorher",
+    "Davor liegt «Anforderungsschablonen (EARS)»."
    ]
   ],
   "tools": [
@@ -3466,6 +4194,11 @@ const M = [
     "stakeholder",
     "ergaenzt",
     "Stakeholder prüfen die Vision."
+   ],
+   [
+    "gap-analyse",
+    "danach",
+    "Danach folgt «Gap-Analyse»."
    ]
   ],
   "tools": [
@@ -3624,6 +4357,11 @@ const M = [
     "geschaeftsregeln",
     "ergaenzt",
     "Regeln stützen sich auf Begriffe."
+   ],
+   [
+    "klassendiagramm",
+    "danach",
+    "Danach folgt «Klassendiagramm»."
    ]
   ],
   "tools": [
@@ -3779,6 +4517,11 @@ const M = [
     "bpmn",
     "ergaenzt",
     "Gateways im Prozess folgen den Regeln."
+   ],
+   [
+    "gherkin-bdd",
+    "ergaenzt",
+    "«Gherkin und BDD» ergänzt diese Methode."
    ]
   ],
   "tools": [
@@ -4079,11 +4822,474 @@ const M = [
     "geschaeftsregeln",
     "ergaenzt",
     "Die Regeln lassen sich in einem Regelkatalog sammeln."
+   ],
+   [
+    "gherkin-bdd",
+    "danach",
+    "Danach folgt «Gherkin und BDD»."
    ]
   ],
   "tools": [
    "Miro",
    "Cucumber"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "gherkin-bdd",
+  "n": "Gherkin und BDD",
+  "c": "dok",
+  "f": "artefakt",
+  "m": "agil",
+  "ph": "spezifizieren",
+  "t": "Beispielspezifikation",
+  "kz": "Gherkin / BDD",
+  "k": "Anforderungen als ausführbare Beispiele in «Gegeben, Wenn, Dann», die Fachbereich, Test und Entwicklung gemeinsam lesen.",
+  "aufwand": "15 bis 45 Min. pro Szenario",
+  "ab": [
+   "Beispiele und Regeln mit dem Fachbereich besprechen",
+   "Feature mit Nutzen kurz beschreiben",
+   "Szenarien in Gegeben, Wenn, Dann formulieren",
+   "Szenarien mit Fachbereich und Test prüfen",
+   "Szenarien ablegen und, wenn gewünscht, automatisieren"
+  ],
+  "re": [
+   "Ein Szenario beschreibt genau ein Verhalten",
+   "Fachsprache statt Bedienschritte",
+   "Konkrete Werte statt allgemeine Aussagen",
+   "Kurz: höchstens fünf bis acht Schritte"
+  ],
+  "bsp": {
+   "t": "Konflikt erkennen",
+   "x": "Feature: Doppelbelegung erkennen. Szenario: Gegeben Fahrzeug 12 hat am Montag von 8 bis 12 Uhr eine Tour. Wenn die Disponentin eine zweite Tour von 10 bis 14 Uhr anlegt, dann zeigt das System eine Warnung «Fahrzeug belegt»."
+  },
+  "zw": "Behavior-Driven Development (BDD) beschreibt Verhalten in konkreten Szenarien. Die Sprache Gherkin gibt ihnen eine feste Form: Feature, Szenario, Gegeben, Wenn, Dann. Die Szenarien dienen als gemeinsames Verständnis, als Akzeptanzkriterien und, mit Werkzeugen wie Cucumber, als automatisierter Test.",
+  "wa": [
+   "Wenn Fachbereich, Test und Entwicklung dasselbe Beispiel brauchen",
+   "Wenn Regeln über konkrete Fälle geklärt werden sollen",
+   "Wenn Akzeptanztests automatisiert werden sollen"
+  ],
+  "wn": [
+   "Für reine Oberflächengestaltung oder Layout",
+   "Wenn niemand Szenarien pflegt: sie veralten schnell",
+   "Für ausschliesslich technische Anforderungen ohne Fachbezug"
+  ],
+  "vb": [
+   "Story oder Anforderung mit klarem Ziel",
+   "Beispiele aus dem Fachbereich sammeln (zum Beispiel im Example Mapping)",
+   "Glossar der Fachbegriffe bereithalten",
+   "Format und Werkzeug klären"
+  ],
+  "nr": "S-22",
+  "kt": "Anforderungen als konkrete Beispiele in «Gegeben, Wenn, Dann»: gemeinsames Verständnis und Test in einem.",
+  "ks": [
+   "Beispiele besprechen",
+   "Feature beschreiben",
+   "Szenarien formulieren",
+   "Mit Fachbereich prüfen",
+   "Ablegen oder automatisieren"
+  ],
+  "gw": [
+   "Fachbereich, Test und Entwicklung eng arbeiten",
+   "Regeln über Beispiele klären",
+   "Tests automatisiert laufen sollen"
+  ],
+  "rg": [
+   "Ein Szenario, ein Verhalten",
+   "Fachsprache statt Klickschritte",
+   "Konkrete Werte nennen"
+  ],
+  "vk": [
+   "Beispiele sammeln",
+   "Ziel der Story klären"
+  ],
+  "bn": "Es geht um Layout oder reine Technik",
+  "pr": "Die Kraft liegt im Gespräch, nicht im Werkzeug. Schreiben Sie Szenarien zusammen mit dem Fachbereich, nicht allein im Büro. Vermeiden Sie «Klicke auf den Knopf»: Beschreiben Sie, was fachlich passiert. Sonst brechen die Szenarien bei jeder Oberflächenänderung.",
+  "em": "Vorher sammelt Example Mapping die Beispiele, die User Story liefert das Ziel. Danach laufen die Szenarien als Abnahmetest. Für kurze Kriterien reichen Akzeptanzkriterien in Listenform.",
+  "qu": [
+   "North, D.: Introducing BDD (dannorth.net, 2006)",
+   "Wynne, M.; Hellesøy, A.: The Cucumber Book (Pragmatic Bookshelf, 2. Auflage 2017)",
+   "Adzic, G.: Specification by Example (Manning, 2011)"
+  ],
+  "io": {
+   "lf": [
+    "Fachbereich",
+    "Product Owner",
+    "Testerinnen und Tester"
+   ],
+   "in": [
+    {
+     "t": "Beispiele und Regeln",
+     "to": "example-mapping",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Anforderung",
+     "to": "user-stories",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Feature-Dateien mit Szenarien"
+    },
+    {
+     "t": "Abnahmekriterien",
+     "to": "akzeptanzkriterien",
+     "v": "ergänzt durch"
+    },
+    {
+     "t": "Automatisierte Tests",
+     "to": "abnahmetest",
+     "v": "genutzt in"
+    }
+   ],
+   "ko": [
+    "Entwicklungsteam",
+    "Test",
+    "Product Owner"
+   ]
+  },
+  "li": [
+   [
+    "example-mapping",
+    "vorher",
+    "Beispiele sind gesammelt."
+   ],
+   [
+    "user-stories",
+    "vorher",
+    "Das Ziel ist beschrieben."
+   ],
+   [
+    "abnahmetest",
+    "danach",
+    "Die Szenarien laufen als Test."
+   ],
+   [
+    "akzeptanzkriterien",
+    "ergaenzt",
+    "Sie machen Kriterien ausführbar."
+   ],
+   [
+    "geschaeftsregeln",
+    "ergaenzt",
+    "Regeln werden durch Beispiele geprüft."
+   ]
+  ],
+  "tools": [
+   "Cucumber",
+   "Azure DevOps",
+   "Jira"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "anforderungsschablonen",
+  "n": "Anforderungsschablonen (EARS)",
+  "c": "dok",
+  "f": "artefakt",
+  "m": "klassisch",
+  "ph": "spezifizieren",
+  "t": "Formulierungshilfe",
+  "kz": "Schablonen",
+  "k": "Feste Satzmuster, die Anforderungen eindeutig, prüfbar und vergleichbar formulieren.",
+  "aufwand": "10 bis 20 Min. pro Anforderung",
+  "ab": [
+   "Anforderung in einem Satz beschreiben",
+   "Bedingung, Subjekt, Verbindlichkeit und Wirkung zuordnen",
+   "Passendes Satzmuster auswählen",
+   "Mehrdeutige Wörter durch Zahlen und Begriffe ersetzen",
+   "Satz mit Fachbereich und Test prüfen"
+  ],
+  "re": [
+   "Ein Satz, eine Anforderung",
+   "Aktiv und mit klarem Subjekt",
+   "Verbindlichkeit nur mit muss, sollte, kann",
+   "Messbare Werte statt Eigenschaftswörter"
+  ],
+  "bsp": {
+   "t": "Konfliktwarnung",
+   "x": "Ohne Schablone: «Das System soll Konflikte erkennen.» Mit Schablone: «Wenn eine Tour ein Fahrzeug im gleichen Zeitraum belegt, muss das System der Disponentin innerhalb von 2 Sekunden die Warnung «Fahrzeug belegt» anzeigen.»"
+  },
+  "zw": "Schablonen geben Anforderungssätzen eine Form, zum Beispiel «Wenn Bedingung, dann muss das System Wirkung». Bekannt sind die Satzschablone nach Rupp und EARS (Easy Approach to Requirements Syntax). Sie vermeiden typische Mängel wie unklare Subjekte, versteckte Bedingungen oder Wörter wie «schnell».",
+  "wa": [
+   "Wenn Anforderungen verbindlich und prüfbar sein müssen",
+   "Wenn viele Autorinnen und Autoren einheitlich schreiben sollen",
+   "Wenn Verträge oder Normen genaue Formulierungen verlangen"
+  ],
+  "wn": [
+   "Wenn ein Team mit Stories und Gesprächen gut arbeitet",
+   "Wenn die Schablone wichtiger wird als der Inhalt",
+   "Für erste, grobe Ideen"
+  ],
+  "vb": [
+   "Schablone wählen und im Team einführen",
+   "Verbindlichkeit festlegen (muss, sollte, kann)",
+   "Glossar für die Begriffe bereithalten",
+   "Beispiele für gute und schlechte Sätze sammeln"
+  ],
+  "nr": "S-23",
+  "kt": "Feste Satzmuster machen Anforderungen eindeutig und prüfbar, zum Beispiel «Wenn …, muss das System …».",
+  "ks": [
+   "Satz in einer Zeile",
+   "Bausteine zuordnen",
+   "Muster wählen",
+   "Mehrdeutiges ersetzen",
+   "Mit Test prüfen"
+  ],
+  "gw": [
+   "Anforderungen verbindlich sein müssen",
+   "Viele Autoren einheitlich schreiben",
+   "Normen genaue Sätze verlangen"
+  ],
+  "rg": [
+   "Ein Satz, eine Anforderung",
+   "Muss, sollte, kann klar nutzen",
+   "Zahlen statt Eigenschaftswörter"
+  ],
+  "vk": [
+   "Schablone im Team einführen",
+   "Glossar bereithalten"
+  ],
+  "bn": "Ein Team arbeitet gut mit Stories",
+  "pr": "Das Muster hilft beim Denken: Wer den Satz nicht füllen kann, kennt die Anforderung noch nicht. Verwenden Sie die Schablone gezielt für kritische Anforderungen, nicht für jede Zeile. Prüfen Sie Sätze gemeinsam mit jemandem, der sie testen muss.",
+  "em": "Vorher klären Glossar und Geschäftsregeln die Begriffe. Danach bilden die Sätze das Pflichtenheft oder die SRS. Für agile Teams sind User Stories und Gherkin meist die bessere Form.",
+  "qu": [
+   "Mavin, A. u. a.: Easy Approach to Requirements Syntax (EARS), RE'09 (IEEE, 2009)",
+   "Rupp, C.: Requirements-Engineering und -Management (Hanser, 6. Auflage 2014)",
+   "ISO/IEC/IEEE 29148:2018, Requirements engineering"
+  ],
+  "io": {
+   "lf": [
+    "Business Analysten",
+    "Fachbereich",
+    "Test"
+   ],
+   "in": [
+    {
+     "t": "Begriffe",
+     "to": "glossar",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Regeln",
+     "to": "geschaeftsregeln",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Anforderungssätze in einheitlicher Form",
+     "to": "pflichtenheft",
+     "v": "übernommen in"
+    },
+    {
+     "t": "Prüfbare Aussagen",
+     "to": "abnahmetest",
+     "v": "genutzt in"
+    }
+   ],
+   "ko": [
+    "Autorinnen und Autoren",
+    "Test",
+    "Auftraggeber"
+   ]
+  },
+  "li": [
+   [
+    "glossar",
+    "vorher",
+    "Begriffe sind geklärt."
+   ],
+   [
+    "geschaeftsregeln",
+    "vorher",
+    "Regeln liegen vor."
+   ],
+   [
+    "pflichtenheft",
+    "danach",
+    "Sätze bilden den Hauptteil."
+   ],
+   [
+    "srs",
+    "danach",
+    "Sie füllen die Spezifikation."
+   ],
+   [
+    "user-stories",
+    "alternative",
+    "Agile Form ohne feste Satzmuster."
+   ],
+   [
+    "nfr",
+    "ergaenzt",
+    "Qualitätsanforderungen messbar formulieren."
+   ]
+  ],
+  "tools": [
+   "Word",
+   "Excel"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "srs",
+  "n": "Anforderungsspezifikation (SRS)",
+  "c": "dok",
+  "f": "artefakt",
+  "m": "klassisch",
+  "ph": "spezifizieren",
+  "t": "Dokumentstruktur",
+  "kz": "SRS",
+  "k": "Strukturiertes Dokument, das alle Anforderungen an ein System vollständig und prüfbar festhält, nach ISO 29148.",
+  "aufwand": "1 bis 4 Wochen",
+  "ab": [
+   "Zweck, Umfang und Begriffe beschreiben",
+   "Systemkontext und Schnittstellen darstellen",
+   "Funktionale Anforderungen gruppiert beschreiben",
+   "Nichtfunktionale Anforderungen und Randbedingungen ergänzen",
+   "Prüfen, freigeben und Änderungen steuern"
+  ],
+  "re": [
+   "Jede Anforderung hat eine eindeutige Nummer",
+   "Jede Anforderung ist prüfbar",
+   "Funktionales und Qualitäts-Anforderungen getrennt",
+   "Änderungen nur über einen Änderungsprozess"
+  ],
+  "bsp": {
+   "t": "Gliederung",
+   "x": "1 Einleitung (Zweck, Umfang, Begriffe). 2 Gesamtbeschreibung (Kontext, Rollen). 3 Funktionale Anforderungen (3.1 Planen, 3.2 Freigeben). 4 Qualitätsanforderungen. 5 Schnittstellen. 6 Randbedingungen. Anhang: Modelle, Rückverfolgung."
+  },
+  "zw": "Die Software Requirements Specification (SRS) beschreibt, was ein System leisten muss: Zweck, Umfang, Rollen, funktionale und nichtfunktionale Anforderungen, Schnittstellen und Randbedingungen. Sie ist die verbindliche Grundlage für Entwicklung, Test und Abnahme, vor allem bei klassischen Vorhaben und Verträgen.",
+  "wa": [
+   "Wenn viele Parteien dasselbe verbindliche Dokument brauchen",
+   "Bei Ausschreibungen, Verträgen oder regulierten Vorhaben",
+   "Wenn Anforderungen langfristig nachvollziehbar sein müssen"
+  ],
+  "wn": [
+   "Wenn ein Team mit Backlog und Gesprächen arbeitet",
+   "Wenn sich die Anforderungen schnell ändern",
+   "Wenn niemand das Dokument pflegt"
+  ],
+  "vb": [
+   "Gliederung nach ISO 29148 oder Firmenvorlage wählen",
+   "Anforderungen sammeln und ordnen",
+   "Rollen für Autor, Prüfer und Freigabe benennen",
+   "Versionierung und Änderungsablauf klären"
+  ],
+  "nr": "S-24",
+  "kt": "Verbindliches Dokument aller Anforderungen: Zweck, Umfang, Funktionen, Qualität und Schnittstellen.",
+  "ks": [
+   "Zweck und Umfang",
+   "Kontext und Schnittstellen",
+   "Funktionen beschreiben",
+   "Qualität und Grenzen",
+   "Prüfen und freigeben"
+  ],
+  "gw": [
+   "Viele Parteien ein Dokument brauchen",
+   "Verträge oder Regulierung gelten",
+   "Langfristig nachvollziehbar"
+  ],
+  "rg": [
+   "Jede Anforderung nummeriert",
+   "Jede Anforderung prüfbar",
+   "Änderungen nur geregelt"
+  ],
+  "vk": [
+   "Gliederung wählen",
+   "Rollen für Prüfung klären"
+  ],
+  "bn": "Ein Team arbeitet mit Backlog und Gesprächen",
+  "pr": "Die SRS lebt von Struktur und Pflege. Gliedern Sie nach Themen, halten Sie die Länge im Griff und verweisen Sie auf Modelle, statt alles zu wiederholen. Ein Änderungsverzeichnis und klare Versionen verhindern, dass verschiedene Parteien mit verschiedenen Ständen arbeiten.",
+  "em": "Vorher liefern Schablonen, Use Cases und Modelle den Inhalt. Danach folgen Review und Abnahme. Für kleinere Vorhaben genügt ein Pflichtenheft, für agile Teams ein Backlog.",
+  "qu": [
+   "ISO/IEC/IEEE 29148:2018, Requirements engineering",
+   "IEEE 830-1998, Recommended Practice for Software Requirements Specifications",
+   "Pohl, K.; Rupp, C.: Basiswissen Requirements Engineering (dpunkt, 5. Auflage 2021)"
+  ],
+  "io": {
+   "lf": [
+    "Business Analysten",
+    "Fachbereich",
+    "Architektur"
+   ],
+   "in": [
+    {
+     "t": "Anforderungssätze",
+     "to": "anforderungsschablonen",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Systemkontext",
+     "to": "kontextdiagramm",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Qualitätsanforderungen",
+     "to": "nfr",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Freigegebene Spezifikation"
+    },
+    {
+     "t": "Prüfung durch Fachleute",
+     "to": "anforderungsreview",
+     "v": "geprüft in"
+    },
+    {
+     "t": "Rückverfolgung",
+     "to": "traceability",
+     "v": "genutzt in"
+    }
+   ],
+   "ko": [
+    "Entwicklungsteam",
+    "Test",
+    "Auftraggeber",
+    "Betrieb"
+   ]
+  },
+  "li": [
+   [
+    "anforderungsschablonen",
+    "vorher",
+    "Sätze füllen das Dokument."
+   ],
+   [
+    "kontextdiagramm",
+    "vorher",
+    "Die Systemgrenze steht fest."
+   ],
+   [
+    "anforderungsreview",
+    "danach",
+    "Das Dokument wird geprüft."
+   ],
+   [
+    "abnahmetest",
+    "danach",
+    "Abnahme gegen die Spezifikation."
+   ],
+   [
+    "pflichtenheft",
+    "alternative",
+    "Schlanker, oft vertraglich."
+   ],
+   [
+    "traceability",
+    "ergaenzt",
+    "Verweise auf Quellen und Tests."
+   ]
+  ],
+  "tools": [
+   "Word",
+   "Confluence"
   ],
   "s": "entwurf"
  },
@@ -4225,6 +5431,11 @@ const M = [
     "beobachtung",
     "vorher",
     "Beobachtete Abläufe modellieren."
+   ],
+   [
+    "prozessanalyse",
+    "alternative",
+    "Alternative: «Prozessanalyse (Ist-Aufnahme)»."
    ]
   ],
   "tools": [
@@ -4510,6 +5721,11 @@ const M = [
     "user-stories",
     "danach",
     "Aus Prozessschritten Stories ableiten."
+   ],
+   [
+    "prozessanalyse",
+    "vorher",
+    "Davor liegt «Prozessanalyse (Ist-Aufnahme)»."
    ]
   ],
   "tools": [
@@ -4661,6 +5877,11 @@ const M = [
     "story-mapping",
     "alternative",
     "Story Map ordnet Stories, Impact Map begründet sie."
+   ],
+   [
+    "zielmodell",
+    "vorher",
+    "Davor liegt «Zielmodell»."
    ]
   ],
   "tools": [
@@ -4809,6 +6030,16 @@ const M = [
     "pflichtenheft",
     "danach",
     "Als Kapitel Systemkontext."
+   ],
+   [
+    "prozessanalyse",
+    "danach",
+    "Danach folgt «Prozessanalyse (Ist-Aufnahme)»."
+   ],
+   [
+    "srs",
+    "danach",
+    "Danach folgt «Anforderungsspezifikation (SRS)»."
    ]
   ],
   "tools": [
@@ -4961,6 +6192,16 @@ const M = [
     "impact-mapping",
     "danach",
     "Ziele des Modells in eine Impact Map überführen."
+   ],
+   [
+    "lean-canvas",
+    "alternative",
+    "Alternative: «Lean Canvas»."
+   ],
+   [
+    "capability-map",
+    "alternative",
+    "Alternative: «Capability Map»."
    ]
   ],
   "tools": [
@@ -5245,6 +6486,11 @@ const M = [
     "pflichtenheft",
     "danach",
     "Als Kapitel Datenmodell einbinden."
+   ],
+   [
+    "klassendiagramm",
+    "danach",
+    "Danach folgt «Klassendiagramm»."
    ]
   ],
   "tools": [
@@ -5693,6 +6939,11 @@ const M = [
     "zustandsdiagramm",
     "ergaenzt",
     "Das Zustandsdiagramm ergänzt Lebenszyklen der Entitäten."
+   ],
+   [
+    "klassendiagramm",
+    "vorher",
+    "Davor liegt «Klassendiagramm»."
    ]
   ],
   "tools": [
@@ -5847,6 +7098,11 @@ const M = [
     "impact-mapping",
     "ergaenzt",
     "Impact Mapping verbindet Ziel und Wirkung."
+   ],
+   [
+    "lean-canvas",
+    "alternative",
+    "Alternative: «Lean Canvas»."
    ]
   ],
   "tools": [
@@ -6149,12 +7405,898 @@ const M = [
     "bpmn",
     "alternative",
     "BPMN zeigt Prozesse über mehrere Rollen."
+   ],
+   [
+    "klassendiagramm",
+    "ergaenzt",
+    "«Klassendiagramm» ergänzt diese Methode."
    ]
   ],
   "tools": [
    "PlantUML",
    "draw.io",
    "Enterprise Architect"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "lean-canvas",
+  "n": "Lean Canvas",
+  "c": "mod",
+  "f": "modell",
+  "m": "agil",
+  "ph": "verstehen",
+  "t": "Canvas",
+  "kz": "",
+  "k": "Ein-Seiten-Plan für eine Produktidee: Problem, Lösung, Kennzahlen und Geschäftsmodell auf neun Feldern.",
+  "aufwand": "1 bis 2 Stunden",
+  "ab": [
+   "Kundensegmente und Probleme beschreiben",
+   "Alleinstellungsmerkmal und Lösung festhalten",
+   "Kanäle und Einnahmequellen ergänzen",
+   "Kostenstruktur und Kennzahlen eintragen",
+   "Unfairen Vorteil benennen und Annahmen markieren"
+  ],
+  "re": [
+   "Pro Feld wenige, klare Aussagen",
+   "Annahmen als solche kennzeichnen",
+   "Die Felder in der Reihenfolge der Risiken füllen",
+   "Nach Tests mit Kunden aktualisieren"
+  ],
+  "bsp": {
+   "t": "Tourenplaner",
+   "x": "Problem: Konflikte bei der Fahrzeugbelegung. Kundensegment: kleine Speditionen. Lösung: Planungsansicht mit Warnung. Kanal: Empfehlung durch Verbände. Einnahmen: Abo je Fahrzeug. Offene Annahme: Speditionen zahlen für Warnungen."
+  },
+  "zw": "Das Lean Canvas ist eine Abwandlung des Business Model Canvas für junge Produkte und Startups. Es stellt Probleme und Kundensegmente in den Mittelpunkt und hält Annahmen fest, die erst getestet werden müssen. In einer Stunde entsteht ein gemeinsames Bild, wo das grösste Risiko liegt.",
+  "wa": [
+   "Wenn eine Produktidee schnell bewertet werden soll",
+   "Wenn Annahmen sichtbar und überprüfbar werden sollen",
+   "Wenn ein Team die Idee auf einer Seite erklären muss"
+  ],
+  "wn": [
+   "Für etablierte Geschäftsmodelle mit vielen Partnern: dort das Business Model Canvas",
+   "Wenn die Felder nur mit Wunschdenken gefüllt werden",
+   "Als Ersatz für Gespräche mit Kunden"
+  ],
+  "vb": [
+   "Produktidee in einem Satz formulieren",
+   "Vorlage mit neun Feldern bereitstellen",
+   "Zeitrahmen für die Sitzung festlegen",
+   "Haftnotizen oder digitale Karten bereithalten"
+  ],
+  "nr": "V-17",
+  "kt": "Neun Felder auf einer Seite: Problem, Lösung, Kennzahlen und Geschäftsmodell einer jungen Idee.",
+  "ks": [
+   "Kunden und Probleme",
+   "Lösung und Merkmal",
+   "Kanäle und Einnahmen",
+   "Kosten und Kennzahlen",
+   "Annahmen markieren"
+  ],
+  "gw": [
+   "Eine Idee schnell bewertet wird",
+   "Annahmen sichtbar werden",
+   "Die Idee auf eine Seite muss"
+  ],
+  "rg": [
+   "Wenige, klare Aussagen je Feld",
+   "Annahmen kennzeichnen",
+   "Nach Tests aktualisieren"
+  ],
+  "vk": [
+   "Produktidee in einem Satz",
+   "Zielgruppe klären"
+  ],
+  "bn": "Es geht um ein etabliertes Geschäftsmodell",
+  "pr": "Beginnen Sie mit dem Problem, nicht mit der Lösung. Markieren Sie die Felder, die Sie nicht belegen können, und planen Sie dazu einen Test, etwa ein Interview oder einen Prototyp. Aktualisieren Sie das Canvas nach jedem Test, sonst bleibt es ein Wunschbild.",
+  "em": "Vorher klärt die Persona, wer das Problem hat. Danach prüfen Sie die Annahmen mit Interview und Prototyp und leiten ein Minimalprodukt ab. Für ein bestehendes Geschäft ist das Business Model Canvas passender.",
+  "qu": [
+   "Maurya, A.: Running Lean (O'Reilly, 3. Auflage 2022)",
+   "Osterwalder, A.; Pigneur, Y.: Business Model Generation (Wiley, 2010)"
+  ],
+  "io": {
+   "lf": [
+    "Produktverantwortliche",
+    "Gründungsteam",
+    "Kunden aus Interviews"
+   ],
+   "in": [
+    {
+     "t": "Beschreibung der Zielgruppe",
+     "to": "persona",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Produktidee",
+     "to": "produktvision",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Ausgefülltes Canvas auf einer Seite"
+    },
+    {
+     "t": "Liste der zu prüfenden Annahmen",
+     "to": "interview",
+     "v": "geprüft mit"
+    },
+    {
+     "t": "Basis für das Minimalprodukt",
+     "to": "mvp-poc",
+     "v": "genutzt in"
+    }
+   ],
+   "ko": [
+    "Gründungsteam",
+    "Investoren",
+    "Produktteam"
+   ]
+  },
+  "li": [
+   [
+    "persona",
+    "vorher",
+    "Sie beschreibt das Kundensegment."
+   ],
+   [
+    "produktvision",
+    "vorher",
+    "Sie liefert die Zielrichtung."
+   ],
+   [
+    "mvp-poc",
+    "danach",
+    "Aus den Annahmen entsteht das Minimalprodukt."
+   ],
+   [
+    "interview",
+    "danach",
+    "Annahmen werden mit Kunden geprüft."
+   ],
+   [
+    "business-model-canvas",
+    "alternative",
+    "Für etablierte Geschäfte mit Partnern."
+   ],
+   [
+    "value-proposition-canvas",
+    "alternative",
+    "Fokus auf Passung von Nutzen und Bedarf."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Papier"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "klassendiagramm",
+  "n": "Klassendiagramm",
+  "c": "mod",
+  "f": "modell",
+  "m": "klassisch",
+  "ph": "spezifizieren",
+  "t": "UML-Diagramm",
+  "kz": "",
+  "k": "Zeigt Klassen mit ihren Eigenschaften, Operationen und Beziehungen untereinander.",
+  "aufwand": "2 bis 4 Stunden",
+  "ab": [
+   "Zentrale Klassen aus den Fachbegriffen ableiten",
+   "Attribute und, falls nötig, Operationen ergänzen",
+   "Beziehungen mit Kardinalität einzeichnen",
+   "Vererbung und Sonderfälle prüfen",
+   "Mit dem Fachbereich gegenlesen"
+  ],
+  "re": [
+   "Klassennamen aus der Fachsprache",
+   "Kardinalitäten an jede Beziehung schreiben",
+   "Nur zeigen, was die Aufgabe braucht",
+   "Ein Diagramm hat ein Thema"
+  ],
+  "bsp": {
+   "t": "Touren",
+   "x": "Klasse Tour mit Datum und Status, Klasse Fahrzeug mit Kennzeichen, Klasse Fahrer. Eine Tour hat genau ein Fahrzeug und einen Fahrer, ein Fahrzeug hat viele Touren. Ein Lieferwagen ist ein Fahrzeug (Vererbung)."
+  },
+  "zw": "Das Klassendiagramm der UML beschreibt die statische Struktur eines Systems: welche Klassen es gibt, welche Attribute und Operationen sie haben und wie sie zusammenhängen (Assoziation, Vererbung, Aggregation). In der Anforderungsphase nutzt man es fachlich, um Begriffe und Beziehungen präzise zu fassen.",
+  "wa": [
+   "Wenn fachliche Begriffe und ihre Beziehungen genau festgehalten werden sollen",
+   "Wenn Entwickler und Fachbereich dasselbe Strukturbild brauchen",
+   "Wenn Vererbung oder Kardinalitäten wichtig sind"
+  ],
+  "wn": [
+   "Wenn nur ein grobes Begriffsbild nötig ist: dann Domänenmodell oder Glossar",
+   "Für Abläufe oder Verhalten",
+   "Wenn niemand die Notation liest"
+  ],
+  "vb": [
+   "Fachbegriffe aus Glossar und Domänenmodell sammeln",
+   "Detaillierungsgrad festlegen (fachlich oder technisch)",
+   "Notation im Team klären",
+   "Werkzeug auswählen"
+  ],
+  "nr": "S-19",
+  "kt": "Klassen mit Eigenschaften und Beziehungen: das Strukturbild fachlicher Begriffe in UML.",
+  "ks": [
+   "Klassen ableiten",
+   "Attribute ergänzen",
+   "Beziehungen zeichnen",
+   "Vererbung prüfen",
+   "Mit Fachbereich lesen"
+  ],
+  "gw": [
+   "Begriffe und Beziehungen genau sein müssen",
+   "Kardinalitäten wichtig sind",
+   "Fachbereich und Technik ein Bild brauchen"
+  ],
+  "rg": [
+   "Klassennamen aus der Fachsprache",
+   "Kardinalität an jeder Beziehung",
+   "Ein Diagramm, ein Thema"
+  ],
+  "vk": [
+   "Begriffe sammeln",
+   "Detailgrad festlegen"
+  ],
+  "bn": "Ein grobes Begriffsbild genügt",
+  "pr": "Zeichnen Sie das fachliche Klassendiagramm zuerst ohne technische Details. Wenn alle Fachbegriffe stimmen, kann die technische Sicht folgen. Ein Diagramm mit mehr als etwa zehn Klassen wird unlesbar: schneiden Sie nach Themen.",
+  "em": "Vorher sammeln Glossar und Domänenmodell die Begriffe. Danach folgt das Datenmodell mit technischen Details. Für nur Ablauf oder Verhalten sind Sequenz- oder Aktivitätsdiagramm besser.",
+  "qu": [
+   "Object Management Group: UML Specification, Version 2.5.1 (2017)",
+   "Rupp, C.; Queins, S.: UML 2 glasklar (Hanser, 4. Auflage 2012)"
+  ],
+  "io": {
+   "lf": [
+    "Fachbereich mit Begriffswissen",
+    "Architektinnen und Architekten"
+   ],
+   "in": [
+    {
+     "t": "Fachbegriffe",
+     "to": "glossar",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Fachliches Strukturbild",
+     "to": "domaenenmodell",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Klassendiagramm mit Kardinalitäten"
+    },
+    {
+     "t": "Technisches Strukturmodell",
+     "to": "datenmodell",
+     "v": "weitergeführt in"
+    }
+   ],
+   "ko": [
+    "Entwicklungsteam",
+    "Architektur",
+    "Fachbereich"
+   ]
+  },
+  "li": [
+   [
+    "glossar",
+    "vorher",
+    "Begriffe sind geklärt."
+   ],
+   [
+    "domaenenmodell",
+    "vorher",
+    "Das fachliche Bild liegt vor."
+   ],
+   [
+    "datenmodell",
+    "danach",
+    "Die Struktur wird technisch gefasst."
+   ],
+   [
+    "sequenzdiagramm",
+    "ergaenzt",
+    "Das Verhalten ergänzt die Struktur."
+   ],
+   [
+    "domaenenmodell",
+    "alternative",
+    "Für ein grobes Begriffsbild reicht es."
+   ]
+  ],
+  "tools": [
+   "PlantUML",
+   "Enterprise Architect"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "zielmodell",
+  "n": "Zielmodell",
+  "c": "mod",
+  "f": "modell",
+  "m": "klassisch",
+  "ph": "verstehen",
+  "t": "Zielhierarchie",
+  "kz": "",
+  "k": "Ordnet Ziele in einer Hierarchie vom Oberziel zu Teilzielen und Anforderungen, mit Abhängigkeiten und Konflikten.",
+  "aufwand": "2 bis 4 Stunden",
+  "ab": [
+   "Oberziel formulieren",
+   "In Teilziele zerlegen («wie?»)",
+   "Nach oben fragen («wozu?») und Lücken schliessen",
+   "Konflikte und Abhängigkeiten markieren",
+   "Blätter in Anforderungen überführen"
+  ],
+  "re": [
+   "Ziele nutzen Verben und sind prüfbar",
+   "Jede Ebene beantwortet «wie?» nach unten und «wozu?» nach oben",
+   "Konflikte offen zeigen und entscheiden",
+   "Jede Anforderung führt zu einem Ziel"
+  ],
+  "bsp": {
+   "t": "Tourenplanung",
+   "x": "Oberziel: Touren effizient planen. Teilziele: Konflikte früh erkennen, Auslastung sichtbar machen, Freigabe beschleunigen. Konflikt: Schnelle Freigabe gegen Vier-Augen-Prinzip. Anforderung unter Freigabe: Leitung bestätigt in der App."
+  },
+  "zw": "Ein Zielmodell macht sichtbar, was ein Vorhaben erreichen soll und wie Ziele zusammenhängen. Oberziele werden in Teilziele zerlegt, bis daraus prüfbare Anforderungen entstehen. Beziehungen zeigen, welche Ziele sich stützen und welche sich widersprechen.",
+  "wa": [
+   "Wenn Stakeholder unterschiedliche oder widersprüchliche Ziele haben",
+   "Wenn Anforderungen auf Ziele zurückführbar sein sollen",
+   "Wenn der Zweck eines Vorhabens begründet werden muss"
+  ],
+  "wn": [
+   "Wenn die Ziele bereits in einer klaren Vision stehen und unstrittig sind",
+   "Bei sehr kleinen Änderungen",
+   "Wenn niemand bereit ist, Konflikte zu entscheiden"
+  ],
+  "vb": [
+   "Stakeholder und ihre Interessen sammeln",
+   "Oberziel formulieren",
+   "Notation wählen (einfacher Baum oder KAOS, iStar)",
+   "Zeit für Konfliktklärung einplanen"
+  ],
+  "nr": "V-18",
+  "kt": "Ziele von oben nach unten zerlegen, Konflikte zeigen und Anforderungen auf Ziele zurückführen.",
+  "ks": [
+   "Oberziel formulieren",
+   "In Teilziele zerlegen",
+   "Nach oben prüfen",
+   "Konflikte markieren",
+   "Anforderungen ableiten"
+  ],
+  "gw": [
+   "Ziele sind unklar oder widersprüchlich",
+   "Anforderungen brauchen Begründung",
+   "Der Zweck muss erklärt werden"
+  ],
+  "rg": [
+   "Ziele sind prüfbar formuliert",
+   "Wie nach unten, wozu nach oben",
+   "Konflikte offen zeigen"
+  ],
+  "vk": [
+   "Stakeholder und Interessen sammeln",
+   "Oberziel formulieren"
+  ],
+  "bn": "Die Ziele stehen unstrittig in einer Vision",
+  "pr": "Zielmodelle klären Diskussionen, weil sie Wunsch und Zweck trennen. Fragen Sie bei jeder Forderung «wozu?» und notieren Sie das Ziel dahinter. Zeigen Sie Konflikte, etwa Schnelligkeit gegen Sicherheit, im Modell, statt sie in einzelnen Anforderungen zu verstecken.",
+  "em": "Vorher liefern Stakeholder-Analyse und Produktvision die Ziele. Danach folgen Impact Mapping oder Anforderungen. Für ein reines Zielbild genügt die Produktvision.",
+  "qu": [
+   "van Lamsweerde, A.: Requirements Engineering: From System Goals to UML Models to Software Specifications (Wiley, 2009)",
+   "Pohl, K.; Rupp, C.: Basiswissen Requirements Engineering (dpunkt, 5. Auflage 2021)"
+  ],
+  "io": {
+   "lf": [
+    "Auftraggeber",
+    "Stakeholder",
+    "Fachbereich"
+   ],
+   "in": [
+    {
+     "t": "Beteiligte und Interessen",
+     "to": "stakeholder",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Zielrichtung",
+     "to": "produktvision",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Zielhierarchie mit Konflikten"
+    },
+    {
+     "t": "Begründung für Anforderungen",
+     "to": "user-stories",
+     "v": "genutzt in"
+    },
+    {
+     "t": "Wirkungsziele",
+     "to": "impact-mapping",
+     "v": "weitergeführt in"
+    }
+   ],
+   "ko": [
+    "Auftraggeber",
+    "Business Analysten",
+    "Projektleitung"
+   ]
+  },
+  "li": [
+   [
+    "stakeholder",
+    "vorher",
+    "Wer verfolgt welche Ziele?"
+   ],
+   [
+    "produktvision",
+    "vorher",
+    "Die Vision gibt die Richtung."
+   ],
+   [
+    "impact-mapping",
+    "danach",
+    "Wirkungen und Hebel werden konkret."
+   ],
+   [
+    "user-stories",
+    "danach",
+    "Anforderungen führen auf Ziele zurück."
+   ],
+   [
+    "traceability",
+    "ergaenzt",
+    "Rückverfolgung zu den Zielen."
+   ],
+   [
+    "impact-mapping",
+    "alternative",
+    "Leichter, wenn es um Wirkung geht."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "draw.io"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "capability-map",
+  "n": "Capability Map",
+  "c": "mod",
+  "f": "modell",
+  "m": "klassisch",
+  "ph": "verstehen",
+  "t": "Fähigkeitenlandkarte",
+  "kz": "",
+  "k": "Zeigt auf einer Seite, was eine Organisation können muss, geordnet nach Fähigkeiten statt nach Abteilungen oder Systemen.",
+  "aufwand": "1 bis 2 Tage",
+  "ab": [
+   "Strategische Bereiche festlegen",
+   "Fähigkeiten je Bereich sammeln und benennen",
+   "Doppelte und überlappende Fähigkeiten bereinigen",
+   "Reifegrad und Wichtigkeit bewerten",
+   "Lücken und Schwerpunkte für das Vorhaben markieren"
+  ],
+  "re": [
+   "Fähigkeiten sind Substantiv plus Tätigkeit, nicht Abteilung",
+   "Jede Fähigkeit steht genau einmal da",
+   "Maximal zwei bis drei Ebenen",
+   "Bewertung nach einer festen Skala"
+  ],
+  "bsp": {
+   "t": "Spedition",
+   "x": "Bereiche: Kunden, Planung, Durchführung, Abrechnung. Unter Planung: Touren planen, Fahrzeuge zuteilen, Konflikte erkennen. Touren planen ist wichtig und nur teilweise unterstützt, darum das Ziel des Projekts."
+  },
+  "zw": "Eine Capability Map gliedert die Fähigkeiten einer Organisation (zum Beispiel «Kundenanfragen bearbeiten», «Touren planen») in Bereiche und Ebenen. Sie ist stabiler als Organigramme oder Systemlandschaften und hilft, Investitionen, Lücken und Doppelungen zu erkennen. Oft werden Fähigkeiten nach Reifegrad oder Wichtigkeit eingefärbt.",
+  "wa": [
+   "Wenn Veränderungen über Abteilungen und Systeme hinweg geplant werden",
+   "Wenn Lücken, Überschneidungen oder Investitionsschwerpunkte sichtbar werden sollen",
+   "Wenn Fachbereich und IT eine gemeinsame Sprache brauchen"
+  ],
+  "wn": [
+   "Für einzelne Abläufe: dann Prozessmodell",
+   "Wenn niemand Fähigkeiten und Systeme zuordnen kann",
+   "Für sehr kleine Teams"
+  ],
+  "vb": [
+   "Unternehmensstrategie und Zielbild sammeln",
+   "Ebenen festlegen (Bereiche, Fähigkeiten, Teilfähigkeiten)",
+   "Wer bewertet, und nach welchen Kriterien?",
+   "Darstellung auf einer Fläche vorbereiten"
+  ],
+  "nr": "V-19",
+  "kt": "Was muss die Organisation können? Fähigkeiten nach Bereichen auf einer Seite, nach Reife eingefärbt.",
+  "ks": [
+   "Bereiche festlegen",
+   "Fähigkeiten sammeln",
+   "Doppelungen bereinigen",
+   "Reife und Wichtigkeit",
+   "Lücken markieren"
+  ],
+  "gw": [
+   "Veränderung über Bereiche hinweg",
+   "Lücken und Doppelungen sichtbar",
+   "Fachbereich und IT sprechen gleich"
+  ],
+  "rg": [
+   "Fähigkeit, nicht Abteilung",
+   "Jede Fähigkeit nur einmal",
+   "Höchstens drei Ebenen"
+  ],
+  "vk": [
+   "Strategie und Zielbild",
+   "Bereiche festlegen"
+  ],
+  "bn": "Es geht um einen einzelnen Ablauf",
+  "pr": "Fähigkeiten beschreiben das Was, nicht das Wie oder Wer. Wenn eine Karte nach Organisation aussieht, trennen Sie nochmals sauber. Nutzen Sie die Farbgebung für die Diskussion: Wo ist die Wichtigkeit hoch und der Reifegrad niedrig, entsteht Handlungsbedarf.",
+  "em": "Vorher liefern Strategie, Vision und Stakeholder-Analyse das Bild. Danach folgen Gap-Analyse und Roadmap. Für einzelne Abläufe nutzen Sie Prozessanalyse und BPMN.",
+  "qu": [
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Business Capability Analysis»",
+   "Open Group: TOGAF Standard, Version 10 (2022), Business Capabilities"
+  ],
+  "io": {
+   "lf": [
+    "Geschäftsleitung",
+    "Fachbereiche",
+    "Architektur"
+   ],
+   "in": [
+    {
+     "t": "Zielrichtung",
+     "to": "produktvision",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Beteiligte",
+     "to": "stakeholder",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Fähigkeitenlandkarte mit Bewertung"
+    },
+    {
+     "t": "Themen für Lücken",
+     "to": "gap-analyse",
+     "v": "genutzt in"
+    },
+    {
+     "t": "Planung von Investitionen",
+     "to": "roadmap",
+     "v": "genutzt in"
+    }
+   ],
+   "ko": [
+    "Geschäftsleitung",
+    "Architektur",
+    "Portfolio- und Projektplanung"
+   ]
+  },
+  "li": [
+   [
+    "produktvision",
+    "vorher",
+    "Die Strategie gibt die Richtung."
+   ],
+   [
+    "stakeholder",
+    "vorher",
+    "Verantwortliche sind bekannt."
+   ],
+   [
+    "gap-analyse",
+    "danach",
+    "Schwach unterstützte Fähigkeiten werden Lücken."
+   ],
+   [
+    "roadmap",
+    "danach",
+    "Schwerpunkte prägen die Reihenfolge."
+   ],
+   [
+    "business-model-canvas",
+    "alternative",
+    "Fokus auf Geschäftsmodell statt auf Fähigkeiten."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "PowerPoint"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "feature-tree",
+  "n": "Feature Tree",
+  "c": "mod",
+  "f": "modell",
+  "m": "klassisch",
+  "ph": "spezifizieren",
+  "t": "Funktionsbaum",
+  "kz": "",
+  "k": "Gliedert den Funktionsumfang eines Produkts als Baum aus Hauptfunktionen und Teilfunktionen.",
+  "aufwand": "2 bis 4 Stunden",
+  "ab": [
+   "Produkt als Wurzel setzen",
+   "Hauptbereiche als erste Ebene einzeichnen",
+   "Funktionen darunter ordnen",
+   "Pflicht, optional und Varianten kennzeichnen",
+   "Mit Stakeholdern auf Vollständigkeit prüfen"
+  ],
+  "re": [
+   "Funktionen als Verb plus Objekt benennen",
+   "Gleiche Ebene, gleiche Grössenordnung",
+   "Jede Funktion hängt an genau einem Bereich",
+   "Höchstens drei Ebenen"
+  ],
+  "bsp": {
+   "t": "Tourenplaner",
+   "x": "Wurzel: Tourenplaner. Bereiche: Planen, Freigeben, Auswerten. Unter Planen: Tour anlegen, Fahrzeug zuteilen, Konflikt prüfen. Unter Auswerten: Auslastung anzeigen (optional)."
+  },
+  "zw": "Der Feature Tree zeigt auf einer Seite, welche Funktionen ein Produkt haben soll und wie sie zusammengehören. Er hilft, den Umfang abzugrenzen, Lücken zu erkennen und Pakete für Releases zu bilden. Bei Produktlinien kann er zeigen, welche Funktionen Pflicht oder optional sind.",
+  "wa": [
+   "Wenn der Umfang eines Produkts übersichtlich gezeigt werden soll",
+   "Wenn Funktionen Releases oder Varianten zugeordnet werden",
+   "Wenn Stakeholder den Überblick vor den Details wollen"
+  ],
+  "wn": [
+   "Für Abläufe oder Zusammenspiel von Rollen",
+   "Wenn die Funktionen noch gar nicht bekannt sind",
+   "Als Ersatz für Anforderungen mit Details"
+  ],
+  "vb": [
+   "Funktionen aus Interviews, Stories oder Dokumenten sammeln",
+   "Ebenen festlegen (Produkt, Bereich, Funktion)",
+   "Kennzeichnung für Pflicht und optional klären",
+   "Fläche für den Baum vorbereiten"
+  ],
+  "nr": "S-20",
+  "kt": "Der Funktionsumfang als Baum: Produkt, Bereiche, Funktionen, mit Pflicht und optional markiert.",
+  "ks": [
+   "Produkt als Wurzel",
+   "Bereiche einzeichnen",
+   "Funktionen zuordnen",
+   "Pflicht, optional markieren",
+   "Auf Vollständigkeit prüfen"
+  ],
+  "gw": [
+   "Umfang auf einer Seite gezeigt wird",
+   "Funktionen Releases zugeordnet werden",
+   "Überblick vor Details"
+  ],
+  "rg": [
+   "Verb und Objekt als Name",
+   "Gleiche Ebene, gleiche Grösse",
+   "Höchstens drei Ebenen"
+  ],
+  "vk": [
+   "Funktionen sammeln",
+   "Ebenen festlegen"
+  ],
+  "bn": "Es geht um Abläufe oder Rollen",
+  "pr": "Ein Baum eignet sich als Landkarte für Gespräche. Er ersetzt keine Anforderungen: Hängen Sie an jede Funktion einen Verweis auf Stories oder Use Cases. Wenn eine Funktion in zwei Bereiche passt, ist ihr Zweck noch zu unscharf.",
+  "em": "Vorher liefern Interviews oder Story Map die Funktionen. Danach bilden Sie Releases in der Release-Planung. Für den zeitlichen Ablauf nutzen Sie Story Map.",
+  "qu": [
+   "Kang, K. u. a.: Feature-Oriented Domain Analysis (FODA) Feasibility Study (SEI, 1990)",
+   "Pohl, K.; Rupp, C.: Basiswissen Requirements Engineering (dpunkt, 5. Auflage 2021)"
+  ],
+  "io": {
+   "lf": [
+    "Product Owner",
+    "Fachbereich",
+    "Entwicklungsteam"
+   ],
+   "in": [
+    {
+     "t": "Funktionswünsche",
+     "to": "interview",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Stories",
+     "to": "user-stories",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Funktionsbaum"
+    },
+    {
+     "t": "Pakete für Releases",
+     "to": "release-planning",
+     "v": "genutzt in"
+    }
+   ],
+   "ko": [
+    "Product Owner",
+    "Auftraggeber",
+    "Entwicklungsteam"
+   ]
+  },
+  "li": [
+   [
+    "interview",
+    "vorher",
+    "Gespräche liefern Funktionswünsche."
+   ],
+   [
+    "user-stories",
+    "vorher",
+    "Stories ordnen sich in den Baum."
+   ],
+   [
+    "release-planning",
+    "danach",
+    "Funktionen werden Releases zugeordnet."
+   ],
+   [
+    "story-mapping",
+    "alternative",
+    "Zeigt zusätzlich den zeitlichen Ablauf."
+   ],
+   [
+    "traceability",
+    "ergaenzt",
+    "Funktionen verweisen auf ihre Anforderungen."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "draw.io"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "wireframes",
+  "n": "Wireframes und Mockups",
+  "c": "mod",
+  "f": "modell",
+  "m": "beide",
+  "ph": "spezifizieren",
+  "t": "Oberflächenskizze",
+  "kz": "Wireframes",
+  "k": "Skizzen einer Oberfläche, die Aufbau, Inhalte und Bedienung zeigen, bevor sie programmiert wird.",
+  "aufwand": "2 bis 8 Stunden",
+  "ab": [
+   "Aufgabe und wichtigste Szenarien klären",
+   "Aufbau pro Bildschirm skizzieren",
+   "Bildschirme über Navigation verbinden",
+   "Mit Nutzern durchspielen",
+   "Rückmeldungen einarbeiten und Anforderungen ergänzen"
+  ],
+  "re": [
+   "Erst Struktur, dann Gestaltung",
+   "Echte Inhalte statt Platzhaltertext",
+   "Wichtigstes zuerst und gross",
+   "Skizze ist Diskussionsgrundlage, keine Spezifikation"
+  ],
+  "bsp": {
+   "t": "Tourenübersicht",
+   "x": "Bildschirm mit Wochenansicht: links Fahrzeuge, oben Tage, Touren als Balken. Konflikt wird rot markiert, ein Klick öffnet Details. Aus dem Test: Die Anzeige der Fahrerin fehlt, sie wird ergänzt."
+  },
+  "zw": "Wireframes zeigen die Struktur einer Seite oder eines Bildschirms ohne Gestaltung: wo steht welcher Inhalt, welche Bedienelemente gibt es, wie führt man durch eine Aufgabe. Mockups ergänzen Farbe und Gestaltung. Beide machen Anforderungen sichtbar und schnell diskutierbar.",
+  "wa": [
+   "Wenn Anforderungen an eine Oberfläche geklärt werden",
+   "Wenn Fachbereich und Entwicklung dasselbe Bild brauchen",
+   "Wenn Bedienung früh getestet werden soll"
+  ],
+  "wn": [
+   "Bei Anforderungen ohne Oberfläche",
+   "Wenn die Gestaltung schon feststeht",
+   "Wenn Wireframes den Platz von Anforderungen einnehmen sollen"
+  ],
+  "vb": [
+   "Aufgaben der Nutzer als Szenarien festhalten",
+   "Werkzeug und Detailgrad wählen (Papier, Balsamiq, Figma)",
+   "Bestehende Gestaltungsvorgaben klären",
+   "Personen für Rückmeldung einladen"
+  ],
+  "nr": "S-21",
+  "kt": "Aufbau und Bedienung eines Bildschirms skizzieren, bevor programmiert wird, und mit Nutzern prüfen.",
+  "ks": [
+   "Aufgaben klären",
+   "Bildschirm skizzieren",
+   "Navigation verbinden",
+   "Mit Nutzern durchspielen",
+   "Rückmeldung einarbeiten"
+  ],
+  "gw": [
+   "Anforderungen an eine Oberfläche",
+   "Alle brauchen dasselbe Bild",
+   "Bedienung früh getestet wird"
+  ],
+  "rg": [
+   "Erst Struktur, dann Gestaltung",
+   "Echte Inhalte statt Platzhalter",
+   "Skizze ist keine Spezifikation"
+  ],
+  "vk": [
+   "Aufgaben der Nutzer klären",
+   "Werkzeug und Detailgrad wählen"
+  ],
+  "bn": "Es gibt keine Oberfläche oder sie steht fest",
+  "pr": "Beginnen Sie auf Papier oder in einem einfachen Werkzeug: grobe Skizzen laden zu Korrekturen ein, hübsche Mockups zu Zustimmung. Halten Sie Entscheidungen, die aus den Skizzen entstehen, als Anforderungen fest, zum Beispiel als Akzeptanzkriterien, damit sie nicht allein im Bild stecken.",
+  "em": "Vorher liefern Persona, Szenarien und Customer Journey die Aufgaben. Danach prüfen Sie mit Usability-Test oder Prototyp. Für Klick-Abläufe nutzen Sie Prototyping.",
+  "qu": [
+   "Garrett, J. J.: The Elements of User Experience (New Riders, 2. Auflage 2010)",
+   "Krug, S.: Don't Make Me Think (New Riders, 3. Auflage 2014)"
+  ],
+  "io": {
+   "lf": [
+    "Nutzerinnen und Nutzer",
+    "UX-Design",
+    "Fachbereich"
+   ],
+   "in": [
+    {
+     "t": "Nutzerprofil",
+     "to": "persona",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Anforderungen",
+     "to": "user-stories",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Wireframes pro Bildschirm"
+    },
+    {
+     "t": "Klickbare Version",
+     "to": "prototyping",
+     "v": "weitergeführt in"
+    },
+    {
+     "t": "Ergänzungen an Kriterien",
+     "to": "akzeptanzkriterien",
+     "v": "übernommen in"
+    }
+   ],
+   "ko": [
+    "Entwicklungsteam",
+    "Auftraggeber",
+    "Test"
+   ]
+  },
+  "li": [
+   [
+    "persona",
+    "vorher",
+    "Für wen wird gestaltet?"
+   ],
+   [
+    "user-stories",
+    "vorher",
+    "Welche Aufgaben sind zu lösen?"
+   ],
+   [
+    "prototyping",
+    "danach",
+    "Skizzen werden klickbar."
+   ],
+   [
+    "usability-test",
+    "danach",
+    "Die Bedienung wird geprüft."
+   ],
+   [
+    "akzeptanzkriterien",
+    "ergaenzt",
+    "Entscheidungen werden als Kriterien festgehalten."
+   ]
+  ],
+  "tools": [
+   "Figma",
+   "Balsamiq"
   ],
   "s": "entwurf"
  },
@@ -6295,6 +8437,16 @@ const M = [
     "product-backlog",
     "danach",
     "Reihenfolge im Backlog übernehmen."
+   ],
+   [
+    "value-vs-effort",
+    "alternative",
+    "Alternative: «Wert-Aufwand-Matrix»."
+   ],
+   [
+    "konfliktloesung",
+    "alternative",
+    "Alternative: «Konfliktlösung bei Anforderungen»."
    ]
   ],
   "tools": [
@@ -6589,6 +8741,11 @@ const M = [
     "product-backlog",
     "danach",
     "Reihenfolge ins Backlog."
+   ],
+   [
+    "cost-of-delay",
+    "alternative",
+    "Alternative: «Cost of Delay (CD3)»."
    ]
   ],
   "tools": [
@@ -6884,6 +9041,16 @@ const M = [
     "wsjf",
     "danach",
     "Aufwandsteil von WSJF."
+   ],
+   [
+    "value-vs-effort",
+    "danach",
+    "Danach folgt «Wert-Aufwand-Matrix»."
+   ],
+   [
+    "cost-of-delay",
+    "danach",
+    "Danach folgt «Cost of Delay (CD3)»."
    ]
   ],
   "tools": [
@@ -7341,6 +9508,16 @@ const M = [
     "moscow",
     "alternative",
     "MoSCoW kommt ohne Rechnen aus."
+   ],
+   [
+    "value-vs-effort",
+    "alternative",
+    "Alternative: «Wert-Aufwand-Matrix»."
+   ],
+   [
+    "cost-of-delay",
+    "alternative",
+    "Alternative: «Cost of Delay (CD3)»."
    ]
   ],
   "tools": [
@@ -7492,6 +9669,11 @@ const M = [
     "kano",
     "alternative",
     "Kano fragt nach Zufriedenheit statt nach Geld."
+   ],
+   [
+    "gap-analyse",
+    "vorher",
+    "Davor liegt «Gap-Analyse»."
    ]
   ],
   "tools": [
@@ -7651,6 +9833,299 @@ const M = [
   "s": "entwurf"
  },
  {
+  "id": "value-vs-effort",
+  "n": "Wert-Aufwand-Matrix",
+  "c": "prio",
+  "f": "modell",
+  "m": "agil",
+  "ph": "bewerten",
+  "t": "Matrix",
+  "kz": "Wert vs. Aufwand",
+  "k": "Ordnet Ideen in einer Matrix nach Wert und Aufwand und zeigt auf einen Blick, was sich zuerst lohnt.",
+  "aufwand": "30 bis 90 Min.",
+  "ab": [
+   "Kandidaten auf Karten schreiben",
+   "Wert und Aufwand grob schätzen",
+   "Karten in die Matrix legen",
+   "Felder besprechen und Ausreisser klären",
+   "Reihenfolge festlegen und dokumentieren"
+  ],
+  "re": [
+   "Wert und Aufwand relativ schätzen, nicht exakt",
+   "Fachbereich schätzt den Wert, Team den Aufwand",
+   "Alle Karten bekommen ein Feld",
+   "Das Gespräch zählt mehr als die genaue Lage"
+  ],
+  "bsp": {
+   "t": "Vier Ideen",
+   "x": "Warnung bei Doppelbelegung: Wert hoch, Aufwand mittel, kommt zuerst. Export als PDF: Wert mittel, Aufwand gering, schneller Gewinn. Neues Layout: Wert gering, Aufwand hoch, wird gestrichen. Offline-Modus: Wert hoch, Aufwand hoch, braucht Aufteilung."
+  },
+  "zw": "Die Wert-Aufwand-Matrix (Value vs. Effort) legt jede Idee in ein Feld: hoher oder niedriger Wert, hoher oder niedriger Aufwand. Schnelle Gewinne (hoher Wert, geringer Aufwand) kommen zuerst, grosse Wetten werden geplant, Zeitfresser (geringer Wert, hoher Aufwand) fallen weg. Es ist die einfachste Priorisierung ohne Rechnung.",
+  "wa": [
+   "Wenn schnell eine erste Reihenfolge gebraucht wird",
+   "Wenn eine Gruppe gemeinsam einschätzt",
+   "Wenn die Daten für eine Formel fehlen"
+  ],
+  "wn": [
+   "Wenn Zahlen belegt und genauer verglichen werden sollen: dann RICE oder WSJF",
+   "Bei Pflichtthemen mit Frist",
+   "Wenn niemand den Aufwand schätzen kann"
+  ],
+  "vb": [
+   "Liste der Kandidaten",
+   "Matrix auf Wand oder Board zeichnen",
+   "Wert und Aufwand grob definieren",
+   "Gruppe aus Fachbereich und Entwicklung zusammenstellen"
+  ],
+  "nr": "B-11",
+  "kt": "Ideen nach Wert und Aufwand in vier Felder legen: schnelle Gewinne zuerst, Zeitfresser streichen.",
+  "ks": [
+   "Kandidaten notieren",
+   "Wert und Aufwand schätzen",
+   "In die Matrix legen",
+   "Ausreisser besprechen",
+   "Reihenfolge festlegen"
+  ],
+  "gw": [
+   "Schnell eine Reihenfolge gebraucht wird",
+   "Eine Gruppe gemeinsam einschätzt",
+   "Daten für Formeln fehlen"
+  ],
+  "rg": [
+   "Relativ schätzen",
+   "Fachbereich: Wert, Team: Aufwand",
+   "Alle Karten bekommen ein Feld"
+  ],
+  "vk": [
+   "Kandidatenliste",
+   "Matrix vorbereiten"
+  ],
+  "bn": "Genaue Zahlen sollen verglichen werden",
+  "pr": "Fragen Sie bei Karten am Rand, welche Annahme sie dorthin bringt. Schnelle Gewinne zuerst erzeugen Vertrauen. Grosse Wetten brauchen oft eine Aufteilung. Prüfen Sie nach einigen Wochen, ob die Schätzung stimmte, und kalibrieren Sie die Matrix.",
+  "em": "Vorher sammelt das Backlog die Kandidaten, Story Points liefern den Aufwand. Danach kommt die Reihenfolge in Roadmap oder Backlog. Für genauere Entscheidungen sind RICE und WSJF besser.",
+  "qu": [
+   "Gothelf, J.; Seiden, J.: Lean UX (O'Reilly, 3. Auflage 2021)",
+   "Atlassian: Prioritization frameworks (atlassian.com)"
+  ],
+  "io": {
+   "lf": [
+    "Product Owner",
+    "Fachbereich",
+    "Entwicklungsteam"
+   ],
+   "in": [
+    {
+     "t": "Kandidatenliste",
+     "to": "product-backlog",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Aufwandsschätzung",
+     "to": "story-points",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Matrix mit Feldern"
+    },
+    {
+     "t": "Reihenfolge",
+     "to": "product-backlog",
+     "v": "übernommen in"
+    },
+    {
+     "t": "Schwerpunkte",
+     "to": "roadmap",
+     "v": "genutzt in"
+    }
+   ],
+   "ko": [
+    "Product Owner",
+    "Entwicklungsteam",
+    "Management"
+   ]
+  },
+  "li": [
+   [
+    "product-backlog",
+    "vorher",
+    "Das Backlog liefert die Kandidaten."
+   ],
+   [
+    "story-points",
+    "vorher",
+    "Story Points zeigen den Aufwand."
+   ],
+   [
+    "roadmap",
+    "danach",
+    "Schwerpunkte fliessen in die Roadmap."
+   ],
+   [
+    "rice",
+    "alternative",
+    "Rechnet mit Zahlen."
+   ],
+   [
+    "moscow",
+    "alternative",
+    "Keine Matrix, dafür Kategorien."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Haftnotizen"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "cost-of-delay",
+  "n": "Cost of Delay (CD3)",
+  "c": "prio",
+  "f": "methode",
+  "m": "agil",
+  "ph": "bewerten",
+  "t": "Bewertungsformel",
+  "kz": "Cost of Delay",
+  "k": "Bewertet, was jede Woche Verzögerung kostet, und ordnet danach, was zuerst geliefert wird.",
+  "aufwand": "1 bis 3 Stunden",
+  "ab": [
+   "Kandidaten und Zeiteinheit festlegen",
+   "Kosten der Verzögerung pro Woche schätzen",
+   "Dauer bis zur Lieferung schätzen",
+   "CD3 als Kosten geteilt durch Dauer berechnen",
+   "Reihenfolge nach höchstem Wert festlegen"
+  ],
+  "re": [
+   "Gleiche Einheit für alle Kandidaten",
+   "Kosten und Dauer von den jeweils Kundigen schätzen",
+   "Annahmen offenlegen",
+   "Ergebnis ist Diskussionsgrundlage"
+  ],
+  "bsp": {
+   "t": "Drei Vorhaben",
+   "x": "Warnung: 8 000 Franken pro Woche, Dauer 2 Wochen, CD3 = 4 000. Export: 1 000 Franken pro Woche, Dauer 1 Woche, CD3 = 1 000. Neues Layout: 500 Franken pro Woche, Dauer 6 Wochen, CD3 = 83. Reihenfolge: Warnung, Export, Layout."
+  },
+  "zw": "Cost of Delay (Kosten der Verzögerung) schätzt den Nutzen, der pro Zeiteinheit verloren geht, wenn etwas später kommt. CD3 teilt diese Kosten durch die Dauer (Cost of Delay Divided by Duration). Gewinnen soll, was am meisten pro Woche verliert und am schnellsten fertig ist. Das macht Zeitdruck sichtbar.",
+  "wa": [
+   "Wenn Zeit der entscheidende Faktor ist (Markt, Frist, Wettbewerb)",
+   "Wenn mehrere Vorhaben um dieselbe Kapazität konkurrieren",
+   "Wenn Kosten der Verzögerung gegenüber Stakeholdern begründet werden sollen"
+  ],
+  "wn": [
+   "Wenn Nutzen kaum in Geld oder Wirkung ausdrückbar ist",
+   "Wenn niemand die Zahlen verantwortet",
+   "Bei sehr wenigen Optionen"
+  ],
+  "vb": [
+   "Liste der Kandidaten",
+   "Einheit für Nutzen festlegen (Franken pro Woche oder Punkte)",
+   "Dauer bis zur Lieferung schätzen",
+   "Profil der Dringlichkeit klären (fix, früh, später)"
+  ],
+  "nr": "B-12",
+  "kt": "Was kostet jede Woche Verzögerung? Kosten geteilt durch Dauer: Dringendes und Schnelles zuerst.",
+  "ks": [
+   "Kandidaten festlegen",
+   "Kosten pro Woche schätzen",
+   "Dauer schätzen",
+   "Kosten durch Dauer teilen",
+   "Reihenfolge festlegen"
+  ],
+  "gw": [
+   "Zeit ist entscheidend",
+   "Vorhaben konkurrieren um Kapazität",
+   "Verzögerung begründet werden soll"
+  ],
+  "rg": [
+   "Gleiche Einheit für alle",
+   "Annahmen offenlegen",
+   "Ergebnis ist Diskussionsgrundlage"
+  ],
+  "vk": [
+   "Kandidaten sammeln",
+   "Einheit festlegen"
+  ],
+  "bn": "Nutzen lässt sich kaum beziffern",
+  "pr": "Auch grobe Zahlen zeigen, welche Themen drängen. Fragen Sie: «Was kostet es uns, wenn das einen Monat später kommt?» Das trennt echte Dringlichkeit von lauter Forderung. Prüfen Sie Fristen und Auswirkungen auf Verträge separat, sie bekommen oft eigene Regeln.",
+  "em": "Vorher liefern Backlog und Schätzung die Kandidaten, Stakeholder die Zahlen. Danach planen Sie Roadmap und Release. Für wiederkehrendes Priorisieren im Scrum ist WSJF ein bekannter Verwandter.",
+  "qu": [
+   "Reinertsen, D.: The Principles of Product Development Flow (Celeritas, 2009)",
+   "Black Swan Farming: Cost of Delay (blackswanfarming.com)",
+   "Leffingwell, D.: Agile Software Requirements (Addison-Wesley, 2011)"
+  ],
+  "io": {
+   "lf": [
+    "Product Owner",
+    "Management",
+    "Entwicklungsteam"
+   ],
+   "in": [
+    {
+     "t": "Kandidatenliste",
+     "to": "product-backlog",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Dauer",
+     "to": "story-points",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Tabelle mit CD3-Werten"
+    },
+    {
+     "t": "Priorisierte Reihenfolge",
+     "to": "roadmap",
+     "v": "genutzt in"
+    },
+    {
+     "t": "Begründung für Stakeholder"
+    }
+   ],
+   "ko": [
+    "Product Owner",
+    "Management",
+    "Projektleitung"
+   ]
+  },
+  "li": [
+   [
+    "product-backlog",
+    "vorher",
+    "Liefert die Kandidaten."
+   ],
+   [
+    "story-points",
+    "vorher",
+    "Liefern Dauer und Aufwand."
+   ],
+   [
+    "roadmap",
+    "danach",
+    "Reihenfolge fliesst in die Roadmap."
+   ],
+   [
+    "wsjf",
+    "alternative",
+    "Nutzt Kosten der Verzögerung in einer Formel mit weiteren Faktoren."
+   ],
+   [
+    "rice",
+    "alternative",
+    "Fokus auf Reichweite statt auf Zeit."
+   ]
+  ],
+  "tools": [
+   "Excel",
+   "Miro"
+  ],
+  "s": "entwurf"
+ },
+ {
   "id": "product-backlog",
   "n": "Product Backlog",
   "c": "plan",
@@ -7798,6 +10273,16 @@ const M = [
     "pflichtenheft",
     "alternative",
     "Ersetzt das Pflichtenheft im agilen Vorgehen."
+   ],
+   [
+    "gap-analyse",
+    "vorher",
+    "Davor liegt «Gap-Analyse»."
+   ],
+   [
+    "value-vs-effort",
+    "danach",
+    "Danach folgt «Wert-Aufwand-Matrix»."
    ]
   ],
   "tools": [
@@ -8101,6 +10586,16 @@ const M = [
     "use-case-diagramm",
     "alternative",
     "Klassischer Überblick über Funktionen."
+   ],
+   [
+    "design-thinking",
+    "vorher",
+    "Davor liegt «Design Thinking»."
+   ],
+   [
+    "feature-tree",
+    "alternative",
+    "Alternative: «Feature Tree»."
    ]
   ],
   "tools": [
@@ -8257,6 +10752,11 @@ const M = [
     "risikoanalyse",
     "ergaenzt",
     "Risiken beeinflussen die Reihenfolge."
+   ],
+   [
+    "capability-map",
+    "vorher",
+    "Davor liegt «Capability Map»."
    ]
   ],
   "tools": [
@@ -8561,11 +11061,174 @@ const M = [
     "moscow",
     "ergaenzt",
     "MoSCoW legt fest, was zum Release gehört."
+   ],
+   [
+    "feature-tree",
+    "vorher",
+    "Davor liegt «Feature Tree»."
+   ],
+   [
+    "mvp-poc",
+    "vorher",
+    "Davor liegt «MVP und Proof of Concept»."
    ]
   ],
   "tools": [
    "Jira",
    "Miro"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "mvp-poc",
+  "n": "MVP und Proof of Concept",
+  "c": "plan",
+  "f": "methode",
+  "m": "agil",
+  "ph": "planen",
+  "t": "Vorgehen",
+  "kz": "MVP / PoC",
+  "k": "Mit dem kleinsten brauchbaren Produkt (MVP) oder einem technischen Nachweis (PoC) früh lernen, bevor viel investiert wird.",
+  "aufwand": "1 bis 12 Wochen",
+  "ab": [
+   "Wichtigste Annahme und Erfolgskriterium festlegen",
+   "Kleinsten Umfang bestimmen, der die Annahme prüft",
+   "MVP oder PoC bauen",
+   "Mit echten Nutzern oder Fachleuten prüfen",
+   "Lernen festhalten: weitermachen, ändern oder stoppen"
+  ],
+  "re": [
+   "Eine Annahme pro Versuch",
+   "Erfolgskriterium vor dem Bau festlegen",
+   "Klein halten, nicht polieren",
+   "Ergebnis ehrlich bewerten, auch Stopp ist ein Ergebnis"
+  ],
+  "bsp": {
+   "t": "Konfliktwarnung",
+   "x": "Annahme: Disponentinnen planen mit einer Warnung schneller. MVP: Warnung nur für ein Fahrzeug im Test, zwei Wochen, Erfolgskriterium: 20 Prozent weniger Korrekturen. Ergebnis: 30 Prozent weniger, der Ausbau wird freigegeben."
+  },
+  "zw": "Ein Minimum Viable Product (MVP) ist die kleinste Version eines Produkts, mit der echte Nutzer eine Annahme prüfen. Ein Proof of Concept (PoC) zeigt, dass etwas technisch oder fachlich machbar ist, ohne ein vollständiges Produkt zu sein. Beide dienen dem Lernen und senken das Risiko grosser Fehlinvestitionen.",
+  "wa": [
+   "Wenn Annahmen über Nutzen oder Machbarkeit unsicher sind",
+   "Wenn früh Rückmeldung von echten Nutzern gebraucht wird",
+   "Wenn Investitionen gestaffelt freigegeben werden sollen"
+  ],
+  "wn": [
+   "Wenn Anforderungen fest und Risiken gering sind",
+   "Wenn ein MVP als halbfertiges Endprodukt missverstanden wird",
+   "Wenn Nutzer nicht erreichbar sind"
+  ],
+  "vb": [
+   "Annahme formulieren, die geprüft werden soll",
+   "Erfolgskriterium vorher festlegen",
+   "Kleinsten Umfang bestimmen",
+   "Zeitrahmen und Budget begrenzen"
+  ],
+  "nr": "P-07",
+  "kt": "Mit dem kleinsten Produkt oder Nachweis eine Annahme prüfen, bevor viel Geld in den Ausbau fliesst.",
+  "ks": [
+   "Annahme festlegen",
+   "Kleinsten Umfang wählen",
+   "Bauen",
+   "Mit Nutzern prüfen",
+   "Weiter, ändern, stoppen"
+  ],
+  "gw": [
+   "Annahmen unsicher sind",
+   "Rückmeldung früh gebraucht wird",
+   "Investitionen gestaffelt sind"
+  ],
+  "rg": [
+   "Eine Annahme pro Versuch",
+   "Kriterium vor dem Bau",
+   "Klein halten, nicht polieren"
+  ],
+  "vk": [
+   "Annahme formulieren",
+   "Erfolgskriterium festlegen"
+  ],
+  "bn": "Anforderungen sind fest, Risiko gering",
+  "pr": "Ein MVP ist ein Lernmittel, kein Rohbau. Fragen Sie: «Welche Annahme prüfen wir, und woran sehen wir, dass sie stimmt?» Es gibt viele Formen unter dem Begriff: Interview, Klickprototyp, Attrappe von Hand betrieben, Pilot bei einem Kunden. Wählen Sie die günstigste, die die Annahme wirklich prüft.",
+  "em": "Vorher klären Lean Canvas und Hypothesen die Annahme. Danach planen Sie Release und Roadmap. Für einen reinen Test der Bedienung genügt ein Prototyp.",
+  "qu": [
+   "Ries, E.: The Lean Startup (Crown Business, 2011)",
+   "Cagan, M.: Inspired (Wiley, 2. Auflage 2018)",
+   "IIBA: BABOK Guide, Version 3 (2015), Technik «Prototyping»"
+  ],
+  "io": {
+   "lf": [
+    "Produktteam",
+    "Nutzerinnen und Nutzer",
+    "Entwicklungsteam"
+   ],
+   "in": [
+    {
+     "t": "Annahmen",
+     "to": "lean-canvas",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Priorisierte Idee",
+     "to": "value-vs-effort",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Lauffähiges MVP oder Nachweis"
+    },
+    {
+     "t": "Erkenntnisse für Entscheid",
+     "to": "roadmap",
+     "v": "genutzt in"
+    },
+    {
+     "t": "Neue Stories",
+     "to": "product-backlog",
+     "v": "übernommen in"
+    }
+   ],
+   "ko": [
+    "Product Owner",
+    "Auftraggeber",
+    "Investoren"
+   ]
+  },
+  "li": [
+   [
+    "lean-canvas",
+    "vorher",
+    "Annahmen sind benannt."
+   ],
+   [
+    "value-vs-effort",
+    "vorher",
+    "Die lohnendste Idee wird gewählt."
+   ],
+   [
+    "release-planning",
+    "danach",
+    "Der Ausbau wird geplant."
+   ],
+   [
+    "roadmap",
+    "danach",
+    "Erkenntnisse prägen die Roadmap."
+   ],
+   [
+    "prototyping",
+    "alternative",
+    "Prüft nur Bedienung, kein Produkt."
+   ],
+   [
+    "spike",
+    "ergaenzt",
+    "Klärt technische Fragen kurz."
+   ]
+  ],
+  "tools": [
+   "Jira",
+   "Figma"
   ],
   "s": "entwurf"
  },
@@ -8704,6 +11367,11 @@ const M = [
     "prototyping",
     "alternative",
     "Prototypen erlauben praktische Prüfung."
+   ],
+   [
+    "anforderungsreview",
+    "alternative",
+    "Alternative: «Anforderungsreview (Inspektion)»."
    ]
   ],
   "tools": [
@@ -8848,6 +11516,21 @@ const M = [
     "aktivitaetsdiagramm",
     "ergaenzt",
     "Ablauf mit dem Prototyp abgleichen."
+   ],
+   [
+    "design-thinking",
+    "vorher",
+    "Davor liegt «Design Thinking»."
+   ],
+   [
+    "wireframes",
+    "vorher",
+    "Davor liegt «Wireframes und Mockups»."
+   ],
+   [
+    "mvp-poc",
+    "alternative",
+    "Alternative: «MVP und Proof of Concept»."
    ]
   ],
   "tools": [
@@ -8995,6 +11678,21 @@ const M = [
     "use-cases",
     "ergaenzt",
     "Use Cases verlinken."
+   ],
+   [
+    "zielmodell",
+    "ergaenzt",
+    "«Zielmodell» ergänzt diese Methode."
+   ],
+   [
+    "feature-tree",
+    "ergaenzt",
+    "«Feature Tree» ergänzt diese Methode."
+   ],
+   [
+    "srs",
+    "ergaenzt",
+    "«Anforderungsspezifikation (SRS)» ergänzt diese Methode."
    ]
   ],
   "tools": [
@@ -9135,6 +11833,11 @@ const M = [
     "product-backlog",
     "alternative",
     "Agil: Änderungen laufen über das Backlog."
+   ],
+   [
+    "konfliktloesung",
+    "vorher",
+    "Davor liegt «Konfliktlösung bei Anforderungen»."
    ]
   ],
   "tools": [
@@ -9284,6 +11987,16 @@ const M = [
     "traceability",
     "ergaenzt",
     "Tests mit Anforderungen verknüpfen."
+   ],
+   [
+    "gherkin-bdd",
+    "vorher",
+    "Davor liegt «Gherkin und BDD»."
+   ],
+   [
+    "srs",
+    "vorher",
+    "Davor liegt «Anforderungsspezifikation (SRS)»."
    ]
   ],
   "tools": [
@@ -9437,6 +12150,11 @@ const M = [
     "abnahmetest",
     "ergaenzt",
     "Der Abnahmetest prüft Kriterien, der Usability-Test das Erleben."
+   ],
+   [
+    "wireframes",
+    "vorher",
+    "Davor liegt «Wireframes und Mockups»."
    ]
   ],
   "tools": [
@@ -9595,6 +12313,302 @@ const M = [
   "s": "entwurf"
  },
  {
+  "id": "anforderungsreview",
+  "n": "Anforderungsreview (Inspektion)",
+  "c": "qs",
+  "f": "meeting",
+  "m": "klassisch",
+  "ph": "absichern",
+  "t": "Prüfverfahren",
+  "kz": "Anforderungsreview",
+  "k": "Prüft Anforderungen vor der Umsetzung mit Checkliste und Rollen auf Fehler, Lücken und Widersprüche.",
+  "aufwand": "1 bis 3 Stunden",
+  "ab": [
+   "Gegenstand, Rollen und Kriterien klären",
+   "Prüfende lesen einzeln und notieren Befunde",
+   "Befunde in der Sitzung zusammentragen",
+   "Befunde nach Schwere einstufen und Verantwortliche bestimmen",
+   "Korrektur nachverfolgen und Ergebnis festhalten"
+  ],
+  "re": [
+   "Prüfen die Anforderung, nicht die Person",
+   "Befunde sammeln, nicht in der Sitzung lösen",
+   "Kriterien aus einer Checkliste, nicht aus dem Bauch",
+   "Jeder Befund hat einen Besitzer und einen Termin"
+  ],
+  "bsp": {
+   "t": "Kapitel Freigabe",
+   "x": "Fünf Prüfende lesen das Kapitel. Befunde: «schnell» ohne Zahl (unklar), zwei Regeln widersprechen sich (Fehler), Ausnahme bei Feiertagen fehlt (Lücke). Alle drei werden bis Freitag korrigiert, nach der Korrektur prüft die Moderation nach."
+  },
+  "zw": "Beim Anforderungsreview lesen mehrere Personen Anforderungen gezielt gegen Prüfkriterien. Formen sind der Walkthrough (Autor führt durch), die Stellungnahme (jede liest allein und schickt Befunde) und die formale Inspektion mit Rollen. Gefundene Fehler kosten jetzt wenig, später viel.",
+  "wa": [
+   "Bevor Anforderungen in Entwicklung oder Vertrag gehen",
+   "Wenn Anforderungen verbindlich sind oder Sicherheit betreffen",
+   "Wenn verschiedene Sichten (Fachbereich, Test, Technik) gebraucht werden"
+  ],
+  "wn": [
+   "Bei sehr kleinen, schnell überholten Anforderungen",
+   "Wenn niemand Zeit zum Lesen einplant",
+   "Wenn Befunde nicht bearbeitet werden"
+  ],
+  "vb": [
+   "Prüfgegenstand und Umfang festlegen (nicht zu gross)",
+   "Checkliste mit Qualitätskriterien bereitstellen",
+   "Rollen verteilen (Moderation, Autor, Protokoll, Prüfende)",
+   "Prüfende lesen vorher einzeln"
+  ],
+  "nr": "A-08",
+  "kt": "Anforderungen mit Checkliste und Rollen auf Fehler, Lücken und Widersprüche prüfen, vor der Umsetzung.",
+  "ks": [
+   "Rollen und Kriterien",
+   "Einzeln lesen",
+   "Befunde sammeln",
+   "Nach Schwere einstufen",
+   "Korrektur nachverfolgen"
+  ],
+  "gw": [
+   "Anforderungen verbindlich werden",
+   "Sicherheit betroffen ist",
+   "Mehrere Sichten gebraucht werden"
+  ],
+  "rg": [
+   "Anforderung prüfen, nicht Person",
+   "Befunde sammeln, nicht lösen",
+   "Jeder Befund hat Besitzer"
+  ],
+  "vk": [
+   "Umfang festlegen",
+   "Checkliste bereitstellen"
+  ],
+  "bn": "Niemand plant Lesezeit ein",
+  "pr": "Die Vorbereitung entscheidet über die Wirkung. Geben Sie jeder Rolle eine Sicht: Test prüft Prüfbarkeit, Fachbereich Richtigkeit, Entwicklung Machbarkeit. Prüfen Sie kleine Abschnitte von etwa zehn Seiten. Ein Prüfprotokoll mit Zahl der Befunde zeigt, ob die Qualität steigt.",
+  "em": "Vorher entsteht das Dokument, zum Beispiel SRS oder Pflichtenheft. Danach folgen Freigabe und Abnahme. Für agile Teams übernehmen Refinement und Review diese Rolle.",
+  "qu": [
+   "Fagan, M.: Design and Code Inspections to Reduce Errors in Program Development, IBM Systems Journal 15 (1976)",
+   "ISO/IEC/IEEE 29148:2018, Requirements engineering",
+   "Pohl, K.; Rupp, C.: Basiswissen Requirements Engineering (dpunkt, 5. Auflage 2021)"
+  ],
+  "io": {
+   "lf": [
+    "Autorinnen und Autoren",
+    "Fachbereich",
+    "Test und Entwicklung"
+   ],
+   "in": [
+    {
+     "t": "Anforderungsdokument",
+     "to": "srs",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Anforderungen als Stories",
+     "to": "user-stories",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Befundliste mit Verantwortlichen"
+    },
+    {
+     "t": "Freigegebene Version",
+     "to": "abnahmetest",
+     "v": "genutzt in"
+    }
+   ],
+   "ko": [
+    "Autorinnen und Autoren",
+    "Projektleitung",
+    "Auftraggeber"
+   ]
+  },
+  "li": [
+   [
+    "srs",
+    "vorher",
+    "Das Dokument liegt vor."
+   ],
+   [
+    "pflichtenheft",
+    "vorher",
+    "Auch das Pflichtenheft wird geprüft."
+   ],
+   [
+    "abnahmetest",
+    "danach",
+    "Geprüfte Anforderungen sind testbar."
+   ],
+   [
+    "review",
+    "alternative",
+    "Der Sprint Review prüft das Ergebnis, nicht die Anforderung."
+   ],
+   [
+    "konfliktloesung",
+    "danach",
+    "Gefundene Widersprüche werden geklärt."
+   ]
+  ],
+  "tools": [
+   "Confluence",
+   "Word"
+  ],
+  "s": "entwurf"
+ },
+ {
+  "id": "konfliktloesung",
+  "n": "Konfliktlösung bei Anforderungen",
+  "c": "qs",
+  "f": "methode",
+  "m": "beide",
+  "ph": "absichern",
+  "t": "Verhandlung",
+  "kz": "Konfliktlösung",
+  "k": "Löst widersprüchliche Anforderungen systematisch: Konflikt benennen, Interessen klären, Lösung wählen, Entscheid festhalten.",
+  "aufwand": "1 bis 3 Stunden",
+  "ab": [
+   "Konflikt neutral beschreiben",
+   "Art des Konflikts bestimmen",
+   "Interessen hinter den Positionen klären",
+   "Lösungsoptionen sammeln und nach Kriterien bewerten",
+   "Entscheid treffen und mit Begründung dokumentieren"
+  ],
+  "re": [
+   "Interessen klären, nicht Positionen verhandeln",
+   "Entscheidungsberechtigte von Anfang an beteiligen",
+   "Optionen vor der Bewertung sammeln",
+   "Entscheid mit Begründung festhalten"
+  ],
+  "bsp": {
+   "t": "Freigabe",
+   "x": "Fachbereich will Freigabe sofort, Revision verlangt Vier-Augen-Prinzip. Interesse Fachbereich: keine Wartezeit. Interesse Revision: Nachvollziehbarkeit. Lösung: Freigabe sofort wirksam, Prüfung durch die Leitung innerhalb eines Tages, Protokoll der Freigabe."
+  },
+  "zw": "Anforderungen unterschiedlicher Stakeholder widersprechen sich oft: schnell gegen sicher, billig gegen komplett. Die Konfliktlösung geht in Schritten vor: Art des Konflikts erkennen (Sache, Daten, Interessen, Werte), Interessen hinter den Positionen klären und ein Verfahren wählen (Einigung, Kompromiss, Alternative, Entscheid durch Verantwortliche).",
+  "wa": [
+   "Wenn Review oder Gespräche Widersprüche zeigen",
+   "Wenn Stakeholder auf ihren Positionen bestehen",
+   "Wenn eine Entscheidung dokumentiert werden muss"
+  ],
+  "wn": [
+   "Wenn es nur Unklarheit gibt, keinen echten Widerspruch",
+   "Wenn niemand entscheiden darf",
+   "Bei persönlichen Konflikten, die eine Vermittlung brauchen"
+  ],
+  "vb": [
+   "Konflikt und Beteiligte benennen",
+   "Positionen und vermutete Interessen sammeln",
+   "Entscheidungsberechtigte klären",
+   "Kriterien für eine gute Lösung vorab festlegen"
+  ],
+  "nr": "A-09",
+  "kt": "Widersprüche benennen, Interessen hinter den Positionen klären, Option wählen und Entscheid begründen.",
+  "ks": [
+   "Konflikt beschreiben",
+   "Art bestimmen",
+   "Interessen klären",
+   "Optionen bewerten",
+   "Entscheid festhalten"
+  ],
+  "gw": [
+   "Review zeigt Widersprüche",
+   "Positionen sind verhärtet",
+   "Ein Entscheid muss nachvollziehbar sein"
+  ],
+  "rg": [
+   "Interessen statt Positionen",
+   "Entscheider von Anfang an dabei",
+   "Entscheid mit Begründung"
+  ],
+  "vk": [
+   "Konflikt benennen",
+   "Entscheidungsberechtigte klären"
+  ],
+  "bn": "Es herrscht nur Unklarheit",
+  "pr": "Fragen Sie nach dem Warum hinter der Forderung: «Wozu brauchen Sie das?» Oft lässt sich ein Interesse mit einer dritten Lösung erfüllen. Wenn kein Konsens entsteht, entscheidet die dafür bestimmte Person, und die anderen tragen den Entscheid, weil er transparent begründet ist.",
+  "em": "Vorher decken Review, Stakeholder-Analyse oder Zielmodell die Konflikte auf. Danach aktualisieren Sie Anforderungen und Zielmodell. Für Einigungen in der Gruppe eignet sich ein Workshop.",
+  "qu": [
+   "Fisher, R.; Ury, W.; Patton, B.: Das Harvard-Konzept (Campus, 2013)",
+   "Glasl, F.: Konfliktmanagement (Haupt, 11. Auflage 2013)",
+   "Pohl, K.; Rupp, C.: Basiswissen Requirements Engineering (dpunkt, 5. Auflage 2021)"
+  ],
+  "io": {
+   "lf": [
+    "Stakeholder",
+    "Entscheidungsberechtigte",
+    "Business Analysten"
+   ],
+   "in": [
+    {
+     "t": "Gefundene Widersprüche",
+     "to": "anforderungsreview",
+     "v": "geliefert von"
+    },
+    {
+     "t": "Beteiligte und Interessen",
+     "to": "stakeholder",
+     "v": "geliefert von"
+    }
+   ],
+   "out": [
+    {
+     "t": "Dokumentierter Entscheid mit Begründung"
+    },
+    {
+     "t": "Angepasste Ziele",
+     "to": "zielmodell",
+     "v": "übernommen in"
+    },
+    {
+     "t": "Aktualisierte Anforderungen",
+     "to": "user-stories",
+     "v": "übernommen in"
+    }
+   ],
+   "ko": [
+    "Stakeholder",
+    "Projektleitung",
+    "Entwicklungsteam"
+   ]
+  },
+  "li": [
+   [
+    "anforderungsreview",
+    "vorher",
+    "Befunde zeigen Widersprüche."
+   ],
+   [
+    "stakeholder",
+    "vorher",
+    "Interessen sind bekannt."
+   ],
+   [
+    "zielmodell",
+    "danach",
+    "Ziele werden angepasst."
+   ],
+   [
+    "change-management",
+    "danach",
+    "Änderungen werden gesteuert."
+   ],
+   [
+    "workshop",
+    "ergaenzt",
+    "Einigungen entstehen gut in Gruppen."
+   ],
+   [
+    "moscow",
+    "alternative",
+    "Entscheidet Streit über Wichtigkeit."
+   ]
+  ],
+  "tools": [
+   "Miro",
+   "Excel"
+  ],
+  "s": "entwurf"
+ },
+ {
   "id": "jira",
   "n": "Jira",
   "c": "tool",
@@ -9663,9 +12677,11 @@ const M = [
    "review",
    "traceability",
    "akzeptanzkriterien",
+   "gherkin-bdd",
    "story-splitting",
    "user-stories",
    "spike",
+   "mvp-poc",
    "product-backlog",
    "refinement",
    "release-planning",
@@ -9740,6 +12756,7 @@ const M = [
   "tools": [],
   "s": "entwurf",
   "sp": [
+   "konfliktloesung",
    "retrospektive",
    "usability-test",
    "example-mapping",
@@ -9747,30 +12764,40 @@ const M = [
    "story-splitting",
    "brainstorming",
    "contextual-inquiry",
+   "design-thinking",
    "empathy-map",
    "event-storming",
    "five-whys",
    "fokusgruppe",
+   "gap-analyse",
    "interview",
    "jobs-to-be-done",
    "persona",
+   "prozessanalyse",
+   "root-cause-analyse",
    "stakeholder",
    "swot",
    "workshop",
    "aktivitaetsdiagramm",
    "business-model-canvas",
+   "capability-map",
    "customer-journey-map",
+   "feature-tree",
    "impact-mapping",
    "kontextdiagramm",
+   "lean-canvas",
    "rich-picture",
    "value-proposition-canvas",
+   "zielmodell",
    "refinement",
    "release-planning",
    "story-mapping",
    "affinity-estimation",
+   "cost-of-delay",
    "dot-voting",
    "moscow",
-   "risikoanalyse"
+   "risikoanalyse",
+   "value-vs-effort"
   ]
  },
  {
@@ -9837,15 +12864,18 @@ const M = [
   "tools": [],
   "s": "entwurf",
   "sp": [
+   "prozessanalyse",
    "aktivitaetsdiagramm",
    "bpmn",
    "datenmodell",
    "domaenenmodell",
+   "feature-tree",
    "impact-mapping",
    "kontextdiagramm",
    "rich-picture",
    "sequenzdiagramm",
    "use-case-diagramm",
+   "zielmodell",
    "zustandsdiagramm"
   ]
  },
@@ -9916,6 +12946,7 @@ const M = [
    "aktivitaetsdiagramm",
    "datenmodell",
    "domaenenmodell",
+   "klassendiagramm",
    "kontextdiagramm",
    "sequenzdiagramm",
    "use-case-diagramm",
@@ -9986,12 +13017,14 @@ const M = [
   "tools": [],
   "s": "entwurf",
   "sp": [
+   "anforderungsreview",
    "retrospektive",
    "review",
    "geschaeftsregeln",
    "glossar",
    "pflichtenheft",
    "produktvision",
+   "srs",
    "use-cases",
    "brainstorming",
    "dokumentenanalyse",
@@ -10070,7 +13103,9 @@ const M = [
    "usability-test",
    "empathy-map",
    "persona",
-   "customer-journey-map"
+   "customer-journey-map",
+   "wireframes",
+   "mvp-poc"
   ]
  },
  {
@@ -10139,7 +13174,8 @@ const M = [
   "sp": [
    "abnahmetest",
    "akzeptanzkriterien",
-   "example-mapping"
+   "example-mapping",
+   "gherkin-bdd"
   ]
  },
  {
@@ -10210,10 +13246,153 @@ const M = [
    "aktivitaetsdiagramm",
    "datenmodell",
    "domaenenmodell",
+   "klassendiagramm",
    "sequenzdiagramm",
    "use-case-diagramm",
    "zustandsdiagramm"
   ]
+ },
+ {
+  "id": "azure-devops",
+  "n": "Azure DevOps",
+  "c": "tool",
+  "f": "werkzeug",
+  "m": "beide",
+  "ph": "alle",
+  "t": "Ticket- und Entwicklungsplattform",
+  "kz": "",
+  "k": "Plattform von Microsoft für Backlog, Boards, Code, Builds und Tests an einem Ort.",
+  "aufwand": "",
+  "ab": [
+   "Backlog mit Epics, Features und Stories führen",
+   "Sprints und Boards planen",
+   "Akzeptanzkriterien an Work Items festhalten",
+   "Szenarien mit Testplänen und Pipelines verknüpfen"
+  ],
+  "re": [
+   "Viele Einstellungen, Konvention im Team nötig",
+   "Modelle und Zeichnungen nur als Anhang",
+   "Lizenzkosten und Bindung an Microsoft-Welt"
+  ],
+  "bsp": null,
+  "zw": "Azure DevOps verbindet Anforderungsverwaltung mit Entwicklung: Work Items (Epics, Features, Stories, Bugs), Boards, Sprints, Repositories, Pipelines und Testpläne. Anforderungen lassen sich mit Code, Builds und Tests verknüpfen und so von der Idee bis zum Release verfolgen.",
+  "wa": [
+   "Wenn Anforderungen und Entwicklung in einer Umgebung zusammenlaufen sollen",
+   "Wenn die Organisation schon im Microsoft-Umfeld arbeitet",
+   "Wenn Rückverfolgung von der Anforderung zum Test nötig ist"
+  ],
+  "wn": [
+   "Für Zeichnungen und Modelle: dort Miro oder draw.io",
+   "Für kleine Teams, die nur ein einfaches Board brauchen",
+   "Wenn niemand Konventionen und Arbeitsabläufe pflegt"
+  ],
+  "vb": [],
+  "nr": "W-09",
+  "kt": "Backlog, Boards, Code und Tests in einer Plattform: Anforderungen bis zum Test verfolgbar.",
+  "ks": [
+   "Backlog und Stories führen",
+   "Sprints und Boards planen",
+   "Kriterien an Items halten",
+   "Tests und Builds verknüpfen"
+  ],
+  "gw": [
+   "Anforderung und Entwicklung zusammen",
+   "Microsoft-Umfeld besteht",
+   "Rückverfolgung bis zum Test"
+  ],
+  "rg": [
+   "Viele Einstellungen, Konvention im Team nötig",
+   "Modelle und Zeichnungen nur als Anhang",
+   "Lizenzkosten und Bindung an Microsoft-Welt"
+  ],
+  "vk": [],
+  "bn": "Für Zeichnungen: besser Miro oder draw.io",
+  "pr": "",
+  "em": "",
+  "qu": [
+   "Microsoft: Azure DevOps Dokumentation (learn.microsoft.com)",
+   "Microsoft: Azure Boards, Work Items (learn.microsoft.com)"
+  ],
+  "io": null,
+  "li": [],
+  "tools": [],
+  "s": "entwurf",
+  "sp": [
+   "gherkin-bdd",
+   "user-stories",
+   "product-backlog",
+   "story-points"
+  ]
+ },
+ {
+  "id": "balsamiq",
+  "n": "Balsamiq",
+  "c": "tool",
+  "f": "werkzeug",
+  "m": "beide",
+  "ph": "alle",
+  "t": "Wireframe-Werkzeug",
+  "kz": "",
+  "k": "Werkzeug für schnelle, bewusst handgezeichnet wirkende Wireframes.",
+  "aufwand": "",
+  "ab": [
+   "Bildschirme aus Bausteinen skizzieren",
+   "Navigation zwischen Bildschirmen verlinken",
+   "Skizzen mit Nutzern und Fachbereich durchsprechen",
+   "Ergebnisse als Bild oder PDF in Anforderungen einbetten"
+  ],
+  "re": [
+   "Bewusst grob: kein Ersatz für Gestaltungsentwurf",
+   "Wenige Möglichkeiten für interaktive Prototypen",
+   "Lizenz oder Abo nötig"
+  ],
+  "bsp": null,
+  "zw": "Balsamiq erzeugt Wireframes im Skizzenstil. Die rohe Optik lenkt von Farben und Schriften ab und lädt zur Diskussion über Aufbau und Inhalt ein. Vorgefertigte Bausteine und einfache Verlinkung machen auch kleine Klickstrecken schnell möglich.",
+  "wa": [
+   "Wenn früh Struktur und Inhalt einer Oberfläche besprochen werden",
+   "Wenn schnelle Skizzen wichtiger sind als Gestaltung",
+   "Wenn Fachbereich und Entwicklung gemeinsam skizzieren"
+  ],
+  "wn": [
+   "Für fertige Gestaltung und Designsysteme: dort Figma",
+   "Für aufwendige, animierte Prototypen",
+   "Wenn eine Gestaltungsvorgabe exakt eingehalten werden muss"
+  ],
+  "vb": [],
+  "nr": "W-10",
+  "kt": "Wireframes im Skizzenstil: schnell Aufbau und Inhalt einer Oberfläche besprechen.",
+  "ks": [
+   "Bildschirme skizzieren",
+   "Navigation verlinken",
+   "Mit Nutzern durchsprechen",
+   "Als Bild einbetten"
+  ],
+  "gw": [
+   "Struktur früh besprochen wird",
+   "Skizze vor Gestaltung geht",
+   "Fachbereich und Technik gemeinsam skizzieren"
+  ],
+  "rg": [
+   "Bewusst grob: kein Ersatz für Gestaltungsentwurf",
+   "Wenige Möglichkeiten für interaktive Prototypen",
+   "Lizenz oder Abo nötig"
+  ],
+  "vk": [],
+  "bn": "Für fertige Gestaltung: besser Figma",
+  "pr": "",
+  "em": "",
+  "qu": [
+   "Balsamiq: Dokumentation (balsamiq.com)",
+   "Garrett, J. J.: The Elements of User Experience (New Riders, 2. Auflage 2010)"
+  ],
+  "io": null,
+  "li": [],
+  "tools": [],
+  "s": "entwurf",
+  "sp": [
+   "prototyping",
+   "wireframes"
+  ]
  }
 ];
-const SETS = [{"id":"workshop-koffer","n":"Workshop-Koffer","m":"W","s":["workshop","event-storming","story-mapping","impact-mapping","moscow","persona","miro","brainstorming","dot-voting","fokusgruppe","empathy-map","example-mapping"]},{"id":"backlog-aufbauen","n":"Backlog aufbauen","m":"B","s":["persona","user-stories","akzeptanzkriterien","story-splitting","story-mapping","product-backlog","refinement","dor-dod","example-mapping","jobs-to-be-done","spike"]},{"id":"schaetzen-planen","n":"Schätzen und Planen","m":"S","s":["planning-poker","story-points","wsjf","roadmap","sprint-planning","risikoanalyse","rice","affinity-estimation","release-planning","kosten-nutzen","retrospektive"]},{"id":"spezifikation-klassisch","n":"Spezifikation klassisch","m":"K","s":["kontextdiagramm","use-case-diagramm","use-cases","aktivitaetsdiagramm","nfr","pflichtenheft","review","traceability","entscheidungstabelle","datenmodell","sequenzdiagramm"]},{"id":"prozesse-verstehen","n":"Prozesse verstehen","m":"P","s":["beobachtung","event-storming","aktivitaetsdiagramm","bpmn","geschaeftsregeln","glossar","rich-picture","customer-journey-map","contextual-inquiry","value-proposition-canvas"]}];
+const SETS = [{"id":"workshop-koffer","n":"Workshop-Koffer","m":"W","s":["workshop","event-storming","story-mapping","impact-mapping","moscow","persona","miro","brainstorming","dot-voting","fokusgruppe","empathy-map","example-mapping","design-thinking","lean-canvas"]},{"id":"backlog-aufbauen","n":"Backlog aufbauen","m":"B","s":["persona","user-stories","akzeptanzkriterien","story-splitting","story-mapping","product-backlog","refinement","dor-dod","example-mapping","jobs-to-be-done","spike","gherkin-bdd","wireframes"]},{"id":"schaetzen-planen","n":"Schätzen und Planen","m":"S","s":["planning-poker","story-points","wsjf","roadmap","sprint-planning","risikoanalyse","rice","affinity-estimation","release-planning","kosten-nutzen","retrospektive","value-vs-effort","cost-of-delay","mvp-poc"]},{"id":"spezifikation-klassisch","n":"Spezifikation klassisch","m":"K","s":["kontextdiagramm","use-case-diagramm","use-cases","aktivitaetsdiagramm","nfr","pflichtenheft","review","traceability","entscheidungstabelle","datenmodell","sequenzdiagramm","anforderungsschablonen","srs","anforderungsreview","klassendiagramm"]},{"id":"prozesse-verstehen","n":"Prozesse verstehen","m":"P","s":["beobachtung","event-storming","aktivitaetsdiagramm","bpmn","geschaeftsregeln","glossar","rich-picture","customer-journey-map","contextual-inquiry","value-proposition-canvas","prozessanalyse","gap-analyse","root-cause-analyse","capability-map"]}];

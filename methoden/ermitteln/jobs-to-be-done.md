@@ -82,7 +82,7 @@ Vorher klärt die Persona, wen Sie befragen. Danach schreiben Sie Stories aus de
 - danach: [[user-stories]] Jobs werden zu Stories mit Nutzen.
 - alternative: [[five-whys]] Fünf Whys fragen nach der Ursache, Jobs nach dem Ziel.
 - ergaenzt: [[kano]] Kano zeigt, wie wichtig ein Job den Nutzern ist.
-
+- alternative: [[design-thinking]] Alternative: «Design Thinking».
 ## Karte
 Teaser: Welchen Fortschritt will jemand in einer Situation erreichen? Ziel zuerst, Lösung später.
 Gut wenn: Funktionswünsche, aber unklares Ziel | Neue Produkte oder abwandernde Nutzer | Segmente erklären das Verhalten nicht

@@ -79,7 +79,8 @@ Vorher helfen ein erstes Interview und eine Stakeholder-Analyse, um die richtige
 - ergaenzt: [[interview]] Im Anschluss ein Interview, um das Beobachtete zu klären.
 - danach: [[persona]] Beobachtungen fliessen in Personas ein.
 - danach: [[aktivitaetsdiagramm]] Den beobachteten Ablauf als Aktivitätsdiagramm modellieren.
-
+- danach: [[root-cause-analyse]] Danach folgt «Root-Cause-Analyse (Ishikawa)».
+- ergänzt: [[prozessanalyse]] «Prozessanalyse (Ist-Aufnahme)» ergänzt diese Methode.
 ## Karte
 Teaser: Menschen bei der echten Arbeit zusehen: Was sie tun, nicht was sie sagen.
 Gut wenn: Abläufe lassen sich schwer beschreiben | Verdacht: Alltag weicht von Doku ab | Vor dem Lösungsentwurf, um echte Probleme zu sehen

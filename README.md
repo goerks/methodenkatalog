@@ -1,5 +1,7 @@
 # Methodenkatalog RE und BA
 
+> Arbeitsanweisung für Claude und Vorgehensmodell: siehe `CLAUDE.md` und `docs/`.
+
 **Online ansehen: https://goerks.github.io/methodenkatalog/**
 
 Statische Webseite für Requirements Engineering und Business Analyse (klassisch und agil). Kein Build für die Seite selbst nötig: `index.html` im Browser öffnen oder per GitHub Pages veröffentlichen.
@@ -85,3 +87,8 @@ Alternativ ohne Workflow: Source «Deploy from a branch», Branch `main`, Ordner
 
 - `js/kartengrafik.js`: eigene Grafiken (grosse Schrift) für Karten und Detailseiten, Schlüssel = Methoden-ID. Ausschnitte werden mit `tools/crop-kartengrafik.mjs` neu berechnet (Playwright), wenn Grafiken geändert werden.
 - Neu: Customer Journey Map, Jobs to be Done, Value Proposition Canvas, Rich Picture, Empathy Map, Fokusgruppe, Brainstorming, Contextual Inquiry, Spike, Example Mapping, Entscheidungstabelle, Datenmodell, Sequenzdiagramm, Dot Voting, RICE, Kosten-Nutzen-Analyse, Affinity Estimation, Release-Planung, Usability-Test, Retrospektive (alle Entwurf).
+
+## Stand 0.5
+
+- 82 Methoden, 10 Werkzeuge, 92 Karten. Grafikstil «Dezent», Design «Linie und Schatten», Canvas-Grafiken mit benannten Teilbereichen, Factsheet je Methode (A4), Responsive-Skala.
+- Prüfwerkzeuge in `tools/test/`, Vorschau-Build `tools/preview.py`, Dokumentation der Zusammenarbeit in `docs/`.

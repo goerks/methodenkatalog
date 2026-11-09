@@ -7699,11 +7699,6 @@ const M = [
     "sequenzdiagramm",
     "ergaenzt",
     "Das Verhalten ergänzt die Struktur."
-   ],
-   [
-    "domaenenmodell",
-    "alternative",
-    "Für ein grobes Begriffsbild reicht es."
    ]
   ],
   "tools": [
@@ -7851,11 +7846,6 @@ const M = [
     "traceability",
     "ergaenzt",
     "Rückverfolgung zu den Zielen."
-   ],
-   [
-    "impact-mapping",
-    "alternative",
-    "Leichter, wenn es um Wirkung geht."
    ]
   ],
   "tools": [

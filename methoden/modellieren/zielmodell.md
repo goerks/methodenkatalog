@@ -80,7 +80,6 @@ Vorher liefern Stakeholder-Analyse und Produktvision die Ziele. Danach folgen Im
 - danach: [[impact-mapping]] Wirkungen und Hebel werden konkret.
 - danach: [[user-stories]] Anforderungen führen auf Ziele zurück.
 - ergänzt: [[traceability]] Rückverfolgung zu den Zielen.
-- alternative: [[impact-mapping]] Leichter, wenn es um Wirkung geht.
 
 ## Karte
 Teaser: Ziele von oben nach unten zerlegen, Konflikte zeigen und Anforderungen auf Ziele zurückführen.

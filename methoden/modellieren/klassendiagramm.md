@@ -77,7 +77,6 @@ Vorher sammeln Glossar und Domänenmodell die Begriffe. Danach folgt das Datenmo
 - vorher: [[domaenenmodell]] Das fachliche Bild liegt vor.
 - danach: [[datenmodell]] Die Struktur wird technisch gefasst.
 - ergänzt: [[sequenzdiagramm]] Das Verhalten ergänzt die Struktur.
-- alternative: [[domaenenmodell]] Für ein grobes Begriffsbild reicht es.
 
 ## Karte
 Teaser: Klassen mit Eigenschaften und Beziehungen: das Strukturbild fachlicher Begriffe in UML.
